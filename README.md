@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/452688446.svg)](https://zenodo.org/badge/latestdoi/452688446)
+
+
 **ImWIP**: CUDA/C implementations of various warping and adjoint warping and differentiated warping algorithms, with python wrappers.
 
 Features
