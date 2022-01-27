@@ -1,0 +1,73 @@
+/*
+:file:      warpAlgorithmsAffine.hu
+:brief:     Header file for affine warping algorithms
+:date:      20 DEC 2021
+:author:    Jens Renders
+            imec-Visionlab
+            University of Antwerp
+            jens.renders@uantwerpen.be
+*/
+
+void affineWarp2D(
+    const float* f,
+    const float* A,
+    const float* b,
+    float* fWarped,
+    int degree,
+    int shape0,
+    int shape1
+);
+
+void adjointAffineWarp2D(
+    const float* fWarped,
+    const float* A,
+    const float* b,
+    float* f,
+    int degree,
+    int shape0,
+    int shape1
+);
+
+void gradAffineWarp2D(
+    const float* f,
+    const float* A,
+    const float* b,
+    float* gradx,
+    float* grady,
+    int shape0,
+    int shape1
+);
+
+void affineWarp3D(
+    const float* f,
+    const float* A,
+    const float* b,
+    float* fWarped,
+    int degree,
+    int shape0,
+    int shape1,
+    int shape2
+);
+
+void adjointAffineWarp3D(
+    const float* fWarped,
+    const float* A,
+    const float* b,
+    float* f,
+    int degree,
+    int shape0,
+    int shape1,
+    int shape2
+);
+
+void gradAffineWarp3D(
+    const float* f,
+    const float* A,
+    const float* b,
+    float* gradx,
+    float* grady,
+    float* gradz,
+    int shape0,
+    int shape1,
+    int shape2
+);

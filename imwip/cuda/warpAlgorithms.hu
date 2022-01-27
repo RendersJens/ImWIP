@@ -1,0 +1,123 @@
+/*
+:file:      warpAlgorithms.hu
+:brief:     header file for DVF based warping algorithms
+:date:      20 DEC 2021
+:author:    Jens Renders
+            imec-Visionlab
+            University of Antwerp
+            jens.renders@uantwerpen.be
+*/
+
+void warp2D(
+    const float* f,
+    const float* u,
+    const float* v,
+    float* fWarped,
+    int degree,
+    int shape0,
+    int shape1
+);
+
+void adjointWarp2D(
+    const float* fWarped,
+    const float* u,
+    const float* v,
+    float* f,
+    int degree,
+    int shape0,
+    int shape1
+);
+
+void gradWarp2D(
+    const float* f,
+    const float* u,
+    const float* v,
+    float* gradx,
+    float* grady,
+    int shape0,
+    int shape1
+);
+
+void jvpWarp2D(
+    const float* f,
+    const float* u,
+    const float* v,
+    const float* input,
+    float* output,
+    int degree,
+    int shape0,
+    int shape1
+);
+
+void warp3D(
+    const float* f,
+    const float* u,
+    const float* v,
+    const float* w,
+    float* fWarped,
+    int degree,
+    int shape0,
+    int shape1,
+    int shape2
+);
+
+void adjointWarp3D(
+    const float* fWarped,
+    const float* u,
+    const float* v,
+    const float* w,
+    float* f,
+    int degree,
+    int shape0,
+    int shape1,
+    int shape2
+);
+
+void gradWarp3D(
+    const float* f,
+    const float* u,
+    const float* v,
+    const float* w,
+    float* gradx,
+    float* grady,
+    float* gradz,
+    int shape0,
+    int shape1,
+    int shape2
+);
+
+void partialGradWarp3D(
+    const float* f,
+    const float* u,
+    const float* v,
+    const float* w,
+    int to,
+    float* grad,
+    int shape0,
+    int shape1,
+    int shape2
+);
+
+void jvpWarp3D(
+        const float* f,
+        const float* u,
+        const float* v,
+        const float* w,
+        const float* input,
+        float* output,
+        int shape0,
+        int shape1,
+        int shape2
+);
+
+void jvpWarp3DY(
+        const float* f,
+        const float* u,
+        const float* v,
+        const float* w,
+        const float* input,
+        float* output,
+        int shape0,
+        int shape1,
+        int shape2
+);
