@@ -30,7 +30,7 @@ Installation
 ------------
 **Install with pip:**
 
-`$ pip install git+https://gitlab.com/Visionlab-ASTRA/image-warping-for-inverse-problems.git`
+`$ pip install git+https://github.com/RendersJens/ImWIP.git`
 
 
 Or clone/download the repository and run pip in the root folder of the project:
