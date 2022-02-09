@@ -29,6 +29,16 @@ Here $`b`$ can represent data that is the result of moving an unknown image $`x`
 ```
 This requires the operators $`A(t)`$, $`A^T(t)`$ and $`A'(t)`$, which are all provided by this package.
 
+Requirements
+------------
+* gcc and g++
+* nvcc
+* Python 3.7+
+    * numpy
+    * scipy
+    * numba
+    * pylops (currently requires scipy < 1.8)
+
 Installation
 ------------
 **Install with pip:**
