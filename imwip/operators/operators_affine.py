@@ -325,7 +325,7 @@ class AffineWarpingOperator3D(LinearOperator):
         
         grad_sx = grad_x * dxds
         grad_sy = grad_y * dyds
-        grad_sz = grad_z * dyds
+        grad_sz = grad_z * dzds
         return np.vstack([grad_sx.ravel(), grad_sy.ravel(), grad_sz.ravel()]).T
 
     def _derivative_zoom(
