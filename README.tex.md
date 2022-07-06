@@ -29,7 +29,7 @@ $$
 \nabla_t f(x,t) &= &(A'(t)x)^T &B^T(BA(t) x - b)
 \end{aligned}
 $$
-This requires the operators $A(t)$, $A^T(t)$ and $A'(t)$, which are all provided by this package.
+This requires the operators $A(t), A^T(t)$ and $A'(t)$, which are all provided by this package.
 
 Requirements
 ------------
