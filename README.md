@@ -36,7 +36,12 @@ Installation
 ------------
 **Install with pip:**
 
-`<img src="svgs/33050e23b124d58b9c4fea7ed8446448.svg?invert_in_darkmode" align=middle width=562.5129675pt height=78.90410880000002pt/> pip install .`
+`$ pip install git+https://github.com/RendersJens/ImWIP.git`
+
+
+Or clone/download the repository and run pip in the root folder of the project:
+
+`$ pip install .`
 
 **Install without pip:**
 
