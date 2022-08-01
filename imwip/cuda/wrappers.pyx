@@ -11,6 +11,12 @@
 import numpy as np
 cimport numpy as np
 
+cdef extern from "utils.hu":
+    void setDevice(int device)
+
+def set_device(int device):
+    setDevice(device)
+
 
 # import the C++ versions of the warping functions
 cdef extern from "warpAlgorithms.hu":

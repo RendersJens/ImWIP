@@ -120,6 +120,7 @@ if sys.platform == "linux":
             sources = [
                 'imwip/cuda/warpAlgorithms.cu',
                 'imwip/cuda/warpAlgorithmsAffine.cu',
+                'imwip/cuda/utils.cu',
                 'imwip/cuda/wrappers.pyx'],
             library_dirs = [CUDA['lib64']],
             libraries = ['cudart'],

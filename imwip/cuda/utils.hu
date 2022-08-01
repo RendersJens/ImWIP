@@ -1,0 +1,11 @@
+/*
+:file:      utils.hu
+:brief:     header file for utils
+:date:      1 AUG 2022
+:author:    Jens Renders
+            imec-Visionlab
+            University of Antwerp
+            jens.renders@uantwerpen.be
+*/
+
+void setDevice(int device);
