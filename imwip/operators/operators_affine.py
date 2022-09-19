@@ -421,7 +421,7 @@ class AffineWarpingOperator3D(LinearOperator):
             co_x, co_y, co_z = np.meshgrid(
                 np.arange(self.im_shape[0]),
                 np.arange(self.im_shape[1]),
-                np.arange(self.im_shape[1]),
+                np.arange(self.im_shape[2]),
                 indexing="ij"
             )
             if self.indexing == "xy":
