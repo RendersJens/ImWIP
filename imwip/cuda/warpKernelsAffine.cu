@@ -163,7 +163,7 @@ __global__ void affineLinearWarp3DKernel(
             if(0 <= Q[m][0] && Q[m][0] < shape0
             && 0 <= Q[m][1] && Q[m][1] < shape1
             && 0 <= Q[m][2] && Q[m][2] < shape2){
-                fWarped[i*shape1*shape2 + j*shape1 + k] += coefficients[m] * f[Q[m][0]*shape1*shape2 + Q[m][1]*shape1 + Q[m][2]];
+                fWarped[i*shape1*shape2 + j*shape2 + k] += coefficients[m] * f[Q[m][0]*shape1*shape2 + Q[m][1]*shape2 + Q[m][2]];
             }
         }
     }
@@ -227,7 +227,7 @@ __global__ void adjointAffineLinearWarp3DKernel(
             if(0 <= Q[m][0] && Q[m][0] < shape0
             && 0 <= Q[m][1] && Q[m][1] < shape1
             && 0 <= Q[m][2] && Q[m][2] < shape2){
-                atomicAdd(&f[Q[m][0]*shape1*shape2 + Q[m][1]*shape1 + Q[m][2]], coefficients[m] * fWarped[i*shape1*shape2 + j*shape1 + k]);
+                atomicAdd(&f[Q[m][0]*shape1*shape2 + Q[m][1]*shape2 + Q[m][2]], coefficients[m] * fWarped[i*shape1*shape2 + j*shape2 + k]);
             }
         }
     }
@@ -406,7 +406,7 @@ __global__ void affineCubicWarp3DKernel(
                         for(int n = 0; n < 64; n++){
                             coefficient += coeffs[m*64 + n] * monomials[n];
                         }
-                        fWarped[i*shape1*shape2 + j*shape1 + k] += coefficient * f[Q0*shape1*shape2 + Q1*shape1 + Q2];
+                        fWarped[i*shape1*shape2 + j*shape2 + k] += coefficient * f[Q0*shape1*shape2 + Q1*shape2 + Q2];
                     }
                     m++;
                 }
@@ -476,7 +476,7 @@ __global__ void adjointAffineCubicWarp3DKernel(
                         for(int n = 0; n < 64; n++){
                             coefficient += coeffs[m*64 + n] * monomials[n];
                         }
-                        atomicAdd(&f[Q0*shape1*shape2 + Q1*shape1 + Q2], coefficient * fWarped[i*shape1*shape2 + j*shape1 + k]);
+                        atomicAdd(&f[Q0*shape1*shape2 + Q1*shape2 + Q2], coefficient * fWarped[i*shape1*shape2 + j*shape2 + k]);
                     }
                     m++;
                 }
