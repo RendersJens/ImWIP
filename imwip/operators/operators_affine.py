@@ -211,6 +211,7 @@ class AffineWarpingOperator3D(LinearOperator):
             rotation=None,
             translation=None,
             centered=True,
+            center=None,
             adjoint_type="exact",
             degree=3,
             indexing="ij"
@@ -258,8 +259,13 @@ class AffineWarpingOperator3D(LinearOperator):
             self.b += np.array(translation)
 
         self.centered = centered
+        if center is None:
+            self.center = np.array(im_shape, dtype=np.float32)/2
+        else:
+            self.center = center
+
         if self.centered:
-            center = np.array(im_shape, dtype=np.float32)/2
+            center = self.center
             if indexing == "xy":
                 center = np.flip(center)
             self.b = center - self.A @ center + self.b
@@ -319,9 +325,9 @@ class AffineWarpingOperator3D(LinearOperator):
         dyds = co_y.astype(np.float32)
         dzds = co_z.astype(np.float32)
         if self.centered:
-            dxds -= self.im_shape[0]/2
-            dyds -= self.im_shape[1]/2
-            dzds -= self.im_shape[2]/2
+            dxds -= self.center[0]
+            dyds -= self.center[1]
+            dzds -= self.center[2]
         
         grad_sx = grad_x * dxds
         grad_sy = grad_y * dyds
@@ -384,9 +390,7 @@ class AffineWarpingOperator3D(LinearOperator):
         drk = (d_rot_k @ (rot_j @ (rot_i @ co)))
 
         if self.centered:
-            center = np.array([[self.im_shape[0]/2],
-                               [self.im_shape[1]/2],
-                               [self.im_shape[2]/2]])
+            center = self.center
             dri -= rot_k @ (rot_j @ (d_rot_i @ center))
             drj -= rot_k @ (d_rot_j @ (rot_i @ center))
             drk -= d_rot_k @ (rot_j @ (rot_i @ center))
