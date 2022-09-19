@@ -123,8 +123,8 @@ __global__ void affineLinearWarp3DKernel(
 
     // this order is faster then the other way around
     int i = blockIdx.z * blockDim.z + threadIdx.z;
-    int k = blockIdx.x * blockDim.x + threadIdx.x;
     int j = blockIdx.y * blockDim.y + threadIdx.y;
+    int k = blockIdx.x * blockDim.x + threadIdx.x;
 
     if(i < shape0 && j < shape1 && k < shape2){
 
@@ -187,8 +187,8 @@ __global__ void adjointAffineLinearWarp3DKernel(
 
     // this order is faster then the other way around
     int i = blockIdx.z * blockDim.z + threadIdx.z;
-    int k = blockIdx.x * blockDim.x + threadIdx.x;
     int j = blockIdx.y * blockDim.y + threadIdx.y;
+    int k = blockIdx.x * blockDim.x + threadIdx.x;
 
     if(i < shape0 && j < shape1 && k < shape2){
 
@@ -364,8 +364,8 @@ __global__ void affineCubicWarp3DKernel(
 
     // this order is faster then the other way around
     int i = blockIdx.z * blockDim.z + threadIdx.z;
-    int k = blockIdx.x * blockDim.x + threadIdx.x;
     int j = blockIdx.y * blockDim.y + threadIdx.y;
+    int k = blockIdx.x * blockDim.x + threadIdx.x;
 
     if(i < shape0 && j < shape1 && k < shape2){
 
@@ -434,8 +434,8 @@ __global__ void adjointAffineCubicWarp3DKernel(
 
     // this order is faster then the other way around
     int i = blockIdx.z * blockDim.z + threadIdx.z;
-    int k = blockIdx.x * blockDim.x + threadIdx.x;
     int j = blockIdx.y * blockDim.y + threadIdx.y;
+    int k = blockIdx.x * blockDim.x + threadIdx.x;
 
     if(i < shape0 && j < shape1 && k < shape2){
 
