@@ -390,7 +390,7 @@ class AffineWarpingOperator3D(LinearOperator):
         drk = (d_rot_k @ (rot_j @ (rot_i @ co)))
 
         if self.centered:
-            center = self.center
+            center = self.center.reshape((3, 1))
             dri -= rot_k @ (rot_j @ (d_rot_i @ center))
             drj -= rot_k @ (d_rot_j @ (rot_i @ center))
             drk -= d_rot_k @ (rot_j @ (rot_i @ center))
