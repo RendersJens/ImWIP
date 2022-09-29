@@ -209,6 +209,7 @@ class AffineWarpingOperator3D(LinearOperator):
             b=None,
             scale=None,
             rotation=None,
+            cayley=None,
             translation=None,
             centered=True,
             center=None,
@@ -252,6 +253,16 @@ class AffineWarpingOperator3D(LinearOperator):
                               [                   0,                   0, 1]])
 
             self.A = rot_k @ (rot_j @ (rot_i @ self.A))
+        elif cayley is not None:
+            self.cayley = cayley
+            u, v, w = self.cayley
+            P = np.array([
+                [ 0,  u, v],
+                [-u,  0, w],
+                [-v, -w, 0]
+            ], dtype=self.dtype)
+            I = np.eye(3)
+            self.A = (I - P) @ np.linalg.inv(I + P)
         self.A = self.A.astype(np.float32)
 
         if translation is not None:
@@ -403,6 +414,75 @@ class AffineWarpingOperator3D(LinearOperator):
         grad_rk = grad_x*drk[0] + grad_y*drk[1] + grad_z*drk[2]
         return np.vstack([grad_ri, grad_rj, grad_rk]).T
 
+    def _derivative_cayley(
+            self,
+            x,
+            grad_x,
+            grad_y,
+            grad_z,
+            co_x,
+            co_y,
+            co_z
+        ):
+        u, v, w = self.cayley
+
+        P = np.array([
+            [ 0,  u, v],
+            [-u,  0, w],
+            [-v, -w, 0]
+        ], dtype=self.dtype)
+
+        dP_du = np.array([
+            [ 0, 1, 0],
+            [-1, 0, 0],
+            [ 0, 0, 0]
+        ], dtype=self.dtype)
+        dP_dv = np.array([
+            [ 0, 0, 1],
+            [ 0, 0, 0],
+            [-1, 0, 0]
+        ], dtype=self.dtype)
+        dP_dw = np.array([
+            [0,  0, 0],
+            [0,  0, 1],
+            [0, -1, 0]
+        ], dtype=self.dtype)
+
+        # (I + P)^-1
+        I = np.eye(3)
+        IPinv = np.linalg.inv(I + P)
+
+        # derivatives of (I + P)^-1
+        dIPinv_du = -IPinv @ dP_du @ IPinv
+        dIPinv_dv = -IPinv @ dP_dv @ IPinv
+        dIPinv_dw = -IPinv @ dP_dw @ IPinv
+
+        # derivatives of A = (I - P)(I + P)^-1
+        dA_du = (I - P) @ dIPinv_du - dP_du @ IPinv
+        dA_dv = (I - P) @ dIPinv_dv - dP_dv @ IPinv
+        dA_dw = (I - P) @ dIPinv_dw - dP_dw @ IPinv
+
+
+        co = np.vstack([co_x.ravel(), co_y.ravel(), co_z.ravel()])
+
+        du = dA_du @ co
+        dv = dA_dv @ co
+        dw = dA_dw @ co
+
+        if self.centered:
+            center = self.center.reshape((3, 1))
+            du -= dA_du @ center
+            dv -= dA_dv @ center
+            dw -= dA_dw @ center
+        
+        grad_x = grad_x.ravel()
+        grad_y = grad_y.ravel()
+        grad_z = grad_z.ravel()
+        grad_u = grad_x*du[0] + grad_y*du[1] + grad_z*du[2]
+        grad_v = grad_x*dv[0] + grad_y*dv[1] + grad_z*dv[2]
+        grad_w = grad_x*dw[0] + grad_y*dw[1] + grad_z*dw[2]
+        return np.vstack([grad_u, grad_v, grad_w]).T
+
     def _derivative_translation(self, x, grad_x, grad_y, grad_z):
         return np.vstack([grad_x.ravel(), grad_y.ravel(), grad_z.ravel()]).T
 
@@ -417,7 +497,7 @@ class AffineWarpingOperator3D(LinearOperator):
             indexing=self.indexing
         )
 
-        if "rotation" in to or "rot" in to or "scale" in to or "zoom" in to:
+        if "cayley" in to or "rotation" in to or "rot" in to or "scale" in to or "zoom" in to:
             co_x, co_y, co_z = np.meshgrid(
                 np.arange(self.im_shape[0]),
                 np.arange(self.im_shape[1]),
@@ -453,6 +533,16 @@ class AffineWarpingOperator3D(LinearOperator):
                 ))
             elif var in ["rot", "rotation"]:
                 derivatives.append(self._derivative_rotation(
+                    x,
+                    grad_x,
+                    grad_y,
+                    grad_z,
+                    co_x,
+                    co_y,
+                    co_z
+                ))
+            elif var == "cayley":
+                derivatives.append(self._derivative_cayley(
                     x,
                     grad_x,
                     grad_y,
