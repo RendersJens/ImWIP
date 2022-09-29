@@ -10,12 +10,26 @@
 
 import numpy as np
 cimport numpy as np
+from libcpp.string cimport string
 
 cdef extern from "utils.hu":
+    int getDevice()
     void setDevice(int device)
+    int getDeviceCount()
+    string getDeviceName(int device)
+
+def get_device():
+    return getDevice()
 
 def set_device(int device):
     setDevice(device)
+
+def get_device_count():
+    return getDeviceCount()
+
+def get_device_name(int device):
+    cdef string name = getDeviceName(device)
+    return name.decode('UTF-8')
 
 
 # import the C++ versions of the warping functions

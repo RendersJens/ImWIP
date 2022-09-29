@@ -7,5 +7,14 @@
             University of Antwerp
             jens.renders@uantwerpen.be
 */
+#include <string>
 
 void setDevice(int device);
+
+int getDevice();
+
+void setDevice(int device);
+
+int getDeviceCount();
+
+std::string getDeviceName(int device);
