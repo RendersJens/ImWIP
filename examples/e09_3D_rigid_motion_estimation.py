@@ -8,8 +8,8 @@ from matplotlib import pyplot as plt
 import imwip
 
 im_size = 256
-translation = [25, -10, 15]
-rotation = [0.3, 0.2, 0.1]
+true_trans = [25, -10, 15]
+true_rot = [0.3, 0.2, 0.1]
 shepp = tomopy.shepp3d(im_size).astype(np.float32)
 
 # motion operator
@@ -22,7 +22,7 @@ M = lambda rot, trans: imwip.AffineWarpingOperator3D(
 
 # simulate
 x = shepp.ravel()
-b = M(rotation, translation) @ x
+b = M(true_rot, true_trans) @ x
 
 # solve
 # ---------------------
