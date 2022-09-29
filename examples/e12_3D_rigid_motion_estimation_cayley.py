@@ -53,14 +53,14 @@ callback = lambda cayley, trans: print(cayley, trans)
 
 # initial guess: zero
 cayley0 = [0.0, 0.0, 0.0]
-trans0 = [25.0, -10, 15]
+trans0 = [0.0, 0, 0]
 x0 = np.zeros(im_size**3, dtype=np.float32)
 
 # solve
 cayley, trans = imwip.split_barzilai_borwein(
     grad_f,
     x0=(cayley0, trans0),
-    max_iter=30,
+    max_iter=350,
     verbose=True,
     callback=callback
 )
