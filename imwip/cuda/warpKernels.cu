@@ -231,9 +231,9 @@ __global__ void linearWarp3DKernel(
     if(i < shape0 && j < shape1 && k < shape2){
 
         // position at which to iterpolate
-        float x = i+u[i*shape1*shape2 + j*shape1 + k];
-        float y = j+v[i*shape1*shape2 + j*shape1 + k];
-        float z = k+w[i*shape1*shape2 + j*shape1 + k];
+        float x = i+u[i*shape1*shape2 + j*shape2 + k];
+        float y = j+v[i*shape1*shape2 + j*shape2 + k];
+        float z = k+w[i*shape1*shape2 + j*shape2 + k];
 
         // points from which to interpolate
         int x1 = floorf(x);
@@ -295,9 +295,9 @@ __global__ void adjointLinearWarp3DKernel(
     if(i < shape0 && j < shape1 && k < shape2){
 
         // position at which to iterpolate
-        float x = i+u[i*shape1*shape2 + j*shape1 + k];
-        float y = j+v[i*shape1*shape2 + j*shape1 + k];
-        float z = k+w[i*shape1*shape2 + j*shape1 + k];
+        float x = i+u[i*shape1*shape2 + j*shape2 + k];
+        float y = j+v[i*shape1*shape2 + j*shape2 + k];
+        float z = k+w[i*shape1*shape2 + j*shape2 + k];
 
         // points from which to interpolate
         int x1 = floorf(x);
@@ -532,9 +532,9 @@ __global__ void cubicWarp3DKernel(
     if(i < shape0 && j < shape1 && k < shape2){
 
         // position at which to iterpolate
-        float x = i+u[i*shape1*shape2 + j*shape1 + k];
-        float y = j+v[i*shape1*shape2 + j*shape1 + k];
-        float z = k+w[i*shape1*shape2 + j*shape1 + k];
+        float x = i+u[i*shape1*shape2 + j*shape2 + k];
+        float y = j+v[i*shape1*shape2 + j*shape2 + k];
+        float z = k+w[i*shape1*shape2 + j*shape2 + k];
 
         // points from which to interpolate
         int x1 = floorf(x);
@@ -602,9 +602,9 @@ __global__ void adjointCubicWarp3DKernel(
     if(i < shape0 && j < shape1 && k < shape2){
 
         // position at which to iterpolate
-        float x = i+u[i*shape1*shape2 + j*shape1 + k];
-        float y = j+v[i*shape1*shape2 + j*shape1 + k];
-        float z = k+w[i*shape1*shape2 + j*shape1 + k];
+        float x = i+u[i*shape1*shape2 + j*shape2 + k];
+        float y = j+v[i*shape1*shape2 + j*shape2 + k];
+        float z = k+w[i*shape1*shape2 + j*shape2 + k];
 
         // points from which to interpolate
         int x1 = floorf(x);
@@ -673,9 +673,9 @@ __global__ void jvpCubicWarp3DKernel(
     if(i < shape0 && j < shape1 && k < shape2){
 
         // position at which to iterpolate
-        float x = i+u[i*shape1*shape2 + j*shape1 + k];
-        float y = j+v[i*shape1*shape2 + j*shape1 + k];
-        float z = k+w[i*shape1*shape2 + j*shape1 + k];
+        float x = i+u[i*shape1*shape2 + j*shape2 + k];
+        float y = j+v[i*shape1*shape2 + j*shape2 + k];
+        float z = k+w[i*shape1*shape2 + j*shape2 + k];
 
         // points from which to interpolate
         int x1 = floorf(x);
