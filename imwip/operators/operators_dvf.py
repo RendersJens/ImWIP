@@ -135,7 +135,7 @@ def diff_warp_3D(f, u, v, w, approx=False):
         gradx, grady, gradz = grad_warp_3D(f, u, v, w)
     diffx = pylops.Diagonal(gradx.ravel(), dtype=np.float32)
     diffy = pylops.Diagonal(grady.ravel(), dtype=np.float32)
-    diffz = pylops.Diagonal(grady.ravel(), dtype=np.float32)
+    diffz = pylops.Diagonal(gradz.ravel(), dtype=np.float32)
     return pylops.VStack([diffx, diffy, diffz], dtype=np.float32)
 
 
