@@ -130,7 +130,7 @@ def diff_warp_2D(f, u, v, approx=False):
 def diff_warp_3D(f, u, v, w, approx=False):
     if approx:
         warped = warp_3D(f, u, v, w)
-        grad = np.gradient(warped, axis=to)
+        gradx, grady, gradz = np.gradient(warped)
     else:
         gradx, grady, gradz = grad_warp_3D(f, u, v, w)
     diffx = pylops.Diagonal(gradx.ravel(), dtype=np.float32)

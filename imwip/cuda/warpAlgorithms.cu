@@ -568,7 +568,7 @@ void gradWarp3D(
     // kernel invocation with 16*16 threads per block, and enough blocks
     // to cover the entire length of the vectors
     dim3 threadsPerBlock(8,8,8);
-    dim3 numBlocks((shape2 + 7)/8, (shape1 + 7)/8, (shape0 + 7)/8); //faster order
+    dim3 numBlocks((shape0 + 7)/8, (shape1 + 7)/8, (shape2 + 7)/8);
     float coeffsx[] = {
         #include "cubic_3D_coefficients_dx.inc"
     };
@@ -678,7 +678,7 @@ void partialGradWarp3D(
     // kernel invocation with 8*8*8 threads per block, and enough blocks
     // to cover the entire length of the vectors
     dim3 threadsPerBlock(8,8,8);
-    dim3 numBlocks((shape2 + 7)/8, (shape1 + 7)/8, (shape0 + 7)/8); //faster order
+    dim3 numBlocks((shape0 + 7)/8, (shape1 + 7)/8, (shape2 + 7)/8);
     float *coeffs;
     if(to == 0){
         float coeffsx[] = {
