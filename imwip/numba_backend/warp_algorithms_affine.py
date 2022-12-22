@@ -16,14 +16,14 @@ from .warp_kernels_affine import (affine_linear_warp_2D_kernel,
 import os
 
 path = os.path.dirname(__file__)
-cubic_2D_coefficients = np.loadtxt(path+"/../cuda/cubic_2D_coefficients.inc", delimiter= ",", dtype=np.float32)
-cubic_2D_coefficients_dx = np.loadtxt(path+"/../cuda/cubic_2D_coefficients_dx.inc", delimiter= ",", dtype=np.float32)
-cubic_2D_coefficients_dy = np.loadtxt(path+"/../cuda/cubic_2D_coefficients_dy.inc", delimiter= ",", dtype=np.float32)
+cubic_2D_coefficients = np.loadtxt(path+"/../cpp_backend/cubic_2D_coefficients.inc", delimiter= ",", dtype=np.float32)
+cubic_2D_coefficients_dx = np.loadtxt(path+"/../cpp_backend/cubic_2D_coefficients_dx.inc", delimiter= ",", dtype=np.float32)
+cubic_2D_coefficients_dy = np.loadtxt(path+"/../cpp_backend/cubic_2D_coefficients_dy.inc", delimiter= ",", dtype=np.float32)
 
-cubic_3D_coefficients = np.loadtxt(path+"/../cuda/cubic_3D_coefficients.inc", delimiter= ",", dtype=np.float32)
-cubic_3D_coefficients_dx = np.loadtxt(path+"/../cuda/cubic_3D_coefficients_dx.inc", delimiter= ",", dtype=np.float32)
-cubic_3D_coefficients_dy = np.loadtxt(path+"/../cuda/cubic_3D_coefficients_dy.inc", delimiter= ",", dtype=np.float32)
-cubic_3D_coefficients_dz = np.loadtxt(path+"/../cuda/cubic_3D_coefficients_dz.inc", delimiter= ",", dtype=np.float32)
+cubic_3D_coefficients = np.loadtxt(path+"/../cpp_backend/cubic_3D_coefficients.inc", delimiter= ",", dtype=np.float32)
+cubic_3D_coefficients_dx = np.loadtxt(path+"/../cpp_backend/cubic_3D_coefficients_dx.inc", delimiter= ",", dtype=np.float32)
+cubic_3D_coefficients_dy = np.loadtxt(path+"/../cpp_backend/cubic_3D_coefficients_dy.inc", delimiter= ",", dtype=np.float32)
+cubic_3D_coefficients_dz = np.loadtxt(path+"/../cpp_backend/cubic_3D_coefficients_dz.inc", delimiter= ",", dtype=np.float32)
 
 
 __all__ = [

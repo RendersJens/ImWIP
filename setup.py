@@ -9,9 +9,9 @@ import numpy
 import sys
 
 
-VERSION = '0.0.1' 
+VERSION = '1.0.2' 
 DESCRIPTION = 'ImWIP: Image Warping for Inverse Problems'
-LONG_DESCRIPTION = "CUDA implementations of various warping and adjoint warping and differentiated warping algorithms, with python wrappers."
+LONG_DESCRIPTION = "ImWIP: Image Warping for Inverse Problems"
 
 
 def find_in_path(name, path):
@@ -106,7 +106,7 @@ class custom_build_ext(build_ext):
         build_ext.build_extensions(self)
 
 
-if sys.platform == "linux":
+try:
     CUDA = locate_cuda()
 
     # Obtain the numpy include directory. This logic works across numpy versions.
@@ -116,12 +116,12 @@ if sys.platform == "linux":
         numpy_include = numpy.get_numpy_include()
 
 
-    ext = Extension('imwip_cuda',
+    ext = Extension('libimwip',
             sources = [
-                'imwip/cuda/warpAlgorithms.cu',
-                'imwip/cuda/warpAlgorithmsAffine.cu',
-                'imwip/cuda/utils.cu',
-                'imwip/cuda/wrappers.pyx'],
+                'imwip/cpp_backend/warpAlgorithms.cu',
+                'imwip/cpp_backend/warpAlgorithmsAffine.cu',
+                'imwip/cpp_backend/utils.cu',
+                'imwip/cpp_backend/wrappers.pyx'],
             library_dirs = [CUDA['lib64']],
             libraries = ['cudart'],
             language = 'c++',
@@ -137,10 +137,10 @@ if sys.platform == "linux":
                     '--compiler-options', "'-fPIC'"
                     ]
                 },
-                include_dirs = [numpy_include, CUDA['include'], 'imwip/cuda']
+                include_dirs = [numpy_include, CUDA['include'], 'imwip/cpp_backend']
             )
     ext_modules = [ext]
-else:
+except:
     ext_modules = []
 
 
