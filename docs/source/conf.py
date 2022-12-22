@@ -9,7 +9,7 @@
 project = 'ImWIP'
 copyright = '2022, Jens Renders'
 author = 'Jens Renders'
-release = '1.0.2'
+release = '1.1.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -23,6 +23,7 @@ extensions = [
 
 templates_path = ['_templates']
 exclude_patterns = []
+autodoc_member_order = 'bysource'
 
 
 

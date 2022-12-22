@@ -20,10 +20,10 @@ print(A)
 print(b)
 
 # linear backward warp
-linear_warped_shepp = imwip.affine_warp_2D(shepp, A, b, degree=1)
+linear_warped_shepp = imwip.affine_warp(shepp, A, b, degree=1, back_end="numba")
 
 # cubic backward warp
-cubic_warped_shepp = imwip.affine_warp_2D(shepp, A, b)
+cubic_warped_shepp = imwip.affine_warp(shepp, A, b)
 
 # a cubic warp can produce values outside of the original range
 np.clip(cubic_warped_shepp, 0, 255, out=cubic_warped_shepp)

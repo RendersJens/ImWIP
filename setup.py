@@ -9,7 +9,7 @@ import numpy
 import sys
 
 
-VERSION = '1.0.2' 
+VERSION = '1.1.0' 
 DESCRIPTION = 'ImWIP: Image Warping for Inverse Problems'
 LONG_DESCRIPTION = "ImWIP: Image Warping for Inverse Problems"
 
@@ -157,9 +157,7 @@ setup(
         cmdclass = {'build_ext': custom_build_ext},
         zip_safe = False,
         classifiers= [
-            "Development Status :: 2 - Pre-Alpha",
             "Intended Audience :: Science/Research",
             "Programming Language :: Python :: 3",
-            "Operating System :: POSIX :: Linux",
         ]
 )

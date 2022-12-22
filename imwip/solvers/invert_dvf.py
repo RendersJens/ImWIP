@@ -11,10 +11,6 @@
 
 import numpy as np
 from tqdm import tqdm
-try:
-    from imwip_cuda import warp_2D, warp_3D
-except ModuleNotFoundError:
-    from imwip.numba import warp_2D, warp_3D
 
 
 def invert_dvf_2D(u, v, max_iter=15, verbose=False):
