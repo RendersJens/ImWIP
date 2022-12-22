@@ -17,13 +17,3 @@ imwip.functions.functions\_affine
    :members:
    :undoc-members:
    :show-inheritance:
-
-
-
-Module contents
----------------
-
-.. automodule:: imwip.functions
-   :members:
-   :undoc-members:
-   :show-inheritance:

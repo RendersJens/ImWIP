@@ -1,37 +1,26 @@
-imwip.solvers package
-=====================
+imwip.solvers
+=============
 
-Submodules
-----------
-
-imwip.solvers.differentiation module
-------------------------------------
+imwip.solvers.differentiation
+-----------------------------
 
 .. automodule:: imwip.solvers.differentiation
    :members:
    :undoc-members:
    :show-inheritance:
 
-imwip.solvers.invert\_dvf module
---------------------------------
+imwip.solvers.invert\_dvf
+-------------------------
 
 .. automodule:: imwip.solvers.invert_dvf
    :members:
    :undoc-members:
    :show-inheritance:
 
-imwip.solvers.solvers module
-----------------------------
+imwip.solvers.solvers
+---------------------
 
 .. automodule:: imwip.solvers.solvers
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: imwip.solvers
    :members:
    :undoc-members:
    :show-inheritance:

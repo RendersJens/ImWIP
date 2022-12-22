@@ -8,6 +8,7 @@ ImWIP: Image warping for Inverse Problems
    :maxdepth: 2
    :caption: Contents:
 
+   why
    installation
    getting_started
    api/api

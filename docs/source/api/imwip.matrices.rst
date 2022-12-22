@@ -1,21 +1,10 @@
-imwip.matrices package
-======================
+imwip.matrices
+==============
 
-Submodules
-----------
-
-imwip.matrices.matrices module
-------------------------------
+imwip.matrices.matrices
+-----------------------
 
 .. automodule:: imwip.matrices.matrices
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: imwip.matrices
    :members:
    :undoc-members:
    :show-inheritance:
