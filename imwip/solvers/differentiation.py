@@ -1,12 +1,8 @@
 """
 :file:      differentiation.py
 :brief:     provides differentiation functionality to
-            pylops operators that contain ImWIP warping operators.
-:date:      20 DEC 2021
+            ImWIP operators and pylops operators that contain ImWIP operators.
 :author:    Jens Renders
-            imec-Visionlab
-            University of Antwerp
-            jens.renders@uantwerpen.be
 """
 
 
@@ -15,15 +11,10 @@ import pylops
 
 def diff(A, x, to=None):
     """ 
-    Given an imwip operator A = A(p) (p represents all the parameters of A),
+    Given an imwip operator :math:`A = A(p)` (:math:`p` represents all the parameters of
+    :math:`A`),
     or a pylops blockmatrix built of those, this function gives the derivative
-    of A(p)x towards p.
-
-    In other words:
-    input:
-        A = A(p), x
-    output:
-        d/dp A(p)x
+    of :math:`A(p)x` towards :math:`p`.
     """
 
     if hasattr(A, "derivative"):

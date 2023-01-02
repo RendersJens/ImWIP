@@ -2,11 +2,7 @@
 :file:      solvers.py
 :brief:     a small collection of solvers, which are suitable for
             most inverse problems involving image warps.
-:date:      20 DEC 2021
 :author:    Jens Renders
-            imec-Visionlab
-            University of Antwerp
-            jens.renders@uantwerpen.be
 """
 
 
@@ -14,7 +10,7 @@ import numpy as np
 from tqdm import tqdm
 
 
-def line_search(f, fx, grad, x, d, t=0.5, c=1e-4, a=1.0, max_iter=20, verbose=False):
+def _line_search(f, fx, grad, x, d, t=0.5, c=1e-4, a=1.0, max_iter=20, verbose=False):
     m = np.dot(grad, d/np.linalg.norm(d))
     iterations = 0
     new_f = f(x + a*d)
@@ -27,7 +23,7 @@ def line_search(f, fx, grad, x, d, t=0.5, c=1e-4, a=1.0, max_iter=20, verbose=Fa
     return a
 
 
-def get_split_stepsize(x, grad, f=None, init_step=None, line_search_iter=None, verbose=False):
+def _get_split_stepsize(x, grad, f=None, init_step=None, line_search_iter=None, verbose=False):
     if init_step is not None:
         a = [0]*len(x)
         for i in range(len(x)):
@@ -50,7 +46,7 @@ def get_split_stepsize(x, grad, f=None, init_step=None, line_search_iter=None, v
                         x_edit = x[:]
                         x_edit[i] = xi
                         return f(*x_edit)
-                    a[i] = line_search(
+                    a[i] = _line_search(
                         lambda xi: f_partial(xi, i),
                         f_partial(x[i], i),
                         grad[i],
@@ -91,7 +87,7 @@ def barzilai_borwein(grad_f,
         else:
             if line_search_iter is None:
                 line_search_iter = 20
-            a = line_search(f, f(x), grad, x, grad,
+            a = _line_search(f, f(x), grad, x, grad,
                 a=1/np.linalg.norm(grad),
                 max_iter=line_search_iter,
                 verbose=verbose)
@@ -155,7 +151,7 @@ def split_barzilai_borwein(
     grad = grad_f(*x)
 
     # initial stepsize
-    a = get_split_stepsize(
+    a = _get_split_stepsize(
         x,
         grad,
         f=f,
@@ -172,7 +168,7 @@ def split_barzilai_borwein(
     # another gradient descent step
     gradp = grad
     grad = grad_f(*x)
-    a = get_split_stepsize(
+    a = _get_split_stepsize(
         x,
         grad,
         f=f,
