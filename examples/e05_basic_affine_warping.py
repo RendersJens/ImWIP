@@ -4,7 +4,6 @@ import numpy as np
 from matplotlib import pyplot as plt
 from skimage import transform
 import imwip
-import sys
 
 # We use a sample image from tomopy, but you can replace this with any image
 import tomopy
@@ -20,7 +19,7 @@ print(A)
 print(b)
 
 # linear backward warp
-linear_warped_shepp = imwip.affine_warp(shepp, A, b, degree=1, back_end="numba")
+linear_warped_shepp = imwip.affine_warp(shepp, A, b, degree=1)
 
 # cubic backward warp
 cubic_warped_shepp = imwip.affine_warp(shepp, A, b)
