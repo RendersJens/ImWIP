@@ -13,6 +13,22 @@ from .gradient_operators import SquareGradientOperator
 
 
 class WarpingOperator2D(LinearOperator):
+    """
+    A 2D warping operator represented as a scipy LinearOperator.
+
+    :param u: First component of the DVF describing the warp
+    :param v: Second component of the DVF describing the warp
+    :param degree: Degree of the splines used for interpolation
+    :param adjoint_type: Method to compute the adjoint. Defaults to ``exact``.
+    :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
+        if available, else "numba"
+
+    :type u: :class:`numpy.ndarray`
+    :type v: :class:`numpy.ndarray`
+    :type degree: 1 or 3, optional
+    :type adjoint_type: ``exact``, ``negative`` or ``inverse``
+    :type backend: ``cpp`` or ``numba``, optional
+    """
 
     def __init__(
             self,

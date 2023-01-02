@@ -25,7 +25,7 @@ def affine_warp(
     """
     Warps a 2D or 3D function according to an affine transformation Ax + b.
 
-    This function is linear in terms of the input f (even if degree 3
+    This function is linear in terms of the input image (even if degree 3
     is used for the splines). Therefore it has an adjoint function which is computed
     by :meth:`adjoint_affine_warp`.
 
@@ -42,7 +42,7 @@ def affine_warp(
         for 2D arrays. Defaults to ``ij``.
     :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
         if available, else "numba"
-    :type f: :class:`numpy.ndarray`
+    :type image: :class:`numpy.ndarray`
     :type A: :class:`numpy.ndarray`
     :type b: :class:`numpy.ndarray`
     :type out: :class:`numpy.ndarray`, optional
@@ -92,7 +92,7 @@ def adjoint_affine_warp(
         backend=None
     ):
     """
-    The function :meth:`affine_warp` is a linear function of the input f (even if degree 3
+    The function :meth:`affine_warp` is a linear function of the input image (even if degree 3
     is used for the splines). Therefore it has an adjoint function which is computed
     by this function. See :meth:`affine_warp` for the description of parameters and return value.
 
@@ -157,7 +157,7 @@ def diff_affine_warp(
         for 2D arrays. Defaults to ``ij``.
     :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
         if available, else "numba"
-    :type f: :class:`numpy.ndarray`
+    :type image: :class:`numpy.ndarray`
     :type u: :class:`numpy.ndarray`
     :type v: :class:`numpy.ndarray`
     :type w: :class:`numpy.ndarray`, optional
