@@ -5,6 +5,8 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+import sys
+sys.path.insert(0, os.path.abspath('../..'))
 
 project = 'ImWIP'
 copyright = '2022, Jens Renders'
