@@ -12,6 +12,41 @@ from collections.abc import Iterable
 
 
 class AffineWarpingOperator2D(LinearOperator):
+    """
+    A 2D warping operator represented as a scipy LinearOperator.
+    It is defined by an affine transformation :math:`Ax + b` or other
+    affine or rigid parameters such as scaling, rotations and translations.
+    .
+
+    :param A: 2x2 matrix A of the affine transformation Ax + b.
+    :param b: Vector b of the affine transformation Ax + b. It should have length 2.
+    :param scale: Scaling parameters of the transformation. If a float, scaling will be
+        equal in all axes.
+    :param rotation: Rotation parameter of the transformation, in radians.
+    :param translation: Translation parameters of the transformation.
+    :param centered: Whether to use the image center as center for the transformation,
+        instead of the (0,0) coordinate. Defaults to `True`.
+    :param degree: Degree of the splines used for interpolation
+    :param adjoint_type: Method to compute the adjoint. Defaults to ``exact``.
+    :param derivative_type: Method to compute the derivatives. Defaults to ``exact``.
+    :param indexing: ``ij`` uses standard numpy array indexing. "xy" reversed the order of
+        the indexes, making the vertical axis the first index. This can be more intuitive
+        for 2D arrays. Defaults to ``ij``.
+    :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
+        if available, else ``numba``
+
+    :type A: :class:`numpy.ndarray`, optional
+    :type b: :class:`numpy.ndarray`, optional
+    :type scale: float or sequence of floats, optional
+    :type rotation: float, optional
+    :type translation: sequence of floats, optional
+    :type centered: bool, optional
+    :type degree: 1 or 3, optional
+    :type adjoint_type: ``exact`` or ``inverse``, optional
+    :type derivative_type: ``exact`` or ``approx``, optional
+    :type indexing: ``ij`` or ``xy``, optional
+    :type backend: ``cpp`` or ``numba``, optional
+    """
 
     def __init__(
             self, im_shape,
@@ -193,6 +228,49 @@ class AffineWarpingOperator2D(LinearOperator):
 
 
 class AffineWarpingOperator3D(LinearOperator):
+    """
+    A 3D warping operator represented as a scipy LinearOperator.
+    It is defined by an affine transformation :math:`Ax + b` or other
+    affine or rigid parameters such as scaling, rotations and translations.
+    .
+
+    :param A: 3x3 matrix A of the affine transformation Ax + b.
+    :param b: Vector b of the affine transformation Ax + b. It should have length 3.
+    :param scale: Scaling parameters of the transformation. If a float, scaling will be
+        equal in all axes.
+    :param rotation: Rotation parameters of the transformation, in radians, one for each
+        axis. The rotations will be applied in the order of the axes.
+    :param cayley: Three Cayley parameters. This is an alternative parametrisation of a
+        3D rotation using the Cayley transform, which is numerically more favorable.
+        It can be interpreted as the rotation corresponding to the quaternion 1+ix+jy+kz,
+        where x, y and z are the Cayley parameters.
+    :param translation: Translation parameters of the transformation.
+    :param centered: Whether to use the provided center as center for the transformation,
+        instead of the (0,0,0) coordinate. Defaults to `True`.
+    :param center: The center of the transformation. If None, it will be set to the image
+        center. Defaults to None.
+    :param degree: Degree of the splines used for interpolation
+    :param adjoint_type: Method to compute the adjoint. Defaults to ``exact``.
+    :param derivative_type: Method to compute the derivatives. Defaults to ``exact``.
+    :param indexing: ``ij`` uses standard numpy array indexing. "xy" reversed the order of
+        the indexes.
+    :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
+        if available, else ``numba``
+
+    :type A: :class:`numpy.ndarray`, optional
+    :type b: :class:`numpy.ndarray`, optional
+    :type scale: float or sequence of floats, optional
+    :type rotation: sequence of floats, optional
+    :type cayley: sequence of floats, optional
+    :type translation: sequence of floats, optional
+    :type centered: bool, optional
+    :type center: :class:`numpy.ndarray`, optional
+    :type degree: 1 or 3, optional
+    :type adjoint_type: ``exact`` or ``inverse``, optional
+    :type derivative_type: ``exact`` or ``approx``, optional
+    :type indexing: ``ij`` or ``xy``, optional
+    :type backend: ``cpp`` or ``numba``, optional
+    """
 
     def __init__(
             self, im_shape,
