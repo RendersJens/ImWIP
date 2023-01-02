@@ -9,5 +9,6 @@ dependencies:
   - scipy==1.9.3
   - numpy==1.23.4
   - pylops==1.18.3
+  - tqdm==4.64.1
   - pip:
     - sphinx_rtd_theme==1.1.1
