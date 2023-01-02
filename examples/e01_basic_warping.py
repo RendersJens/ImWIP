@@ -14,10 +14,10 @@ u = 10*np.repeat(np.sin(np.linspace(0,4*np.pi, im_size, dtype=np.float32)), im_s
 v = 8*np.repeat(np.cos(np.linspace(0,4*np.pi, im_size, dtype=np.float32)), im_size).reshape((im_size, im_size))
 
 # linear backward warp
-linear_warped_shepp = imwip.warp_2D(shepp, u, v)
+linear_warped_shepp = imwip.warp(shepp, u, v)
 
 # cubic backward warp
-cubic_warped_shepp = imwip.warp_2D(shepp, u, v, degree=3)
+cubic_warped_shepp = imwip.warp(shepp, u, v, degree=3)
 
 # a cubic warp can produce values outside of the original range
 np.clip(cubic_warped_shepp, 0, 255, out=cubic_warped_shepp)
