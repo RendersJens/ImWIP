@@ -39,7 +39,7 @@ class WarpingOperator2D(LinearOperator):
         # we expect the input as flattened array, so we reshape it
         x = x.reshape(self.u.shape)
 
-        # preform the warp
+        # perform the warp
         x_warped = imwip.warp(
             x,
             self.u,
@@ -56,7 +56,7 @@ class WarpingOperator2D(LinearOperator):
         # we expect the input as flattened array, so we reshape it
         x_warped = x_warped.reshape(self.u.shape)
 
-        # preform the adjoint warp
+        # perform the adjoint warp
         if self.adjoint_type == "exact":
             x = imwip.adjoint_warp(
                 x_warped,
@@ -121,7 +121,7 @@ class WarpingOperator3D(LinearOperator):
         # we expect the input as flattened array, so we reshape it
         x = x.reshape(self.u.shape)
 
-        # preform the warp
+        # perform the warp
         x_warped = imwip.warp(
             x,
             self.u,
@@ -139,7 +139,7 @@ class WarpingOperator3D(LinearOperator):
         # we expect the input as flattened array, so we reshape it
         x_warped = x_warped.reshape(self.u.shape)
 
-        # preform the adjoint warp
+        # perform the adjoint warp
         if self.adjoint_type == "exact":
             x = imwip.adjoint_warp(
                 x_warped,
