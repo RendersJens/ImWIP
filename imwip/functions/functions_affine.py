@@ -23,7 +23,7 @@ def affine_warp(
         backend=None
     ):
     """
-    Warps a 2D or 3D function according to an affine transformation Ax + b.
+    Warps a 2D or 3D image according to an affine transformation Ax + b.
 
     This function is linear in terms of the input image (even if degree 3
     is used for the splines). Therefore it has an adjoint function which is computed

@@ -24,7 +24,7 @@ def warp(
         backend=None
     ):
     """
-    Warps a 2D or 3D function along a DVF.
+    Warps a 2D or 3D image along a DVF.
 
     This function is linear in terms of the input image (even if degree 3
     is used for the splines). Therefore it has an adjoint function which is computed
@@ -43,6 +43,7 @@ def warp(
         for 2D arrays. Defaults to ``ij``.
     :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
         if available, else ``numba``
+
     :type image: :class:`numpy.ndarray`
     :type u: :class:`numpy.ndarray`
     :type v: :class:`numpy.ndarray`
@@ -51,6 +52,7 @@ def warp(
     :type degree: 1 or 3, optional
     :type indexing: ``ij`` or ``xy``, optional
     :type backend: ``cpp`` or ``numba``, optional
+    
     :return: The warped image
     :rtype: :class:`numpy.ndarray`
     """
