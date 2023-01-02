@@ -14,13 +14,7 @@ from numba.types import void, int32, float32, boolean
 import math
 
 
-@cuda.jit(void(
-    float32[:, ::1],
-    float32[:, ::1],
-    float32[::1],
-    float32[:, ::1],
-    boolean
-    ))
+@cuda.jit
 def affine_linear_warp_2D_kernel(f, A, b, f_warped, adjoint):
     i, j = cuda.grid(2)
 
@@ -57,13 +51,7 @@ def affine_linear_warp_2D_kernel(f, A, b, f_warped, adjoint):
                     f_warped[i, j] += coefficients[m] * f[Q[m][0], Q[m][1]]
 
 
-@cuda.jit(void(
-    float32[:, :, ::1],
-    float32[:, ::1],
-    float32[::1],
-    float32[:, :, ::1],
-    boolean
-    ))
+@cuda.jit
 def affine_linear_warp_3D_kernel(f, A, b, f_warped, adjoint):
     i, j, k = cuda.grid(3)
 
@@ -112,14 +100,7 @@ def affine_linear_warp_3D_kernel(f, A, b, f_warped, adjoint):
                     f_warped[i, j, k] += coefficients[m] * f[Q[m][0], Q[m][1], Q[m][2]]
 
 
-@cuda.jit(void(
-    float32[:, ::1],
-    float32[:, ::1],
-    float32[::1],
-    float32[:, ::1],
-    float32[::1],
-    boolean
-    ))
+@cuda.jit
 def affine_cubic_warp_2D_kernel(f, A, b, f_warped, coeffs, adjoint):
     i, j = cuda.grid(2)
 
@@ -162,14 +143,7 @@ def affine_cubic_warp_2D_kernel(f, A, b, f_warped, coeffs, adjoint):
                 m += 1
 
 
-@cuda.jit(void(
-    float32[:, :, ::1],
-    float32[:, ::1],
-    float32[::1],
-    float32[:, :, ::1],
-    float32[::1],
-    boolean
-    ))
+@cuda.jit
 def affine_cubic_warp_3D_kernel(f, A, b, f_warped, coeffs, adjoint):
     i, j, k = cuda.grid(3)
 

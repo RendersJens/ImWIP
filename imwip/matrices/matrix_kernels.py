@@ -12,13 +12,7 @@ from numba.types import void, int32, float32, boolean, UniTuple
 import math
 
 
-@cuda.jit(void(
-    UniTuple(int32, 2),
-    float32[:, ::1],
-    float32[:, ::1],
-    float32[:, ::1],
-    int32[:, :, ::1]
-    ))
+@cuda.jit
 def linear_warp_2D_matrix_kernel(im_shape, u, v, data, coords):
     i, j = cuda.grid(2)
 
@@ -54,14 +48,7 @@ def linear_warp_2D_matrix_kernel(im_shape, u, v, data, coords):
                 coords[1, i*im_shape[1] + j, m] = Q[m][0]*im_shape[1] + Q[m][1]
 
 
-@cuda.jit(void(
-    UniTuple(int32, 2),
-    float32[:, ::1],
-    float32[:, ::1],
-    float32[::1],
-    float32[:, ::1],
-    int32[:, :, ::1]
-    ))
+@cuda.jit
 def cubic_warp_2D_matrix_kernel(im_shape, u, v, coeffs, data, coords):
     i, j = cuda.grid(2)
 
@@ -104,13 +91,7 @@ def cubic_warp_2D_matrix_kernel(im_shape, u, v, coeffs, data, coords):
                 m += 1
 
 
-@cuda.jit(void(
-    UniTuple(int32, 2),
-    float32[:, ::1],
-    float32[::1],
-    float32[:, ::1],
-    int32[:, :, ::1]
-    ))
+@cuda.jit
 def affine_linear_warp_2D_matrix_kernel(im_shape, A, b, data, coords):
     i, j = cuda.grid(2)
 
@@ -146,14 +127,7 @@ def affine_linear_warp_2D_matrix_kernel(im_shape, A, b, data, coords):
                 coords[1, i*im_shape[1] + j, m] = Q[m][0]*im_shape[1] + Q[m][1]
 
 
-@cuda.jit(void(
-    UniTuple(int32, 2),
-    float32[:, ::1],
-    float32[::1],
-    float32[::1],
-    float32[:, ::1],
-    int32[:, :, ::1]
-    ))
+@cuda.jit
 def affine_cubic_warp_2D_matrix_kernel(im_shape, A, b, coeffs, data, coords):
     i, j = cuda.grid(2)
 
@@ -196,14 +170,7 @@ def affine_cubic_warp_2D_matrix_kernel(im_shape, A, b, coeffs, data, coords):
                 m += 1
 
 
-@cuda.jit(void(
-    UniTuple(int32, 3),
-    float32[:, :, ::1],
-    float32[:, :, ::1],
-    float32[:, :, ::1],
-    float32[:, ::1],
-    int32[:, :, ::1]
-    ))
+@cuda.jit
 def linear_warp_3D_matrix_kernel(im_shape, u, v, w, data, coords):
     i, j, k = cuda.grid(3)
 
@@ -251,15 +218,7 @@ def linear_warp_3D_matrix_kernel(im_shape, u, v, w, data, coords):
                 coords[1, i*im_shape[1]*im_shape[2] + j*im_shape[1] + k, m] = Q[m][0]*im_shape[1]*im_shape[2] + Q[m][1]*im_shape[1] + Q[m][2]
 
 
-@cuda.jit(void(
-    UniTuple(int32, 3),
-    float32[:, :, ::1],
-    float32[:, :, ::1],
-    float32[:, :, ::1],
-    float32[::1],
-    float32[:, ::1],
-    int32[:, :, ::1]
-    ))
+@cuda.jit
 def cubic_warp_3D_matrix_kernel(im_shape, u, v, w, coeffs, data, coords):
     i, j, k = cuda.grid(3)
 
@@ -309,13 +268,7 @@ def cubic_warp_3D_matrix_kernel(im_shape, u, v, w, coeffs, data, coords):
                     m += 1
 
 
-@cuda.jit(void(
-    UniTuple(int32, 3),
-    float32[:, ::1],
-    float32[::1],
-    float32[:, ::1],
-    int32[:, :, ::1]
-    ))
+@cuda.jit
 def affine_linear_warp_3D_matrix_kernel(im_shape, A, b, data, coords):
     i, j, k = cuda.grid(3)
 
@@ -363,14 +316,7 @@ def affine_linear_warp_3D_matrix_kernel(im_shape, A, b, data, coords):
                 coords[1, i*im_shape[1]*im_shape[2] + j*im_shape[1] + k, m] = Q[m][0]*im_shape[1]*im_shape[2] + Q[m][1]*im_shape[1] + Q[m][2]
 
 
-@cuda.jit(void(
-    UniTuple(int32, 3),
-    float32[:, ::1],
-    float32[::1],
-    float32[::1],
-    float32[:, ::1],
-    int32[:, :, ::1]
-    ))
+@cuda.jit
 def affine_cubic_warp_3D_matrix_kernel(im_shape, A, b, coeffs, data, coords):
     i, j, k = cuda.grid(3)
 
