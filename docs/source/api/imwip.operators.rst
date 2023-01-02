@@ -27,11 +27,3 @@ imwip.operators.operators\_affine
    :members:
    :undoc-members:
    :show-inheritance:
-
-imwip.operators.gradient\_operators
------------------------------------
-
-.. automodule:: imwip.operators.gradient_operators
-   :members:
-   :undoc-members:
-   :show-inheritance:
