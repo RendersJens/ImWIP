@@ -10,5 +10,10 @@ sphinx:
   configuration: docs/source/conf.py
   fail_on_warning: true
 
+python:
+  install:
+    - method: setuptools
+      path: .
+
 conda:
   environment: docs/environment.yml
