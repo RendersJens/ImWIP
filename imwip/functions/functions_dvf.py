@@ -21,7 +21,7 @@ def warp(
         out=None,
         degree=3,
         indexing="ij",
-        back_end=None
+        backend=None
     ):
     """
     Warps a 2D or 3D function along a DVF.
@@ -41,7 +41,7 @@ def warp(
     :param indexing: ``ij`` uses standard numpy array indexing. "xy" reversed the order of
         the indexes, making the vertical axis the first index. This can be more intuitive
         for 2D arrays. Defaults to ``ij``.
-    :param back_end: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
+    :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
         if available, else "numba"
     :type f: :class:`numpy.ndarray`
     :type u: :class:`numpy.ndarray`
@@ -50,27 +50,27 @@ def warp(
     :type out: :class:`numpy.ndarray`, optional
     :type degree: 1 or 3, optional
     :type indexing: ``ij`` or ``xy``, optional
-    :type back_end: ``cpp`` or ``numba``, optional
+    :type backend: ``cpp`` or ``numba``, optional
     :return: The warped image
     :rtype: :class:`numpy.ndarray`
     """
 
-    if back_end is None:
-        back_end = "cpp" if libimwip_available else "numba"
+    if backend is None:
+        backend = "cpp" if libimwip_available else "numba"
 
     dim = 2 if w is None else 3
-    if back_end == "cpp":
+    if backend == "cpp":
         if dim == 2:
             warp_function = libimwip.warp_2D
         else:
             warp_function = libimwip.warp_3D
-    elif back_end == "numba":
+    elif backend == "numba":
         if dim == 2:
             warp_function = imwip.numba_backend.warp_2D
         else:
             warp_function = imwip.numba_backend.warp_3D
     else:
-        raise ValueError("back_end should be \"cpp\" or \"numba\"")
+        raise ValueError("backend should be \"cpp\" or \"numba\"")
 
     if dim == 2:
         return warp_function(
@@ -100,7 +100,7 @@ def adjoint_warp(
         out=None,
         degree=3,
         indexing="ij",
-        back_end=None
+        backend=None
     ):
     """
     The function :meth:`warp` is a linear function of the input f (even if degree 3
@@ -109,22 +109,22 @@ def adjoint_warp(
 
     """
 
-    if back_end is None:
-        back_end = "cpp" if libimwip_available else "numba"
+    if backend is None:
+        backend = "cpp" if libimwip_available else "numba"
 
     dim = 2 if w is None else 3
-    if back_end == "cpp":
+    if backend == "cpp":
         if dim == 2:
             warp_function = libimwip.adjoint_warp_2D
         else:
             warp_function = libimwip.adjoint_warp_3D
-    elif back_end == "numba":
+    elif backend == "numba":
         if dim == 2:
             warp_function = imwip.numba_backend.adjoint_warp_2D
         else:
             warp_function = imwip.numba_backend.adjoint_warp_3D
     else:
-        raise ValueError("back_end should be \"cpp\" or \"numba\"")
+        raise ValueError("backend should be \"cpp\" or \"numba\"")
 
     if dim == 2:
         return warp_function(
@@ -156,7 +156,7 @@ def diff_warp(
         diff_y=None,
         diff_z=None,
         indexing="ij",
-        back_end=None
+        backend=None
     ):
     """
     The derivative of :meth:`warp` towards the DVF. This function assumes splines of degree 3,
@@ -176,7 +176,7 @@ def diff_warp(
     :param indexing: ``ij`` uses standard numpy array indexing. "xy" reversed the order of
         the indexes, making the vertical axis the first index. This can be more intuitive
         for 2D arrays. Defaults to ``ij``.
-    :param back_end: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
+    :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
         if available, else "numba"
     :type f: :class:`numpy.ndarray`
     :type u: :class:`numpy.ndarray`
@@ -186,29 +186,29 @@ def diff_warp(
     :type diff_y: :class:`numpy.ndarray`, optional
     :type diff_z: :class:`numpy.ndarray`, optional
     :type indexing: ``ij`` or ``xy``, optional
-    :type back_end: ``cpp`` or ``numba``, optional
+    :type backend: ``cpp`` or ``numba``, optional
     :return: diff_x, diff_y, diff_z
     :rtype: :class:`numpy.ndarray`, :class:`numpy.ndarray`, :class:`numpy.ndarray`, 
     """
 
-    if back_end is None:
-        back_end = "cpp" if libimwip_available else "numba"
+    if backend is None:
+        backend = "cpp" if libimwip_available else "numba"
 
     dim = b.size
     if dim not in [2, 3]:
         raise ValueError("b should be of length 2 or 3")
-    if back_end == "cpp":
+    if backend == "cpp":
         if dim == 2:
-            warp_function = libimwip.diff_affine_warp_2D
+            warp_function = libimwip.diff_warp_2D
         else:
-            warp_function = libimwip.diff_affine_warp_3D
-    elif back_end == "numba":
+            warp_function = libimwip.diff_warp_3D
+    elif backend == "numba":
         if dim == 2:
-            warp_function = imwip.numba_backend.diff_affine_warp_2D
+            warp_function = imwip.numba_backend.diff_warp_2D
         else:
-            warp_function = imwip.numba_backend.diff_affine_warp_3D
+            warp_function = imwip.numba_backend.diff_warp_3D
     else:
-        raise ValueError("back_end should be \"cpp\" or \"numba\"")
+        raise ValueError("backend should be \"cpp\" or \"numba\"")
 
     if dim == 2:
         return warp_function(
