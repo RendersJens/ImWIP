@@ -1,25 +1,15 @@
 """
-:file:      matrices.py
-:brief:     functions for generating sparse matrix representations
+:file:      matrix_kernels.py
+:brief:     Kernels for generating sparse matrix representations
             of image warps
-:date:      20 DEC 2021
 :author:    Jens Renders
-            imec-Visionlab
-            University of Antwerp
-            jens.renders@uantwerpen.be
 """
 
 
 import numpy as np
-from scipy.sparse import coo_matrix
 from numba import cuda
 from numba.types import void, int32, float32, boolean, UniTuple
 import math
-import os
-
-path = os.path.dirname(__file__)
-cubic_2D_coefficients = np.loadtxt(path+"/../cpp_backend/cubic_2D_coefficients.inc", delimiter= ",", dtype=np.float32)
-cubic_3D_coefficients = np.loadtxt(path+"/../cpp_backend/cubic_3D_coefficients.inc", delimiter= ",", dtype=np.float32)
 
 
 @cuda.jit(void(
@@ -114,40 +104,6 @@ def cubic_warp_2D_matrix_kernel(im_shape, u, v, coeffs, data, coords):
                 m += 1
 
 
-def warp_2D_matrix(im_shape, u, v, degree=3):
-    im_size = im_shape[0] * im_shape[1]
-    coeffs = cubic_2D_coefficients
-    threads_per_block = (16, 16)
-    num_blocks = ((im_shape[0] + 15)//16, (im_shape[1] + 15)//16)
-
-    if degree==1:
-        data = np.zeros((im_size, 4), dtype=np.float32)
-        coords = np.zeros((2, im_size, 4), dtype=np.int32)
-        linear_warp_2D_matrix_kernel[num_blocks, threads_per_block](
-            im_shape,
-            u,
-            v,
-            data,
-            coords
-        )
-    elif degree==3:
-        data = np.zeros((im_size, 16), dtype=np.float32)
-        coords = np.zeros((2, im_size, 16), dtype=np.int32)
-        cubic_warp_2D_matrix_kernel[num_blocks, threads_per_block](
-            im_shape,
-            u,
-            v,
-            coeffs,
-            data,
-            coords
-        )
-    else:
-        raise NotImplementedError("Only degree 1 and 3 are implemented.")
-
-    return coo_matrix((data.ravel(), coords.reshape(2, -1)), shape=(im_size, im_size)).tocsr()
-
-
-
 @cuda.jit(void(
     UniTuple(int32, 2),
     float32[:, ::1],
@@ -238,39 +194,6 @@ def affine_cubic_warp_2D_matrix_kernel(im_shape, A, b, coeffs, data, coords):
                     coords[1, i*im_shape[1] + j, m] = Q0*im_shape[1] + Q1
 
                 m += 1
-
-
-def affine_warp_2D_matrix(im_shape, A, b, degree=3):
-    im_size = im_shape[0] * im_shape[1]
-    coeffs = cubic_2D_coefficients
-    threads_per_block = (16, 16)
-    num_blocks = ((im_shape[0] + 15)//16, (im_shape[1] + 15)//16)
-
-    if degree==1:
-        data = np.zeros((im_size, 4), dtype=np.float32)
-        coords = np.zeros((2, im_size, 4), dtype=np.int32)
-        affine_linear_warp_2D_matrix_kernel[num_blocks, threads_per_block](
-            im_shape,
-            A,
-            b,
-            data,
-            coords
-        )
-    elif degree==3:
-        data = np.zeros((im_size, 16), dtype=np.float32)
-        coords = np.zeros((2, im_size, 16), dtype=np.int32)
-        affine_cubic_warp_2D_matrix_kernel[num_blocks, threads_per_block](
-            im_shape,
-            A,
-            b,
-            coeffs,
-            data,
-            coords
-        )
-    else:
-        raise NotImplementedError("Only degree 1 and 3 are implemented.")
-
-    return coo_matrix((data.ravel(), coords.reshape(2, -1)), shape=(im_size, im_size)).tocsr()
 
 
 @cuda.jit(void(
@@ -386,42 +309,6 @@ def cubic_warp_3D_matrix_kernel(im_shape, u, v, w, coeffs, data, coords):
                     m += 1
 
 
-def warp_3D_matrix(im_shape, u, v, w, degree=3):
-    im_size = im_shape[0] * im_shape[1] * im_shape[2]
-    coeffs = cubic_3D_coefficients
-    threads_per_block = (8, 8, 8)
-    num_blocks = ((im_shape[0] + 7)//8, (im_shape[1] + 7)//8, (im_shape[2] + 7)//8)
-
-    if degree==1:
-        data = np.zeros((im_size, 8), dtype=np.float32)
-        coords = np.zeros((2, im_size, 8), dtype=np.int32)
-        linear_warp_3D_matrix_kernel[num_blocks, threads_per_block](
-            im_shape,
-            u,
-            v,
-            w,
-            data,
-            coords
-        )
-    elif degree==3:
-        data = np.zeros((im_size, 64), dtype=np.float32)
-        coords = np.zeros((2, im_size, 64), dtype=np.int32)
-        cubic_warp_3D_matrix_kernel[num_blocks, threads_per_block](
-            im_shape,
-            u,
-            v,
-            w,
-            coeffs,
-            data,
-            coords
-        )
-    else:
-        raise NotImplementedError("Only degree 1 and 3 are implemented.")
-
-    return coo_matrix((data.ravel(), coords.reshape(2, -1)), shape=(im_size, im_size)).tocsr()
-
-
-
 @cuda.jit(void(
     UniTuple(int32, 3),
     float32[:, ::1],
@@ -531,36 +418,3 @@ def affine_cubic_warp_3D_matrix_kernel(im_shape, A, b, coeffs, data, coords):
                         coords[0, i*im_shape[1]*im_shape[2] + j*im_shape[1] + k, m] = i*im_shape[1]*im_shape[2] + j*im_shape[1] + k
                         coords[1, i*im_shape[1]*im_shape[2] + j*im_shape[1] + k, m] = Q0*im_shape[1]*im_shape[2] + Q1*im_shape[1] + Q2
                     m += 1
-
-
-def affine_warp_3D_matrix(im_shape, A, b, degree=3):
-    im_size = im_shape[0] * im_shape[1] * im_shape[2]
-    coeffs = cubic_3D_coefficients
-    threads_per_block = (8, 8, 8)
-    num_blocks = ((im_shape[0] + 7)//8, (im_shape[1] + 7)//8, (im_shape[2] + 7)//8)
-
-    if degree==1:
-        data = np.zeros((im_size, 8), dtype=np.float32)
-        coords = np.zeros((2, im_size, 8), dtype=np.int32)
-        affine_linear_warp_3D_matrix_kernel[num_blocks, threads_per_block](
-            im_shape,
-            A,
-            b,
-            data,
-            coords
-        )
-    elif degree==3:
-        data = np.zeros((im_size, 64), dtype=np.float32)
-        coords = np.zeros((2, im_size, 64), dtype=np.int32)
-        affine_cubic_warp_3D_matrix_kernel[num_blocks, threads_per_block](
-            im_shape,
-            A,
-            b,
-            coeffs,
-            data,
-            coords
-        )
-    else:
-        raise NotImplementedError("Only degree 1 and 3 are implemented.")
-
-    return coo_matrix((data.ravel(), coords.reshape(2, -1)), shape=(im_size, im_size)).tocsr()
