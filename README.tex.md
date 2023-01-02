@@ -1,3 +1,4 @@
+[![Documentation Status](https://readthedocs.org/projects/imwip/badge/?version=latest)](https://imwip.readthedocs.io/en/latest/?badge=latest)
 [![DOI](https://zenodo.org/badge/452688446.svg)](https://zenodo.org/badge/latestdoi/452688446)
 
 
