@@ -17,11 +17,11 @@ A = np.array([[np.cos(np.pi/6), -np.sin(np.pi/6), 0],
 b = np.array([1, 2, 3], dtype=np.float32)
 
 # linear backward warp
-linear_warped_shepp = imwip.affine_warp_3D(shepp, A, b, degree=1)
+linear_warped_shepp = imwip.affine_warp(shepp, A, b, degree=1)
 
 # cubic backward warp
 t0 = time()
-cubic_warped_shepp = imwip.affine_warp_3D(shepp, A, b)
+cubic_warped_shepp = imwip.affine_warp(shepp, A, b)
 print(time()-t0)
 
 # plots
