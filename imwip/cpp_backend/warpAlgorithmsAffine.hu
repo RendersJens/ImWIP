@@ -28,12 +28,12 @@ void adjointAffineWarp2D(
     int shape1
 );
 
-void gradAffineWarp2D(
+void diffAffineWarp2D(
     const float* f,
     const float* A,
     const float* b,
-    float* gradx,
-    float* grady,
+    float* diffx,
+    float* diffy,
     int shape0,
     int shape1
 );
@@ -60,13 +60,13 @@ void adjointAffineWarp3D(
     int shape2
 );
 
-void gradAffineWarp3D(
+void diffAffineWarp3D(
     const float* f,
     const float* A,
     const float* b,
-    float* gradx,
-    float* grady,
-    float* gradz,
+    float* diffx,
+    float* diffy,
+    float* diffz,
     int shape0,
     int shape1,
     int shape2

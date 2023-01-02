@@ -28,12 +28,12 @@ void adjointWarp2D(
     int shape1
 );
 
-void gradWarp2D(
+void diffWarp2D(
     const float* f,
     const float* u,
     const float* v,
-    float* gradx,
-    float* grady,
+    float* diffx,
+    float* diffy,
     int shape0,
     int shape1
 );
@@ -73,26 +73,26 @@ void adjointWarp3D(
     int shape2
 );
 
-void gradWarp3D(
+void diffWarp3D(
     const float* f,
     const float* u,
     const float* v,
     const float* w,
-    float* gradx,
-    float* grady,
-    float* gradz,
+    float* diffx,
+    float* diffy,
+    float* diffz,
     int shape0,
     int shape1,
     int shape2
 );
 
-void partialGradWarp3D(
+void partialDiffWarp3D(
     const float* f,
     const float* u,
     const float* v,
     const float* w,
     int to,
-    float* grad,
+    float* diff,
     int shape0,
     int shape1,
     int shape2

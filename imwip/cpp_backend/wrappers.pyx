@@ -1,11 +1,7 @@
 """
 :file:      wrappers.pyx
 :brief:     Python wrappers of C/CUDA warping algorithms
-:date:      20 DEC 2021
 :author:    Jens Renders
-            imec-Visionlab
-            University of Antwerp
-            jens.renders@uantwerpen.be
 """
 
 import numpy as np
@@ -54,12 +50,12 @@ cdef extern from "warpAlgorithms.hu":
         int shape1
     )
 
-    void gradWarp2D(
+    void diffWarp2D(
         const float* f,
         const float* u,
         const float* v,
-        float* gradx,
-        float* grady,
+        float* diffx,
+        float* diffy,
         int shape0,
         int shape1
     )
@@ -99,26 +95,26 @@ cdef extern from "warpAlgorithms.hu":
         int shape2
     )
 
-    void gradWarp3D(
+    void diffWarp3D(
         const float* f,
         const float* u,
         const float* v,
         const float* w,
-        float* gradx,
-        float* grady,
-        float* gradz,
+        float* diffx,
+        float* diffy,
+        float* diffz,
         int shape0,
         int shape1,
         int shape2
     )
 
-    void partialGradWarp3D(
+    void partialDiffWarp3D(
         const float* f,
         const float* u,
         const float* v,
         const float* w,
         int to,
-        float* grad,
+        float* diff,
         int shape0,
         int shape1,
         int shape2
@@ -192,21 +188,21 @@ def adjoint_warp_2D(
     return f
 
 
-def grad_warp_2D(
+def diff_warp_2D(
         np.ndarray[ndim=2, dtype=float, mode="c"] f,
         np.ndarray[ndim=2, dtype=float, mode="c"] u,
         np.ndarray[ndim=2, dtype=float, mode="c"] v,
-        np.ndarray[ndim=2, dtype=float, mode="c"] grad_x=None,
-        np.ndarray[ndim=2, dtype=float, mode="c"] grad_y=None
+        np.ndarray[ndim=2, dtype=float, mode="c"] diff_x=None,
+        np.ndarray[ndim=2, dtype=float, mode="c"] diff_y=None
     ):
-    grad_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
-    grad_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
+    diff_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
+    diff_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
 
     # the C++ version accepts pointers, so for each numpy array we
     # get the pointer to the first element and pass it to the C++ function
-    gradWarp2D(&f[0,0], &u[0,0], &v[0, 0], &grad_x[0,0], &grad_y[0,0], f.shape[0], f.shape[1])
+    diffWarp2D(&f[0,0], &u[0,0], &v[0, 0], &diff_x[0,0], &diff_y[0,0], f.shape[0], f.shape[1])
 
-    return grad_x, grad_y
+    return diff_x, diff_y
 
 
 # python version of jvpWarp2D, this function accepts numpy arrays
@@ -286,62 +282,62 @@ def adjoint_warp_3D(
     return f
 
 
-def grad_warp_3D(
+def diff_warp_3D(
         np.ndarray[ndim=3, dtype=float, mode="c"] f,
         np.ndarray[ndim=3, dtype=float, mode="c"] u,
         np.ndarray[ndim=3, dtype=float, mode="c"] v,
         np.ndarray[ndim=3, dtype=float, mode="c"] w,
-        np.ndarray[ndim=3, dtype=float, mode="c"] grad_x=None,
-        np.ndarray[ndim=3, dtype=float, mode="c"] grad_y=None,
-        np.ndarray[ndim=3, dtype=float, mode="c"] grad_z=None,
+        np.ndarray[ndim=3, dtype=float, mode="c"] diff_x=None,
+        np.ndarray[ndim=3, dtype=float, mode="c"] diff_y=None,
+        np.ndarray[ndim=3, dtype=float, mode="c"] diff_z=None,
     ):
-    grad_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
-    grad_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
-    grad_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+    diff_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+    diff_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+    diff_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
 
     # the C++ version accepts pointers, so for each numpy array we
     # get the pointer to the first element and pass it to the C++ function
-    gradWarp3D(
+    diffWarp3D(
         &f[0,0,0],
         &u[0,0,0],
         &v[0,0,0],
         &w[0,0,0],
-        &grad_x[0,0,0],
-        &grad_y[0,0,0],
-        &grad_z[0,0,0],
+        &diff_x[0,0,0],
+        &diff_y[0,0,0],
+        &diff_z[0,0,0],
         f.shape[0],
         f.shape[1],
         f.shape[2]
     )
 
-    return grad_x, grad_y, grad_z
+    return diff_x, diff_y, diff_z
 
 
-def partial_grad_warp_3D(
+def partial_diff_warp_3D(
         np.ndarray[ndim=3, dtype=float, mode="c"] f,
         np.ndarray[ndim=3, dtype=float, mode="c"] u,
         np.ndarray[ndim=3, dtype=float, mode="c"] v,
         np.ndarray[ndim=3, dtype=float, mode="c"] w,
         int to,
-        np.ndarray[ndim=3, dtype=float, mode="c"] grad=None
+        np.ndarray[ndim=3, dtype=float, mode="c"] diff=None
     ):
-    grad = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+    diff = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
 
     # the C++ version accepts pointers, so for each numpy array we
     # get the pointer to the first element and pass it to the C++ function
-    partialGradWarp3D(
+    partialDiffWarp3D(
         &f[0,0,0],
         &u[0,0,0],
         &v[0,0,0],
         &w[0,0,0],
         to,
-        &grad[0,0,0],
+        &diff[0,0,0],
         f.shape[0],
         f.shape[1],
         f.shape[2]
     )
 
-    return grad
+    return diff
 
 
 # python version of jvpWarp3D, this function accepts numpy arrays
@@ -372,7 +368,7 @@ def jvp_warp_3D(
 
     return vec_out
 
-# python version of gradWarp3DY, this function accepts numpy arrays
+# python version of diffWarp3DY, this function accepts numpy arrays
 def jvp_warp_3DY(
         np.ndarray[ndim=3, dtype=float, mode="c"] f,
         np.ndarray[ndim=3, dtype=float, mode="c"] u,
@@ -423,12 +419,12 @@ cdef extern from "warpAlgorithmsAffine.hu":
         int shape1
     )
 
-    void gradAffineWarp2D(
+    void diffAffineWarp2D(
         const float* f,
         const float* A,
         const float* b,
-        float* gradx,
-        float* grady,
+        float* diffx,
+        float* diffy,
         int shape0,
         int shape1
     )
@@ -444,13 +440,13 @@ cdef extern from "warpAlgorithmsAffine.hu":
         int shape2
     )
 
-    void gradAffineWarp3D(
+    void diffAffineWarp3D(
         const float* f,
         const float* A,
         const float* b,
-        float* gradx,
-        float* grady,
-        float* gradz,
+        float* diffx,
+        float* diffy,
+        float* diffz,
         int shape0,
         int shape1,
         int shape2
@@ -521,16 +517,16 @@ def adjoint_affine_warp_2D(
 
     return f
 
-def grad_affine_warp_2D(
+def diff_affine_warp_2D(
         np.ndarray[ndim=2, dtype=float, mode="c"] f,
         np.ndarray[ndim=2, dtype=float, mode="c"] A,
         np.ndarray[ndim=1, dtype=float, mode="c"] b,
-        np.ndarray[ndim=2, dtype=float, mode="c"] grad_x=None,
-        np.ndarray[ndim=2, dtype=float, mode="c"] grad_y=None,
+        np.ndarray[ndim=2, dtype=float, mode="c"] diff_x=None,
+        np.ndarray[ndim=2, dtype=float, mode="c"] diff_y=None,
         str indexing="ij"
     ):
-    grad_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
-    grad_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
+    diff_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
+    diff_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
 
     if indexing == "xy":
         A = np.fliplr(np.flipud(A)).copy()
@@ -539,11 +535,11 @@ def grad_affine_warp_2D(
     # the C++ version accepts pointers, so for each numpy array we
     # get the pointer to the first element and pass it to the C++ function
     if indexing == "xy":
-        gradAffineWarp2D(&f[0,0], &A[0,0], &b[0], &grad_y[0,0], &grad_x[0,0], f.shape[0], f.shape[1])
+        diffAffineWarp2D(&f[0,0], &A[0,0], &b[0], &diff_y[0,0], &diff_x[0,0], f.shape[0], f.shape[1])
     else:
-        gradAffineWarp2D(&f[0,0], &A[0,0], &b[0], &grad_x[0,0], &grad_y[0,0], f.shape[0], f.shape[1])
+        diffAffineWarp2D(&f[0,0], &A[0,0], &b[0], &diff_x[0,0], &diff_y[0,0], f.shape[0], f.shape[1])
 
-    return grad_x, grad_y
+    return diff_x, diff_y
 
 # python version of affineWarp3D, this function accepts numpy arrays
 def affine_warp_3D(
@@ -607,19 +603,19 @@ def adjoint_affine_warp_3D(
 
     return f
 
-def grad_affine_warp_3D(
+def diff_affine_warp_3D(
         np.ndarray[ndim=3, dtype=float, mode="c"] f,
         np.ndarray[ndim=2, dtype=float, mode="c"] A,
         np.ndarray[ndim=1, dtype=float, mode="c"] b,
-        np.ndarray[ndim=3, dtype=float, mode="c"] grad_x=None,
-        np.ndarray[ndim=3, dtype=float, mode="c"] grad_y=None,
-        np.ndarray[ndim=3, dtype=float, mode="c"] grad_z=None,
+        np.ndarray[ndim=3, dtype=float, mode="c"] diff_x=None,
+        np.ndarray[ndim=3, dtype=float, mode="c"] diff_y=None,
+        np.ndarray[ndim=3, dtype=float, mode="c"] diff_z=None,
         str indexing="ij"
     ):
     
-    grad_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
-    grad_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
-    grad_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+    diff_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+    diff_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+    diff_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
 
     if indexing == "xy":
         A = np.fliplr(np.flipud(A)).copy()
@@ -627,16 +623,16 @@ def grad_affine_warp_3D(
 
     # the C++ version accepts pointers, so for each numpy array we
     # get the pointer to the first element and pass it to the C++ function
-    gradAffineWarp3D(
+    diffAffineWarp3D(
         &f[0,0,0],
         &A[0,0],
         &b[0],
-        &grad_x[0,0,0],
-        &grad_y[0,0,0],
-        &grad_z[0,0,0],
+        &diff_x[0,0,0],
+        &diff_y[0,0,0],
+        &diff_z[0,0,0],
         f.shape[0],
         f.shape[1],
         f.shape[2]
     )
 
-    return grad_x, grad_y, grad_z
+    return diff_x, diff_y, diff_z

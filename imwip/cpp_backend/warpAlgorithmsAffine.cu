@@ -176,12 +176,12 @@ void adjointAffineWarp2D(
 }
 
 
-void gradAffineWarp2D(
+void diffAffineWarp2D(
         const float* f,
         const float* A,
         const float* b,
-        float* gradx,
-        float* grady,
+        float* diffx,
+        float* diffy,
         int shape0,
         int shape1
     ){
@@ -189,19 +189,19 @@ void gradAffineWarp2D(
     size_t size = shape0 * shape1 * sizeof(float);
 
     // allocate vectors in device memory
-    float *d_f, *d_A, *d_b, *d_gradx, *d_grady;
+    float *d_f, *d_A, *d_b, *d_diffx, *d_diffy;
     gpuErrchk(cudaMalloc(&d_f, size));
     gpuErrchk(cudaMalloc(&d_A, 4 * sizeof(float)));
     gpuErrchk(cudaMalloc(&d_b, 2 * sizeof(float)));
-    gpuErrchk(cudaMalloc(&d_gradx, size));
-    gpuErrchk(cudaMalloc(&d_grady, size));
+    gpuErrchk(cudaMalloc(&d_diffx, size));
+    gpuErrchk(cudaMalloc(&d_diffy, size));
 
     // copy vectors from host memory to device memory
     gpuErrchk(cudaMemcpy(d_f, f, size, cudaMemcpyHostToDevice));
     gpuErrchk(cudaMemcpy(d_A, A, 4 * sizeof(float), cudaMemcpyHostToDevice));
     gpuErrchk(cudaMemcpy(d_b, b, 2 * sizeof(float), cudaMemcpyHostToDevice));
-    gpuErrchk(cudaMemcpy(d_gradx, gradx, size, cudaMemcpyHostToDevice));
-    gpuErrchk(cudaMemcpy(d_grady, grady, size, cudaMemcpyHostToDevice));
+    gpuErrchk(cudaMemcpy(d_diffx, diffx, size, cudaMemcpyHostToDevice));
+    gpuErrchk(cudaMemcpy(d_diffy, diffy, size, cudaMemcpyHostToDevice));
 
     // kernel invocation with 16*16 threads per block, and enough blocks
     // to cover the entire length of the vectors
@@ -223,7 +223,7 @@ void gradAffineWarp2D(
         d_f,
         d_A,
         d_b,
-        d_gradx,
+        d_diffx,
         shape0,
         shape1,
         d_coeffsx
@@ -234,7 +234,7 @@ void gradAffineWarp2D(
         d_f,
         d_A,
         d_b,
-        d_grady,
+        d_diffy,
         shape0,
         shape1,
         d_coeffsy
@@ -245,15 +245,15 @@ void gradAffineWarp2D(
     cudaFree(d_coeffsy);
 
     // copy the result back to the host
-    gpuErrchk(cudaMemcpy(gradx, d_gradx, size, cudaMemcpyDeviceToHost));
-    gpuErrchk(cudaMemcpy(grady, d_grady, size, cudaMemcpyDeviceToHost));
+    gpuErrchk(cudaMemcpy(diffx, d_diffx, size, cudaMemcpyDeviceToHost));
+    gpuErrchk(cudaMemcpy(diffy, d_diffy, size, cudaMemcpyDeviceToHost));
 
     // release the device memory
     cudaFree(d_f);
     cudaFree(d_A);
     cudaFree(d_b);
-    cudaFree(d_gradx);
-    cudaFree(d_grady);
+    cudaFree(d_diffx);
+    cudaFree(d_diffy);
 }
 
 
@@ -415,13 +415,13 @@ void adjointAffineWarp3D(
 }
 
 
-void gradAffineWarp3D(
+void diffAffineWarp3D(
         const float* f,
         const float* A,
         const float* b,
-        float* gradx,
-        float* grady,
-        float* gradz,
+        float* diffx,
+        float* diffy,
+        float* diffz,
         int shape0,
         int shape1,
         int shape2
@@ -430,21 +430,21 @@ void gradAffineWarp3D(
     size_t size = shape0 * shape1 * shape2 * sizeof(float);
 
     // allocate vectors in device memory
-    float *d_f, *d_A, *d_b, *d_gradx, *d_grady, *d_gradz;
+    float *d_f, *d_A, *d_b, *d_diffx, *d_diffy, *d_diffz;
     gpuErrchk(cudaMalloc(&d_f, size));
     gpuErrchk(cudaMalloc(&d_A, 9 * sizeof(float)));
     gpuErrchk(cudaMalloc(&d_b, 3 * sizeof(float)));
-    gpuErrchk(cudaMalloc(&d_gradx, size));
-    gpuErrchk(cudaMalloc(&d_grady, size));
-    gpuErrchk(cudaMalloc(&d_gradz, size));
+    gpuErrchk(cudaMalloc(&d_diffx, size));
+    gpuErrchk(cudaMalloc(&d_diffy, size));
+    gpuErrchk(cudaMalloc(&d_diffz, size));
 
     // copy vectors from host memory to device memory
     gpuErrchk(cudaMemcpy(d_f, f, size, cudaMemcpyHostToDevice));
     gpuErrchk(cudaMemcpy(d_A, A, 9 * sizeof(float), cudaMemcpyHostToDevice));
     gpuErrchk(cudaMemcpy(d_b, b, 3 * sizeof(float), cudaMemcpyHostToDevice));
-    gpuErrchk(cudaMemcpy(d_gradx, gradx, size, cudaMemcpyHostToDevice));
-    gpuErrchk(cudaMemcpy(d_grady, grady, size, cudaMemcpyHostToDevice));
-    gpuErrchk(cudaMemcpy(d_gradz, gradz, size, cudaMemcpyHostToDevice));
+    gpuErrchk(cudaMemcpy(d_diffx, diffx, size, cudaMemcpyHostToDevice));
+    gpuErrchk(cudaMemcpy(d_diffy, diffy, size, cudaMemcpyHostToDevice));
+    gpuErrchk(cudaMemcpy(d_diffz, diffz, size, cudaMemcpyHostToDevice));
 
     // kernel invocation with 16*16 threads per block, and enough blocks
     // to cover the entire length of the vectors
@@ -472,7 +472,7 @@ void gradAffineWarp3D(
         d_f,
         d_A,
         d_b,
-        d_gradx,
+        d_diffx,
         shape0,
         shape1,
         shape2,
@@ -484,7 +484,7 @@ void gradAffineWarp3D(
         d_f,
         d_A,
         d_b,
-        d_grady,
+        d_diffy,
         shape0,
         shape1,
         shape2,
@@ -496,7 +496,7 @@ void gradAffineWarp3D(
         d_f,
         d_A,
         d_b,
-        d_gradz,
+        d_diffz,
         shape0,
         shape1,
         shape2,
@@ -509,15 +509,15 @@ void gradAffineWarp3D(
     cudaFree(d_coeffsz);
 
     // copy the result back to the host
-    gpuErrchk(cudaMemcpy(gradx, d_gradx, size, cudaMemcpyDeviceToHost));
-    gpuErrchk(cudaMemcpy(grady, d_grady, size, cudaMemcpyDeviceToHost));
-    gpuErrchk(cudaMemcpy(gradz, d_gradz, size, cudaMemcpyDeviceToHost));
+    gpuErrchk(cudaMemcpy(diffx, d_diffx, size, cudaMemcpyDeviceToHost));
+    gpuErrchk(cudaMemcpy(diffy, d_diffy, size, cudaMemcpyDeviceToHost));
+    gpuErrchk(cudaMemcpy(diffz, d_diffz, size, cudaMemcpyDeviceToHost));
 
     // release the device memory
     cudaFree(d_f);
     cudaFree(d_A);
     cudaFree(d_b);
-    cudaFree(d_gradx);
-    cudaFree(d_grady);
-    cudaFree(d_gradz);
+    cudaFree(d_diffx);
+    cudaFree(d_diffy);
+    cudaFree(d_diffz);
 }

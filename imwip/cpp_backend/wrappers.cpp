@@ -1916,8 +1916,8 @@ static const char __pyx_k_np[] = "np";
 static const char __pyx_k_to[] = "to";
 static const char __pyx_k_xy[] = "xy";
 static const char __pyx_k_copy[] = "copy";
+static const char __pyx_k_diff[] = "diff";
 static const char __pyx_k_flip[] = "flip";
-static const char __pyx_k_grad[] = "grad";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
@@ -1926,11 +1926,11 @@ static const char __pyx_k_numpy[] = "numpy";
 static const char __pyx_k_zeros[] = "zeros";
 static const char __pyx_k_degree[] = "degree";
 static const char __pyx_k_device[] = "device";
+static const char __pyx_k_diff_x[] = "diff_x";
+static const char __pyx_k_diff_y[] = "diff_y";
+static const char __pyx_k_diff_z[] = "diff_z";
 static const char __pyx_k_fliplr[] = "fliplr";
 static const char __pyx_k_flipud[] = "flipud";
-static const char __pyx_k_grad_x[] = "grad_x";
-static const char __pyx_k_grad_y[] = "grad_y";
-static const char __pyx_k_grad_z[] = "grad_z";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_name_2[] = "name";
 static const char __pyx_k_vec_in[] = "vec_in";
@@ -1945,8 +1945,8 @@ static const char __pyx_k_set_device[] = "set_device";
 static const char __pyx_k_ImportError[] = "ImportError";
 static const char __pyx_k_jvp_warp_2D[] = "jvp_warp_2D";
 static const char __pyx_k_jvp_warp_3D[] = "jvp_warp_3D";
-static const char __pyx_k_grad_warp_2D[] = "grad_warp_2D";
-static const char __pyx_k_grad_warp_3D[] = "grad_warp_3D";
+static const char __pyx_k_diff_warp_2D[] = "diff_warp_2D";
+static const char __pyx_k_diff_warp_3D[] = "diff_warp_3D";
 static const char __pyx_k_jvp_warp_3DY[] = "jvp_warp_3DY";
 static const char __pyx_k_affine_warp_2D[] = "affine_warp_2D";
 static const char __pyx_k_affine_warp_3D[] = "affine_warp_3D";
@@ -1955,12 +1955,12 @@ static const char __pyx_k_adjoint_warp_3D[] = "adjoint_warp_3D";
 static const char __pyx_k_get_device_name[] = "get_device_name";
 static const char __pyx_k_get_device_count[] = "get_device_count";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
-static const char __pyx_k_grad_affine_warp_2D[] = "grad_affine_warp_2D";
-static const char __pyx_k_grad_affine_warp_3D[] = "grad_affine_warp_3D";
-static const char __pyx_k_partial_grad_warp_3D[] = "partial_grad_warp_3D";
+static const char __pyx_k_diff_affine_warp_2D[] = "diff_affine_warp_2D";
+static const char __pyx_k_diff_affine_warp_3D[] = "diff_affine_warp_3D";
+static const char __pyx_k_partial_diff_warp_3D[] = "partial_diff_warp_3D";
 static const char __pyx_k_adjoint_affine_warp_2D[] = "adjoint_affine_warp_2D";
 static const char __pyx_k_adjoint_affine_warp_3D[] = "adjoint_affine_warp_3D";
-static const char __pyx_k_file_wrappers_pyx_brief_Python[] = "\n:file:      wrappers.pyx\n:brief:     Python wrappers of C/CUDA warping algorithms\n:date:      20 DEC 2021\n:author:    Jens Renders\n            imec-Visionlab\n            University of Antwerp\n            jens.renders@uantwerpen.be\n";
+static const char __pyx_k_file_wrappers_pyx_brief_Python[] = "\n:file:      wrappers.pyx\n:brief:     Python wrappers of C/CUDA warping algorithms\n:author:    Jens Renders\n";
 static const char __pyx_k_imwip_cpp_backend_wrappers_pyx[] = "imwip/cpp_backend/wrappers.pyx";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
@@ -1977,6 +1977,14 @@ static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_copy;
 static PyObject *__pyx_n_s_degree;
 static PyObject *__pyx_n_s_device;
+static PyObject *__pyx_n_s_diff;
+static PyObject *__pyx_n_s_diff_affine_warp_2D;
+static PyObject *__pyx_n_s_diff_affine_warp_3D;
+static PyObject *__pyx_n_s_diff_warp_2D;
+static PyObject *__pyx_n_s_diff_warp_3D;
+static PyObject *__pyx_n_s_diff_x;
+static PyObject *__pyx_n_s_diff_y;
+static PyObject *__pyx_n_s_diff_z;
 static PyObject *__pyx_n_s_dtype;
 static PyObject *__pyx_n_s_f;
 static PyObject *__pyx_n_s_f_warped;
@@ -1986,14 +1994,6 @@ static PyObject *__pyx_n_s_flipud;
 static PyObject *__pyx_n_s_get_device;
 static PyObject *__pyx_n_s_get_device_count;
 static PyObject *__pyx_n_s_get_device_name;
-static PyObject *__pyx_n_s_grad;
-static PyObject *__pyx_n_s_grad_affine_warp_2D;
-static PyObject *__pyx_n_s_grad_affine_warp_3D;
-static PyObject *__pyx_n_s_grad_warp_2D;
-static PyObject *__pyx_n_s_grad_warp_3D;
-static PyObject *__pyx_n_s_grad_x;
-static PyObject *__pyx_n_s_grad_y;
-static PyObject *__pyx_n_s_grad_z;
 static PyObject *__pyx_n_s_ij;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_kp_s_imwip_cpp_backend_wrappers_pyx;
@@ -2009,7 +2009,7 @@ static PyObject *__pyx_n_s_np;
 static PyObject *__pyx_n_s_numpy;
 static PyObject *__pyx_kp_s_numpy_core_multiarray_failed_to;
 static PyObject *__pyx_kp_s_numpy_core_umath_failed_to_impor;
-static PyObject *__pyx_n_s_partial_grad_warp_3D;
+static PyObject *__pyx_n_s_partial_diff_warp_3D;
 static PyObject *__pyx_n_s_set_device;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_to;
@@ -2028,20 +2028,20 @@ static PyObject *__pyx_pf_8libimwip_4get_device_count(CYTHON_UNUSED PyObject *__
 static PyObject *__pyx_pf_8libimwip_6get_device_name(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_device); /* proto */
 static PyObject *__pyx_pf_8libimwip_8warp_2D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_f_warped, int __pyx_v_degree); /* proto */
 static PyObject *__pyx_pf_8libimwip_10adjoint_warp_2D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f_warped, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_f, int __pyx_v_degree); /* proto */
-static PyObject *__pyx_pf_8libimwip_12grad_warp_2D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_grad_x, PyArrayObject *__pyx_v_grad_y); /* proto */
+static PyObject *__pyx_pf_8libimwip_12diff_warp_2D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_diff_x, PyArrayObject *__pyx_v_diff_y); /* proto */
 static PyObject *__pyx_pf_8libimwip_14jvp_warp_2D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_vec_in, PyArrayObject *__pyx_v_vec_out, int __pyx_v_degree); /* proto */
 static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_w, PyArrayObject *__pyx_v_f_warped, int __pyx_v_degree); /* proto */
 static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f_warped, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_w, PyArrayObject *__pyx_v_f, int __pyx_v_degree); /* proto */
-static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_w, PyArrayObject *__pyx_v_grad_x, PyArrayObject *__pyx_v_grad_y, PyArrayObject *__pyx_v_grad_z); /* proto */
-static PyObject *__pyx_pf_8libimwip_22partial_grad_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_w, int __pyx_v_to, PyArrayObject *__pyx_v_grad); /* proto */
+static PyObject *__pyx_pf_8libimwip_20diff_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_w, PyArrayObject *__pyx_v_diff_x, PyArrayObject *__pyx_v_diff_y, PyArrayObject *__pyx_v_diff_z); /* proto */
+static PyObject *__pyx_pf_8libimwip_22partial_diff_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_w, int __pyx_v_to, PyArrayObject *__pyx_v_diff); /* proto */
 static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_w, PyArrayObject *__pyx_v_vec_in, PyArrayObject *__pyx_v_vec_out); /* proto */
 static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_w, PyArrayObject *__pyx_v_vec_in, PyArrayObject *__pyx_v_vec_out); /* proto */
 static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_A, PyArrayObject *__pyx_v_b, PyArrayObject *__pyx_v_f_warped, int __pyx_v_degree, PyObject *__pyx_v_indexing); /* proto */
 static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f_warped, PyArrayObject *__pyx_v_A, PyArrayObject *__pyx_v_b, PyArrayObject *__pyx_v_f, int __pyx_v_degree, PyObject *__pyx_v_indexing); /* proto */
-static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_A, PyArrayObject *__pyx_v_b, PyArrayObject *__pyx_v_grad_x, PyArrayObject *__pyx_v_grad_y, PyObject *__pyx_v_indexing); /* proto */
+static PyObject *__pyx_pf_8libimwip_32diff_affine_warp_2D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_A, PyArrayObject *__pyx_v_b, PyArrayObject *__pyx_v_diff_x, PyArrayObject *__pyx_v_diff_y, PyObject *__pyx_v_indexing); /* proto */
 static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_A, PyArrayObject *__pyx_v_b, PyArrayObject *__pyx_v_f_warped, int __pyx_v_degree, PyObject *__pyx_v_indexing); /* proto */
 static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f_warped, PyArrayObject *__pyx_v_A, PyArrayObject *__pyx_v_b, PyArrayObject *__pyx_v_f, int __pyx_v_degree, PyObject *__pyx_v_indexing); /* proto */
-static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_A, PyArrayObject *__pyx_v_b, PyArrayObject *__pyx_v_grad_x, PyArrayObject *__pyx_v_grad_y, PyArrayObject *__pyx_v_grad_z, PyObject *__pyx_v_indexing); /* proto */
+static PyObject *__pyx_pf_8libimwip_38diff_affine_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_A, PyArrayObject *__pyx_v_b, PyArrayObject *__pyx_v_diff_x, PyArrayObject *__pyx_v_diff_y, PyArrayObject *__pyx_v_diff_z, PyObject *__pyx_v_indexing); /* proto */
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__2;
 static PyObject *__pyx_tuple__4;
@@ -2084,7 +2084,7 @@ static PyObject *__pyx_codeobj__38;
 static PyObject *__pyx_codeobj__40;
 /* Late includes */
 
-/* "imwip/cpp_backend/wrappers.pyx":21
+/* "imwip/cpp_backend/wrappers.pyx":17
  *     string getDeviceName(int device)
  * 
  * def get_device():             # <<<<<<<<<<<<<<
@@ -2115,7 +2115,7 @@ static PyObject *__pyx_pf_8libimwip_get_device(CYTHON_UNUSED PyObject *__pyx_sel
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_device", 0);
 
-  /* "imwip/cpp_backend/wrappers.pyx":22
+  /* "imwip/cpp_backend/wrappers.pyx":18
  * 
  * def get_device():
  *     return getDevice()             # <<<<<<<<<<<<<<
@@ -2123,13 +2123,13 @@ static PyObject *__pyx_pf_8libimwip_get_device(CYTHON_UNUSED PyObject *__pyx_sel
  * def set_device(int device):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(getDevice()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(getDevice()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":21
+  /* "imwip/cpp_backend/wrappers.pyx":17
  *     string getDeviceName(int device)
  * 
  * def get_device():             # <<<<<<<<<<<<<<
@@ -2148,7 +2148,7 @@ static PyObject *__pyx_pf_8libimwip_get_device(CYTHON_UNUSED PyObject *__pyx_sel
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":24
+/* "imwip/cpp_backend/wrappers.pyx":20
  *     return getDevice()
  * 
  * def set_device(int device):             # <<<<<<<<<<<<<<
@@ -2168,7 +2168,7 @@ static PyObject *__pyx_pw_8libimwip_3set_device(PyObject *__pyx_self, PyObject *
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("set_device (wrapper)", 0);
   assert(__pyx_arg_device); {
-    __pyx_v_device = __Pyx_PyInt_As_int(__pyx_arg_device); if (unlikely((__pyx_v_device == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 24, __pyx_L3_error)
+    __pyx_v_device = __Pyx_PyInt_As_int(__pyx_arg_device); if (unlikely((__pyx_v_device == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 20, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2188,7 +2188,7 @@ static PyObject *__pyx_pf_8libimwip_2set_device(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("set_device", 0);
 
-  /* "imwip/cpp_backend/wrappers.pyx":25
+  /* "imwip/cpp_backend/wrappers.pyx":21
  * 
  * def set_device(int device):
  *     setDevice(device)             # <<<<<<<<<<<<<<
@@ -2197,7 +2197,7 @@ static PyObject *__pyx_pf_8libimwip_2set_device(CYTHON_UNUSED PyObject *__pyx_se
  */
   setDevice(__pyx_v_device);
 
-  /* "imwip/cpp_backend/wrappers.pyx":24
+  /* "imwip/cpp_backend/wrappers.pyx":20
  *     return getDevice()
  * 
  * def set_device(int device):             # <<<<<<<<<<<<<<
@@ -2212,7 +2212,7 @@ static PyObject *__pyx_pf_8libimwip_2set_device(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":27
+/* "imwip/cpp_backend/wrappers.pyx":23
  *     setDevice(device)
  * 
  * def get_device_count():             # <<<<<<<<<<<<<<
@@ -2243,7 +2243,7 @@ static PyObject *__pyx_pf_8libimwip_4get_device_count(CYTHON_UNUSED PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_device_count", 0);
 
-  /* "imwip/cpp_backend/wrappers.pyx":28
+  /* "imwip/cpp_backend/wrappers.pyx":24
  * 
  * def get_device_count():
  *     return getDeviceCount()             # <<<<<<<<<<<<<<
@@ -2251,13 +2251,13 @@ static PyObject *__pyx_pf_8libimwip_4get_device_count(CYTHON_UNUSED PyObject *__
  * def get_device_name(int device):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(getDeviceCount()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(getDeviceCount()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":27
+  /* "imwip/cpp_backend/wrappers.pyx":23
  *     setDevice(device)
  * 
  * def get_device_count():             # <<<<<<<<<<<<<<
@@ -2276,7 +2276,7 @@ static PyObject *__pyx_pf_8libimwip_4get_device_count(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":30
+/* "imwip/cpp_backend/wrappers.pyx":26
  *     return getDeviceCount()
  * 
  * def get_device_name(int device):             # <<<<<<<<<<<<<<
@@ -2296,7 +2296,7 @@ static PyObject *__pyx_pw_8libimwip_7get_device_name(PyObject *__pyx_self, PyObj
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_device_name (wrapper)", 0);
   assert(__pyx_arg_device); {
-    __pyx_v_device = __Pyx_PyInt_As_int(__pyx_arg_device); if (unlikely((__pyx_v_device == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 30, __pyx_L3_error)
+    __pyx_v_device = __Pyx_PyInt_As_int(__pyx_arg_device); if (unlikely((__pyx_v_device == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 26, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2321,7 +2321,7 @@ static PyObject *__pyx_pf_8libimwip_6get_device_name(CYTHON_UNUSED PyObject *__p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_device_name", 0);
 
-  /* "imwip/cpp_backend/wrappers.pyx":31
+  /* "imwip/cpp_backend/wrappers.pyx":27
  * 
  * def get_device_name(int device):
  *     cdef string name = getDeviceName(device)             # <<<<<<<<<<<<<<
@@ -2330,7 +2330,7 @@ static PyObject *__pyx_pf_8libimwip_6get_device_name(CYTHON_UNUSED PyObject *__p
  */
   __pyx_v_name = getDeviceName(__pyx_v_device);
 
-  /* "imwip/cpp_backend/wrappers.pyx":32
+  /* "imwip/cpp_backend/wrappers.pyx":28
  * def get_device_name(int device):
  *     cdef string name = getDeviceName(device)
  *     return name.decode('UTF-8')             # <<<<<<<<<<<<<<
@@ -2338,13 +2338,13 @@ static PyObject *__pyx_pf_8libimwip_6get_device_name(CYTHON_UNUSED PyObject *__p
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_decode_cpp_string(__pyx_v_name, 0, PY_SSIZE_T_MAX, NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_decode_cpp_string(__pyx_v_name, 0, PY_SSIZE_T_MAX, NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":30
+  /* "imwip/cpp_backend/wrappers.pyx":26
  *     return getDeviceCount()
  * 
  * def get_device_name(int device):             # <<<<<<<<<<<<<<
@@ -2363,7 +2363,7 @@ static PyObject *__pyx_pf_8libimwip_6get_device_name(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":152
+/* "imwip/cpp_backend/wrappers.pyx":148
  * 
  * # python version of warp2D, this function accepts numpy arrays
  * def warp_2D(             # <<<<<<<<<<<<<<
@@ -2390,7 +2390,7 @@ static PyObject *__pyx_pw_8libimwip_9warp_2D(PyObject *__pyx_self, PyObject *__p
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_u,&__pyx_n_s_v,&__pyx_n_s_f_warped,&__pyx_n_s_degree,0};
     PyObject* values[5] = {0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":156
+    /* "imwip/cpp_backend/wrappers.pyx":152
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] v,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f_warped=None,             # <<<<<<<<<<<<<<
@@ -2424,13 +2424,13 @@ static PyObject *__pyx_pw_8libimwip_9warp_2D(PyObject *__pyx_self, PyObject *__p
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_u)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("warp_2D", 0, 3, 5, 1); __PYX_ERR(0, 152, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("warp_2D", 0, 3, 5, 1); __PYX_ERR(0, 148, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("warp_2D", 0, 3, 5, 2); __PYX_ERR(0, 152, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("warp_2D", 0, 3, 5, 2); __PYX_ERR(0, 148, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -2446,7 +2446,7 @@ static PyObject *__pyx_pw_8libimwip_9warp_2D(PyObject *__pyx_self, PyObject *__p
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "warp_2D") < 0)) __PYX_ERR(0, 152, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "warp_2D") < 0)) __PYX_ERR(0, 148, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2466,26 +2466,26 @@ static PyObject *__pyx_pw_8libimwip_9warp_2D(PyObject *__pyx_self, PyObject *__p
     __pyx_v_v = ((PyArrayObject *)values[2]);
     __pyx_v_f_warped = ((PyArrayObject *)values[3]);
     if (values[4]) {
-      __pyx_v_degree = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 157, __pyx_L3_error)
+      __pyx_v_degree = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 153, __pyx_L3_error)
     } else {
       __pyx_v_degree = ((int)3);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("warp_2D", 0, 3, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 152, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("warp_2D", 0, 3, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 148, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("libimwip.warp_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 153, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 154, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 155, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 156, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 149, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 150, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 151, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 152, __pyx_L1_error)
   __pyx_r = __pyx_pf_8libimwip_8warp_2D(__pyx_self, __pyx_v_f, __pyx_v_u, __pyx_v_v, __pyx_v_f_warped, __pyx_v_degree);
 
-  /* "imwip/cpp_backend/wrappers.pyx":152
+  /* "imwip/cpp_backend/wrappers.pyx":148
  * 
  * # python version of warp2D, this function accepts numpy arrays
  * def warp_2D(             # <<<<<<<<<<<<<<
@@ -2555,26 +2555,26 @@ static PyObject *__pyx_pf_8libimwip_8warp_2D(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_pybuffernd_f_warped.rcbuffer = &__pyx_pybuffer_f_warped;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 152, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 148, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 152, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 148, __pyx_L1_error)
   }
   __pyx_pybuffernd_u.diminfo[0].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_u.diminfo[0].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_u.diminfo[1].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_u.diminfo[1].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 152, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 148, __pyx_L1_error)
   }
   __pyx_pybuffernd_v.diminfo[0].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_v.diminfo[0].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_v.diminfo[1].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_v.diminfo[1].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 152, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 148, __pyx_L1_error)
   }
   __pyx_pybuffernd_f_warped.diminfo[0].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f_warped.diminfo[0].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f_warped.diminfo[1].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f_warped.diminfo[1].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[1];
 
-  /* "imwip/cpp_backend/wrappers.pyx":159
+  /* "imwip/cpp_backend/wrappers.pyx":155
  *         int degree=3
  *     ):
  *     if f_warped is None:             # <<<<<<<<<<<<<<
@@ -2585,23 +2585,23 @@ static PyObject *__pyx_pf_8libimwip_8warp_2D(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":160
+    /* "imwip/cpp_backend/wrappers.pyx":156
  *     ):
  *     if f_warped is None:
  *         f_warped = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3);
@@ -2609,23 +2609,23 @@ static PyObject *__pyx_pf_8libimwip_8warp_2D(CYTHON_UNUSED PyObject *__pyx_self,
     PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_5);
     __pyx_t_3 = 0;
     __pyx_t_5 = 0;
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_6);
     __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 160, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 160, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 156, __pyx_L1_error)
     __pyx_t_7 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -2642,13 +2642,13 @@ static PyObject *__pyx_pf_8libimwip_8warp_2D(CYTHON_UNUSED PyObject *__pyx_self,
         __pyx_t_9 = __pyx_t_10 = __pyx_t_11 = 0;
       }
       __pyx_pybuffernd_f_warped.diminfo[0].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f_warped.diminfo[0].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f_warped.diminfo[1].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f_warped.diminfo[1].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[1];
-      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 160, __pyx_L1_error)
+      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 156, __pyx_L1_error)
     }
     __pyx_t_7 = 0;
     __Pyx_DECREF_SET(__pyx_v_f_warped, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":159
+    /* "imwip/cpp_backend/wrappers.pyx":155
  *         int degree=3
  *     ):
  *     if f_warped is None:             # <<<<<<<<<<<<<<
@@ -2657,7 +2657,7 @@ static PyObject *__pyx_pf_8libimwip_8warp_2D(CYTHON_UNUSED PyObject *__pyx_self,
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":164
+  /* "imwip/cpp_backend/wrappers.pyx":160
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
  *     warp2D(&f[0,0], &u[0,0], &v[0,0], &f_warped[0,0], degree, f.shape[0], f.shape[1])             # <<<<<<<<<<<<<<
@@ -2677,7 +2677,7 @@ static PyObject *__pyx_pf_8libimwip_8warp_2D(CYTHON_UNUSED PyObject *__pyx_self,
   } else if (unlikely(__pyx_t_13 >= __pyx_pybuffernd_f.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 164, __pyx_L1_error)
+    __PYX_ERR(0, 160, __pyx_L1_error)
   }
   __pyx_t_14 = 0;
   __pyx_t_15 = 0;
@@ -2692,7 +2692,7 @@ static PyObject *__pyx_pf_8libimwip_8warp_2D(CYTHON_UNUSED PyObject *__pyx_self,
   } else if (unlikely(__pyx_t_15 >= __pyx_pybuffernd_u.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 164, __pyx_L1_error)
+    __PYX_ERR(0, 160, __pyx_L1_error)
   }
   __pyx_t_16 = 0;
   __pyx_t_17 = 0;
@@ -2707,7 +2707,7 @@ static PyObject *__pyx_pf_8libimwip_8warp_2D(CYTHON_UNUSED PyObject *__pyx_self,
   } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_v.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 164, __pyx_L1_error)
+    __PYX_ERR(0, 160, __pyx_L1_error)
   }
   __pyx_t_18 = 0;
   __pyx_t_19 = 0;
@@ -2722,11 +2722,11 @@ static PyObject *__pyx_pf_8libimwip_8warp_2D(CYTHON_UNUSED PyObject *__pyx_self,
   } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_f_warped.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 164, __pyx_L1_error)
+    __PYX_ERR(0, 160, __pyx_L1_error)
   }
   warp2D((&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_f.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_u.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_u.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_u.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_v.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_v.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_v.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_f_warped.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_f_warped.diminfo[1].strides))), __pyx_v_degree, (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":166
+  /* "imwip/cpp_backend/wrappers.pyx":162
  *     warp2D(&f[0,0], &u[0,0], &v[0,0], &f_warped[0,0], degree, f.shape[0], f.shape[1])
  * 
  *     return f_warped             # <<<<<<<<<<<<<<
@@ -2738,7 +2738,7 @@ static PyObject *__pyx_pf_8libimwip_8warp_2D(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_r = ((PyObject *)__pyx_v_f_warped);
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":152
+  /* "imwip/cpp_backend/wrappers.pyx":148
  * 
  * # python version of warp2D, this function accepts numpy arrays
  * def warp_2D(             # <<<<<<<<<<<<<<
@@ -2776,7 +2776,7 @@ static PyObject *__pyx_pf_8libimwip_8warp_2D(CYTHON_UNUSED PyObject *__pyx_self,
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":170
+/* "imwip/cpp_backend/wrappers.pyx":166
  * 
  * # python version of adjointWarp2D, this function accepts numpy arrays
  * def adjoint_warp_2D(             # <<<<<<<<<<<<<<
@@ -2803,7 +2803,7 @@ static PyObject *__pyx_pw_8libimwip_11adjoint_warp_2D(PyObject *__pyx_self, PyOb
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f_warped,&__pyx_n_s_u,&__pyx_n_s_v,&__pyx_n_s_f,&__pyx_n_s_degree,0};
     PyObject* values[5] = {0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":174
+    /* "imwip/cpp_backend/wrappers.pyx":170
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] v,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f=None,             # <<<<<<<<<<<<<<
@@ -2837,13 +2837,13 @@ static PyObject *__pyx_pw_8libimwip_11adjoint_warp_2D(PyObject *__pyx_self, PyOb
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_u)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("adjoint_warp_2D", 0, 3, 5, 1); __PYX_ERR(0, 170, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("adjoint_warp_2D", 0, 3, 5, 1); __PYX_ERR(0, 166, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("adjoint_warp_2D", 0, 3, 5, 2); __PYX_ERR(0, 170, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("adjoint_warp_2D", 0, 3, 5, 2); __PYX_ERR(0, 166, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -2859,7 +2859,7 @@ static PyObject *__pyx_pw_8libimwip_11adjoint_warp_2D(PyObject *__pyx_self, PyOb
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "adjoint_warp_2D") < 0)) __PYX_ERR(0, 170, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "adjoint_warp_2D") < 0)) __PYX_ERR(0, 166, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2879,26 +2879,26 @@ static PyObject *__pyx_pw_8libimwip_11adjoint_warp_2D(PyObject *__pyx_self, PyOb
     __pyx_v_v = ((PyArrayObject *)values[2]);
     __pyx_v_f = ((PyArrayObject *)values[3]);
     if (values[4]) {
-      __pyx_v_degree = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L3_error)
+      __pyx_v_degree = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 171, __pyx_L3_error)
     } else {
       __pyx_v_degree = ((int)3);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("adjoint_warp_2D", 0, 3, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 170, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("adjoint_warp_2D", 0, 3, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 166, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("libimwip.adjoint_warp_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 171, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 172, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 173, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 174, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 167, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 168, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 169, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 170, __pyx_L1_error)
   __pyx_r = __pyx_pf_8libimwip_10adjoint_warp_2D(__pyx_self, __pyx_v_f_warped, __pyx_v_u, __pyx_v_v, __pyx_v_f, __pyx_v_degree);
 
-  /* "imwip/cpp_backend/wrappers.pyx":170
+  /* "imwip/cpp_backend/wrappers.pyx":166
  * 
  * # python version of adjointWarp2D, this function accepts numpy arrays
  * def adjoint_warp_2D(             # <<<<<<<<<<<<<<
@@ -2968,26 +2968,26 @@ static PyObject *__pyx_pf_8libimwip_10adjoint_warp_2D(CYTHON_UNUSED PyObject *__
   __pyx_pybuffernd_f.rcbuffer = &__pyx_pybuffer_f;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 170, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 166, __pyx_L1_error)
   }
   __pyx_pybuffernd_f_warped.diminfo[0].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f_warped.diminfo[0].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f_warped.diminfo[1].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f_warped.diminfo[1].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 170, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 166, __pyx_L1_error)
   }
   __pyx_pybuffernd_u.diminfo[0].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_u.diminfo[0].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_u.diminfo[1].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_u.diminfo[1].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 170, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 166, __pyx_L1_error)
   }
   __pyx_pybuffernd_v.diminfo[0].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_v.diminfo[0].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_v.diminfo[1].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_v.diminfo[1].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 170, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 166, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1];
 
-  /* "imwip/cpp_backend/wrappers.pyx":177
+  /* "imwip/cpp_backend/wrappers.pyx":173
  *         int degree=3
  *     ):
  *     if f is None:             # <<<<<<<<<<<<<<
@@ -2998,23 +2998,23 @@ static PyObject *__pyx_pf_8libimwip_10adjoint_warp_2D(CYTHON_UNUSED PyObject *__
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":178
+    /* "imwip/cpp_backend/wrappers.pyx":174
  *     ):
  *     if f is None:
  *         f = np.zeros((f_warped.shape[0], f_warped.shape[1]), dtype=f_warped.dtype)             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3);
@@ -3022,23 +3022,23 @@ static PyObject *__pyx_pf_8libimwip_10adjoint_warp_2D(CYTHON_UNUSED PyObject *__
     PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_5);
     __pyx_t_3 = 0;
     __pyx_t_5 = 0;
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_6);
     __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f_warped), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f_warped), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 178, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 178, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 174, __pyx_L1_error)
     __pyx_t_7 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -3055,13 +3055,13 @@ static PyObject *__pyx_pf_8libimwip_10adjoint_warp_2D(CYTHON_UNUSED PyObject *__
         __pyx_t_9 = __pyx_t_10 = __pyx_t_11 = 0;
       }
       __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1];
-      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 178, __pyx_L1_error)
+      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 174, __pyx_L1_error)
     }
     __pyx_t_7 = 0;
     __Pyx_DECREF_SET(__pyx_v_f, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":177
+    /* "imwip/cpp_backend/wrappers.pyx":173
  *         int degree=3
  *     ):
  *     if f is None:             # <<<<<<<<<<<<<<
@@ -3070,7 +3070,7 @@ static PyObject *__pyx_pf_8libimwip_10adjoint_warp_2D(CYTHON_UNUSED PyObject *__
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":183
+  /* "imwip/cpp_backend/wrappers.pyx":179
  *     # get the pointer to the first element and pass it to the C++ function
  *     adjointWarp2D(
  *         &f_warped[0,0],             # <<<<<<<<<<<<<<
@@ -3090,10 +3090,10 @@ static PyObject *__pyx_pf_8libimwip_10adjoint_warp_2D(CYTHON_UNUSED PyObject *__
   } else if (unlikely(__pyx_t_13 >= __pyx_pybuffernd_f_warped.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 183, __pyx_L1_error)
+    __PYX_ERR(0, 179, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":184
+  /* "imwip/cpp_backend/wrappers.pyx":180
  *     adjointWarp2D(
  *         &f_warped[0,0],
  *         &u[0,0],             # <<<<<<<<<<<<<<
@@ -3113,10 +3113,10 @@ static PyObject *__pyx_pf_8libimwip_10adjoint_warp_2D(CYTHON_UNUSED PyObject *__
   } else if (unlikely(__pyx_t_15 >= __pyx_pybuffernd_u.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 184, __pyx_L1_error)
+    __PYX_ERR(0, 180, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":185
+  /* "imwip/cpp_backend/wrappers.pyx":181
  *         &f_warped[0,0],
  *         &u[0,0],
  *         &v[0,0],             # <<<<<<<<<<<<<<
@@ -3136,10 +3136,10 @@ static PyObject *__pyx_pf_8libimwip_10adjoint_warp_2D(CYTHON_UNUSED PyObject *__
   } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_v.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 185, __pyx_L1_error)
+    __PYX_ERR(0, 181, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":186
+  /* "imwip/cpp_backend/wrappers.pyx":182
  *         &u[0,0],
  *         &v[0,0],
  *         &f[0,0],             # <<<<<<<<<<<<<<
@@ -3159,10 +3159,10 @@ static PyObject *__pyx_pf_8libimwip_10adjoint_warp_2D(CYTHON_UNUSED PyObject *__
   } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_f.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 186, __pyx_L1_error)
+    __PYX_ERR(0, 182, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":182
+  /* "imwip/cpp_backend/wrappers.pyx":178
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
  *     adjointWarp2D(             # <<<<<<<<<<<<<<
@@ -3171,7 +3171,7 @@ static PyObject *__pyx_pf_8libimwip_10adjoint_warp_2D(CYTHON_UNUSED PyObject *__
  */
   adjointWarp2D((&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_f_warped.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_f_warped.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_u.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_u.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_u.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_v.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_v.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_v.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_f.diminfo[1].strides))), __pyx_v_degree, (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":192
+  /* "imwip/cpp_backend/wrappers.pyx":188
  *     )
  * 
  *     return f             # <<<<<<<<<<<<<<
@@ -3183,7 +3183,7 @@ static PyObject *__pyx_pf_8libimwip_10adjoint_warp_2D(CYTHON_UNUSED PyObject *__
   __pyx_r = ((PyObject *)__pyx_v_f);
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":170
+  /* "imwip/cpp_backend/wrappers.pyx":166
  * 
  * # python version of adjointWarp2D, this function accepts numpy arrays
  * def adjoint_warp_2D(             # <<<<<<<<<<<<<<
@@ -3221,48 +3221,48 @@ static PyObject *__pyx_pf_8libimwip_10adjoint_warp_2D(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":195
+/* "imwip/cpp_backend/wrappers.pyx":191
  * 
  * 
- * def grad_warp_2D(             # <<<<<<<<<<<<<<
+ * def diff_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_8libimwip_13grad_warp_2D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_8libimwip_13grad_warp_2D = {"grad_warp_2D", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8libimwip_13grad_warp_2D, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_8libimwip_13grad_warp_2D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8libimwip_13diff_warp_2D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8libimwip_13diff_warp_2D = {"diff_warp_2D", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8libimwip_13diff_warp_2D, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8libimwip_13diff_warp_2D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_f = 0;
   PyArrayObject *__pyx_v_u = 0;
   PyArrayObject *__pyx_v_v = 0;
-  PyArrayObject *__pyx_v_grad_x = 0;
-  PyArrayObject *__pyx_v_grad_y = 0;
+  PyArrayObject *__pyx_v_diff_x = 0;
+  PyArrayObject *__pyx_v_diff_y = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("grad_warp_2D (wrapper)", 0);
+  __Pyx_RefNannySetupContext("diff_warp_2D (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_u,&__pyx_n_s_v,&__pyx_n_s_grad_x,&__pyx_n_s_grad_y,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_u,&__pyx_n_s_v,&__pyx_n_s_diff_x,&__pyx_n_s_diff_y,0};
     PyObject* values[5] = {0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":199
+    /* "imwip/cpp_backend/wrappers.pyx":195
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] v,
- *         np.ndarray[ndim=2, dtype=float, mode="c"] grad_x=None,             # <<<<<<<<<<<<<<
- *         np.ndarray[ndim=2, dtype=float, mode="c"] grad_y=None
+ *         np.ndarray[ndim=2, dtype=float, mode="c"] diff_x=None,             # <<<<<<<<<<<<<<
+ *         np.ndarray[ndim=2, dtype=float, mode="c"] diff_y=None
  *     ):
  */
     values[3] = (PyObject *)((PyArrayObject *)Py_None);
 
-    /* "imwip/cpp_backend/wrappers.pyx":200
+    /* "imwip/cpp_backend/wrappers.pyx":196
  *         np.ndarray[ndim=2, dtype=float, mode="c"] v,
- *         np.ndarray[ndim=2, dtype=float, mode="c"] grad_x=None,
- *         np.ndarray[ndim=2, dtype=float, mode="c"] grad_y=None             # <<<<<<<<<<<<<<
+ *         np.ndarray[ndim=2, dtype=float, mode="c"] diff_x=None,
+ *         np.ndarray[ndim=2, dtype=float, mode="c"] diff_y=None             # <<<<<<<<<<<<<<
  *     ):
- *     grad_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
+ *     diff_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
  */
     values[4] = (PyObject *)((PyArrayObject *)Py_None);
     if (unlikely(__pyx_kwds)) {
@@ -3291,29 +3291,29 @@ static PyObject *__pyx_pw_8libimwip_13grad_warp_2D(PyObject *__pyx_self, PyObjec
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_u)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("grad_warp_2D", 0, 3, 5, 1); __PYX_ERR(0, 195, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("diff_warp_2D", 0, 3, 5, 1); __PYX_ERR(0, 191, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("grad_warp_2D", 0, 3, 5, 2); __PYX_ERR(0, 195, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("diff_warp_2D", 0, 3, 5, 2); __PYX_ERR(0, 191, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (kw_args > 0) {
-          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_grad_x);
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_diff_x);
           if (value) { values[3] = value; kw_args--; }
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (kw_args > 0) {
-          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_grad_y);
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_diff_y);
           if (value) { values[4] = value; kw_args--; }
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "grad_warp_2D") < 0)) __PYX_ERR(0, 195, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "diff_warp_2D") < 0)) __PYX_ERR(0, 191, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -3331,28 +3331,28 @@ static PyObject *__pyx_pw_8libimwip_13grad_warp_2D(PyObject *__pyx_self, PyObjec
     __pyx_v_f = ((PyArrayObject *)values[0]);
     __pyx_v_u = ((PyArrayObject *)values[1]);
     __pyx_v_v = ((PyArrayObject *)values[2]);
-    __pyx_v_grad_x = ((PyArrayObject *)values[3]);
-    __pyx_v_grad_y = ((PyArrayObject *)values[4]);
+    __pyx_v_diff_x = ((PyArrayObject *)values[3]);
+    __pyx_v_diff_y = ((PyArrayObject *)values[4]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("grad_warp_2D", 0, 3, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 195, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("diff_warp_2D", 0, 3, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 191, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libimwip.grad_warp_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("libimwip.diff_warp_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 196, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 197, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 198, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_grad_x), __pyx_ptype_5numpy_ndarray, 1, "grad_x", 0))) __PYX_ERR(0, 199, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_grad_y), __pyx_ptype_5numpy_ndarray, 1, "grad_y", 0))) __PYX_ERR(0, 200, __pyx_L1_error)
-  __pyx_r = __pyx_pf_8libimwip_12grad_warp_2D(__pyx_self, __pyx_v_f, __pyx_v_u, __pyx_v_v, __pyx_v_grad_x, __pyx_v_grad_y);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 192, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 193, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 194, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_diff_x), __pyx_ptype_5numpy_ndarray, 1, "diff_x", 0))) __PYX_ERR(0, 195, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_diff_y), __pyx_ptype_5numpy_ndarray, 1, "diff_y", 0))) __PYX_ERR(0, 196, __pyx_L1_error)
+  __pyx_r = __pyx_pf_8libimwip_12diff_warp_2D(__pyx_self, __pyx_v_f, __pyx_v_u, __pyx_v_v, __pyx_v_diff_x, __pyx_v_diff_y);
 
-  /* "imwip/cpp_backend/wrappers.pyx":195
+  /* "imwip/cpp_backend/wrappers.pyx":191
  * 
  * 
- * def grad_warp_2D(             # <<<<<<<<<<<<<<
+ * def diff_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  */
@@ -3366,13 +3366,13 @@ static PyObject *__pyx_pw_8libimwip_13grad_warp_2D(PyObject *__pyx_self, PyObjec
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_8libimwip_12grad_warp_2D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_grad_x, PyArrayObject *__pyx_v_grad_y) {
+static PyObject *__pyx_pf_8libimwip_12diff_warp_2D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_diff_x, PyArrayObject *__pyx_v_diff_y) {
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_diff_x;
+  __Pyx_Buffer __pyx_pybuffer_diff_x;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_diff_y;
+  __Pyx_Buffer __pyx_pybuffer_diff_y;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_f;
   __Pyx_Buffer __pyx_pybuffer_f;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_grad_x;
-  __Pyx_Buffer __pyx_pybuffer_grad_x;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_grad_y;
-  __Pyx_Buffer __pyx_pybuffer_grad_y;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_u;
   __Pyx_Buffer __pyx_pybuffer_u;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_v;
@@ -3402,9 +3402,9 @@ static PyObject *__pyx_pf_8libimwip_12grad_warp_2D(CYTHON_UNUSED PyObject *__pyx
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("grad_warp_2D", 0);
-  __Pyx_INCREF((PyObject *)__pyx_v_grad_x);
-  __Pyx_INCREF((PyObject *)__pyx_v_grad_y);
+  __Pyx_RefNannySetupContext("diff_warp_2D", 0);
+  __Pyx_INCREF((PyObject *)__pyx_v_diff_x);
+  __Pyx_INCREF((PyObject *)__pyx_v_diff_y);
   __pyx_pybuffer_f.pybuffer.buf = NULL;
   __pyx_pybuffer_f.refcount = 0;
   __pyx_pybuffernd_f.data = NULL;
@@ -3417,57 +3417,57 @@ static PyObject *__pyx_pf_8libimwip_12grad_warp_2D(CYTHON_UNUSED PyObject *__pyx
   __pyx_pybuffer_v.refcount = 0;
   __pyx_pybuffernd_v.data = NULL;
   __pyx_pybuffernd_v.rcbuffer = &__pyx_pybuffer_v;
-  __pyx_pybuffer_grad_x.pybuffer.buf = NULL;
-  __pyx_pybuffer_grad_x.refcount = 0;
-  __pyx_pybuffernd_grad_x.data = NULL;
-  __pyx_pybuffernd_grad_x.rcbuffer = &__pyx_pybuffer_grad_x;
-  __pyx_pybuffer_grad_y.pybuffer.buf = NULL;
-  __pyx_pybuffer_grad_y.refcount = 0;
-  __pyx_pybuffernd_grad_y.data = NULL;
-  __pyx_pybuffernd_grad_y.rcbuffer = &__pyx_pybuffer_grad_y;
+  __pyx_pybuffer_diff_x.pybuffer.buf = NULL;
+  __pyx_pybuffer_diff_x.refcount = 0;
+  __pyx_pybuffernd_diff_x.data = NULL;
+  __pyx_pybuffernd_diff_x.rcbuffer = &__pyx_pybuffer_diff_x;
+  __pyx_pybuffer_diff_y.pybuffer.buf = NULL;
+  __pyx_pybuffer_diff_y.refcount = 0;
+  __pyx_pybuffernd_diff_y.data = NULL;
+  __pyx_pybuffernd_diff_y.rcbuffer = &__pyx_pybuffer_diff_y;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 195, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 191, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 195, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 191, __pyx_L1_error)
   }
   __pyx_pybuffernd_u.diminfo[0].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_u.diminfo[0].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_u.diminfo[1].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_u.diminfo[1].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 195, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 191, __pyx_L1_error)
   }
   __pyx_pybuffernd_v.diminfo[0].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_v.diminfo[0].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_v.diminfo[1].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_v.diminfo[1].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 195, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 191, __pyx_L1_error)
   }
-  __pyx_pybuffernd_grad_x.diminfo[0].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_x.diminfo[0].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_x.diminfo[1].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_x.diminfo[1].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[1];
+  __pyx_pybuffernd_diff_x.diminfo[0].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_x.diminfo[0].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_x.diminfo[1].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_x.diminfo[1].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 195, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 191, __pyx_L1_error)
   }
-  __pyx_pybuffernd_grad_y.diminfo[0].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_y.diminfo[0].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_y.diminfo[1].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_y.diminfo[1].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[1];
+  __pyx_pybuffernd_diff_y.diminfo[0].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_y.diminfo[0].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_y.diminfo[1].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_y.diminfo[1].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[1];
 
-  /* "imwip/cpp_backend/wrappers.pyx":202
- *         np.ndarray[ndim=2, dtype=float, mode="c"] grad_y=None
+  /* "imwip/cpp_backend/wrappers.pyx":198
+ *         np.ndarray[ndim=2, dtype=float, mode="c"] diff_y=None
  *     ):
- *     grad_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)             # <<<<<<<<<<<<<<
- *     grad_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
+ *     diff_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)             # <<<<<<<<<<<<<<
+ *     diff_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
@@ -3475,31 +3475,31 @@ static PyObject *__pyx_pf_8libimwip_12grad_warp_2D(CYTHON_UNUSED PyObject *__pyx
   PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_3);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 202, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 202, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 198, __pyx_L1_error)
   __pyx_t_5 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer);
-    __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer);
+    __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_6 < 0)) {
       PyErr_Fetch(&__pyx_t_7, &__pyx_t_8, &__pyx_t_9);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_7); Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_9);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -3507,30 +3507,30 @@ static PyObject *__pyx_pf_8libimwip_12grad_warp_2D(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_7 = __pyx_t_8 = __pyx_t_9 = 0;
     }
-    __pyx_pybuffernd_grad_x.diminfo[0].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_x.diminfo[0].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_x.diminfo[1].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_x.diminfo[1].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[1];
-    if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 202, __pyx_L1_error)
+    __pyx_pybuffernd_diff_x.diminfo[0].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_x.diminfo[0].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_x.diminfo[1].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_x.diminfo[1].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[1];
+    if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 198, __pyx_L1_error)
   }
   __pyx_t_5 = 0;
-  __Pyx_DECREF_SET(__pyx_v_grad_x, ((PyArrayObject *)__pyx_t_1));
+  __Pyx_DECREF_SET(__pyx_v_diff_x, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":203
+  /* "imwip/cpp_backend/wrappers.pyx":199
  *     ):
- *     grad_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
- *     grad_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)             # <<<<<<<<<<<<<<
+ *     diff_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
+ *     diff_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
@@ -3538,31 +3538,31 @@ static PyObject *__pyx_pf_8libimwip_12grad_warp_2D(CYTHON_UNUSED PyObject *__pyx
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_3);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 203, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 203, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 199, __pyx_L1_error)
   __pyx_t_10 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer);
-    __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer, (PyObject*)__pyx_t_10, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer);
+    __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer, (PyObject*)__pyx_t_10, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_6 < 0)) {
       PyErr_Fetch(&__pyx_t_9, &__pyx_t_8, &__pyx_t_7);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_7);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -3570,19 +3570,19 @@ static PyObject *__pyx_pf_8libimwip_12grad_warp_2D(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_9 = __pyx_t_8 = __pyx_t_7 = 0;
     }
-    __pyx_pybuffernd_grad_y.diminfo[0].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_y.diminfo[0].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_y.diminfo[1].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_y.diminfo[1].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[1];
-    if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 203, __pyx_L1_error)
+    __pyx_pybuffernd_diff_y.diminfo[0].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_y.diminfo[0].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_y.diminfo[1].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_y.diminfo[1].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[1];
+    if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 199, __pyx_L1_error)
   }
   __pyx_t_10 = 0;
-  __Pyx_DECREF_SET(__pyx_v_grad_y, ((PyArrayObject *)__pyx_t_1));
+  __Pyx_DECREF_SET(__pyx_v_diff_y, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":207
+  /* "imwip/cpp_backend/wrappers.pyx":203
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
- *     gradWarp2D(&f[0,0], &u[0,0], &v[0, 0], &grad_x[0,0], &grad_y[0,0], f.shape[0], f.shape[1])             # <<<<<<<<<<<<<<
+ *     diffWarp2D(&f[0,0], &u[0,0], &v[0, 0], &diff_x[0,0], &diff_y[0,0], f.shape[0], f.shape[1])             # <<<<<<<<<<<<<<
  * 
- *     return grad_x, grad_y
+ *     return diff_x, diff_y
  */
   __pyx_t_11 = 0;
   __pyx_t_12 = 0;
@@ -3597,7 +3597,7 @@ static PyObject *__pyx_pf_8libimwip_12grad_warp_2D(CYTHON_UNUSED PyObject *__pyx
   } else if (unlikely(__pyx_t_12 >= __pyx_pybuffernd_f.diminfo[1].shape)) __pyx_t_6 = 1;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 207, __pyx_L1_error)
+    __PYX_ERR(0, 203, __pyx_L1_error)
   }
   __pyx_t_13 = 0;
   __pyx_t_14 = 0;
@@ -3612,7 +3612,7 @@ static PyObject *__pyx_pf_8libimwip_12grad_warp_2D(CYTHON_UNUSED PyObject *__pyx
   } else if (unlikely(__pyx_t_14 >= __pyx_pybuffernd_u.diminfo[1].shape)) __pyx_t_6 = 1;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 207, __pyx_L1_error)
+    __PYX_ERR(0, 203, __pyx_L1_error)
   }
   __pyx_t_15 = 0;
   __pyx_t_16 = 0;
@@ -3627,64 +3627,64 @@ static PyObject *__pyx_pf_8libimwip_12grad_warp_2D(CYTHON_UNUSED PyObject *__pyx
   } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_v.diminfo[1].shape)) __pyx_t_6 = 1;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 207, __pyx_L1_error)
+    __PYX_ERR(0, 203, __pyx_L1_error)
   }
   __pyx_t_17 = 0;
   __pyx_t_18 = 0;
   __pyx_t_6 = -1;
   if (__pyx_t_17 < 0) {
-    __pyx_t_17 += __pyx_pybuffernd_grad_x.diminfo[0].shape;
+    __pyx_t_17 += __pyx_pybuffernd_diff_x.diminfo[0].shape;
     if (unlikely(__pyx_t_17 < 0)) __pyx_t_6 = 0;
-  } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_grad_x.diminfo[0].shape)) __pyx_t_6 = 0;
+  } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_diff_x.diminfo[0].shape)) __pyx_t_6 = 0;
   if (__pyx_t_18 < 0) {
-    __pyx_t_18 += __pyx_pybuffernd_grad_x.diminfo[1].shape;
+    __pyx_t_18 += __pyx_pybuffernd_diff_x.diminfo[1].shape;
     if (unlikely(__pyx_t_18 < 0)) __pyx_t_6 = 1;
-  } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_grad_x.diminfo[1].shape)) __pyx_t_6 = 1;
+  } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_diff_x.diminfo[1].shape)) __pyx_t_6 = 1;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 207, __pyx_L1_error)
+    __PYX_ERR(0, 203, __pyx_L1_error)
   }
   __pyx_t_19 = 0;
   __pyx_t_20 = 0;
   __pyx_t_6 = -1;
   if (__pyx_t_19 < 0) {
-    __pyx_t_19 += __pyx_pybuffernd_grad_y.diminfo[0].shape;
+    __pyx_t_19 += __pyx_pybuffernd_diff_y.diminfo[0].shape;
     if (unlikely(__pyx_t_19 < 0)) __pyx_t_6 = 0;
-  } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_grad_y.diminfo[0].shape)) __pyx_t_6 = 0;
+  } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_diff_y.diminfo[0].shape)) __pyx_t_6 = 0;
   if (__pyx_t_20 < 0) {
-    __pyx_t_20 += __pyx_pybuffernd_grad_y.diminfo[1].shape;
+    __pyx_t_20 += __pyx_pybuffernd_diff_y.diminfo[1].shape;
     if (unlikely(__pyx_t_20 < 0)) __pyx_t_6 = 1;
-  } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_grad_y.diminfo[1].shape)) __pyx_t_6 = 1;
+  } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_diff_y.diminfo[1].shape)) __pyx_t_6 = 1;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 207, __pyx_L1_error)
+    __PYX_ERR(0, 203, __pyx_L1_error)
   }
-  gradWarp2D((&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_11, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_12, __pyx_pybuffernd_f.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_u.rcbuffer->pybuffer.buf, __pyx_t_13, __pyx_pybuffernd_u.diminfo[0].strides, __pyx_t_14, __pyx_pybuffernd_u.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_v.rcbuffer->pybuffer.buf, __pyx_t_15, __pyx_pybuffernd_v.diminfo[0].strides, __pyx_t_16, __pyx_pybuffernd_v.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_grad_x.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_grad_x.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_grad_y.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_grad_y.diminfo[1].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]));
+  diffWarp2D((&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_11, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_12, __pyx_pybuffernd_f.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_u.rcbuffer->pybuffer.buf, __pyx_t_13, __pyx_pybuffernd_u.diminfo[0].strides, __pyx_t_14, __pyx_pybuffernd_u.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_v.rcbuffer->pybuffer.buf, __pyx_t_15, __pyx_pybuffernd_v.diminfo[0].strides, __pyx_t_16, __pyx_pybuffernd_v.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_diff_x.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_diff_x.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_diff_y.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_diff_y.diminfo[1].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":209
- *     gradWarp2D(&f[0,0], &u[0,0], &v[0, 0], &grad_x[0,0], &grad_y[0,0], f.shape[0], f.shape[1])
+  /* "imwip/cpp_backend/wrappers.pyx":205
+ *     diffWarp2D(&f[0,0], &u[0,0], &v[0, 0], &diff_x[0,0], &diff_y[0,0], f.shape[0], f.shape[1])
  * 
- *     return grad_x, grad_y             # <<<<<<<<<<<<<<
+ *     return diff_x, diff_y             # <<<<<<<<<<<<<<
  * 
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(((PyObject *)__pyx_v_grad_x));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_grad_x));
-  PyTuple_SET_ITEM(__pyx_t_1, 0, ((PyObject *)__pyx_v_grad_x));
-  __Pyx_INCREF(((PyObject *)__pyx_v_grad_y));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_grad_y));
-  PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_grad_y));
+  __Pyx_INCREF(((PyObject *)__pyx_v_diff_x));
+  __Pyx_GIVEREF(((PyObject *)__pyx_v_diff_x));
+  PyTuple_SET_ITEM(__pyx_t_1, 0, ((PyObject *)__pyx_v_diff_x));
+  __Pyx_INCREF(((PyObject *)__pyx_v_diff_y));
+  __Pyx_GIVEREF(((PyObject *)__pyx_v_diff_y));
+  PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_diff_y));
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":195
+  /* "imwip/cpp_backend/wrappers.pyx":191
  * 
  * 
- * def grad_warp_2D(             # <<<<<<<<<<<<<<
+ * def diff_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  */
@@ -3699,30 +3699,30 @@ static PyObject *__pyx_pf_8libimwip_12grad_warp_2D(CYTHON_UNUSED PyObject *__pyx
     __Pyx_PyThreadState_declare
     __Pyx_PyThreadState_assign
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_f.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_u.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_v.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("libimwip.grad_warp_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("libimwip.diff_warp_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_f.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_u.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_v.rcbuffer->pybuffer);
   __pyx_L2:;
-  __Pyx_XDECREF((PyObject *)__pyx_v_grad_x);
-  __Pyx_XDECREF((PyObject *)__pyx_v_grad_y);
+  __Pyx_XDECREF((PyObject *)__pyx_v_diff_x);
+  __Pyx_XDECREF((PyObject *)__pyx_v_diff_y);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":213
+/* "imwip/cpp_backend/wrappers.pyx":209
  * 
  * # python version of jvpWarp2D, this function accepts numpy arrays
  * def jvp_warp_2D(             # <<<<<<<<<<<<<<
@@ -3750,7 +3750,7 @@ static PyObject *__pyx_pw_8libimwip_15jvp_warp_2D(PyObject *__pyx_self, PyObject
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_u,&__pyx_n_s_v,&__pyx_n_s_vec_in,&__pyx_n_s_vec_out,&__pyx_n_s_degree,0};
     PyObject* values[6] = {0,0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":218
+    /* "imwip/cpp_backend/wrappers.pyx":214
  *         np.ndarray[ndim=2, dtype=float, mode="c"] v,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] vec_in,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] vec_out=None,             # <<<<<<<<<<<<<<
@@ -3786,19 +3786,19 @@ static PyObject *__pyx_pw_8libimwip_15jvp_warp_2D(PyObject *__pyx_self, PyObject
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_u)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("jvp_warp_2D", 0, 4, 6, 1); __PYX_ERR(0, 213, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jvp_warp_2D", 0, 4, 6, 1); __PYX_ERR(0, 209, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("jvp_warp_2D", 0, 4, 6, 2); __PYX_ERR(0, 213, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jvp_warp_2D", 0, 4, 6, 2); __PYX_ERR(0, 209, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vec_in)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("jvp_warp_2D", 0, 4, 6, 3); __PYX_ERR(0, 213, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jvp_warp_2D", 0, 4, 6, 3); __PYX_ERR(0, 209, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -3814,7 +3814,7 @@ static PyObject *__pyx_pw_8libimwip_15jvp_warp_2D(PyObject *__pyx_self, PyObject
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "jvp_warp_2D") < 0)) __PYX_ERR(0, 213, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "jvp_warp_2D") < 0)) __PYX_ERR(0, 209, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -3836,27 +3836,27 @@ static PyObject *__pyx_pw_8libimwip_15jvp_warp_2D(PyObject *__pyx_self, PyObject
     __pyx_v_vec_in = ((PyArrayObject *)values[3]);
     __pyx_v_vec_out = ((PyArrayObject *)values[4]);
     if (values[5]) {
-      __pyx_v_degree = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L3_error)
+      __pyx_v_degree = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 215, __pyx_L3_error)
     } else {
       __pyx_v_degree = ((int)3);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("jvp_warp_2D", 0, 4, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 213, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("jvp_warp_2D", 0, 4, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 209, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("libimwip.jvp_warp_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 214, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 215, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 216, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vec_in), __pyx_ptype_5numpy_ndarray, 1, "vec_in", 0))) __PYX_ERR(0, 217, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vec_out), __pyx_ptype_5numpy_ndarray, 1, "vec_out", 0))) __PYX_ERR(0, 218, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 210, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 211, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 212, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vec_in), __pyx_ptype_5numpy_ndarray, 1, "vec_in", 0))) __PYX_ERR(0, 213, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vec_out), __pyx_ptype_5numpy_ndarray, 1, "vec_out", 0))) __PYX_ERR(0, 214, __pyx_L1_error)
   __pyx_r = __pyx_pf_8libimwip_14jvp_warp_2D(__pyx_self, __pyx_v_f, __pyx_v_u, __pyx_v_v, __pyx_v_vec_in, __pyx_v_vec_out, __pyx_v_degree);
 
-  /* "imwip/cpp_backend/wrappers.pyx":213
+  /* "imwip/cpp_backend/wrappers.pyx":209
  * 
  * # python version of jvpWarp2D, this function accepts numpy arrays
  * def jvp_warp_2D(             # <<<<<<<<<<<<<<
@@ -3934,31 +3934,31 @@ static PyObject *__pyx_pf_8libimwip_14jvp_warp_2D(CYTHON_UNUSED PyObject *__pyx_
   __pyx_pybuffernd_vec_out.rcbuffer = &__pyx_pybuffer_vec_out;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 213, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 209, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 213, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 209, __pyx_L1_error)
   }
   __pyx_pybuffernd_u.diminfo[0].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_u.diminfo[0].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_u.diminfo[1].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_u.diminfo[1].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 213, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 209, __pyx_L1_error)
   }
   __pyx_pybuffernd_v.diminfo[0].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_v.diminfo[0].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_v.diminfo[1].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_v.diminfo[1].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vec_in.rcbuffer->pybuffer, (PyObject*)__pyx_v_vec_in, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 213, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vec_in.rcbuffer->pybuffer, (PyObject*)__pyx_v_vec_in, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 209, __pyx_L1_error)
   }
   __pyx_pybuffernd_vec_in.diminfo[0].strides = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_vec_in.diminfo[0].shape = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_vec_in.diminfo[1].strides = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_vec_in.diminfo[1].shape = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vec_out.rcbuffer->pybuffer, (PyObject*)__pyx_v_vec_out, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 213, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vec_out.rcbuffer->pybuffer, (PyObject*)__pyx_v_vec_out, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 209, __pyx_L1_error)
   }
   __pyx_pybuffernd_vec_out.diminfo[0].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_vec_out.diminfo[0].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_vec_out.diminfo[1].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_vec_out.diminfo[1].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[1];
 
-  /* "imwip/cpp_backend/wrappers.pyx":221
+  /* "imwip/cpp_backend/wrappers.pyx":217
  *         int degree=3
  *     ):
  *     if vec_out is None:             # <<<<<<<<<<<<<<
@@ -3969,23 +3969,23 @@ static PyObject *__pyx_pf_8libimwip_14jvp_warp_2D(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":222
+    /* "imwip/cpp_backend/wrappers.pyx":218
  *     ):
  *     if vec_out is None:
  *         vec_out = np.zeros((2*f.shape[0], f.shape[1]), dtype=f.dtype)             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 222, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 222, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_long((2 * (__pyx_v_f->dimensions[0]))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 222, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_long((2 * (__pyx_v_f->dimensions[0]))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 222, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 222, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3);
@@ -3993,23 +3993,23 @@ static PyObject *__pyx_pf_8libimwip_14jvp_warp_2D(CYTHON_UNUSED PyObject *__pyx_
     PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_5);
     __pyx_t_3 = 0;
     __pyx_t_5 = 0;
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 222, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_6);
     __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 222, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 222, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 222, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 222, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 218, __pyx_L1_error)
     __pyx_t_7 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -4026,13 +4026,13 @@ static PyObject *__pyx_pf_8libimwip_14jvp_warp_2D(CYTHON_UNUSED PyObject *__pyx_
         __pyx_t_9 = __pyx_t_10 = __pyx_t_11 = 0;
       }
       __pyx_pybuffernd_vec_out.diminfo[0].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_vec_out.diminfo[0].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_vec_out.diminfo[1].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_vec_out.diminfo[1].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[1];
-      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 222, __pyx_L1_error)
+      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 218, __pyx_L1_error)
     }
     __pyx_t_7 = 0;
     __Pyx_DECREF_SET(__pyx_v_vec_out, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":221
+    /* "imwip/cpp_backend/wrappers.pyx":217
  *         int degree=3
  *     ):
  *     if vec_out is None:             # <<<<<<<<<<<<<<
@@ -4041,7 +4041,7 @@ static PyObject *__pyx_pf_8libimwip_14jvp_warp_2D(CYTHON_UNUSED PyObject *__pyx_
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":226
+  /* "imwip/cpp_backend/wrappers.pyx":222
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
  *     jvpWarp2D(&f[0,0], &u[0,0], &v[0,0], &vec_in[0,0], &vec_out[0,0], degree, f.shape[0], f.shape[1])             # <<<<<<<<<<<<<<
@@ -4061,7 +4061,7 @@ static PyObject *__pyx_pf_8libimwip_14jvp_warp_2D(CYTHON_UNUSED PyObject *__pyx_
   } else if (unlikely(__pyx_t_13 >= __pyx_pybuffernd_f.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 226, __pyx_L1_error)
+    __PYX_ERR(0, 222, __pyx_L1_error)
   }
   __pyx_t_14 = 0;
   __pyx_t_15 = 0;
@@ -4076,7 +4076,7 @@ static PyObject *__pyx_pf_8libimwip_14jvp_warp_2D(CYTHON_UNUSED PyObject *__pyx_
   } else if (unlikely(__pyx_t_15 >= __pyx_pybuffernd_u.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 226, __pyx_L1_error)
+    __PYX_ERR(0, 222, __pyx_L1_error)
   }
   __pyx_t_16 = 0;
   __pyx_t_17 = 0;
@@ -4091,7 +4091,7 @@ static PyObject *__pyx_pf_8libimwip_14jvp_warp_2D(CYTHON_UNUSED PyObject *__pyx_
   } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_v.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 226, __pyx_L1_error)
+    __PYX_ERR(0, 222, __pyx_L1_error)
   }
   __pyx_t_18 = 0;
   __pyx_t_19 = 0;
@@ -4106,7 +4106,7 @@ static PyObject *__pyx_pf_8libimwip_14jvp_warp_2D(CYTHON_UNUSED PyObject *__pyx_
   } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_vec_in.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 226, __pyx_L1_error)
+    __PYX_ERR(0, 222, __pyx_L1_error)
   }
   __pyx_t_20 = 0;
   __pyx_t_21 = 0;
@@ -4121,11 +4121,11 @@ static PyObject *__pyx_pf_8libimwip_14jvp_warp_2D(CYTHON_UNUSED PyObject *__pyx_
   } else if (unlikely(__pyx_t_21 >= __pyx_pybuffernd_vec_out.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 226, __pyx_L1_error)
+    __PYX_ERR(0, 222, __pyx_L1_error)
   }
   jvpWarp2D((&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_f.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_u.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_u.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_u.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_v.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_v.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_v.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_vec_in.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_vec_in.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_vec_out.diminfo[0].strides, __pyx_t_21, __pyx_pybuffernd_vec_out.diminfo[1].strides))), __pyx_v_degree, (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":228
+  /* "imwip/cpp_backend/wrappers.pyx":224
  *     jvpWarp2D(&f[0,0], &u[0,0], &v[0,0], &vec_in[0,0], &vec_out[0,0], degree, f.shape[0], f.shape[1])
  * 
  *     return vec_out             # <<<<<<<<<<<<<<
@@ -4137,7 +4137,7 @@ static PyObject *__pyx_pf_8libimwip_14jvp_warp_2D(CYTHON_UNUSED PyObject *__pyx_
   __pyx_r = ((PyObject *)__pyx_v_vec_out);
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":213
+  /* "imwip/cpp_backend/wrappers.pyx":209
  * 
  * # python version of jvpWarp2D, this function accepts numpy arrays
  * def jvp_warp_2D(             # <<<<<<<<<<<<<<
@@ -4177,7 +4177,7 @@ static PyObject *__pyx_pf_8libimwip_14jvp_warp_2D(CYTHON_UNUSED PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":232
+/* "imwip/cpp_backend/wrappers.pyx":228
  * 
  * # python version of warp3D, this function accepts numpy arrays
  * def warp_3D(             # <<<<<<<<<<<<<<
@@ -4205,7 +4205,7 @@ static PyObject *__pyx_pw_8libimwip_17warp_3D(PyObject *__pyx_self, PyObject *__
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_u,&__pyx_n_s_v,&__pyx_n_s_w,&__pyx_n_s_f_warped,&__pyx_n_s_degree,0};
     PyObject* values[6] = {0,0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":237
+    /* "imwip/cpp_backend/wrappers.pyx":233
  *         np.ndarray[ndim=3, dtype=float, mode="c"] v,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] w,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f_warped=None,             # <<<<<<<<<<<<<<
@@ -4241,19 +4241,19 @@ static PyObject *__pyx_pw_8libimwip_17warp_3D(PyObject *__pyx_self, PyObject *__
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_u)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("warp_3D", 0, 4, 6, 1); __PYX_ERR(0, 232, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("warp_3D", 0, 4, 6, 1); __PYX_ERR(0, 228, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("warp_3D", 0, 4, 6, 2); __PYX_ERR(0, 232, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("warp_3D", 0, 4, 6, 2); __PYX_ERR(0, 228, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_w)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("warp_3D", 0, 4, 6, 3); __PYX_ERR(0, 232, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("warp_3D", 0, 4, 6, 3); __PYX_ERR(0, 228, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -4269,7 +4269,7 @@ static PyObject *__pyx_pw_8libimwip_17warp_3D(PyObject *__pyx_self, PyObject *__
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "warp_3D") < 0)) __PYX_ERR(0, 232, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "warp_3D") < 0)) __PYX_ERR(0, 228, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -4291,27 +4291,27 @@ static PyObject *__pyx_pw_8libimwip_17warp_3D(PyObject *__pyx_self, PyObject *__
     __pyx_v_w = ((PyArrayObject *)values[3]);
     __pyx_v_f_warped = ((PyArrayObject *)values[4]);
     if (values[5]) {
-      __pyx_v_degree = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 238, __pyx_L3_error)
+      __pyx_v_degree = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 234, __pyx_L3_error)
     } else {
       __pyx_v_degree = ((int)3);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("warp_3D", 0, 4, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 232, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("warp_3D", 0, 4, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 228, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("libimwip.warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 233, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 234, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 235, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_w), __pyx_ptype_5numpy_ndarray, 1, "w", 0))) __PYX_ERR(0, 236, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 237, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 229, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 230, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 231, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_w), __pyx_ptype_5numpy_ndarray, 1, "w", 0))) __PYX_ERR(0, 232, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 233, __pyx_L1_error)
   __pyx_r = __pyx_pf_8libimwip_16warp_3D(__pyx_self, __pyx_v_f, __pyx_v_u, __pyx_v_v, __pyx_v_w, __pyx_v_f_warped, __pyx_v_degree);
 
-  /* "imwip/cpp_backend/wrappers.pyx":232
+  /* "imwip/cpp_backend/wrappers.pyx":228
  * 
  * # python version of warp3D, this function accepts numpy arrays
  * def warp_3D(             # <<<<<<<<<<<<<<
@@ -4395,31 +4395,31 @@ static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self
   __pyx_pybuffernd_f_warped.rcbuffer = &__pyx_pybuffer_f_warped;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 232, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 228, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f.diminfo[2].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f.diminfo[2].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 232, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 228, __pyx_L1_error)
   }
   __pyx_pybuffernd_u.diminfo[0].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_u.diminfo[0].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_u.diminfo[1].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_u.diminfo[1].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_u.diminfo[2].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_u.diminfo[2].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 232, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 228, __pyx_L1_error)
   }
   __pyx_pybuffernd_v.diminfo[0].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_v.diminfo[0].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_v.diminfo[1].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_v.diminfo[1].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_v.diminfo[2].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_v.diminfo[2].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_w.rcbuffer->pybuffer, (PyObject*)__pyx_v_w, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 232, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_w.rcbuffer->pybuffer, (PyObject*)__pyx_v_w, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 228, __pyx_L1_error)
   }
   __pyx_pybuffernd_w.diminfo[0].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_w.diminfo[0].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_w.diminfo[1].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_w.diminfo[1].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_w.diminfo[2].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_w.diminfo[2].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 232, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 228, __pyx_L1_error)
   }
   __pyx_pybuffernd_f_warped.diminfo[0].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f_warped.diminfo[0].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f_warped.diminfo[1].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f_warped.diminfo[1].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f_warped.diminfo[2].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f_warped.diminfo[2].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[2];
 
-  /* "imwip/cpp_backend/wrappers.pyx":240
+  /* "imwip/cpp_backend/wrappers.pyx":236
  *         int degree=3
  *     ):
  *     if f_warped is None:             # <<<<<<<<<<<<<<
@@ -4430,25 +4430,25 @@ static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":241
+    /* "imwip/cpp_backend/wrappers.pyx":237
  *     ):
  *     if f_warped is None:
  *         f_warped = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 241, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 241, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 241, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 241, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 241, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 241, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_3);
@@ -4459,23 +4459,23 @@ static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self
     __pyx_t_3 = 0;
     __pyx_t_5 = 0;
     __pyx_t_6 = 0;
-    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 241, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_7);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7);
     __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 241, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 241, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 241, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 241, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 241, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 237, __pyx_L1_error)
     __pyx_t_8 = ((PyArrayObject *)__pyx_t_5);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -4492,13 +4492,13 @@ static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self
         __pyx_t_10 = __pyx_t_11 = __pyx_t_12 = 0;
       }
       __pyx_pybuffernd_f_warped.diminfo[0].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f_warped.diminfo[0].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f_warped.diminfo[1].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f_warped.diminfo[1].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f_warped.diminfo[2].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f_warped.diminfo[2].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[2];
-      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 241, __pyx_L1_error)
+      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 237, __pyx_L1_error)
     }
     __pyx_t_8 = 0;
     __Pyx_DECREF_SET(__pyx_v_f_warped, ((PyArrayObject *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":240
+    /* "imwip/cpp_backend/wrappers.pyx":236
  *         int degree=3
  *     ):
  *     if f_warped is None:             # <<<<<<<<<<<<<<
@@ -4507,7 +4507,7 @@ static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":246
+  /* "imwip/cpp_backend/wrappers.pyx":242
  *     # get the pointer to the first element and pass it to the C++ function
  *     warp3D(
  *         &f[0,0,0],             # <<<<<<<<<<<<<<
@@ -4532,10 +4532,10 @@ static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self
   } else if (unlikely(__pyx_t_15 >= __pyx_pybuffernd_f.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 246, __pyx_L1_error)
+    __PYX_ERR(0, 242, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":247
+  /* "imwip/cpp_backend/wrappers.pyx":243
  *     warp3D(
  *         &f[0,0,0],
  *         &u[0,0,0],             # <<<<<<<<<<<<<<
@@ -4560,10 +4560,10 @@ static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self
   } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_u.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 247, __pyx_L1_error)
+    __PYX_ERR(0, 243, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":248
+  /* "imwip/cpp_backend/wrappers.pyx":244
  *         &f[0,0,0],
  *         &u[0,0,0],
  *         &v[0,0,0],             # <<<<<<<<<<<<<<
@@ -4588,10 +4588,10 @@ static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self
   } else if (unlikely(__pyx_t_21 >= __pyx_pybuffernd_v.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 248, __pyx_L1_error)
+    __PYX_ERR(0, 244, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":249
+  /* "imwip/cpp_backend/wrappers.pyx":245
  *         &u[0,0,0],
  *         &v[0,0,0],
  *         &w[0,0,0],             # <<<<<<<<<<<<<<
@@ -4616,10 +4616,10 @@ static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self
   } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_w.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 249, __pyx_L1_error)
+    __PYX_ERR(0, 245, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":250
+  /* "imwip/cpp_backend/wrappers.pyx":246
  *         &v[0,0,0],
  *         &w[0,0,0],
  *         &f_warped[0,0,0],             # <<<<<<<<<<<<<<
@@ -4644,10 +4644,10 @@ static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self
   } else if (unlikely(__pyx_t_27 >= __pyx_pybuffernd_f_warped.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 250, __pyx_L1_error)
+    __PYX_ERR(0, 246, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":245
+  /* "imwip/cpp_backend/wrappers.pyx":241
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
  *     warp3D(             # <<<<<<<<<<<<<<
@@ -4656,7 +4656,7 @@ static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self
  */
   warp3D((&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_13, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_14, __pyx_pybuffernd_f.diminfo[1].strides, __pyx_t_15, __pyx_pybuffernd_f.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_u.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_u.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_u.diminfo[1].strides, __pyx_t_18, __pyx_pybuffernd_u.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_v.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_v.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_v.diminfo[1].strides, __pyx_t_21, __pyx_pybuffernd_v.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_w.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_w.diminfo[0].strides, __pyx_t_23, __pyx_pybuffernd_w.diminfo[1].strides, __pyx_t_24, __pyx_pybuffernd_w.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_f_warped.diminfo[0].strides, __pyx_t_26, __pyx_pybuffernd_f_warped.diminfo[1].strides, __pyx_t_27, __pyx_pybuffernd_f_warped.diminfo[2].strides))), __pyx_v_degree, (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]), (__pyx_v_f->dimensions[2]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":257
+  /* "imwip/cpp_backend/wrappers.pyx":253
  *     )
  * 
  *     return f_warped             # <<<<<<<<<<<<<<
@@ -4668,7 +4668,7 @@ static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self
   __pyx_r = ((PyObject *)__pyx_v_f_warped);
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":232
+  /* "imwip/cpp_backend/wrappers.pyx":228
  * 
  * # python version of warp3D, this function accepts numpy arrays
  * def warp_3D(             # <<<<<<<<<<<<<<
@@ -4709,7 +4709,7 @@ static PyObject *__pyx_pf_8libimwip_16warp_3D(CYTHON_UNUSED PyObject *__pyx_self
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":261
+/* "imwip/cpp_backend/wrappers.pyx":257
  * 
  * # python version of adjointBackwardWarp3D, this function accepts numpy arrays
  * def adjoint_warp_3D(             # <<<<<<<<<<<<<<
@@ -4737,7 +4737,7 @@ static PyObject *__pyx_pw_8libimwip_19adjoint_warp_3D(PyObject *__pyx_self, PyOb
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f_warped,&__pyx_n_s_u,&__pyx_n_s_v,&__pyx_n_s_w,&__pyx_n_s_f,&__pyx_n_s_degree,0};
     PyObject* values[6] = {0,0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":266
+    /* "imwip/cpp_backend/wrappers.pyx":262
  *         np.ndarray[ndim=3, dtype=float, mode="c"] v,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] w,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f=None,             # <<<<<<<<<<<<<<
@@ -4773,19 +4773,19 @@ static PyObject *__pyx_pw_8libimwip_19adjoint_warp_3D(PyObject *__pyx_self, PyOb
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_u)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("adjoint_warp_3D", 0, 4, 6, 1); __PYX_ERR(0, 261, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("adjoint_warp_3D", 0, 4, 6, 1); __PYX_ERR(0, 257, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("adjoint_warp_3D", 0, 4, 6, 2); __PYX_ERR(0, 261, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("adjoint_warp_3D", 0, 4, 6, 2); __PYX_ERR(0, 257, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_w)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("adjoint_warp_3D", 0, 4, 6, 3); __PYX_ERR(0, 261, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("adjoint_warp_3D", 0, 4, 6, 3); __PYX_ERR(0, 257, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -4801,7 +4801,7 @@ static PyObject *__pyx_pw_8libimwip_19adjoint_warp_3D(PyObject *__pyx_self, PyOb
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "adjoint_warp_3D") < 0)) __PYX_ERR(0, 261, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "adjoint_warp_3D") < 0)) __PYX_ERR(0, 257, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -4823,27 +4823,27 @@ static PyObject *__pyx_pw_8libimwip_19adjoint_warp_3D(PyObject *__pyx_self, PyOb
     __pyx_v_w = ((PyArrayObject *)values[3]);
     __pyx_v_f = ((PyArrayObject *)values[4]);
     if (values[5]) {
-      __pyx_v_degree = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 267, __pyx_L3_error)
+      __pyx_v_degree = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 263, __pyx_L3_error)
     } else {
       __pyx_v_degree = ((int)3);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("adjoint_warp_3D", 0, 4, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 261, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("adjoint_warp_3D", 0, 4, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 257, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("libimwip.adjoint_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 262, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 263, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 264, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_w), __pyx_ptype_5numpy_ndarray, 1, "w", 0))) __PYX_ERR(0, 265, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 266, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 258, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 259, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 260, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_w), __pyx_ptype_5numpy_ndarray, 1, "w", 0))) __PYX_ERR(0, 261, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 262, __pyx_L1_error)
   __pyx_r = __pyx_pf_8libimwip_18adjoint_warp_3D(__pyx_self, __pyx_v_f_warped, __pyx_v_u, __pyx_v_v, __pyx_v_w, __pyx_v_f, __pyx_v_degree);
 
-  /* "imwip/cpp_backend/wrappers.pyx":261
+  /* "imwip/cpp_backend/wrappers.pyx":257
  * 
  * # python version of adjointBackwardWarp3D, this function accepts numpy arrays
  * def adjoint_warp_3D(             # <<<<<<<<<<<<<<
@@ -4927,31 +4927,31 @@ static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__
   __pyx_pybuffernd_f.rcbuffer = &__pyx_pybuffer_f;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 261, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 257, __pyx_L1_error)
   }
   __pyx_pybuffernd_f_warped.diminfo[0].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f_warped.diminfo[0].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f_warped.diminfo[1].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f_warped.diminfo[1].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f_warped.diminfo[2].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f_warped.diminfo[2].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 261, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 257, __pyx_L1_error)
   }
   __pyx_pybuffernd_u.diminfo[0].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_u.diminfo[0].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_u.diminfo[1].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_u.diminfo[1].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_u.diminfo[2].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_u.diminfo[2].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 261, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 257, __pyx_L1_error)
   }
   __pyx_pybuffernd_v.diminfo[0].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_v.diminfo[0].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_v.diminfo[1].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_v.diminfo[1].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_v.diminfo[2].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_v.diminfo[2].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_w.rcbuffer->pybuffer, (PyObject*)__pyx_v_w, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 261, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_w.rcbuffer->pybuffer, (PyObject*)__pyx_v_w, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 257, __pyx_L1_error)
   }
   __pyx_pybuffernd_w.diminfo[0].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_w.diminfo[0].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_w.diminfo[1].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_w.diminfo[1].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_w.diminfo[2].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_w.diminfo[2].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 261, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 257, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f.diminfo[2].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f.diminfo[2].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[2];
 
-  /* "imwip/cpp_backend/wrappers.pyx":269
+  /* "imwip/cpp_backend/wrappers.pyx":265
  *         int degree=3
  *     ):
  *     if f is None:             # <<<<<<<<<<<<<<
@@ -4962,25 +4962,25 @@ static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":270
+    /* "imwip/cpp_backend/wrappers.pyx":266
  *     ):
  *     if f is None:
  *         f = np.zeros((f_warped.shape[0], f_warped.shape[1], f_warped.shape[2]), dtype=f_warped.dtype)             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[2])); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[2])); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_3);
@@ -4991,23 +4991,23 @@ static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__
     __pyx_t_3 = 0;
     __pyx_t_5 = 0;
     __pyx_t_6 = 0;
-    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_7);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7);
     __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f_warped), __pyx_n_s_dtype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f_warped), __pyx_n_s_dtype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 270, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 270, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 266, __pyx_L1_error)
     __pyx_t_8 = ((PyArrayObject *)__pyx_t_5);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -5024,13 +5024,13 @@ static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__
         __pyx_t_10 = __pyx_t_11 = __pyx_t_12 = 0;
       }
       __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f.diminfo[2].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f.diminfo[2].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[2];
-      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 270, __pyx_L1_error)
+      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 266, __pyx_L1_error)
     }
     __pyx_t_8 = 0;
     __Pyx_DECREF_SET(__pyx_v_f, ((PyArrayObject *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":269
+    /* "imwip/cpp_backend/wrappers.pyx":265
  *         int degree=3
  *     ):
  *     if f is None:             # <<<<<<<<<<<<<<
@@ -5039,7 +5039,7 @@ static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":275
+  /* "imwip/cpp_backend/wrappers.pyx":271
  *     # get the pointer to the first element and pass it to the C++ function
  *     adjointWarp3D(
  *         &f_warped[0,0,0],             # <<<<<<<<<<<<<<
@@ -5064,10 +5064,10 @@ static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__
   } else if (unlikely(__pyx_t_15 >= __pyx_pybuffernd_f_warped.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 275, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":276
+  /* "imwip/cpp_backend/wrappers.pyx":272
  *     adjointWarp3D(
  *         &f_warped[0,0,0],
  *         &u[0,0,0],             # <<<<<<<<<<<<<<
@@ -5092,10 +5092,10 @@ static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__
   } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_u.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 276, __pyx_L1_error)
+    __PYX_ERR(0, 272, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":277
+  /* "imwip/cpp_backend/wrappers.pyx":273
  *         &f_warped[0,0,0],
  *         &u[0,0,0],
  *         &v[0,0,0],             # <<<<<<<<<<<<<<
@@ -5120,10 +5120,10 @@ static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__
   } else if (unlikely(__pyx_t_21 >= __pyx_pybuffernd_v.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 277, __pyx_L1_error)
+    __PYX_ERR(0, 273, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":278
+  /* "imwip/cpp_backend/wrappers.pyx":274
  *         &u[0,0,0],
  *         &v[0,0,0],
  *         &w[0,0,0],             # <<<<<<<<<<<<<<
@@ -5148,10 +5148,10 @@ static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__
   } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_w.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 278, __pyx_L1_error)
+    __PYX_ERR(0, 274, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":279
+  /* "imwip/cpp_backend/wrappers.pyx":275
  *         &v[0,0,0],
  *         &w[0,0,0],
  *         &f[0,0,0],             # <<<<<<<<<<<<<<
@@ -5176,10 +5176,10 @@ static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__
   } else if (unlikely(__pyx_t_27 >= __pyx_pybuffernd_f.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 279, __pyx_L1_error)
+    __PYX_ERR(0, 275, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":274
+  /* "imwip/cpp_backend/wrappers.pyx":270
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
  *     adjointWarp3D(             # <<<<<<<<<<<<<<
@@ -5188,7 +5188,7 @@ static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__
  */
   adjointWarp3D((&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.buf, __pyx_t_13, __pyx_pybuffernd_f_warped.diminfo[0].strides, __pyx_t_14, __pyx_pybuffernd_f_warped.diminfo[1].strides, __pyx_t_15, __pyx_pybuffernd_f_warped.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_u.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_u.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_u.diminfo[1].strides, __pyx_t_18, __pyx_pybuffernd_u.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_v.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_v.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_v.diminfo[1].strides, __pyx_t_21, __pyx_pybuffernd_v.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_w.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_w.diminfo[0].strides, __pyx_t_23, __pyx_pybuffernd_w.diminfo[1].strides, __pyx_t_24, __pyx_pybuffernd_w.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_26, __pyx_pybuffernd_f.diminfo[1].strides, __pyx_t_27, __pyx_pybuffernd_f.diminfo[2].strides))), __pyx_v_degree, (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]), (__pyx_v_f->dimensions[2]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":286
+  /* "imwip/cpp_backend/wrappers.pyx":282
  *     )
  * 
  *     return f             # <<<<<<<<<<<<<<
@@ -5200,7 +5200,7 @@ static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__
   __pyx_r = ((PyObject *)__pyx_v_f);
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":261
+  /* "imwip/cpp_backend/wrappers.pyx":257
  * 
  * # python version of adjointBackwardWarp3D, this function accepts numpy arrays
  * def adjoint_warp_3D(             # <<<<<<<<<<<<<<
@@ -5241,59 +5241,59 @@ static PyObject *__pyx_pf_8libimwip_18adjoint_warp_3D(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":289
+/* "imwip/cpp_backend/wrappers.pyx":285
  * 
  * 
- * def grad_warp_3D(             # <<<<<<<<<<<<<<
+ * def diff_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_8libimwip_21grad_warp_3D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_8libimwip_21grad_warp_3D = {"grad_warp_3D", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8libimwip_21grad_warp_3D, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_8libimwip_21grad_warp_3D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8libimwip_21diff_warp_3D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8libimwip_21diff_warp_3D = {"diff_warp_3D", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8libimwip_21diff_warp_3D, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8libimwip_21diff_warp_3D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_f = 0;
   PyArrayObject *__pyx_v_u = 0;
   PyArrayObject *__pyx_v_v = 0;
   PyArrayObject *__pyx_v_w = 0;
-  PyArrayObject *__pyx_v_grad_x = 0;
-  PyArrayObject *__pyx_v_grad_y = 0;
-  PyArrayObject *__pyx_v_grad_z = 0;
+  PyArrayObject *__pyx_v_diff_x = 0;
+  PyArrayObject *__pyx_v_diff_y = 0;
+  PyArrayObject *__pyx_v_diff_z = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("grad_warp_3D (wrapper)", 0);
+  __Pyx_RefNannySetupContext("diff_warp_3D (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_u,&__pyx_n_s_v,&__pyx_n_s_w,&__pyx_n_s_grad_x,&__pyx_n_s_grad_y,&__pyx_n_s_grad_z,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_u,&__pyx_n_s_v,&__pyx_n_s_w,&__pyx_n_s_diff_x,&__pyx_n_s_diff_y,&__pyx_n_s_diff_z,0};
     PyObject* values[7] = {0,0,0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":294
+    /* "imwip/cpp_backend/wrappers.pyx":290
  *         np.ndarray[ndim=3, dtype=float, mode="c"] v,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] w,
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_x=None,             # <<<<<<<<<<<<<<
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_y=None,
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_z=None,
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_x=None,             # <<<<<<<<<<<<<<
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_y=None,
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_z=None,
  */
     values[4] = (PyObject *)((PyArrayObject *)Py_None);
 
-    /* "imwip/cpp_backend/wrappers.pyx":295
+    /* "imwip/cpp_backend/wrappers.pyx":291
  *         np.ndarray[ndim=3, dtype=float, mode="c"] w,
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_x=None,
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_y=None,             # <<<<<<<<<<<<<<
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_z=None,
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_x=None,
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_y=None,             # <<<<<<<<<<<<<<
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_z=None,
  *     ):
  */
     values[5] = (PyObject *)((PyArrayObject *)Py_None);
 
-    /* "imwip/cpp_backend/wrappers.pyx":296
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_x=None,
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_y=None,
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_z=None,             # <<<<<<<<<<<<<<
+    /* "imwip/cpp_backend/wrappers.pyx":292
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_x=None,
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_y=None,
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_z=None,             # <<<<<<<<<<<<<<
  *     ):
- *     grad_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
  */
     values[6] = (PyObject *)((PyArrayObject *)Py_None);
     if (unlikely(__pyx_kwds)) {
@@ -5326,41 +5326,41 @@ static PyObject *__pyx_pw_8libimwip_21grad_warp_3D(PyObject *__pyx_self, PyObjec
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_u)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("grad_warp_3D", 0, 4, 7, 1); __PYX_ERR(0, 289, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("diff_warp_3D", 0, 4, 7, 1); __PYX_ERR(0, 285, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("grad_warp_3D", 0, 4, 7, 2); __PYX_ERR(0, 289, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("diff_warp_3D", 0, 4, 7, 2); __PYX_ERR(0, 285, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_w)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("grad_warp_3D", 0, 4, 7, 3); __PYX_ERR(0, 289, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("diff_warp_3D", 0, 4, 7, 3); __PYX_ERR(0, 285, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (kw_args > 0) {
-          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_grad_x);
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_diff_x);
           if (value) { values[4] = value; kw_args--; }
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (kw_args > 0) {
-          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_grad_y);
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_diff_y);
           if (value) { values[5] = value; kw_args--; }
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (kw_args > 0) {
-          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_grad_z);
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_diff_z);
           if (value) { values[6] = value; kw_args--; }
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "grad_warp_3D") < 0)) __PYX_ERR(0, 289, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "diff_warp_3D") < 0)) __PYX_ERR(0, 285, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -5382,31 +5382,31 @@ static PyObject *__pyx_pw_8libimwip_21grad_warp_3D(PyObject *__pyx_self, PyObjec
     __pyx_v_u = ((PyArrayObject *)values[1]);
     __pyx_v_v = ((PyArrayObject *)values[2]);
     __pyx_v_w = ((PyArrayObject *)values[3]);
-    __pyx_v_grad_x = ((PyArrayObject *)values[4]);
-    __pyx_v_grad_y = ((PyArrayObject *)values[5]);
-    __pyx_v_grad_z = ((PyArrayObject *)values[6]);
+    __pyx_v_diff_x = ((PyArrayObject *)values[4]);
+    __pyx_v_diff_y = ((PyArrayObject *)values[5]);
+    __pyx_v_diff_z = ((PyArrayObject *)values[6]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("grad_warp_3D", 0, 4, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 289, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("diff_warp_3D", 0, 4, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 285, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libimwip.grad_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("libimwip.diff_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 290, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 291, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 292, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_w), __pyx_ptype_5numpy_ndarray, 1, "w", 0))) __PYX_ERR(0, 293, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_grad_x), __pyx_ptype_5numpy_ndarray, 1, "grad_x", 0))) __PYX_ERR(0, 294, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_grad_y), __pyx_ptype_5numpy_ndarray, 1, "grad_y", 0))) __PYX_ERR(0, 295, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_grad_z), __pyx_ptype_5numpy_ndarray, 1, "grad_z", 0))) __PYX_ERR(0, 296, __pyx_L1_error)
-  __pyx_r = __pyx_pf_8libimwip_20grad_warp_3D(__pyx_self, __pyx_v_f, __pyx_v_u, __pyx_v_v, __pyx_v_w, __pyx_v_grad_x, __pyx_v_grad_y, __pyx_v_grad_z);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 286, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 287, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 288, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_w), __pyx_ptype_5numpy_ndarray, 1, "w", 0))) __PYX_ERR(0, 289, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_diff_x), __pyx_ptype_5numpy_ndarray, 1, "diff_x", 0))) __PYX_ERR(0, 290, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_diff_y), __pyx_ptype_5numpy_ndarray, 1, "diff_y", 0))) __PYX_ERR(0, 291, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_diff_z), __pyx_ptype_5numpy_ndarray, 1, "diff_z", 0))) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_r = __pyx_pf_8libimwip_20diff_warp_3D(__pyx_self, __pyx_v_f, __pyx_v_u, __pyx_v_v, __pyx_v_w, __pyx_v_diff_x, __pyx_v_diff_y, __pyx_v_diff_z);
 
-  /* "imwip/cpp_backend/wrappers.pyx":289
+  /* "imwip/cpp_backend/wrappers.pyx":285
  * 
  * 
- * def grad_warp_3D(             # <<<<<<<<<<<<<<
+ * def diff_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
@@ -5420,15 +5420,15 @@ static PyObject *__pyx_pw_8libimwip_21grad_warp_3D(PyObject *__pyx_self, PyObjec
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_w, PyArrayObject *__pyx_v_grad_x, PyArrayObject *__pyx_v_grad_y, PyArrayObject *__pyx_v_grad_z) {
+static PyObject *__pyx_pf_8libimwip_20diff_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_w, PyArrayObject *__pyx_v_diff_x, PyArrayObject *__pyx_v_diff_y, PyArrayObject *__pyx_v_diff_z) {
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_diff_x;
+  __Pyx_Buffer __pyx_pybuffer_diff_x;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_diff_y;
+  __Pyx_Buffer __pyx_pybuffer_diff_y;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_diff_z;
+  __Pyx_Buffer __pyx_pybuffer_diff_z;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_f;
   __Pyx_Buffer __pyx_pybuffer_f;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_grad_x;
-  __Pyx_Buffer __pyx_pybuffer_grad_x;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_grad_y;
-  __Pyx_Buffer __pyx_pybuffer_grad_y;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_grad_z;
-  __Pyx_Buffer __pyx_pybuffer_grad_z;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_u;
   __Pyx_Buffer __pyx_pybuffer_u;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_v;
@@ -5473,10 +5473,10 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("grad_warp_3D", 0);
-  __Pyx_INCREF((PyObject *)__pyx_v_grad_x);
-  __Pyx_INCREF((PyObject *)__pyx_v_grad_y);
-  __Pyx_INCREF((PyObject *)__pyx_v_grad_z);
+  __Pyx_RefNannySetupContext("diff_warp_3D", 0);
+  __Pyx_INCREF((PyObject *)__pyx_v_diff_x);
+  __Pyx_INCREF((PyObject *)__pyx_v_diff_y);
+  __Pyx_INCREF((PyObject *)__pyx_v_diff_z);
   __pyx_pybuffer_f.pybuffer.buf = NULL;
   __pyx_pybuffer_f.refcount = 0;
   __pyx_pybuffernd_f.data = NULL;
@@ -5493,73 +5493,73 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
   __pyx_pybuffer_w.refcount = 0;
   __pyx_pybuffernd_w.data = NULL;
   __pyx_pybuffernd_w.rcbuffer = &__pyx_pybuffer_w;
-  __pyx_pybuffer_grad_x.pybuffer.buf = NULL;
-  __pyx_pybuffer_grad_x.refcount = 0;
-  __pyx_pybuffernd_grad_x.data = NULL;
-  __pyx_pybuffernd_grad_x.rcbuffer = &__pyx_pybuffer_grad_x;
-  __pyx_pybuffer_grad_y.pybuffer.buf = NULL;
-  __pyx_pybuffer_grad_y.refcount = 0;
-  __pyx_pybuffernd_grad_y.data = NULL;
-  __pyx_pybuffernd_grad_y.rcbuffer = &__pyx_pybuffer_grad_y;
-  __pyx_pybuffer_grad_z.pybuffer.buf = NULL;
-  __pyx_pybuffer_grad_z.refcount = 0;
-  __pyx_pybuffernd_grad_z.data = NULL;
-  __pyx_pybuffernd_grad_z.rcbuffer = &__pyx_pybuffer_grad_z;
+  __pyx_pybuffer_diff_x.pybuffer.buf = NULL;
+  __pyx_pybuffer_diff_x.refcount = 0;
+  __pyx_pybuffernd_diff_x.data = NULL;
+  __pyx_pybuffernd_diff_x.rcbuffer = &__pyx_pybuffer_diff_x;
+  __pyx_pybuffer_diff_y.pybuffer.buf = NULL;
+  __pyx_pybuffer_diff_y.refcount = 0;
+  __pyx_pybuffernd_diff_y.data = NULL;
+  __pyx_pybuffernd_diff_y.rcbuffer = &__pyx_pybuffer_diff_y;
+  __pyx_pybuffer_diff_z.pybuffer.buf = NULL;
+  __pyx_pybuffer_diff_z.refcount = 0;
+  __pyx_pybuffernd_diff_z.data = NULL;
+  __pyx_pybuffernd_diff_z.rcbuffer = &__pyx_pybuffer_diff_z;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 285, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f.diminfo[2].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f.diminfo[2].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 285, __pyx_L1_error)
   }
   __pyx_pybuffernd_u.diminfo[0].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_u.diminfo[0].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_u.diminfo[1].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_u.diminfo[1].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_u.diminfo[2].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_u.diminfo[2].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 285, __pyx_L1_error)
   }
   __pyx_pybuffernd_v.diminfo[0].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_v.diminfo[0].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_v.diminfo[1].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_v.diminfo[1].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_v.diminfo[2].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_v.diminfo[2].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_w.rcbuffer->pybuffer, (PyObject*)__pyx_v_w, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_w.rcbuffer->pybuffer, (PyObject*)__pyx_v_w, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 285, __pyx_L1_error)
   }
   __pyx_pybuffernd_w.diminfo[0].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_w.diminfo[0].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_w.diminfo[1].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_w.diminfo[1].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_w.diminfo[2].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_w.diminfo[2].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 285, __pyx_L1_error)
   }
-  __pyx_pybuffernd_grad_x.diminfo[0].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_x.diminfo[0].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_x.diminfo[1].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_x.diminfo[1].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad_x.diminfo[2].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad_x.diminfo[2].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[2];
+  __pyx_pybuffernd_diff_x.diminfo[0].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_x.diminfo[0].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_x.diminfo[1].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_x.diminfo[1].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff_x.diminfo[2].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff_x.diminfo[2].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 285, __pyx_L1_error)
   }
-  __pyx_pybuffernd_grad_y.diminfo[0].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_y.diminfo[0].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_y.diminfo[1].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_y.diminfo[1].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad_y.diminfo[2].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad_y.diminfo[2].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[2];
+  __pyx_pybuffernd_diff_y.diminfo[0].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_y.diminfo[0].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_y.diminfo[1].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_y.diminfo[1].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff_y.diminfo[2].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff_y.diminfo[2].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_z.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_z, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_z.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_z, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 285, __pyx_L1_error)
   }
-  __pyx_pybuffernd_grad_z.diminfo[0].strides = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_z.diminfo[0].shape = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_z.diminfo[1].strides = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_z.diminfo[1].shape = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad_z.diminfo[2].strides = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad_z.diminfo[2].shape = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.shape[2];
+  __pyx_pybuffernd_diff_z.diminfo[0].strides = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_z.diminfo[0].shape = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_z.diminfo[1].strides = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_z.diminfo[1].shape = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff_z.diminfo[2].strides = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff_z.diminfo[2].shape = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.shape[2];
 
-  /* "imwip/cpp_backend/wrappers.pyx":298
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_z=None,
+  /* "imwip/cpp_backend/wrappers.pyx":294
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_z=None,
  *     ):
- *     grad_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
- *     grad_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
- *     grad_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
+ *     diff_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 298, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 298, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 298, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 298, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 298, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 298, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1);
@@ -5570,31 +5570,31 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 298, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 298, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 298, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 298, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 298, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 298, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 294, __pyx_L1_error)
   __pyx_t_6 = ((PyArrayObject *)__pyx_t_3);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_8, &__pyx_t_9, &__pyx_t_10);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -5602,32 +5602,32 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_8 = __pyx_t_9 = __pyx_t_10 = 0;
     }
-    __pyx_pybuffernd_grad_x.diminfo[0].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_x.diminfo[0].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_x.diminfo[1].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_x.diminfo[1].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad_x.diminfo[2].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad_x.diminfo[2].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[2];
-    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 298, __pyx_L1_error)
+    __pyx_pybuffernd_diff_x.diminfo[0].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_x.diminfo[0].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_x.diminfo[1].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_x.diminfo[1].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff_x.diminfo[2].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff_x.diminfo[2].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[2];
+    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 294, __pyx_L1_error)
   }
   __pyx_t_6 = 0;
-  __Pyx_DECREF_SET(__pyx_v_grad_x, ((PyArrayObject *)__pyx_t_3));
+  __Pyx_DECREF_SET(__pyx_v_diff_x, ((PyArrayObject *)__pyx_t_3));
   __pyx_t_3 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":299
+  /* "imwip/cpp_backend/wrappers.pyx":295
  *     ):
- *     grad_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
- *     grad_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
- *     grad_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
+ *     diff_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_3);
@@ -5638,31 +5638,31 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
   __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 299, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 299, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 295, __pyx_L1_error)
   __pyx_t_11 = ((PyArrayObject *)__pyx_t_4);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer, (PyObject*)__pyx_t_11, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer, (PyObject*)__pyx_t_11, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_10, &__pyx_t_9, &__pyx_t_8);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_8);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -5670,32 +5670,32 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_10 = __pyx_t_9 = __pyx_t_8 = 0;
     }
-    __pyx_pybuffernd_grad_y.diminfo[0].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_y.diminfo[0].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_y.diminfo[1].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_y.diminfo[1].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad_y.diminfo[2].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad_y.diminfo[2].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[2];
-    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 299, __pyx_L1_error)
+    __pyx_pybuffernd_diff_y.diminfo[0].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_y.diminfo[0].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_y.diminfo[1].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_y.diminfo[1].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff_y.diminfo[2].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff_y.diminfo[2].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[2];
+    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 295, __pyx_L1_error)
   }
   __pyx_t_11 = 0;
-  __Pyx_DECREF_SET(__pyx_v_grad_y, ((PyArrayObject *)__pyx_t_4));
+  __Pyx_DECREF_SET(__pyx_v_diff_y, ((PyArrayObject *)__pyx_t_4));
   __pyx_t_4 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":300
- *     grad_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
- *     grad_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
- *     grad_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
+  /* "imwip/cpp_backend/wrappers.pyx":296
+ *     diff_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
@@ -5706,31 +5706,31 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_4 = 0;
   __pyx_t_2 = 0;
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 300, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 300, __pyx_L1_error)
+  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 296, __pyx_L1_error)
   __pyx_t_12 = ((PyArrayObject *)__pyx_t_2);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_z.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_z.rcbuffer->pybuffer, (PyObject*)__pyx_t_12, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_z.rcbuffer->pybuffer);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_z.rcbuffer->pybuffer, (PyObject*)__pyx_t_12, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_8, &__pyx_t_9, &__pyx_t_10);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_z.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_z, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_z.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_z, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -5738,16 +5738,16 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_8 = __pyx_t_9 = __pyx_t_10 = 0;
     }
-    __pyx_pybuffernd_grad_z.diminfo[0].strides = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_z.diminfo[0].shape = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_z.diminfo[1].strides = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_z.diminfo[1].shape = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad_z.diminfo[2].strides = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad_z.diminfo[2].shape = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.shape[2];
-    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 300, __pyx_L1_error)
+    __pyx_pybuffernd_diff_z.diminfo[0].strides = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_z.diminfo[0].shape = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_z.diminfo[1].strides = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_z.diminfo[1].shape = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff_z.diminfo[2].strides = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff_z.diminfo[2].shape = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.shape[2];
+    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 296, __pyx_L1_error)
   }
   __pyx_t_12 = 0;
-  __Pyx_DECREF_SET(__pyx_v_grad_z, ((PyArrayObject *)__pyx_t_2));
+  __Pyx_DECREF_SET(__pyx_v_diff_z, ((PyArrayObject *)__pyx_t_2));
   __pyx_t_2 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":305
+  /* "imwip/cpp_backend/wrappers.pyx":301
  *     # get the pointer to the first element and pass it to the C++ function
- *     gradWarp3D(
+ *     diffWarp3D(
  *         &f[0,0,0],             # <<<<<<<<<<<<<<
  *         &u[0,0,0],
  *         &v[0,0,0],
@@ -5770,11 +5770,11 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
   } else if (unlikely(__pyx_t_15 >= __pyx_pybuffernd_f.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 305, __pyx_L1_error)
+    __PYX_ERR(0, 301, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":306
- *     gradWarp3D(
+  /* "imwip/cpp_backend/wrappers.pyx":302
+ *     diffWarp3D(
  *         &f[0,0,0],
  *         &u[0,0,0],             # <<<<<<<<<<<<<<
  *         &v[0,0,0],
@@ -5798,15 +5798,15 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
   } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_u.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 306, __pyx_L1_error)
+    __PYX_ERR(0, 302, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":307
+  /* "imwip/cpp_backend/wrappers.pyx":303
  *         &f[0,0,0],
  *         &u[0,0,0],
  *         &v[0,0,0],             # <<<<<<<<<<<<<<
  *         &w[0,0,0],
- *         &grad_x[0,0,0],
+ *         &diff_x[0,0,0],
  */
   __pyx_t_19 = 0;
   __pyx_t_20 = 0;
@@ -5826,15 +5826,15 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
   } else if (unlikely(__pyx_t_21 >= __pyx_pybuffernd_v.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 307, __pyx_L1_error)
+    __PYX_ERR(0, 303, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":308
+  /* "imwip/cpp_backend/wrappers.pyx":304
  *         &u[0,0,0],
  *         &v[0,0,0],
  *         &w[0,0,0],             # <<<<<<<<<<<<<<
- *         &grad_x[0,0,0],
- *         &grad_y[0,0,0],
+ *         &diff_x[0,0,0],
+ *         &diff_y[0,0,0],
  */
   __pyx_t_22 = 0;
   __pyx_t_23 = 0;
@@ -5854,42 +5854,42 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
   } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_w.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 308, __pyx_L1_error)
+    __PYX_ERR(0, 304, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":309
+  /* "imwip/cpp_backend/wrappers.pyx":305
  *         &v[0,0,0],
  *         &w[0,0,0],
- *         &grad_x[0,0,0],             # <<<<<<<<<<<<<<
- *         &grad_y[0,0,0],
- *         &grad_z[0,0,0],
+ *         &diff_x[0,0,0],             # <<<<<<<<<<<<<<
+ *         &diff_y[0,0,0],
+ *         &diff_z[0,0,0],
  */
   __pyx_t_25 = 0;
   __pyx_t_26 = 0;
   __pyx_t_27 = 0;
   __pyx_t_7 = -1;
   if (__pyx_t_25 < 0) {
-    __pyx_t_25 += __pyx_pybuffernd_grad_x.diminfo[0].shape;
+    __pyx_t_25 += __pyx_pybuffernd_diff_x.diminfo[0].shape;
     if (unlikely(__pyx_t_25 < 0)) __pyx_t_7 = 0;
-  } else if (unlikely(__pyx_t_25 >= __pyx_pybuffernd_grad_x.diminfo[0].shape)) __pyx_t_7 = 0;
+  } else if (unlikely(__pyx_t_25 >= __pyx_pybuffernd_diff_x.diminfo[0].shape)) __pyx_t_7 = 0;
   if (__pyx_t_26 < 0) {
-    __pyx_t_26 += __pyx_pybuffernd_grad_x.diminfo[1].shape;
+    __pyx_t_26 += __pyx_pybuffernd_diff_x.diminfo[1].shape;
     if (unlikely(__pyx_t_26 < 0)) __pyx_t_7 = 1;
-  } else if (unlikely(__pyx_t_26 >= __pyx_pybuffernd_grad_x.diminfo[1].shape)) __pyx_t_7 = 1;
+  } else if (unlikely(__pyx_t_26 >= __pyx_pybuffernd_diff_x.diminfo[1].shape)) __pyx_t_7 = 1;
   if (__pyx_t_27 < 0) {
-    __pyx_t_27 += __pyx_pybuffernd_grad_x.diminfo[2].shape;
+    __pyx_t_27 += __pyx_pybuffernd_diff_x.diminfo[2].shape;
     if (unlikely(__pyx_t_27 < 0)) __pyx_t_7 = 2;
-  } else if (unlikely(__pyx_t_27 >= __pyx_pybuffernd_grad_x.diminfo[2].shape)) __pyx_t_7 = 2;
+  } else if (unlikely(__pyx_t_27 >= __pyx_pybuffernd_diff_x.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 309, __pyx_L1_error)
+    __PYX_ERR(0, 305, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":310
+  /* "imwip/cpp_backend/wrappers.pyx":306
  *         &w[0,0,0],
- *         &grad_x[0,0,0],
- *         &grad_y[0,0,0],             # <<<<<<<<<<<<<<
- *         &grad_z[0,0,0],
+ *         &diff_x[0,0,0],
+ *         &diff_y[0,0,0],             # <<<<<<<<<<<<<<
+ *         &diff_z[0,0,0],
  *         f.shape[0],
  */
   __pyx_t_28 = 0;
@@ -5897,26 +5897,26 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_30 = 0;
   __pyx_t_7 = -1;
   if (__pyx_t_28 < 0) {
-    __pyx_t_28 += __pyx_pybuffernd_grad_y.diminfo[0].shape;
+    __pyx_t_28 += __pyx_pybuffernd_diff_y.diminfo[0].shape;
     if (unlikely(__pyx_t_28 < 0)) __pyx_t_7 = 0;
-  } else if (unlikely(__pyx_t_28 >= __pyx_pybuffernd_grad_y.diminfo[0].shape)) __pyx_t_7 = 0;
+  } else if (unlikely(__pyx_t_28 >= __pyx_pybuffernd_diff_y.diminfo[0].shape)) __pyx_t_7 = 0;
   if (__pyx_t_29 < 0) {
-    __pyx_t_29 += __pyx_pybuffernd_grad_y.diminfo[1].shape;
+    __pyx_t_29 += __pyx_pybuffernd_diff_y.diminfo[1].shape;
     if (unlikely(__pyx_t_29 < 0)) __pyx_t_7 = 1;
-  } else if (unlikely(__pyx_t_29 >= __pyx_pybuffernd_grad_y.diminfo[1].shape)) __pyx_t_7 = 1;
+  } else if (unlikely(__pyx_t_29 >= __pyx_pybuffernd_diff_y.diminfo[1].shape)) __pyx_t_7 = 1;
   if (__pyx_t_30 < 0) {
-    __pyx_t_30 += __pyx_pybuffernd_grad_y.diminfo[2].shape;
+    __pyx_t_30 += __pyx_pybuffernd_diff_y.diminfo[2].shape;
     if (unlikely(__pyx_t_30 < 0)) __pyx_t_7 = 2;
-  } else if (unlikely(__pyx_t_30 >= __pyx_pybuffernd_grad_y.diminfo[2].shape)) __pyx_t_7 = 2;
+  } else if (unlikely(__pyx_t_30 >= __pyx_pybuffernd_diff_y.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 310, __pyx_L1_error)
+    __PYX_ERR(0, 306, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":311
- *         &grad_x[0,0,0],
- *         &grad_y[0,0,0],
- *         &grad_z[0,0,0],             # <<<<<<<<<<<<<<
+  /* "imwip/cpp_backend/wrappers.pyx":307
+ *         &diff_x[0,0,0],
+ *         &diff_y[0,0,0],
+ *         &diff_z[0,0,0],             # <<<<<<<<<<<<<<
  *         f.shape[0],
  *         f.shape[1],
  */
@@ -5925,58 +5925,58 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_33 = 0;
   __pyx_t_7 = -1;
   if (__pyx_t_31 < 0) {
-    __pyx_t_31 += __pyx_pybuffernd_grad_z.diminfo[0].shape;
+    __pyx_t_31 += __pyx_pybuffernd_diff_z.diminfo[0].shape;
     if (unlikely(__pyx_t_31 < 0)) __pyx_t_7 = 0;
-  } else if (unlikely(__pyx_t_31 >= __pyx_pybuffernd_grad_z.diminfo[0].shape)) __pyx_t_7 = 0;
+  } else if (unlikely(__pyx_t_31 >= __pyx_pybuffernd_diff_z.diminfo[0].shape)) __pyx_t_7 = 0;
   if (__pyx_t_32 < 0) {
-    __pyx_t_32 += __pyx_pybuffernd_grad_z.diminfo[1].shape;
+    __pyx_t_32 += __pyx_pybuffernd_diff_z.diminfo[1].shape;
     if (unlikely(__pyx_t_32 < 0)) __pyx_t_7 = 1;
-  } else if (unlikely(__pyx_t_32 >= __pyx_pybuffernd_grad_z.diminfo[1].shape)) __pyx_t_7 = 1;
+  } else if (unlikely(__pyx_t_32 >= __pyx_pybuffernd_diff_z.diminfo[1].shape)) __pyx_t_7 = 1;
   if (__pyx_t_33 < 0) {
-    __pyx_t_33 += __pyx_pybuffernd_grad_z.diminfo[2].shape;
+    __pyx_t_33 += __pyx_pybuffernd_diff_z.diminfo[2].shape;
     if (unlikely(__pyx_t_33 < 0)) __pyx_t_7 = 2;
-  } else if (unlikely(__pyx_t_33 >= __pyx_pybuffernd_grad_z.diminfo[2].shape)) __pyx_t_7 = 2;
+  } else if (unlikely(__pyx_t_33 >= __pyx_pybuffernd_diff_z.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 311, __pyx_L1_error)
+    __PYX_ERR(0, 307, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":304
+  /* "imwip/cpp_backend/wrappers.pyx":300
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
- *     gradWarp3D(             # <<<<<<<<<<<<<<
+ *     diffWarp3D(             # <<<<<<<<<<<<<<
  *         &f[0,0,0],
  *         &u[0,0,0],
  */
-  gradWarp3D((&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_13, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_14, __pyx_pybuffernd_f.diminfo[1].strides, __pyx_t_15, __pyx_pybuffernd_f.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_u.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_u.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_u.diminfo[1].strides, __pyx_t_18, __pyx_pybuffernd_u.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_v.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_v.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_v.diminfo[1].strides, __pyx_t_21, __pyx_pybuffernd_v.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_w.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_w.diminfo[0].strides, __pyx_t_23, __pyx_pybuffernd_w.diminfo[1].strides, __pyx_t_24, __pyx_pybuffernd_w.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_grad_x.diminfo[0].strides, __pyx_t_26, __pyx_pybuffernd_grad_x.diminfo[1].strides, __pyx_t_27, __pyx_pybuffernd_grad_x.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_grad_y.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_grad_y.diminfo[1].strides, __pyx_t_30, __pyx_pybuffernd_grad_y.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.buf, __pyx_t_31, __pyx_pybuffernd_grad_z.diminfo[0].strides, __pyx_t_32, __pyx_pybuffernd_grad_z.diminfo[1].strides, __pyx_t_33, __pyx_pybuffernd_grad_z.diminfo[2].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]), (__pyx_v_f->dimensions[2]));
+  diffWarp3D((&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_13, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_14, __pyx_pybuffernd_f.diminfo[1].strides, __pyx_t_15, __pyx_pybuffernd_f.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_u.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_u.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_u.diminfo[1].strides, __pyx_t_18, __pyx_pybuffernd_u.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_v.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_v.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_v.diminfo[1].strides, __pyx_t_21, __pyx_pybuffernd_v.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_w.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_w.diminfo[0].strides, __pyx_t_23, __pyx_pybuffernd_w.diminfo[1].strides, __pyx_t_24, __pyx_pybuffernd_w.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_diff_x.diminfo[0].strides, __pyx_t_26, __pyx_pybuffernd_diff_x.diminfo[1].strides, __pyx_t_27, __pyx_pybuffernd_diff_x.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_diff_y.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_diff_y.diminfo[1].strides, __pyx_t_30, __pyx_pybuffernd_diff_y.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.buf, __pyx_t_31, __pyx_pybuffernd_diff_z.diminfo[0].strides, __pyx_t_32, __pyx_pybuffernd_diff_z.diminfo[1].strides, __pyx_t_33, __pyx_pybuffernd_diff_z.diminfo[2].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]), (__pyx_v_f->dimensions[2]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":317
+  /* "imwip/cpp_backend/wrappers.pyx":313
  *     )
  * 
- *     return grad_x, grad_y, grad_z             # <<<<<<<<<<<<<<
+ *     return diff_x, diff_y, diff_z             # <<<<<<<<<<<<<<
  * 
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 313, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_INCREF(((PyObject *)__pyx_v_grad_x));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_grad_x));
-  PyTuple_SET_ITEM(__pyx_t_2, 0, ((PyObject *)__pyx_v_grad_x));
-  __Pyx_INCREF(((PyObject *)__pyx_v_grad_y));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_grad_y));
-  PyTuple_SET_ITEM(__pyx_t_2, 1, ((PyObject *)__pyx_v_grad_y));
-  __Pyx_INCREF(((PyObject *)__pyx_v_grad_z));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_grad_z));
-  PyTuple_SET_ITEM(__pyx_t_2, 2, ((PyObject *)__pyx_v_grad_z));
+  __Pyx_INCREF(((PyObject *)__pyx_v_diff_x));
+  __Pyx_GIVEREF(((PyObject *)__pyx_v_diff_x));
+  PyTuple_SET_ITEM(__pyx_t_2, 0, ((PyObject *)__pyx_v_diff_x));
+  __Pyx_INCREF(((PyObject *)__pyx_v_diff_y));
+  __Pyx_GIVEREF(((PyObject *)__pyx_v_diff_y));
+  PyTuple_SET_ITEM(__pyx_t_2, 1, ((PyObject *)__pyx_v_diff_y));
+  __Pyx_INCREF(((PyObject *)__pyx_v_diff_z));
+  __Pyx_GIVEREF(((PyObject *)__pyx_v_diff_z));
+  PyTuple_SET_ITEM(__pyx_t_2, 2, ((PyObject *)__pyx_v_diff_z));
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":289
+  /* "imwip/cpp_backend/wrappers.pyx":285
  * 
  * 
- * def grad_warp_3D(             # <<<<<<<<<<<<<<
+ * def diff_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
@@ -5992,68 +5992,68 @@ static PyObject *__pyx_pf_8libimwip_20grad_warp_3D(CYTHON_UNUSED PyObject *__pyx
     __Pyx_PyThreadState_declare
     __Pyx_PyThreadState_assign
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_z.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_f.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_z.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_u.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_v.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_w.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("libimwip.grad_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("libimwip.diff_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_z.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_f.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_z.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_u.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_v.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_w.rcbuffer->pybuffer);
   __pyx_L2:;
-  __Pyx_XDECREF((PyObject *)__pyx_v_grad_x);
-  __Pyx_XDECREF((PyObject *)__pyx_v_grad_y);
-  __Pyx_XDECREF((PyObject *)__pyx_v_grad_z);
+  __Pyx_XDECREF((PyObject *)__pyx_v_diff_x);
+  __Pyx_XDECREF((PyObject *)__pyx_v_diff_y);
+  __Pyx_XDECREF((PyObject *)__pyx_v_diff_z);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":320
+/* "imwip/cpp_backend/wrappers.pyx":316
  * 
  * 
- * def partial_grad_warp_3D(             # <<<<<<<<<<<<<<
+ * def partial_diff_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_8libimwip_23partial_grad_warp_3D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_8libimwip_23partial_grad_warp_3D = {"partial_grad_warp_3D", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8libimwip_23partial_grad_warp_3D, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_8libimwip_23partial_grad_warp_3D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8libimwip_23partial_diff_warp_3D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8libimwip_23partial_diff_warp_3D = {"partial_diff_warp_3D", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8libimwip_23partial_diff_warp_3D, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8libimwip_23partial_diff_warp_3D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_f = 0;
   PyArrayObject *__pyx_v_u = 0;
   PyArrayObject *__pyx_v_v = 0;
   PyArrayObject *__pyx_v_w = 0;
   int __pyx_v_to;
-  PyArrayObject *__pyx_v_grad = 0;
+  PyArrayObject *__pyx_v_diff = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("partial_grad_warp_3D (wrapper)", 0);
+  __Pyx_RefNannySetupContext("partial_diff_warp_3D (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_u,&__pyx_n_s_v,&__pyx_n_s_w,&__pyx_n_s_to,&__pyx_n_s_grad,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_u,&__pyx_n_s_v,&__pyx_n_s_w,&__pyx_n_s_to,&__pyx_n_s_diff,0};
     PyObject* values[6] = {0,0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":326
+    /* "imwip/cpp_backend/wrappers.pyx":322
  *         np.ndarray[ndim=3, dtype=float, mode="c"] w,
  *         int to,
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad=None             # <<<<<<<<<<<<<<
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff=None             # <<<<<<<<<<<<<<
  *     ):
- *     grad = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
  */
     values[5] = (PyObject *)((PyArrayObject *)Py_None);
     if (unlikely(__pyx_kwds)) {
@@ -6084,35 +6084,35 @@ static PyObject *__pyx_pw_8libimwip_23partial_grad_warp_3D(PyObject *__pyx_self,
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_u)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("partial_grad_warp_3D", 0, 5, 6, 1); __PYX_ERR(0, 320, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("partial_diff_warp_3D", 0, 5, 6, 1); __PYX_ERR(0, 316, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("partial_grad_warp_3D", 0, 5, 6, 2); __PYX_ERR(0, 320, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("partial_diff_warp_3D", 0, 5, 6, 2); __PYX_ERR(0, 316, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_w)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("partial_grad_warp_3D", 0, 5, 6, 3); __PYX_ERR(0, 320, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("partial_diff_warp_3D", 0, 5, 6, 3); __PYX_ERR(0, 316, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_to)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("partial_grad_warp_3D", 0, 5, 6, 4); __PYX_ERR(0, 320, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("partial_diff_warp_3D", 0, 5, 6, 4); __PYX_ERR(0, 316, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (kw_args > 0) {
-          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_grad);
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_diff);
           if (value) { values[5] = value; kw_args--; }
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "partial_grad_warp_3D") < 0)) __PYX_ERR(0, 320, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "partial_diff_warp_3D") < 0)) __PYX_ERR(0, 316, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -6131,28 +6131,28 @@ static PyObject *__pyx_pw_8libimwip_23partial_grad_warp_3D(PyObject *__pyx_self,
     __pyx_v_u = ((PyArrayObject *)values[1]);
     __pyx_v_v = ((PyArrayObject *)values[2]);
     __pyx_v_w = ((PyArrayObject *)values[3]);
-    __pyx_v_to = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_to == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 325, __pyx_L3_error)
-    __pyx_v_grad = ((PyArrayObject *)values[5]);
+    __pyx_v_to = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_to == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 321, __pyx_L3_error)
+    __pyx_v_diff = ((PyArrayObject *)values[5]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("partial_grad_warp_3D", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 320, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("partial_diff_warp_3D", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 316, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libimwip.partial_grad_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("libimwip.partial_diff_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 321, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 322, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 323, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_w), __pyx_ptype_5numpy_ndarray, 1, "w", 0))) __PYX_ERR(0, 324, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_grad), __pyx_ptype_5numpy_ndarray, 1, "grad", 0))) __PYX_ERR(0, 326, __pyx_L1_error)
-  __pyx_r = __pyx_pf_8libimwip_22partial_grad_warp_3D(__pyx_self, __pyx_v_f, __pyx_v_u, __pyx_v_v, __pyx_v_w, __pyx_v_to, __pyx_v_grad);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 317, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 318, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 319, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_w), __pyx_ptype_5numpy_ndarray, 1, "w", 0))) __PYX_ERR(0, 320, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_diff), __pyx_ptype_5numpy_ndarray, 1, "diff", 0))) __PYX_ERR(0, 322, __pyx_L1_error)
+  __pyx_r = __pyx_pf_8libimwip_22partial_diff_warp_3D(__pyx_self, __pyx_v_f, __pyx_v_u, __pyx_v_v, __pyx_v_w, __pyx_v_to, __pyx_v_diff);
 
-  /* "imwip/cpp_backend/wrappers.pyx":320
+  /* "imwip/cpp_backend/wrappers.pyx":316
  * 
  * 
- * def partial_grad_warp_3D(             # <<<<<<<<<<<<<<
+ * def partial_diff_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
@@ -6166,11 +6166,11 @@ static PyObject *__pyx_pw_8libimwip_23partial_grad_warp_3D(PyObject *__pyx_self,
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_8libimwip_22partial_grad_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_w, int __pyx_v_to, PyArrayObject *__pyx_v_grad) {
+static PyObject *__pyx_pf_8libimwip_22partial_diff_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_u, PyArrayObject *__pyx_v_v, PyArrayObject *__pyx_v_w, int __pyx_v_to, PyArrayObject *__pyx_v_diff) {
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_diff;
+  __Pyx_Buffer __pyx_pybuffer_diff;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_f;
   __Pyx_Buffer __pyx_pybuffer_f;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_grad;
-  __Pyx_Buffer __pyx_pybuffer_grad;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_u;
   __Pyx_Buffer __pyx_pybuffer_u;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_v;
@@ -6207,8 +6207,8 @@ static PyObject *__pyx_pf_8libimwip_22partial_grad_warp_3D(CYTHON_UNUSED PyObjec
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("partial_grad_warp_3D", 0);
-  __Pyx_INCREF((PyObject *)__pyx_v_grad);
+  __Pyx_RefNannySetupContext("partial_diff_warp_3D", 0);
+  __Pyx_INCREF((PyObject *)__pyx_v_diff);
   __pyx_pybuffer_f.pybuffer.buf = NULL;
   __pyx_pybuffer_f.refcount = 0;
   __pyx_pybuffernd_f.data = NULL;
@@ -6225,55 +6225,55 @@ static PyObject *__pyx_pf_8libimwip_22partial_grad_warp_3D(CYTHON_UNUSED PyObjec
   __pyx_pybuffer_w.refcount = 0;
   __pyx_pybuffernd_w.data = NULL;
   __pyx_pybuffernd_w.rcbuffer = &__pyx_pybuffer_w;
-  __pyx_pybuffer_grad.pybuffer.buf = NULL;
-  __pyx_pybuffer_grad.refcount = 0;
-  __pyx_pybuffernd_grad.data = NULL;
-  __pyx_pybuffernd_grad.rcbuffer = &__pyx_pybuffer_grad;
+  __pyx_pybuffer_diff.pybuffer.buf = NULL;
+  __pyx_pybuffer_diff.refcount = 0;
+  __pyx_pybuffernd_diff.data = NULL;
+  __pyx_pybuffernd_diff.rcbuffer = &__pyx_pybuffer_diff;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 320, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 316, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f.diminfo[2].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f.diminfo[2].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 320, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 316, __pyx_L1_error)
   }
   __pyx_pybuffernd_u.diminfo[0].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_u.diminfo[0].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_u.diminfo[1].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_u.diminfo[1].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_u.diminfo[2].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_u.diminfo[2].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 320, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 316, __pyx_L1_error)
   }
   __pyx_pybuffernd_v.diminfo[0].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_v.diminfo[0].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_v.diminfo[1].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_v.diminfo[1].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_v.diminfo[2].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_v.diminfo[2].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_w.rcbuffer->pybuffer, (PyObject*)__pyx_v_w, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 320, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_w.rcbuffer->pybuffer, (PyObject*)__pyx_v_w, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 316, __pyx_L1_error)
   }
   __pyx_pybuffernd_w.diminfo[0].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_w.diminfo[0].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_w.diminfo[1].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_w.diminfo[1].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_w.diminfo[2].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_w.diminfo[2].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 320, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 316, __pyx_L1_error)
   }
-  __pyx_pybuffernd_grad.diminfo[0].strides = __pyx_pybuffernd_grad.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad.diminfo[0].shape = __pyx_pybuffernd_grad.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad.diminfo[1].strides = __pyx_pybuffernd_grad.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad.diminfo[1].shape = __pyx_pybuffernd_grad.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad.diminfo[2].strides = __pyx_pybuffernd_grad.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad.diminfo[2].shape = __pyx_pybuffernd_grad.rcbuffer->pybuffer.shape[2];
+  __pyx_pybuffernd_diff.diminfo[0].strides = __pyx_pybuffernd_diff.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff.diminfo[0].shape = __pyx_pybuffernd_diff.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff.diminfo[1].strides = __pyx_pybuffernd_diff.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff.diminfo[1].shape = __pyx_pybuffernd_diff.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff.diminfo[2].strides = __pyx_pybuffernd_diff.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff.diminfo[2].shape = __pyx_pybuffernd_diff.rcbuffer->pybuffer.shape[2];
 
-  /* "imwip/cpp_backend/wrappers.pyx":328
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad=None
+  /* "imwip/cpp_backend/wrappers.pyx":324
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff=None
  *     ):
- *     grad = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
+ *     diff = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1);
@@ -6284,31 +6284,31 @@ static PyObject *__pyx_pf_8libimwip_22partial_grad_warp_3D(CYTHON_UNUSED PyObjec
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 328, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 328, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 324, __pyx_L1_error)
   __pyx_t_6 = ((PyArrayObject *)__pyx_t_3);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff.rcbuffer->pybuffer);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_8, &__pyx_t_9, &__pyx_t_10);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -6316,16 +6316,16 @@ static PyObject *__pyx_pf_8libimwip_22partial_grad_warp_3D(CYTHON_UNUSED PyObjec
       }
       __pyx_t_8 = __pyx_t_9 = __pyx_t_10 = 0;
     }
-    __pyx_pybuffernd_grad.diminfo[0].strides = __pyx_pybuffernd_grad.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad.diminfo[0].shape = __pyx_pybuffernd_grad.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad.diminfo[1].strides = __pyx_pybuffernd_grad.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad.diminfo[1].shape = __pyx_pybuffernd_grad.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad.diminfo[2].strides = __pyx_pybuffernd_grad.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad.diminfo[2].shape = __pyx_pybuffernd_grad.rcbuffer->pybuffer.shape[2];
-    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 328, __pyx_L1_error)
+    __pyx_pybuffernd_diff.diminfo[0].strides = __pyx_pybuffernd_diff.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff.diminfo[0].shape = __pyx_pybuffernd_diff.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff.diminfo[1].strides = __pyx_pybuffernd_diff.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff.diminfo[1].shape = __pyx_pybuffernd_diff.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff.diminfo[2].strides = __pyx_pybuffernd_diff.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff.diminfo[2].shape = __pyx_pybuffernd_diff.rcbuffer->pybuffer.shape[2];
+    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 324, __pyx_L1_error)
   }
   __pyx_t_6 = 0;
-  __Pyx_DECREF_SET(__pyx_v_grad, ((PyArrayObject *)__pyx_t_3));
+  __Pyx_DECREF_SET(__pyx_v_diff, ((PyArrayObject *)__pyx_t_3));
   __pyx_t_3 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":333
+  /* "imwip/cpp_backend/wrappers.pyx":329
  *     # get the pointer to the first element and pass it to the C++ function
- *     partialGradWarp3D(
+ *     partialDiffWarp3D(
  *         &f[0,0,0],             # <<<<<<<<<<<<<<
  *         &u[0,0,0],
  *         &v[0,0,0],
@@ -6348,11 +6348,11 @@ static PyObject *__pyx_pf_8libimwip_22partial_grad_warp_3D(CYTHON_UNUSED PyObjec
   } else if (unlikely(__pyx_t_13 >= __pyx_pybuffernd_f.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 333, __pyx_L1_error)
+    __PYX_ERR(0, 329, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":334
- *     partialGradWarp3D(
+  /* "imwip/cpp_backend/wrappers.pyx":330
+ *     partialDiffWarp3D(
  *         &f[0,0,0],
  *         &u[0,0,0],             # <<<<<<<<<<<<<<
  *         &v[0,0,0],
@@ -6376,10 +6376,10 @@ static PyObject *__pyx_pf_8libimwip_22partial_grad_warp_3D(CYTHON_UNUSED PyObjec
   } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_u.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 334, __pyx_L1_error)
+    __PYX_ERR(0, 330, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":335
+  /* "imwip/cpp_backend/wrappers.pyx":331
  *         &f[0,0,0],
  *         &u[0,0,0],
  *         &v[0,0,0],             # <<<<<<<<<<<<<<
@@ -6404,15 +6404,15 @@ static PyObject *__pyx_pf_8libimwip_22partial_grad_warp_3D(CYTHON_UNUSED PyObjec
   } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_v.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 335, __pyx_L1_error)
+    __PYX_ERR(0, 331, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":336
+  /* "imwip/cpp_backend/wrappers.pyx":332
  *         &u[0,0,0],
  *         &v[0,0,0],
  *         &w[0,0,0],             # <<<<<<<<<<<<<<
  *         to,
- *         &grad[0,0,0],
+ *         &diff[0,0,0],
  */
   __pyx_t_20 = 0;
   __pyx_t_21 = 0;
@@ -6432,13 +6432,13 @@ static PyObject *__pyx_pf_8libimwip_22partial_grad_warp_3D(CYTHON_UNUSED PyObjec
   } else if (unlikely(__pyx_t_22 >= __pyx_pybuffernd_w.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 336, __pyx_L1_error)
+    __PYX_ERR(0, 332, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":338
+  /* "imwip/cpp_backend/wrappers.pyx":334
  *         &w[0,0,0],
  *         to,
- *         &grad[0,0,0],             # <<<<<<<<<<<<<<
+ *         &diff[0,0,0],             # <<<<<<<<<<<<<<
  *         f.shape[0],
  *         f.shape[1],
  */
@@ -6447,47 +6447,47 @@ static PyObject *__pyx_pf_8libimwip_22partial_grad_warp_3D(CYTHON_UNUSED PyObjec
   __pyx_t_25 = 0;
   __pyx_t_7 = -1;
   if (__pyx_t_23 < 0) {
-    __pyx_t_23 += __pyx_pybuffernd_grad.diminfo[0].shape;
+    __pyx_t_23 += __pyx_pybuffernd_diff.diminfo[0].shape;
     if (unlikely(__pyx_t_23 < 0)) __pyx_t_7 = 0;
-  } else if (unlikely(__pyx_t_23 >= __pyx_pybuffernd_grad.diminfo[0].shape)) __pyx_t_7 = 0;
+  } else if (unlikely(__pyx_t_23 >= __pyx_pybuffernd_diff.diminfo[0].shape)) __pyx_t_7 = 0;
   if (__pyx_t_24 < 0) {
-    __pyx_t_24 += __pyx_pybuffernd_grad.diminfo[1].shape;
+    __pyx_t_24 += __pyx_pybuffernd_diff.diminfo[1].shape;
     if (unlikely(__pyx_t_24 < 0)) __pyx_t_7 = 1;
-  } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_grad.diminfo[1].shape)) __pyx_t_7 = 1;
+  } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_diff.diminfo[1].shape)) __pyx_t_7 = 1;
   if (__pyx_t_25 < 0) {
-    __pyx_t_25 += __pyx_pybuffernd_grad.diminfo[2].shape;
+    __pyx_t_25 += __pyx_pybuffernd_diff.diminfo[2].shape;
     if (unlikely(__pyx_t_25 < 0)) __pyx_t_7 = 2;
-  } else if (unlikely(__pyx_t_25 >= __pyx_pybuffernd_grad.diminfo[2].shape)) __pyx_t_7 = 2;
+  } else if (unlikely(__pyx_t_25 >= __pyx_pybuffernd_diff.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 338, __pyx_L1_error)
+    __PYX_ERR(0, 334, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":332
+  /* "imwip/cpp_backend/wrappers.pyx":328
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
- *     partialGradWarp3D(             # <<<<<<<<<<<<<<
+ *     partialDiffWarp3D(             # <<<<<<<<<<<<<<
  *         &f[0,0,0],
  *         &u[0,0,0],
  */
-  partialGradWarp3D((&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_11, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_12, __pyx_pybuffernd_f.diminfo[1].strides, __pyx_t_13, __pyx_pybuffernd_f.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_u.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_u.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_u.diminfo[1].strides, __pyx_t_16, __pyx_pybuffernd_u.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_v.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_v.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_v.diminfo[1].strides, __pyx_t_19, __pyx_pybuffernd_v.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_w.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_w.diminfo[0].strides, __pyx_t_21, __pyx_pybuffernd_w.diminfo[1].strides, __pyx_t_22, __pyx_pybuffernd_w.diminfo[2].strides))), __pyx_v_to, (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_grad.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_grad.diminfo[0].strides, __pyx_t_24, __pyx_pybuffernd_grad.diminfo[1].strides, __pyx_t_25, __pyx_pybuffernd_grad.diminfo[2].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]), (__pyx_v_f->dimensions[2]));
+  partialDiffWarp3D((&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_11, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_12, __pyx_pybuffernd_f.diminfo[1].strides, __pyx_t_13, __pyx_pybuffernd_f.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_u.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_u.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_u.diminfo[1].strides, __pyx_t_16, __pyx_pybuffernd_u.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_v.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_v.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_v.diminfo[1].strides, __pyx_t_19, __pyx_pybuffernd_v.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_w.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_w.diminfo[0].strides, __pyx_t_21, __pyx_pybuffernd_w.diminfo[1].strides, __pyx_t_22, __pyx_pybuffernd_w.diminfo[2].strides))), __pyx_v_to, (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_diff.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_diff.diminfo[0].strides, __pyx_t_24, __pyx_pybuffernd_diff.diminfo[1].strides, __pyx_t_25, __pyx_pybuffernd_diff.diminfo[2].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]), (__pyx_v_f->dimensions[2]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":344
+  /* "imwip/cpp_backend/wrappers.pyx":340
  *     )
  * 
- *     return grad             # <<<<<<<<<<<<<<
+ *     return diff             # <<<<<<<<<<<<<<
  * 
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(((PyObject *)__pyx_v_grad));
-  __pyx_r = ((PyObject *)__pyx_v_grad);
+  __Pyx_INCREF(((PyObject *)__pyx_v_diff));
+  __pyx_r = ((PyObject *)__pyx_v_diff);
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":320
+  /* "imwip/cpp_backend/wrappers.pyx":316
  * 
  * 
- * def partial_grad_warp_3D(             # <<<<<<<<<<<<<<
+ * def partial_diff_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
@@ -6503,29 +6503,29 @@ static PyObject *__pyx_pf_8libimwip_22partial_grad_warp_3D(CYTHON_UNUSED PyObjec
     __Pyx_PyThreadState_declare
     __Pyx_PyThreadState_assign
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_f.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_u.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_v.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_w.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("libimwip.partial_grad_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("libimwip.partial_diff_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_f.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_u.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_v.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_w.rcbuffer->pybuffer);
   __pyx_L2:;
-  __Pyx_XDECREF((PyObject *)__pyx_v_grad);
+  __Pyx_XDECREF((PyObject *)__pyx_v_diff);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":348
+/* "imwip/cpp_backend/wrappers.pyx":344
  * 
  * # python version of jvpWarp3D, this function accepts numpy arrays
  * def jvp_warp_3D(             # <<<<<<<<<<<<<<
@@ -6553,7 +6553,7 @@ static PyObject *__pyx_pw_8libimwip_25jvp_warp_3D(PyObject *__pyx_self, PyObject
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_u,&__pyx_n_s_v,&__pyx_n_s_w,&__pyx_n_s_vec_in,&__pyx_n_s_vec_out,0};
     PyObject* values[6] = {0,0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":354
+    /* "imwip/cpp_backend/wrappers.pyx":350
  *         np.ndarray[ndim=3, dtype=float, mode="c"] w,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] vec_in,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] vec_out=None             # <<<<<<<<<<<<<<
@@ -6589,25 +6589,25 @@ static PyObject *__pyx_pw_8libimwip_25jvp_warp_3D(PyObject *__pyx_self, PyObject
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_u)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("jvp_warp_3D", 0, 5, 6, 1); __PYX_ERR(0, 348, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jvp_warp_3D", 0, 5, 6, 1); __PYX_ERR(0, 344, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("jvp_warp_3D", 0, 5, 6, 2); __PYX_ERR(0, 348, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jvp_warp_3D", 0, 5, 6, 2); __PYX_ERR(0, 344, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_w)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("jvp_warp_3D", 0, 5, 6, 3); __PYX_ERR(0, 348, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jvp_warp_3D", 0, 5, 6, 3); __PYX_ERR(0, 344, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vec_in)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("jvp_warp_3D", 0, 5, 6, 4); __PYX_ERR(0, 348, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jvp_warp_3D", 0, 5, 6, 4); __PYX_ERR(0, 344, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
@@ -6617,7 +6617,7 @@ static PyObject *__pyx_pw_8libimwip_25jvp_warp_3D(PyObject *__pyx_self, PyObject
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "jvp_warp_3D") < 0)) __PYX_ERR(0, 348, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "jvp_warp_3D") < 0)) __PYX_ERR(0, 344, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -6641,21 +6641,21 @@ static PyObject *__pyx_pw_8libimwip_25jvp_warp_3D(PyObject *__pyx_self, PyObject
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("jvp_warp_3D", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 348, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("jvp_warp_3D", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 344, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("libimwip.jvp_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 349, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 350, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 351, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_w), __pyx_ptype_5numpy_ndarray, 1, "w", 0))) __PYX_ERR(0, 352, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vec_in), __pyx_ptype_5numpy_ndarray, 1, "vec_in", 0))) __PYX_ERR(0, 353, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vec_out), __pyx_ptype_5numpy_ndarray, 1, "vec_out", 0))) __PYX_ERR(0, 354, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 345, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 346, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 347, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_w), __pyx_ptype_5numpy_ndarray, 1, "w", 0))) __PYX_ERR(0, 348, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vec_in), __pyx_ptype_5numpy_ndarray, 1, "vec_in", 0))) __PYX_ERR(0, 349, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vec_out), __pyx_ptype_5numpy_ndarray, 1, "vec_out", 0))) __PYX_ERR(0, 350, __pyx_L1_error)
   __pyx_r = __pyx_pf_8libimwip_24jvp_warp_3D(__pyx_self, __pyx_v_f, __pyx_v_u, __pyx_v_v, __pyx_v_w, __pyx_v_vec_in, __pyx_v_vec_out);
 
-  /* "imwip/cpp_backend/wrappers.pyx":348
+  /* "imwip/cpp_backend/wrappers.pyx":344
  * 
  * # python version of jvpWarp3D, this function accepts numpy arrays
  * def jvp_warp_3D(             # <<<<<<<<<<<<<<
@@ -6748,36 +6748,36 @@ static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_
   __pyx_pybuffernd_vec_out.rcbuffer = &__pyx_pybuffer_vec_out;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 348, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 344, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f.diminfo[2].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f.diminfo[2].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 348, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 344, __pyx_L1_error)
   }
   __pyx_pybuffernd_u.diminfo[0].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_u.diminfo[0].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_u.diminfo[1].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_u.diminfo[1].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_u.diminfo[2].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_u.diminfo[2].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 348, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 344, __pyx_L1_error)
   }
   __pyx_pybuffernd_v.diminfo[0].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_v.diminfo[0].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_v.diminfo[1].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_v.diminfo[1].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_v.diminfo[2].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_v.diminfo[2].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_w.rcbuffer->pybuffer, (PyObject*)__pyx_v_w, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 348, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_w.rcbuffer->pybuffer, (PyObject*)__pyx_v_w, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 344, __pyx_L1_error)
   }
   __pyx_pybuffernd_w.diminfo[0].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_w.diminfo[0].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_w.diminfo[1].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_w.diminfo[1].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_w.diminfo[2].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_w.diminfo[2].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vec_in.rcbuffer->pybuffer, (PyObject*)__pyx_v_vec_in, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 348, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vec_in.rcbuffer->pybuffer, (PyObject*)__pyx_v_vec_in, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 344, __pyx_L1_error)
   }
   __pyx_pybuffernd_vec_in.diminfo[0].strides = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_vec_in.diminfo[0].shape = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_vec_in.diminfo[1].strides = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_vec_in.diminfo[1].shape = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_vec_in.diminfo[2].strides = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_vec_in.diminfo[2].shape = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vec_out.rcbuffer->pybuffer, (PyObject*)__pyx_v_vec_out, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 348, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vec_out.rcbuffer->pybuffer, (PyObject*)__pyx_v_vec_out, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 344, __pyx_L1_error)
   }
   __pyx_pybuffernd_vec_out.diminfo[0].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_vec_out.diminfo[0].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_vec_out.diminfo[1].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_vec_out.diminfo[1].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_vec_out.diminfo[2].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_vec_out.diminfo[2].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[2];
 
-  /* "imwip/cpp_backend/wrappers.pyx":356
+  /* "imwip/cpp_backend/wrappers.pyx":352
  *         np.ndarray[ndim=3, dtype=float, mode="c"] vec_out=None
  *     ):
  *     if vec_out is None:             # <<<<<<<<<<<<<<
@@ -6788,25 +6788,25 @@ static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":357
+    /* "imwip/cpp_backend/wrappers.pyx":353
  *     ):
  *     if vec_out is None:
  *         vec_out = np.zeros((3*f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 357, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 357, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_long((3 * (__pyx_v_f->dimensions[0]))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 357, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_long((3 * (__pyx_v_f->dimensions[0]))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 357, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 357, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 357, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_3);
@@ -6817,23 +6817,23 @@ static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_
     __pyx_t_3 = 0;
     __pyx_t_5 = 0;
     __pyx_t_6 = 0;
-    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 357, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_7);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7);
     __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 357, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 357, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 357, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 357, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 357, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 353, __pyx_L1_error)
     __pyx_t_8 = ((PyArrayObject *)__pyx_t_5);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -6850,13 +6850,13 @@ static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_
         __pyx_t_10 = __pyx_t_11 = __pyx_t_12 = 0;
       }
       __pyx_pybuffernd_vec_out.diminfo[0].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_vec_out.diminfo[0].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_vec_out.diminfo[1].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_vec_out.diminfo[1].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_vec_out.diminfo[2].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_vec_out.diminfo[2].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[2];
-      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 357, __pyx_L1_error)
+      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 353, __pyx_L1_error)
     }
     __pyx_t_8 = 0;
     __Pyx_DECREF_SET(__pyx_v_vec_out, ((PyArrayObject *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":356
+    /* "imwip/cpp_backend/wrappers.pyx":352
  *         np.ndarray[ndim=3, dtype=float, mode="c"] vec_out=None
  *     ):
  *     if vec_out is None:             # <<<<<<<<<<<<<<
@@ -6865,7 +6865,7 @@ static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":362
+  /* "imwip/cpp_backend/wrappers.pyx":358
  *     # get the pointer to the first element and pass it to the C++ function
  *     jvpWarp3D(
  *         &f[0,0,0],             # <<<<<<<<<<<<<<
@@ -6890,10 +6890,10 @@ static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_
   } else if (unlikely(__pyx_t_15 >= __pyx_pybuffernd_f.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 362, __pyx_L1_error)
+    __PYX_ERR(0, 358, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":363
+  /* "imwip/cpp_backend/wrappers.pyx":359
  *     jvpWarp3D(
  *         &f[0,0,0],
  *         &u[0,0,0],             # <<<<<<<<<<<<<<
@@ -6918,10 +6918,10 @@ static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_
   } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_u.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 363, __pyx_L1_error)
+    __PYX_ERR(0, 359, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":364
+  /* "imwip/cpp_backend/wrappers.pyx":360
  *         &f[0,0,0],
  *         &u[0,0,0],
  *         &v[0,0,0],             # <<<<<<<<<<<<<<
@@ -6946,10 +6946,10 @@ static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_
   } else if (unlikely(__pyx_t_21 >= __pyx_pybuffernd_v.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 364, __pyx_L1_error)
+    __PYX_ERR(0, 360, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":365
+  /* "imwip/cpp_backend/wrappers.pyx":361
  *         &u[0,0,0],
  *         &v[0,0,0],
  *         &w[0,0,0],             # <<<<<<<<<<<<<<
@@ -6974,10 +6974,10 @@ static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_
   } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_w.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 365, __pyx_L1_error)
+    __PYX_ERR(0, 361, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":366
+  /* "imwip/cpp_backend/wrappers.pyx":362
  *         &v[0,0,0],
  *         &w[0,0,0],
  *         &vec_in[0,0,0],             # <<<<<<<<<<<<<<
@@ -7002,10 +7002,10 @@ static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_
   } else if (unlikely(__pyx_t_27 >= __pyx_pybuffernd_vec_in.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 366, __pyx_L1_error)
+    __PYX_ERR(0, 362, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":367
+  /* "imwip/cpp_backend/wrappers.pyx":363
  *         &w[0,0,0],
  *         &vec_in[0,0,0],
  *         &vec_out[0,0,0],             # <<<<<<<<<<<<<<
@@ -7030,10 +7030,10 @@ static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_
   } else if (unlikely(__pyx_t_30 >= __pyx_pybuffernd_vec_out.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 367, __pyx_L1_error)
+    __PYX_ERR(0, 363, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":361
+  /* "imwip/cpp_backend/wrappers.pyx":357
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
  *     jvpWarp3D(             # <<<<<<<<<<<<<<
@@ -7042,19 +7042,19 @@ static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_
  */
   jvpWarp3D((&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_13, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_14, __pyx_pybuffernd_f.diminfo[1].strides, __pyx_t_15, __pyx_pybuffernd_f.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_u.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_u.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_u.diminfo[1].strides, __pyx_t_18, __pyx_pybuffernd_u.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_v.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_v.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_v.diminfo[1].strides, __pyx_t_21, __pyx_pybuffernd_v.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_w.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_w.diminfo[0].strides, __pyx_t_23, __pyx_pybuffernd_w.diminfo[1].strides, __pyx_t_24, __pyx_pybuffernd_w.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_vec_in.diminfo[0].strides, __pyx_t_26, __pyx_pybuffernd_vec_in.diminfo[1].strides, __pyx_t_27, __pyx_pybuffernd_vec_in.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_vec_out.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_vec_out.diminfo[1].strides, __pyx_t_30, __pyx_pybuffernd_vec_out.diminfo[2].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]), (__pyx_v_f->dimensions[2]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":373
+  /* "imwip/cpp_backend/wrappers.pyx":369
  *     )
  * 
  *     return vec_out             # <<<<<<<<<<<<<<
  * 
- * # python version of gradWarp3DY, this function accepts numpy arrays
+ * # python version of diffWarp3DY, this function accepts numpy arrays
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(((PyObject *)__pyx_v_vec_out));
   __pyx_r = ((PyObject *)__pyx_v_vec_out);
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":348
+  /* "imwip/cpp_backend/wrappers.pyx":344
  * 
  * # python version of jvpWarp3D, this function accepts numpy arrays
  * def jvp_warp_3D(             # <<<<<<<<<<<<<<
@@ -7097,9 +7097,9 @@ static PyObject *__pyx_pf_8libimwip_24jvp_warp_3D(CYTHON_UNUSED PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":376
+/* "imwip/cpp_backend/wrappers.pyx":372
  * 
- * # python version of gradWarp3DY, this function accepts numpy arrays
+ * # python version of diffWarp3DY, this function accepts numpy arrays
  * def jvp_warp_3DY(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
@@ -7125,7 +7125,7 @@ static PyObject *__pyx_pw_8libimwip_27jvp_warp_3DY(PyObject *__pyx_self, PyObjec
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_u,&__pyx_n_s_v,&__pyx_n_s_w,&__pyx_n_s_vec_in,&__pyx_n_s_vec_out,0};
     PyObject* values[6] = {0,0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":382
+    /* "imwip/cpp_backend/wrappers.pyx":378
  *         np.ndarray[ndim=3, dtype=float, mode="c"] w,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] vec_in,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] vec_out=None             # <<<<<<<<<<<<<<
@@ -7161,25 +7161,25 @@ static PyObject *__pyx_pw_8libimwip_27jvp_warp_3DY(PyObject *__pyx_self, PyObjec
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_u)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("jvp_warp_3DY", 0, 5, 6, 1); __PYX_ERR(0, 376, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jvp_warp_3DY", 0, 5, 6, 1); __PYX_ERR(0, 372, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("jvp_warp_3DY", 0, 5, 6, 2); __PYX_ERR(0, 376, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jvp_warp_3DY", 0, 5, 6, 2); __PYX_ERR(0, 372, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_w)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("jvp_warp_3DY", 0, 5, 6, 3); __PYX_ERR(0, 376, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jvp_warp_3DY", 0, 5, 6, 3); __PYX_ERR(0, 372, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vec_in)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("jvp_warp_3DY", 0, 5, 6, 4); __PYX_ERR(0, 376, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jvp_warp_3DY", 0, 5, 6, 4); __PYX_ERR(0, 372, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
@@ -7189,7 +7189,7 @@ static PyObject *__pyx_pw_8libimwip_27jvp_warp_3DY(PyObject *__pyx_self, PyObjec
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "jvp_warp_3DY") < 0)) __PYX_ERR(0, 376, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "jvp_warp_3DY") < 0)) __PYX_ERR(0, 372, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7213,23 +7213,23 @@ static PyObject *__pyx_pw_8libimwip_27jvp_warp_3DY(PyObject *__pyx_self, PyObjec
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("jvp_warp_3DY", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 376, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("jvp_warp_3DY", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 372, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("libimwip.jvp_warp_3DY", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 377, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 378, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 379, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_w), __pyx_ptype_5numpy_ndarray, 1, "w", 0))) __PYX_ERR(0, 380, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vec_in), __pyx_ptype_5numpy_ndarray, 1, "vec_in", 0))) __PYX_ERR(0, 381, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vec_out), __pyx_ptype_5numpy_ndarray, 1, "vec_out", 0))) __PYX_ERR(0, 382, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 373, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_u), __pyx_ptype_5numpy_ndarray, 1, "u", 0))) __PYX_ERR(0, 374, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_5numpy_ndarray, 1, "v", 0))) __PYX_ERR(0, 375, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_w), __pyx_ptype_5numpy_ndarray, 1, "w", 0))) __PYX_ERR(0, 376, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vec_in), __pyx_ptype_5numpy_ndarray, 1, "vec_in", 0))) __PYX_ERR(0, 377, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vec_out), __pyx_ptype_5numpy_ndarray, 1, "vec_out", 0))) __PYX_ERR(0, 378, __pyx_L1_error)
   __pyx_r = __pyx_pf_8libimwip_26jvp_warp_3DY(__pyx_self, __pyx_v_f, __pyx_v_u, __pyx_v_v, __pyx_v_w, __pyx_v_vec_in, __pyx_v_vec_out);
 
-  /* "imwip/cpp_backend/wrappers.pyx":376
+  /* "imwip/cpp_backend/wrappers.pyx":372
  * 
- * # python version of gradWarp3DY, this function accepts numpy arrays
+ * # python version of diffWarp3DY, this function accepts numpy arrays
  * def jvp_warp_3DY(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
@@ -7320,36 +7320,36 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
   __pyx_pybuffernd_vec_out.rcbuffer = &__pyx_pybuffer_vec_out;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 376, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 372, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f.diminfo[2].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f.diminfo[2].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 376, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_u.rcbuffer->pybuffer, (PyObject*)__pyx_v_u, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 372, __pyx_L1_error)
   }
   __pyx_pybuffernd_u.diminfo[0].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_u.diminfo[0].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_u.diminfo[1].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_u.diminfo[1].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_u.diminfo[2].strides = __pyx_pybuffernd_u.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_u.diminfo[2].shape = __pyx_pybuffernd_u.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 376, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_v.rcbuffer->pybuffer, (PyObject*)__pyx_v_v, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 372, __pyx_L1_error)
   }
   __pyx_pybuffernd_v.diminfo[0].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_v.diminfo[0].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_v.diminfo[1].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_v.diminfo[1].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_v.diminfo[2].strides = __pyx_pybuffernd_v.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_v.diminfo[2].shape = __pyx_pybuffernd_v.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_w.rcbuffer->pybuffer, (PyObject*)__pyx_v_w, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 376, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_w.rcbuffer->pybuffer, (PyObject*)__pyx_v_w, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 372, __pyx_L1_error)
   }
   __pyx_pybuffernd_w.diminfo[0].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_w.diminfo[0].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_w.diminfo[1].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_w.diminfo[1].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_w.diminfo[2].strides = __pyx_pybuffernd_w.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_w.diminfo[2].shape = __pyx_pybuffernd_w.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vec_in.rcbuffer->pybuffer, (PyObject*)__pyx_v_vec_in, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 376, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vec_in.rcbuffer->pybuffer, (PyObject*)__pyx_v_vec_in, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 372, __pyx_L1_error)
   }
   __pyx_pybuffernd_vec_in.diminfo[0].strides = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_vec_in.diminfo[0].shape = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_vec_in.diminfo[1].strides = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_vec_in.diminfo[1].shape = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_vec_in.diminfo[2].strides = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_vec_in.diminfo[2].shape = __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vec_out.rcbuffer->pybuffer, (PyObject*)__pyx_v_vec_out, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 376, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vec_out.rcbuffer->pybuffer, (PyObject*)__pyx_v_vec_out, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 372, __pyx_L1_error)
   }
   __pyx_pybuffernd_vec_out.diminfo[0].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_vec_out.diminfo[0].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_vec_out.diminfo[1].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_vec_out.diminfo[1].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_vec_out.diminfo[2].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_vec_out.diminfo[2].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[2];
 
-  /* "imwip/cpp_backend/wrappers.pyx":384
+  /* "imwip/cpp_backend/wrappers.pyx":380
  *         np.ndarray[ndim=3, dtype=float, mode="c"] vec_out=None
  *     ):
  *     if vec_out is None:             # <<<<<<<<<<<<<<
@@ -7360,25 +7360,25 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":385
+    /* "imwip/cpp_backend/wrappers.pyx":381
  *     ):
  *     if vec_out is None:
  *         vec_out = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 385, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 385, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 381, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 385, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 385, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 381, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 385, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 381, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 385, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 381, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_3);
@@ -7389,23 +7389,23 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
     __pyx_t_3 = 0;
     __pyx_t_5 = 0;
     __pyx_t_6 = 0;
-    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 385, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 381, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_7);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7);
     __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 385, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 381, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 385, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 381, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 385, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 381, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 385, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 381, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 385, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 381, __pyx_L1_error)
     __pyx_t_8 = ((PyArrayObject *)__pyx_t_5);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -7422,13 +7422,13 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
         __pyx_t_10 = __pyx_t_11 = __pyx_t_12 = 0;
       }
       __pyx_pybuffernd_vec_out.diminfo[0].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_vec_out.diminfo[0].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_vec_out.diminfo[1].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_vec_out.diminfo[1].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_vec_out.diminfo[2].strides = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_vec_out.diminfo[2].shape = __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.shape[2];
-      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 385, __pyx_L1_error)
+      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 381, __pyx_L1_error)
     }
     __pyx_t_8 = 0;
     __Pyx_DECREF_SET(__pyx_v_vec_out, ((PyArrayObject *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":384
+    /* "imwip/cpp_backend/wrappers.pyx":380
  *         np.ndarray[ndim=3, dtype=float, mode="c"] vec_out=None
  *     ):
  *     if vec_out is None:             # <<<<<<<<<<<<<<
@@ -7437,7 +7437,7 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":390
+  /* "imwip/cpp_backend/wrappers.pyx":386
  *     # get the pointer to the first element and pass it to the C++ function
  *     jvpWarp3DY(
  *         &f[0,0,0],             # <<<<<<<<<<<<<<
@@ -7462,10 +7462,10 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
   } else if (unlikely(__pyx_t_15 >= __pyx_pybuffernd_f.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 390, __pyx_L1_error)
+    __PYX_ERR(0, 386, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":391
+  /* "imwip/cpp_backend/wrappers.pyx":387
  *     jvpWarp3DY(
  *         &f[0,0,0],
  *         &u[0,0,0],             # <<<<<<<<<<<<<<
@@ -7490,10 +7490,10 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
   } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_u.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 391, __pyx_L1_error)
+    __PYX_ERR(0, 387, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":392
+  /* "imwip/cpp_backend/wrappers.pyx":388
  *         &f[0,0,0],
  *         &u[0,0,0],
  *         &v[0,0,0],             # <<<<<<<<<<<<<<
@@ -7518,10 +7518,10 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
   } else if (unlikely(__pyx_t_21 >= __pyx_pybuffernd_v.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 392, __pyx_L1_error)
+    __PYX_ERR(0, 388, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":393
+  /* "imwip/cpp_backend/wrappers.pyx":389
  *         &u[0,0,0],
  *         &v[0,0,0],
  *         &w[0,0,0],             # <<<<<<<<<<<<<<
@@ -7546,10 +7546,10 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
   } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_w.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 393, __pyx_L1_error)
+    __PYX_ERR(0, 389, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":394
+  /* "imwip/cpp_backend/wrappers.pyx":390
  *         &v[0,0,0],
  *         &w[0,0,0],
  *         &vec_in[0,0,0],             # <<<<<<<<<<<<<<
@@ -7574,10 +7574,10 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
   } else if (unlikely(__pyx_t_27 >= __pyx_pybuffernd_vec_in.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 394, __pyx_L1_error)
+    __PYX_ERR(0, 390, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":395
+  /* "imwip/cpp_backend/wrappers.pyx":391
  *         &w[0,0,0],
  *         &vec_in[0,0,0],
  *         &vec_out[0,0,0],             # <<<<<<<<<<<<<<
@@ -7602,10 +7602,10 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
   } else if (unlikely(__pyx_t_30 >= __pyx_pybuffernd_vec_out.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 395, __pyx_L1_error)
+    __PYX_ERR(0, 391, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":389
+  /* "imwip/cpp_backend/wrappers.pyx":385
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
  *     jvpWarp3DY(             # <<<<<<<<<<<<<<
@@ -7614,7 +7614,7 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
  */
   jvpWarp3DY((&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_13, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_14, __pyx_pybuffernd_f.diminfo[1].strides, __pyx_t_15, __pyx_pybuffernd_f.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_u.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_u.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_u.diminfo[1].strides, __pyx_t_18, __pyx_pybuffernd_u.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_v.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_v.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_v.diminfo[1].strides, __pyx_t_21, __pyx_pybuffernd_v.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_w.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_w.diminfo[0].strides, __pyx_t_23, __pyx_pybuffernd_w.diminfo[1].strides, __pyx_t_24, __pyx_pybuffernd_w.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_vec_in.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_vec_in.diminfo[0].strides, __pyx_t_26, __pyx_pybuffernd_vec_in.diminfo[1].strides, __pyx_t_27, __pyx_pybuffernd_vec_in.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_vec_out.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_vec_out.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_vec_out.diminfo[1].strides, __pyx_t_30, __pyx_pybuffernd_vec_out.diminfo[2].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]), (__pyx_v_f->dimensions[2]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":401
+  /* "imwip/cpp_backend/wrappers.pyx":397
  *     )
  * 
  *     return vec_out             # <<<<<<<<<<<<<<
@@ -7626,9 +7626,9 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
   __pyx_r = ((PyObject *)__pyx_v_vec_out);
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":376
+  /* "imwip/cpp_backend/wrappers.pyx":372
  * 
- * # python version of gradWarp3DY, this function accepts numpy arrays
+ * # python version of diffWarp3DY, this function accepts numpy arrays
  * def jvp_warp_3DY(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
@@ -7669,7 +7669,7 @@ static PyObject *__pyx_pf_8libimwip_26jvp_warp_3DY(CYTHON_UNUSED PyObject *__pyx
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":472
+/* "imwip/cpp_backend/wrappers.pyx":468
  * 
  * # python version of affineWarp2D, this function accepts numpy arrays
  * def affine_warp_2D(             # <<<<<<<<<<<<<<
@@ -7697,7 +7697,7 @@ static PyObject *__pyx_pw_8libimwip_29affine_warp_2D(PyObject *__pyx_self, PyObj
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_A,&__pyx_n_s_b,&__pyx_n_s_f_warped,&__pyx_n_s_degree,&__pyx_n_s_indexing,0};
     PyObject* values[6] = {0,0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":476
+    /* "imwip/cpp_backend/wrappers.pyx":472
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  *         np.ndarray[ndim=1, dtype=float, mode="c"] b,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f_warped=None,             # <<<<<<<<<<<<<<
@@ -7734,13 +7734,13 @@ static PyObject *__pyx_pw_8libimwip_29affine_warp_2D(PyObject *__pyx_self, PyObj
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_A)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("affine_warp_2D", 0, 3, 6, 1); __PYX_ERR(0, 472, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("affine_warp_2D", 0, 3, 6, 1); __PYX_ERR(0, 468, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("affine_warp_2D", 0, 3, 6, 2); __PYX_ERR(0, 472, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("affine_warp_2D", 0, 3, 6, 2); __PYX_ERR(0, 468, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -7762,7 +7762,7 @@ static PyObject *__pyx_pw_8libimwip_29affine_warp_2D(PyObject *__pyx_self, PyObj
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "affine_warp_2D") < 0)) __PYX_ERR(0, 472, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "affine_warp_2D") < 0)) __PYX_ERR(0, 468, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7784,7 +7784,7 @@ static PyObject *__pyx_pw_8libimwip_29affine_warp_2D(PyObject *__pyx_self, PyObj
     __pyx_v_b = ((PyArrayObject *)values[2]);
     __pyx_v_f_warped = ((PyArrayObject *)values[3]);
     if (values[4]) {
-      __pyx_v_degree = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 477, __pyx_L3_error)
+      __pyx_v_degree = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 473, __pyx_L3_error)
     } else {
       __pyx_v_degree = ((int)3);
     }
@@ -7792,20 +7792,20 @@ static PyObject *__pyx_pw_8libimwip_29affine_warp_2D(PyObject *__pyx_self, PyObj
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("affine_warp_2D", 0, 3, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 472, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("affine_warp_2D", 0, 3, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 468, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("libimwip.affine_warp_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 473, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_A), __pyx_ptype_5numpy_ndarray, 1, "A", 0))) __PYX_ERR(0, 474, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_5numpy_ndarray, 1, "b", 0))) __PYX_ERR(0, 475, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 476, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_indexing), (&PyString_Type), 1, "indexing", 1))) __PYX_ERR(0, 478, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 469, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_A), __pyx_ptype_5numpy_ndarray, 1, "A", 0))) __PYX_ERR(0, 470, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_5numpy_ndarray, 1, "b", 0))) __PYX_ERR(0, 471, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 472, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_indexing), (&PyString_Type), 1, "indexing", 1))) __PYX_ERR(0, 474, __pyx_L1_error)
   __pyx_r = __pyx_pf_8libimwip_28affine_warp_2D(__pyx_self, __pyx_v_f, __pyx_v_A, __pyx_v_b, __pyx_v_f_warped, __pyx_v_degree, __pyx_v_indexing);
 
-  /* "imwip/cpp_backend/wrappers.pyx":472
+  /* "imwip/cpp_backend/wrappers.pyx":468
  * 
  * # python version of affineWarp2D, this function accepts numpy arrays
  * def affine_warp_2D(             # <<<<<<<<<<<<<<
@@ -7880,26 +7880,26 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
   __pyx_pybuffernd_f_warped.rcbuffer = &__pyx_pybuffer_f_warped;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 472, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 468, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_A.rcbuffer->pybuffer, (PyObject*)__pyx_v_A, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 472, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_A.rcbuffer->pybuffer, (PyObject*)__pyx_v_A, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 468, __pyx_L1_error)
   }
   __pyx_pybuffernd_A.diminfo[0].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_A.diminfo[0].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_A.diminfo[1].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_A.diminfo[1].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_b.rcbuffer->pybuffer, (PyObject*)__pyx_v_b, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 472, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_b.rcbuffer->pybuffer, (PyObject*)__pyx_v_b, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 468, __pyx_L1_error)
   }
   __pyx_pybuffernd_b.diminfo[0].strides = __pyx_pybuffernd_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_b.diminfo[0].shape = __pyx_pybuffernd_b.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 472, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 468, __pyx_L1_error)
   }
   __pyx_pybuffernd_f_warped.diminfo[0].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f_warped.diminfo[0].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f_warped.diminfo[1].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f_warped.diminfo[1].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[1];
 
-  /* "imwip/cpp_backend/wrappers.pyx":480
+  /* "imwip/cpp_backend/wrappers.pyx":476
  *         str indexing="ij"
  *     ):
  *     if f_warped is None:             # <<<<<<<<<<<<<<
@@ -7910,23 +7910,23 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":481
+    /* "imwip/cpp_backend/wrappers.pyx":477
  *     ):
  *     if f_warped is None:
  *         f_warped = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)             # <<<<<<<<<<<<<<
  * 
  *     if indexing == "xy":
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 481, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 481, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 481, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 481, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 481, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3);
@@ -7934,23 +7934,23 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
     PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_5);
     __pyx_t_3 = 0;
     __pyx_t_5 = 0;
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 481, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_6);
     __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 481, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 481, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 481, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 481, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 481, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 477, __pyx_L1_error)
     __pyx_t_7 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -7967,13 +7967,13 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
         __pyx_t_9 = __pyx_t_10 = __pyx_t_11 = 0;
       }
       __pyx_pybuffernd_f_warped.diminfo[0].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f_warped.diminfo[0].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f_warped.diminfo[1].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f_warped.diminfo[1].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[1];
-      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 481, __pyx_L1_error)
+      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 477, __pyx_L1_error)
     }
     __pyx_t_7 = 0;
     __Pyx_DECREF_SET(__pyx_v_f_warped, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":480
+    /* "imwip/cpp_backend/wrappers.pyx":476
  *         str indexing="ij"
  *     ):
  *     if f_warped is None:             # <<<<<<<<<<<<<<
@@ -7982,32 +7982,32 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":483
+  /* "imwip/cpp_backend/wrappers.pyx":479
  *         f_warped = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
  * 
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
  *         A = np.fliplr(np.flipud(A)).copy()
  *         b = np.flip(b).copy()
  */
-  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 483, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 479, __pyx_L1_error)
   __pyx_t_1 = (__pyx_t_2 != 0);
   if (__pyx_t_1) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":484
+    /* "imwip/cpp_backend/wrappers.pyx":480
  * 
  *     if indexing == "xy":
  *         A = np.fliplr(np.flipud(A)).copy()             # <<<<<<<<<<<<<<
  *         b = np.flip(b).copy()
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 484, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fliplr); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 484, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fliplr); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 484, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_flipud); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 484, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_flipud); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     __pyx_t_12 = NULL;
@@ -8022,7 +8022,7 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
     }
     __pyx_t_5 = (__pyx_t_12) ? __Pyx_PyObject_Call2Args(__pyx_t_13, __pyx_t_12, ((PyObject *)__pyx_v_A)) : __Pyx_PyObject_CallOneArg(__pyx_t_13, ((PyObject *)__pyx_v_A));
     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 484, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __pyx_t_13 = NULL;
@@ -8038,10 +8038,10 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
     __pyx_t_6 = (__pyx_t_13) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_13, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
     __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 484, __pyx_L1_error)
+    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_copy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 484, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_copy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = NULL;
@@ -8056,10 +8056,10 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
     }
     __pyx_t_3 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 484, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 484, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 480, __pyx_L1_error)
     __pyx_t_14 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8076,22 +8076,22 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
         __pyx_t_11 = __pyx_t_10 = __pyx_t_9 = 0;
       }
       __pyx_pybuffernd_A.diminfo[0].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_A.diminfo[0].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_A.diminfo[1].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_A.diminfo[1].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[1];
-      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 484, __pyx_L1_error)
+      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 480, __pyx_L1_error)
     }
     __pyx_t_14 = 0;
     __Pyx_DECREF_SET(__pyx_v_A, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":485
+    /* "imwip/cpp_backend/wrappers.pyx":481
  *     if indexing == "xy":
  *         A = np.fliplr(np.flipud(A)).copy()
  *         b = np.flip(b).copy()             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 485, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 481, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_flip); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 485, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_flip); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 481, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = NULL;
@@ -8106,10 +8106,10 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
     }
     __pyx_t_4 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_6, ((PyObject *)__pyx_v_b)) : __Pyx_PyObject_CallOneArg(__pyx_t_5, ((PyObject *)__pyx_v_b));
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 485, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 481, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_copy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 485, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_copy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 481, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -8124,10 +8124,10 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
     }
     __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 485, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 481, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 485, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 481, __pyx_L1_error)
     __pyx_t_15 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8144,13 +8144,13 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
         __pyx_t_9 = __pyx_t_10 = __pyx_t_11 = 0;
       }
       __pyx_pybuffernd_b.diminfo[0].strides = __pyx_pybuffernd_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_b.diminfo[0].shape = __pyx_pybuffernd_b.rcbuffer->pybuffer.shape[0];
-      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 485, __pyx_L1_error)
+      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 481, __pyx_L1_error)
     }
     __pyx_t_15 = 0;
     __Pyx_DECREF_SET(__pyx_v_b, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":483
+    /* "imwip/cpp_backend/wrappers.pyx":479
  *         f_warped = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
  * 
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
@@ -8159,7 +8159,7 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":489
+  /* "imwip/cpp_backend/wrappers.pyx":485
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
  *     affineWarp2D(&f[0,0], &A[0,0], &b[0], &f_warped[0,0], degree, f.shape[0], f.shape[1])             # <<<<<<<<<<<<<<
@@ -8179,7 +8179,7 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
   } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_f.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 489, __pyx_L1_error)
+    __PYX_ERR(0, 485, __pyx_L1_error)
   }
   __pyx_t_18 = 0;
   __pyx_t_19 = 0;
@@ -8194,7 +8194,7 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
   } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_A.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 489, __pyx_L1_error)
+    __PYX_ERR(0, 485, __pyx_L1_error)
   }
   __pyx_t_20 = 0;
   __pyx_t_8 = -1;
@@ -8204,7 +8204,7 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
   } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_b.diminfo[0].shape)) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 489, __pyx_L1_error)
+    __PYX_ERR(0, 485, __pyx_L1_error)
   }
   __pyx_t_21 = 0;
   __pyx_t_22 = 0;
@@ -8219,11 +8219,11 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
   } else if (unlikely(__pyx_t_22 >= __pyx_pybuffernd_f_warped.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 489, __pyx_L1_error)
+    __PYX_ERR(0, 485, __pyx_L1_error)
   }
   affineWarp2D((&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_f.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_A.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_A.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_A.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig1d(float *, __pyx_pybuffernd_b.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_b.diminfo[0].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_f_warped.diminfo[0].strides, __pyx_t_22, __pyx_pybuffernd_f_warped.diminfo[1].strides))), __pyx_v_degree, (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":491
+  /* "imwip/cpp_backend/wrappers.pyx":487
  *     affineWarp2D(&f[0,0], &A[0,0], &b[0], &f_warped[0,0], degree, f.shape[0], f.shape[1])
  * 
  *     return f_warped             # <<<<<<<<<<<<<<
@@ -8235,7 +8235,7 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
   __pyx_r = ((PyObject *)__pyx_v_f_warped);
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":472
+  /* "imwip/cpp_backend/wrappers.pyx":468
  * 
  * # python version of affineWarp2D, this function accepts numpy arrays
  * def affine_warp_2D(             # <<<<<<<<<<<<<<
@@ -8277,7 +8277,7 @@ static PyObject *__pyx_pf_8libimwip_28affine_warp_2D(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":495
+/* "imwip/cpp_backend/wrappers.pyx":491
  * 
  * # python version of adjointAffineWarp2D, this function accepts numpy arrays
  * def adjoint_affine_warp_2D(             # <<<<<<<<<<<<<<
@@ -8305,7 +8305,7 @@ static PyObject *__pyx_pw_8libimwip_31adjoint_affine_warp_2D(PyObject *__pyx_sel
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f_warped,&__pyx_n_s_A,&__pyx_n_s_b,&__pyx_n_s_f,&__pyx_n_s_degree,&__pyx_n_s_indexing,0};
     PyObject* values[6] = {0,0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":499
+    /* "imwip/cpp_backend/wrappers.pyx":495
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  *         np.ndarray[ndim=1, dtype=float, mode="c"] b,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f=None,             # <<<<<<<<<<<<<<
@@ -8342,13 +8342,13 @@ static PyObject *__pyx_pw_8libimwip_31adjoint_affine_warp_2D(PyObject *__pyx_sel
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_A)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("adjoint_affine_warp_2D", 0, 3, 6, 1); __PYX_ERR(0, 495, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("adjoint_affine_warp_2D", 0, 3, 6, 1); __PYX_ERR(0, 491, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("adjoint_affine_warp_2D", 0, 3, 6, 2); __PYX_ERR(0, 495, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("adjoint_affine_warp_2D", 0, 3, 6, 2); __PYX_ERR(0, 491, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -8370,7 +8370,7 @@ static PyObject *__pyx_pw_8libimwip_31adjoint_affine_warp_2D(PyObject *__pyx_sel
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "adjoint_affine_warp_2D") < 0)) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "adjoint_affine_warp_2D") < 0)) __PYX_ERR(0, 491, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -8392,7 +8392,7 @@ static PyObject *__pyx_pw_8libimwip_31adjoint_affine_warp_2D(PyObject *__pyx_sel
     __pyx_v_b = ((PyArrayObject *)values[2]);
     __pyx_v_f = ((PyArrayObject *)values[3]);
     if (values[4]) {
-      __pyx_v_degree = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 500, __pyx_L3_error)
+      __pyx_v_degree = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 496, __pyx_L3_error)
     } else {
       __pyx_v_degree = ((int)3);
     }
@@ -8400,20 +8400,20 @@ static PyObject *__pyx_pw_8libimwip_31adjoint_affine_warp_2D(PyObject *__pyx_sel
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("adjoint_affine_warp_2D", 0, 3, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 495, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("adjoint_affine_warp_2D", 0, 3, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 491, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("libimwip.adjoint_affine_warp_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 496, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_A), __pyx_ptype_5numpy_ndarray, 1, "A", 0))) __PYX_ERR(0, 497, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_5numpy_ndarray, 1, "b", 0))) __PYX_ERR(0, 498, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 499, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_indexing), (&PyString_Type), 1, "indexing", 1))) __PYX_ERR(0, 501, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 492, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_A), __pyx_ptype_5numpy_ndarray, 1, "A", 0))) __PYX_ERR(0, 493, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_5numpy_ndarray, 1, "b", 0))) __PYX_ERR(0, 494, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 495, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_indexing), (&PyString_Type), 1, "indexing", 1))) __PYX_ERR(0, 497, __pyx_L1_error)
   __pyx_r = __pyx_pf_8libimwip_30adjoint_affine_warp_2D(__pyx_self, __pyx_v_f_warped, __pyx_v_A, __pyx_v_b, __pyx_v_f, __pyx_v_degree, __pyx_v_indexing);
 
-  /* "imwip/cpp_backend/wrappers.pyx":495
+  /* "imwip/cpp_backend/wrappers.pyx":491
  * 
  * # python version of adjointAffineWarp2D, this function accepts numpy arrays
  * def adjoint_affine_warp_2D(             # <<<<<<<<<<<<<<
@@ -8488,26 +8488,26 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
   __pyx_pybuffernd_f.rcbuffer = &__pyx_pybuffer_f;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 495, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 491, __pyx_L1_error)
   }
   __pyx_pybuffernd_f_warped.diminfo[0].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f_warped.diminfo[0].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f_warped.diminfo[1].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f_warped.diminfo[1].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_A.rcbuffer->pybuffer, (PyObject*)__pyx_v_A, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 495, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_A.rcbuffer->pybuffer, (PyObject*)__pyx_v_A, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 491, __pyx_L1_error)
   }
   __pyx_pybuffernd_A.diminfo[0].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_A.diminfo[0].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_A.diminfo[1].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_A.diminfo[1].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_b.rcbuffer->pybuffer, (PyObject*)__pyx_v_b, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 495, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_b.rcbuffer->pybuffer, (PyObject*)__pyx_v_b, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 491, __pyx_L1_error)
   }
   __pyx_pybuffernd_b.diminfo[0].strides = __pyx_pybuffernd_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_b.diminfo[0].shape = __pyx_pybuffernd_b.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 495, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 491, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1];
 
-  /* "imwip/cpp_backend/wrappers.pyx":503
+  /* "imwip/cpp_backend/wrappers.pyx":499
  *         str indexing = "ij"
  *     ):
  *     if f is None:             # <<<<<<<<<<<<<<
@@ -8518,23 +8518,23 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":504
+    /* "imwip/cpp_backend/wrappers.pyx":500
  *     ):
  *     if f is None:
  *         f = np.zeros((f_warped.shape[0], f_warped.shape[1]), dtype=f_warped.dtype)             # <<<<<<<<<<<<<<
  * 
  *     if indexing == "xy":
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 504, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 500, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 504, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 500, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 504, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 500, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 504, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 500, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 504, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 500, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3);
@@ -8542,23 +8542,23 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
     PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_5);
     __pyx_t_3 = 0;
     __pyx_t_5 = 0;
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 504, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 500, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_6);
     __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 504, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 500, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f_warped), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 504, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f_warped), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 500, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 504, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 500, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 504, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 500, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 504, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 500, __pyx_L1_error)
     __pyx_t_7 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8575,13 +8575,13 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
         __pyx_t_9 = __pyx_t_10 = __pyx_t_11 = 0;
       }
       __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1];
-      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 504, __pyx_L1_error)
+      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 500, __pyx_L1_error)
     }
     __pyx_t_7 = 0;
     __Pyx_DECREF_SET(__pyx_v_f, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":503
+    /* "imwip/cpp_backend/wrappers.pyx":499
  *         str indexing = "ij"
  *     ):
  *     if f is None:             # <<<<<<<<<<<<<<
@@ -8590,32 +8590,32 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":506
+  /* "imwip/cpp_backend/wrappers.pyx":502
  *         f = np.zeros((f_warped.shape[0], f_warped.shape[1]), dtype=f_warped.dtype)
  * 
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
  *         A = np.fliplr(np.flipud(A)).copy()
  *         b = np.flip(b).copy()
  */
-  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 506, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 502, __pyx_L1_error)
   __pyx_t_1 = (__pyx_t_2 != 0);
   if (__pyx_t_1) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":507
+    /* "imwip/cpp_backend/wrappers.pyx":503
  * 
  *     if indexing == "xy":
  *         A = np.fliplr(np.flipud(A)).copy()             # <<<<<<<<<<<<<<
  *         b = np.flip(b).copy()
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 507, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 503, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fliplr); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 507, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fliplr); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 503, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 507, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 503, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_flipud); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 507, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_flipud); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 503, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     __pyx_t_12 = NULL;
@@ -8630,7 +8630,7 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
     }
     __pyx_t_5 = (__pyx_t_12) ? __Pyx_PyObject_Call2Args(__pyx_t_13, __pyx_t_12, ((PyObject *)__pyx_v_A)) : __Pyx_PyObject_CallOneArg(__pyx_t_13, ((PyObject *)__pyx_v_A));
     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 507, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 503, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __pyx_t_13 = NULL;
@@ -8646,10 +8646,10 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
     __pyx_t_6 = (__pyx_t_13) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_13, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
     __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 507, __pyx_L1_error)
+    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 503, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_copy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 507, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_copy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 503, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = NULL;
@@ -8664,10 +8664,10 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
     }
     __pyx_t_3 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 507, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 503, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 507, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 503, __pyx_L1_error)
     __pyx_t_14 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8684,22 +8684,22 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
         __pyx_t_11 = __pyx_t_10 = __pyx_t_9 = 0;
       }
       __pyx_pybuffernd_A.diminfo[0].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_A.diminfo[0].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_A.diminfo[1].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_A.diminfo[1].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[1];
-      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 507, __pyx_L1_error)
+      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 503, __pyx_L1_error)
     }
     __pyx_t_14 = 0;
     __Pyx_DECREF_SET(__pyx_v_A, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":508
+    /* "imwip/cpp_backend/wrappers.pyx":504
  *     if indexing == "xy":
  *         A = np.fliplr(np.flipud(A)).copy()
  *         b = np.flip(b).copy()             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 508, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 504, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_flip); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 508, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_flip); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 504, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = NULL;
@@ -8714,10 +8714,10 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
     }
     __pyx_t_4 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_6, ((PyObject *)__pyx_v_b)) : __Pyx_PyObject_CallOneArg(__pyx_t_5, ((PyObject *)__pyx_v_b));
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 508, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 504, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_copy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 508, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_copy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 504, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -8732,10 +8732,10 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
     }
     __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 508, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 504, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 508, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 504, __pyx_L1_error)
     __pyx_t_15 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8752,13 +8752,13 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
         __pyx_t_9 = __pyx_t_10 = __pyx_t_11 = 0;
       }
       __pyx_pybuffernd_b.diminfo[0].strides = __pyx_pybuffernd_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_b.diminfo[0].shape = __pyx_pybuffernd_b.rcbuffer->pybuffer.shape[0];
-      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 508, __pyx_L1_error)
+      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 504, __pyx_L1_error)
     }
     __pyx_t_15 = 0;
     __Pyx_DECREF_SET(__pyx_v_b, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":506
+    /* "imwip/cpp_backend/wrappers.pyx":502
  *         f = np.zeros((f_warped.shape[0], f_warped.shape[1]), dtype=f_warped.dtype)
  * 
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
@@ -8767,7 +8767,7 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":513
+  /* "imwip/cpp_backend/wrappers.pyx":509
  *     # get the pointer to the first element and pass it to the C++ function
  *     adjointAffineWarp2D(
  *         &f_warped[0,0],             # <<<<<<<<<<<<<<
@@ -8787,10 +8787,10 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_f_warped.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 513, __pyx_L1_error)
+    __PYX_ERR(0, 509, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":514
+  /* "imwip/cpp_backend/wrappers.pyx":510
  *     adjointAffineWarp2D(
  *         &f_warped[0,0],
  *         &A[0,0],             # <<<<<<<<<<<<<<
@@ -8810,10 +8810,10 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_A.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 514, __pyx_L1_error)
+    __PYX_ERR(0, 510, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":515
+  /* "imwip/cpp_backend/wrappers.pyx":511
  *         &f_warped[0,0],
  *         &A[0,0],
  *         &b[0],             # <<<<<<<<<<<<<<
@@ -8828,10 +8828,10 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_b.diminfo[0].shape)) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 515, __pyx_L1_error)
+    __PYX_ERR(0, 511, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":516
+  /* "imwip/cpp_backend/wrappers.pyx":512
  *         &A[0,0],
  *         &b[0],
  *         &f[0,0],             # <<<<<<<<<<<<<<
@@ -8851,10 +8851,10 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_22 >= __pyx_pybuffernd_f.diminfo[1].shape)) __pyx_t_8 = 1;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 516, __pyx_L1_error)
+    __PYX_ERR(0, 512, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":512
+  /* "imwip/cpp_backend/wrappers.pyx":508
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
  *     adjointAffineWarp2D(             # <<<<<<<<<<<<<<
@@ -8863,19 +8863,19 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
  */
   adjointAffineWarp2D((&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_f_warped.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_f_warped.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_A.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_A.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_A.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig1d(float *, __pyx_pybuffernd_b.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_b.diminfo[0].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_22, __pyx_pybuffernd_f.diminfo[1].strides))), __pyx_v_degree, (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":522
+  /* "imwip/cpp_backend/wrappers.pyx":518
  *     )
  * 
  *     return f             # <<<<<<<<<<<<<<
  * 
- * def grad_affine_warp_2D(
+ * def diff_affine_warp_2D(
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(((PyObject *)__pyx_v_f));
   __pyx_r = ((PyObject *)__pyx_v_f);
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":495
+  /* "imwip/cpp_backend/wrappers.pyx":491
  * 
  * # python version of adjointAffineWarp2D, this function accepts numpy arrays
  * def adjoint_affine_warp_2D(             # <<<<<<<<<<<<<<
@@ -8917,47 +8917,47 @@ static PyObject *__pyx_pf_8libimwip_30adjoint_affine_warp_2D(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":524
+/* "imwip/cpp_backend/wrappers.pyx":520
  *     return f
  * 
- * def grad_affine_warp_2D(             # <<<<<<<<<<<<<<
+ * def diff_affine_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_8libimwip_33grad_affine_warp_2D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_8libimwip_33grad_affine_warp_2D = {"grad_affine_warp_2D", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8libimwip_33grad_affine_warp_2D, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_8libimwip_33grad_affine_warp_2D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8libimwip_33diff_affine_warp_2D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8libimwip_33diff_affine_warp_2D = {"diff_affine_warp_2D", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8libimwip_33diff_affine_warp_2D, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8libimwip_33diff_affine_warp_2D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_f = 0;
   PyArrayObject *__pyx_v_A = 0;
   PyArrayObject *__pyx_v_b = 0;
-  PyArrayObject *__pyx_v_grad_x = 0;
-  PyArrayObject *__pyx_v_grad_y = 0;
+  PyArrayObject *__pyx_v_diff_x = 0;
+  PyArrayObject *__pyx_v_diff_y = 0;
   PyObject *__pyx_v_indexing = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("grad_affine_warp_2D (wrapper)", 0);
+  __Pyx_RefNannySetupContext("diff_affine_warp_2D (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_A,&__pyx_n_s_b,&__pyx_n_s_grad_x,&__pyx_n_s_grad_y,&__pyx_n_s_indexing,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_A,&__pyx_n_s_b,&__pyx_n_s_diff_x,&__pyx_n_s_diff_y,&__pyx_n_s_indexing,0};
     PyObject* values[6] = {0,0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":528
+    /* "imwip/cpp_backend/wrappers.pyx":524
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  *         np.ndarray[ndim=1, dtype=float, mode="c"] b,
- *         np.ndarray[ndim=2, dtype=float, mode="c"] grad_x=None,             # <<<<<<<<<<<<<<
- *         np.ndarray[ndim=2, dtype=float, mode="c"] grad_y=None,
+ *         np.ndarray[ndim=2, dtype=float, mode="c"] diff_x=None,             # <<<<<<<<<<<<<<
+ *         np.ndarray[ndim=2, dtype=float, mode="c"] diff_y=None,
  *         str indexing="ij"
  */
     values[3] = (PyObject *)((PyArrayObject *)Py_None);
 
-    /* "imwip/cpp_backend/wrappers.pyx":529
+    /* "imwip/cpp_backend/wrappers.pyx":525
  *         np.ndarray[ndim=1, dtype=float, mode="c"] b,
- *         np.ndarray[ndim=2, dtype=float, mode="c"] grad_x=None,
- *         np.ndarray[ndim=2, dtype=float, mode="c"] grad_y=None,             # <<<<<<<<<<<<<<
+ *         np.ndarray[ndim=2, dtype=float, mode="c"] diff_x=None,
+ *         np.ndarray[ndim=2, dtype=float, mode="c"] diff_y=None,             # <<<<<<<<<<<<<<
  *         str indexing="ij"
  *     ):
  */
@@ -8991,24 +8991,24 @@ static PyObject *__pyx_pw_8libimwip_33grad_affine_warp_2D(PyObject *__pyx_self, 
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_A)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("grad_affine_warp_2D", 0, 3, 6, 1); __PYX_ERR(0, 524, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("diff_affine_warp_2D", 0, 3, 6, 1); __PYX_ERR(0, 520, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("grad_affine_warp_2D", 0, 3, 6, 2); __PYX_ERR(0, 524, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("diff_affine_warp_2D", 0, 3, 6, 2); __PYX_ERR(0, 520, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (kw_args > 0) {
-          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_grad_x);
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_diff_x);
           if (value) { values[3] = value; kw_args--; }
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (kw_args > 0) {
-          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_grad_y);
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_diff_y);
           if (value) { values[4] = value; kw_args--; }
         }
         CYTHON_FALLTHROUGH;
@@ -9019,7 +9019,7 @@ static PyObject *__pyx_pw_8libimwip_33grad_affine_warp_2D(PyObject *__pyx_self, 
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "grad_affine_warp_2D") < 0)) __PYX_ERR(0, 524, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "diff_affine_warp_2D") < 0)) __PYX_ERR(0, 520, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -9039,30 +9039,30 @@ static PyObject *__pyx_pw_8libimwip_33grad_affine_warp_2D(PyObject *__pyx_self, 
     __pyx_v_f = ((PyArrayObject *)values[0]);
     __pyx_v_A = ((PyArrayObject *)values[1]);
     __pyx_v_b = ((PyArrayObject *)values[2]);
-    __pyx_v_grad_x = ((PyArrayObject *)values[3]);
-    __pyx_v_grad_y = ((PyArrayObject *)values[4]);
+    __pyx_v_diff_x = ((PyArrayObject *)values[3]);
+    __pyx_v_diff_y = ((PyArrayObject *)values[4]);
     __pyx_v_indexing = ((PyObject*)values[5]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("grad_affine_warp_2D", 0, 3, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 524, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("diff_affine_warp_2D", 0, 3, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 520, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libimwip.grad_affine_warp_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("libimwip.diff_affine_warp_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 525, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_A), __pyx_ptype_5numpy_ndarray, 1, "A", 0))) __PYX_ERR(0, 526, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_5numpy_ndarray, 1, "b", 0))) __PYX_ERR(0, 527, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_grad_x), __pyx_ptype_5numpy_ndarray, 1, "grad_x", 0))) __PYX_ERR(0, 528, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_grad_y), __pyx_ptype_5numpy_ndarray, 1, "grad_y", 0))) __PYX_ERR(0, 529, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_indexing), (&PyString_Type), 1, "indexing", 1))) __PYX_ERR(0, 530, __pyx_L1_error)
-  __pyx_r = __pyx_pf_8libimwip_32grad_affine_warp_2D(__pyx_self, __pyx_v_f, __pyx_v_A, __pyx_v_b, __pyx_v_grad_x, __pyx_v_grad_y, __pyx_v_indexing);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 521, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_A), __pyx_ptype_5numpy_ndarray, 1, "A", 0))) __PYX_ERR(0, 522, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_5numpy_ndarray, 1, "b", 0))) __PYX_ERR(0, 523, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_diff_x), __pyx_ptype_5numpy_ndarray, 1, "diff_x", 0))) __PYX_ERR(0, 524, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_diff_y), __pyx_ptype_5numpy_ndarray, 1, "diff_y", 0))) __PYX_ERR(0, 525, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_indexing), (&PyString_Type), 1, "indexing", 1))) __PYX_ERR(0, 526, __pyx_L1_error)
+  __pyx_r = __pyx_pf_8libimwip_32diff_affine_warp_2D(__pyx_self, __pyx_v_f, __pyx_v_A, __pyx_v_b, __pyx_v_diff_x, __pyx_v_diff_y, __pyx_v_indexing);
 
-  /* "imwip/cpp_backend/wrappers.pyx":524
+  /* "imwip/cpp_backend/wrappers.pyx":520
  *     return f
  * 
- * def grad_affine_warp_2D(             # <<<<<<<<<<<<<<
+ * def diff_affine_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
@@ -9076,17 +9076,17 @@ static PyObject *__pyx_pw_8libimwip_33grad_affine_warp_2D(PyObject *__pyx_self, 
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_A, PyArrayObject *__pyx_v_b, PyArrayObject *__pyx_v_grad_x, PyArrayObject *__pyx_v_grad_y, PyObject *__pyx_v_indexing) {
+static PyObject *__pyx_pf_8libimwip_32diff_affine_warp_2D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_A, PyArrayObject *__pyx_v_b, PyArrayObject *__pyx_v_diff_x, PyArrayObject *__pyx_v_diff_y, PyObject *__pyx_v_indexing) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_A;
   __Pyx_Buffer __pyx_pybuffer_A;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_b;
   __Pyx_Buffer __pyx_pybuffer_b;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_diff_x;
+  __Pyx_Buffer __pyx_pybuffer_diff_x;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_diff_y;
+  __Pyx_Buffer __pyx_pybuffer_diff_y;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_f;
   __Pyx_Buffer __pyx_pybuffer_f;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_grad_x;
-  __Pyx_Buffer __pyx_pybuffer_grad_x;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_grad_y;
-  __Pyx_Buffer __pyx_pybuffer_grad_y;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -9117,11 +9117,11 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("grad_affine_warp_2D", 0);
+  __Pyx_RefNannySetupContext("diff_affine_warp_2D", 0);
   __Pyx_INCREF((PyObject *)__pyx_v_A);
   __Pyx_INCREF((PyObject *)__pyx_v_b);
-  __Pyx_INCREF((PyObject *)__pyx_v_grad_x);
-  __Pyx_INCREF((PyObject *)__pyx_v_grad_y);
+  __Pyx_INCREF((PyObject *)__pyx_v_diff_x);
+  __Pyx_INCREF((PyObject *)__pyx_v_diff_y);
   __pyx_pybuffer_f.pybuffer.buf = NULL;
   __pyx_pybuffer_f.refcount = 0;
   __pyx_pybuffernd_f.data = NULL;
@@ -9134,57 +9134,57 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
   __pyx_pybuffer_b.refcount = 0;
   __pyx_pybuffernd_b.data = NULL;
   __pyx_pybuffernd_b.rcbuffer = &__pyx_pybuffer_b;
-  __pyx_pybuffer_grad_x.pybuffer.buf = NULL;
-  __pyx_pybuffer_grad_x.refcount = 0;
-  __pyx_pybuffernd_grad_x.data = NULL;
-  __pyx_pybuffernd_grad_x.rcbuffer = &__pyx_pybuffer_grad_x;
-  __pyx_pybuffer_grad_y.pybuffer.buf = NULL;
-  __pyx_pybuffer_grad_y.refcount = 0;
-  __pyx_pybuffernd_grad_y.data = NULL;
-  __pyx_pybuffernd_grad_y.rcbuffer = &__pyx_pybuffer_grad_y;
+  __pyx_pybuffer_diff_x.pybuffer.buf = NULL;
+  __pyx_pybuffer_diff_x.refcount = 0;
+  __pyx_pybuffernd_diff_x.data = NULL;
+  __pyx_pybuffernd_diff_x.rcbuffer = &__pyx_pybuffer_diff_x;
+  __pyx_pybuffer_diff_y.pybuffer.buf = NULL;
+  __pyx_pybuffer_diff_y.refcount = 0;
+  __pyx_pybuffernd_diff_y.data = NULL;
+  __pyx_pybuffernd_diff_y.rcbuffer = &__pyx_pybuffer_diff_y;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 524, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 520, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_A.rcbuffer->pybuffer, (PyObject*)__pyx_v_A, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 524, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_A.rcbuffer->pybuffer, (PyObject*)__pyx_v_A, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 520, __pyx_L1_error)
   }
   __pyx_pybuffernd_A.diminfo[0].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_A.diminfo[0].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_A.diminfo[1].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_A.diminfo[1].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_b.rcbuffer->pybuffer, (PyObject*)__pyx_v_b, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 524, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_b.rcbuffer->pybuffer, (PyObject*)__pyx_v_b, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 520, __pyx_L1_error)
   }
   __pyx_pybuffernd_b.diminfo[0].strides = __pyx_pybuffernd_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_b.diminfo[0].shape = __pyx_pybuffernd_b.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 524, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 520, __pyx_L1_error)
   }
-  __pyx_pybuffernd_grad_x.diminfo[0].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_x.diminfo[0].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_x.diminfo[1].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_x.diminfo[1].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[1];
+  __pyx_pybuffernd_diff_x.diminfo[0].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_x.diminfo[0].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_x.diminfo[1].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_x.diminfo[1].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 524, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 520, __pyx_L1_error)
   }
-  __pyx_pybuffernd_grad_y.diminfo[0].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_y.diminfo[0].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_y.diminfo[1].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_y.diminfo[1].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[1];
+  __pyx_pybuffernd_diff_y.diminfo[0].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_y.diminfo[0].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_y.diminfo[1].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_y.diminfo[1].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[1];
 
-  /* "imwip/cpp_backend/wrappers.pyx":532
+  /* "imwip/cpp_backend/wrappers.pyx":528
  *         str indexing="ij"
  *     ):
- *     grad_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)             # <<<<<<<<<<<<<<
- *     grad_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
+ *     diff_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)             # <<<<<<<<<<<<<<
+ *     diff_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
@@ -9192,31 +9192,31 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
   PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_3);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 532, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 532, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 528, __pyx_L1_error)
   __pyx_t_5 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer);
-    __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer);
+    __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_6 < 0)) {
       PyErr_Fetch(&__pyx_t_7, &__pyx_t_8, &__pyx_t_9);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_7); Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_9);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -9224,30 +9224,30 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
       }
       __pyx_t_7 = __pyx_t_8 = __pyx_t_9 = 0;
     }
-    __pyx_pybuffernd_grad_x.diminfo[0].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_x.diminfo[0].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_x.diminfo[1].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_x.diminfo[1].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[1];
-    if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 532, __pyx_L1_error)
+    __pyx_pybuffernd_diff_x.diminfo[0].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_x.diminfo[0].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_x.diminfo[1].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_x.diminfo[1].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[1];
+    if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 528, __pyx_L1_error)
   }
   __pyx_t_5 = 0;
-  __Pyx_DECREF_SET(__pyx_v_grad_x, ((PyArrayObject *)__pyx_t_1));
+  __Pyx_DECREF_SET(__pyx_v_diff_x, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":533
+  /* "imwip/cpp_backend/wrappers.pyx":529
  *     ):
- *     grad_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
- *     grad_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)             # <<<<<<<<<<<<<<
+ *     diff_x = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
+ *     diff_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)             # <<<<<<<<<<<<<<
  * 
  *     if indexing == "xy":
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
@@ -9255,31 +9255,31 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_3);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 533, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 533, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 529, __pyx_L1_error)
   __pyx_t_10 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer);
-    __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer, (PyObject*)__pyx_t_10, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer);
+    __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer, (PyObject*)__pyx_t_10, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_6 < 0)) {
       PyErr_Fetch(&__pyx_t_9, &__pyx_t_8, &__pyx_t_7);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_7);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -9287,39 +9287,39 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
       }
       __pyx_t_9 = __pyx_t_8 = __pyx_t_7 = 0;
     }
-    __pyx_pybuffernd_grad_y.diminfo[0].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_y.diminfo[0].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_y.diminfo[1].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_y.diminfo[1].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[1];
-    if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 533, __pyx_L1_error)
+    __pyx_pybuffernd_diff_y.diminfo[0].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_y.diminfo[0].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_y.diminfo[1].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_y.diminfo[1].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[1];
+    if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 529, __pyx_L1_error)
   }
   __pyx_t_10 = 0;
-  __Pyx_DECREF_SET(__pyx_v_grad_y, ((PyArrayObject *)__pyx_t_1));
+  __Pyx_DECREF_SET(__pyx_v_diff_y, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":535
- *     grad_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
+  /* "imwip/cpp_backend/wrappers.pyx":531
+ *     diff_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
  * 
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
  *         A = np.fliplr(np.flipud(A)).copy()
  *         b = np.flip(b).copy()
  */
-  __pyx_t_11 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 535, __pyx_L1_error)
+  __pyx_t_11 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 531, __pyx_L1_error)
   __pyx_t_12 = (__pyx_t_11 != 0);
   if (__pyx_t_12) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":536
+    /* "imwip/cpp_backend/wrappers.pyx":532
  * 
  *     if indexing == "xy":
  *         A = np.fliplr(np.flipud(A)).copy()             # <<<<<<<<<<<<<<
  *         b = np.flip(b).copy()
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 536, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 532, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fliplr); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 536, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fliplr); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 532, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_np); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 536, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_np); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 532, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_flipud); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 536, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_flipud); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 532, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __pyx_t_13 = NULL;
@@ -9334,7 +9334,7 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
     }
     __pyx_t_3 = (__pyx_t_13) ? __Pyx_PyObject_Call2Args(__pyx_t_14, __pyx_t_13, ((PyObject *)__pyx_v_A)) : __Pyx_PyObject_CallOneArg(__pyx_t_14, ((PyObject *)__pyx_v_A));
     __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 536, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 532, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __pyx_t_14 = NULL;
@@ -9350,10 +9350,10 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
     __pyx_t_2 = (__pyx_t_14) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_14, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 536, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 532, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_copy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 536, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_copy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 532, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -9368,10 +9368,10 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
     }
     __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 536, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 536, __pyx_L1_error)
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 532, __pyx_L1_error)
     __pyx_t_15 = ((PyArrayObject *)__pyx_t_1);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -9388,22 +9388,22 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
         __pyx_t_7 = __pyx_t_8 = __pyx_t_9 = 0;
       }
       __pyx_pybuffernd_A.diminfo[0].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_A.diminfo[0].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_A.diminfo[1].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_A.diminfo[1].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[1];
-      if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 536, __pyx_L1_error)
+      if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 532, __pyx_L1_error)
     }
     __pyx_t_15 = 0;
     __Pyx_DECREF_SET(__pyx_v_A, ((PyArrayObject *)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":537
+    /* "imwip/cpp_backend/wrappers.pyx":533
  *     if indexing == "xy":
  *         A = np.fliplr(np.flipud(A)).copy()
  *         b = np.flip(b).copy()             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 537, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 533, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_flip); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 537, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_flip); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 533, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -9418,10 +9418,10 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
     }
     __pyx_t_4 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, ((PyObject *)__pyx_v_b)) : __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_b));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 537, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 533, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_copy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 537, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_copy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 533, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -9436,10 +9436,10 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
     }
     __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 537, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 533, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 537, __pyx_L1_error)
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 533, __pyx_L1_error)
     __pyx_t_16 = ((PyArrayObject *)__pyx_t_1);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -9456,14 +9456,14 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
         __pyx_t_9 = __pyx_t_8 = __pyx_t_7 = 0;
       }
       __pyx_pybuffernd_b.diminfo[0].strides = __pyx_pybuffernd_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_b.diminfo[0].shape = __pyx_pybuffernd_b.rcbuffer->pybuffer.shape[0];
-      if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 537, __pyx_L1_error)
+      if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 533, __pyx_L1_error)
     }
     __pyx_t_16 = 0;
     __Pyx_DECREF_SET(__pyx_v_b, ((PyArrayObject *)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":535
- *     grad_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
+    /* "imwip/cpp_backend/wrappers.pyx":531
+ *     diff_y = np.zeros((f.shape[0], f.shape[1]), dtype=f.dtype)
  * 
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
  *         A = np.fliplr(np.flipud(A)).copy()
@@ -9471,23 +9471,23 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":541
+  /* "imwip/cpp_backend/wrappers.pyx":537
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
- *         gradAffineWarp2D(&f[0,0], &A[0,0], &b[0], &grad_y[0,0], &grad_x[0,0], f.shape[0], f.shape[1])
+ *         diffAffineWarp2D(&f[0,0], &A[0,0], &b[0], &diff_y[0,0], &diff_x[0,0], f.shape[0], f.shape[1])
  *     else:
  */
-  __pyx_t_12 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 541, __pyx_L1_error)
+  __pyx_t_12 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 537, __pyx_L1_error)
   __pyx_t_11 = (__pyx_t_12 != 0);
   if (__pyx_t_11) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":542
+    /* "imwip/cpp_backend/wrappers.pyx":538
  *     # get the pointer to the first element and pass it to the C++ function
  *     if indexing == "xy":
- *         gradAffineWarp2D(&f[0,0], &A[0,0], &b[0], &grad_y[0,0], &grad_x[0,0], f.shape[0], f.shape[1])             # <<<<<<<<<<<<<<
+ *         diffAffineWarp2D(&f[0,0], &A[0,0], &b[0], &diff_y[0,0], &diff_x[0,0], f.shape[0], f.shape[1])             # <<<<<<<<<<<<<<
  *     else:
- *         gradAffineWarp2D(&f[0,0], &A[0,0], &b[0], &grad_x[0,0], &grad_y[0,0], f.shape[0], f.shape[1])
+ *         diffAffineWarp2D(&f[0,0], &A[0,0], &b[0], &diff_x[0,0], &diff_y[0,0], f.shape[0], f.shape[1])
  */
     __pyx_t_17 = 0;
     __pyx_t_18 = 0;
@@ -9502,7 +9502,7 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
     } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_f.diminfo[1].shape)) __pyx_t_6 = 1;
     if (unlikely(__pyx_t_6 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_6);
-      __PYX_ERR(0, 542, __pyx_L1_error)
+      __PYX_ERR(0, 538, __pyx_L1_error)
     }
     __pyx_t_19 = 0;
     __pyx_t_20 = 0;
@@ -9517,7 +9517,7 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
     } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_A.diminfo[1].shape)) __pyx_t_6 = 1;
     if (unlikely(__pyx_t_6 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_6);
-      __PYX_ERR(0, 542, __pyx_L1_error)
+      __PYX_ERR(0, 538, __pyx_L1_error)
     }
     __pyx_t_21 = 0;
     __pyx_t_6 = -1;
@@ -9527,56 +9527,56 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
     } else if (unlikely(__pyx_t_21 >= __pyx_pybuffernd_b.diminfo[0].shape)) __pyx_t_6 = 0;
     if (unlikely(__pyx_t_6 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_6);
-      __PYX_ERR(0, 542, __pyx_L1_error)
+      __PYX_ERR(0, 538, __pyx_L1_error)
     }
     __pyx_t_22 = 0;
     __pyx_t_23 = 0;
     __pyx_t_6 = -1;
     if (__pyx_t_22 < 0) {
-      __pyx_t_22 += __pyx_pybuffernd_grad_y.diminfo[0].shape;
+      __pyx_t_22 += __pyx_pybuffernd_diff_y.diminfo[0].shape;
       if (unlikely(__pyx_t_22 < 0)) __pyx_t_6 = 0;
-    } else if (unlikely(__pyx_t_22 >= __pyx_pybuffernd_grad_y.diminfo[0].shape)) __pyx_t_6 = 0;
+    } else if (unlikely(__pyx_t_22 >= __pyx_pybuffernd_diff_y.diminfo[0].shape)) __pyx_t_6 = 0;
     if (__pyx_t_23 < 0) {
-      __pyx_t_23 += __pyx_pybuffernd_grad_y.diminfo[1].shape;
+      __pyx_t_23 += __pyx_pybuffernd_diff_y.diminfo[1].shape;
       if (unlikely(__pyx_t_23 < 0)) __pyx_t_6 = 1;
-    } else if (unlikely(__pyx_t_23 >= __pyx_pybuffernd_grad_y.diminfo[1].shape)) __pyx_t_6 = 1;
+    } else if (unlikely(__pyx_t_23 >= __pyx_pybuffernd_diff_y.diminfo[1].shape)) __pyx_t_6 = 1;
     if (unlikely(__pyx_t_6 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_6);
-      __PYX_ERR(0, 542, __pyx_L1_error)
+      __PYX_ERR(0, 538, __pyx_L1_error)
     }
     __pyx_t_24 = 0;
     __pyx_t_25 = 0;
     __pyx_t_6 = -1;
     if (__pyx_t_24 < 0) {
-      __pyx_t_24 += __pyx_pybuffernd_grad_x.diminfo[0].shape;
+      __pyx_t_24 += __pyx_pybuffernd_diff_x.diminfo[0].shape;
       if (unlikely(__pyx_t_24 < 0)) __pyx_t_6 = 0;
-    } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_grad_x.diminfo[0].shape)) __pyx_t_6 = 0;
+    } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_diff_x.diminfo[0].shape)) __pyx_t_6 = 0;
     if (__pyx_t_25 < 0) {
-      __pyx_t_25 += __pyx_pybuffernd_grad_x.diminfo[1].shape;
+      __pyx_t_25 += __pyx_pybuffernd_diff_x.diminfo[1].shape;
       if (unlikely(__pyx_t_25 < 0)) __pyx_t_6 = 1;
-    } else if (unlikely(__pyx_t_25 >= __pyx_pybuffernd_grad_x.diminfo[1].shape)) __pyx_t_6 = 1;
+    } else if (unlikely(__pyx_t_25 >= __pyx_pybuffernd_diff_x.diminfo[1].shape)) __pyx_t_6 = 1;
     if (unlikely(__pyx_t_6 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_6);
-      __PYX_ERR(0, 542, __pyx_L1_error)
+      __PYX_ERR(0, 538, __pyx_L1_error)
     }
-    gradAffineWarp2D((&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_f.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_A.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_A.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_A.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig1d(float *, __pyx_pybuffernd_b.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_b.diminfo[0].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_grad_y.diminfo[0].strides, __pyx_t_23, __pyx_pybuffernd_grad_y.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.buf, __pyx_t_24, __pyx_pybuffernd_grad_x.diminfo[0].strides, __pyx_t_25, __pyx_pybuffernd_grad_x.diminfo[1].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]));
+    diffAffineWarp2D((&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_f.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_A.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_A.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_A.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig1d(float *, __pyx_pybuffernd_b.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_b.diminfo[0].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_diff_y.diminfo[0].strides, __pyx_t_23, __pyx_pybuffernd_diff_y.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.buf, __pyx_t_24, __pyx_pybuffernd_diff_x.diminfo[0].strides, __pyx_t_25, __pyx_pybuffernd_diff_x.diminfo[1].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]));
 
-    /* "imwip/cpp_backend/wrappers.pyx":541
+    /* "imwip/cpp_backend/wrappers.pyx":537
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
- *         gradAffineWarp2D(&f[0,0], &A[0,0], &b[0], &grad_y[0,0], &grad_x[0,0], f.shape[0], f.shape[1])
+ *         diffAffineWarp2D(&f[0,0], &A[0,0], &b[0], &diff_y[0,0], &diff_x[0,0], f.shape[0], f.shape[1])
  *     else:
  */
     goto __pyx_L4;
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":544
- *         gradAffineWarp2D(&f[0,0], &A[0,0], &b[0], &grad_y[0,0], &grad_x[0,0], f.shape[0], f.shape[1])
+  /* "imwip/cpp_backend/wrappers.pyx":540
+ *         diffAffineWarp2D(&f[0,0], &A[0,0], &b[0], &diff_y[0,0], &diff_x[0,0], f.shape[0], f.shape[1])
  *     else:
- *         gradAffineWarp2D(&f[0,0], &A[0,0], &b[0], &grad_x[0,0], &grad_y[0,0], f.shape[0], f.shape[1])             # <<<<<<<<<<<<<<
+ *         diffAffineWarp2D(&f[0,0], &A[0,0], &b[0], &diff_x[0,0], &diff_y[0,0], f.shape[0], f.shape[1])             # <<<<<<<<<<<<<<
  * 
- *     return grad_x, grad_y
+ *     return diff_x, diff_y
  */
   /*else*/ {
     __pyx_t_25 = 0;
@@ -9592,7 +9592,7 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
     } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_f.diminfo[1].shape)) __pyx_t_6 = 1;
     if (unlikely(__pyx_t_6 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_6);
-      __PYX_ERR(0, 544, __pyx_L1_error)
+      __PYX_ERR(0, 540, __pyx_L1_error)
     }
     __pyx_t_23 = 0;
     __pyx_t_22 = 0;
@@ -9607,7 +9607,7 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
     } else if (unlikely(__pyx_t_22 >= __pyx_pybuffernd_A.diminfo[1].shape)) __pyx_t_6 = 1;
     if (unlikely(__pyx_t_6 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_6);
-      __PYX_ERR(0, 544, __pyx_L1_error)
+      __PYX_ERR(0, 540, __pyx_L1_error)
     }
     __pyx_t_21 = 0;
     __pyx_t_6 = -1;
@@ -9617,66 +9617,66 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
     } else if (unlikely(__pyx_t_21 >= __pyx_pybuffernd_b.diminfo[0].shape)) __pyx_t_6 = 0;
     if (unlikely(__pyx_t_6 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_6);
-      __PYX_ERR(0, 544, __pyx_L1_error)
+      __PYX_ERR(0, 540, __pyx_L1_error)
     }
     __pyx_t_20 = 0;
     __pyx_t_19 = 0;
     __pyx_t_6 = -1;
     if (__pyx_t_20 < 0) {
-      __pyx_t_20 += __pyx_pybuffernd_grad_x.diminfo[0].shape;
+      __pyx_t_20 += __pyx_pybuffernd_diff_x.diminfo[0].shape;
       if (unlikely(__pyx_t_20 < 0)) __pyx_t_6 = 0;
-    } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_grad_x.diminfo[0].shape)) __pyx_t_6 = 0;
+    } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_diff_x.diminfo[0].shape)) __pyx_t_6 = 0;
     if (__pyx_t_19 < 0) {
-      __pyx_t_19 += __pyx_pybuffernd_grad_x.diminfo[1].shape;
+      __pyx_t_19 += __pyx_pybuffernd_diff_x.diminfo[1].shape;
       if (unlikely(__pyx_t_19 < 0)) __pyx_t_6 = 1;
-    } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_grad_x.diminfo[1].shape)) __pyx_t_6 = 1;
+    } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_diff_x.diminfo[1].shape)) __pyx_t_6 = 1;
     if (unlikely(__pyx_t_6 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_6);
-      __PYX_ERR(0, 544, __pyx_L1_error)
+      __PYX_ERR(0, 540, __pyx_L1_error)
     }
     __pyx_t_18 = 0;
     __pyx_t_17 = 0;
     __pyx_t_6 = -1;
     if (__pyx_t_18 < 0) {
-      __pyx_t_18 += __pyx_pybuffernd_grad_y.diminfo[0].shape;
+      __pyx_t_18 += __pyx_pybuffernd_diff_y.diminfo[0].shape;
       if (unlikely(__pyx_t_18 < 0)) __pyx_t_6 = 0;
-    } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_grad_y.diminfo[0].shape)) __pyx_t_6 = 0;
+    } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_diff_y.diminfo[0].shape)) __pyx_t_6 = 0;
     if (__pyx_t_17 < 0) {
-      __pyx_t_17 += __pyx_pybuffernd_grad_y.diminfo[1].shape;
+      __pyx_t_17 += __pyx_pybuffernd_diff_y.diminfo[1].shape;
       if (unlikely(__pyx_t_17 < 0)) __pyx_t_6 = 1;
-    } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_grad_y.diminfo[1].shape)) __pyx_t_6 = 1;
+    } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_diff_y.diminfo[1].shape)) __pyx_t_6 = 1;
     if (unlikely(__pyx_t_6 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_6);
-      __PYX_ERR(0, 544, __pyx_L1_error)
+      __PYX_ERR(0, 540, __pyx_L1_error)
     }
-    gradAffineWarp2D((&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_24, __pyx_pybuffernd_f.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_A.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_A.diminfo[0].strides, __pyx_t_22, __pyx_pybuffernd_A.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig1d(float *, __pyx_pybuffernd_b.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_b.diminfo[0].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_grad_x.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_grad_x.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_grad_y.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_grad_y.diminfo[1].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]));
+    diffAffineWarp2D((&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_24, __pyx_pybuffernd_f.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_A.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_A.diminfo[0].strides, __pyx_t_22, __pyx_pybuffernd_A.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig1d(float *, __pyx_pybuffernd_b.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_b.diminfo[0].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_diff_x.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_diff_x.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_diff_y.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_diff_y.diminfo[1].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]));
   }
   __pyx_L4:;
 
-  /* "imwip/cpp_backend/wrappers.pyx":546
- *         gradAffineWarp2D(&f[0,0], &A[0,0], &b[0], &grad_x[0,0], &grad_y[0,0], f.shape[0], f.shape[1])
+  /* "imwip/cpp_backend/wrappers.pyx":542
+ *         diffAffineWarp2D(&f[0,0], &A[0,0], &b[0], &diff_x[0,0], &diff_y[0,0], f.shape[0], f.shape[1])
  * 
- *     return grad_x, grad_y             # <<<<<<<<<<<<<<
+ *     return diff_x, diff_y             # <<<<<<<<<<<<<<
  * 
  * # python version of affineWarp3D, this function accepts numpy arrays
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 546, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(((PyObject *)__pyx_v_grad_x));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_grad_x));
-  PyTuple_SET_ITEM(__pyx_t_1, 0, ((PyObject *)__pyx_v_grad_x));
-  __Pyx_INCREF(((PyObject *)__pyx_v_grad_y));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_grad_y));
-  PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_grad_y));
+  __Pyx_INCREF(((PyObject *)__pyx_v_diff_x));
+  __Pyx_GIVEREF(((PyObject *)__pyx_v_diff_x));
+  PyTuple_SET_ITEM(__pyx_t_1, 0, ((PyObject *)__pyx_v_diff_x));
+  __Pyx_INCREF(((PyObject *)__pyx_v_diff_y));
+  __Pyx_GIVEREF(((PyObject *)__pyx_v_diff_y));
+  PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_diff_y));
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":524
+  /* "imwip/cpp_backend/wrappers.pyx":520
  *     return f
  * 
- * def grad_affine_warp_2D(             # <<<<<<<<<<<<<<
+ * def diff_affine_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
@@ -9695,30 +9695,30 @@ static PyObject *__pyx_pf_8libimwip_32grad_affine_warp_2D(CYTHON_UNUSED PyObject
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_A.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_b.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_f.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("libimwip.grad_affine_warp_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("libimwip.diff_affine_warp_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_A.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_b.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_f.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer);
   __pyx_L2:;
   __Pyx_XDECREF((PyObject *)__pyx_v_A);
   __Pyx_XDECREF((PyObject *)__pyx_v_b);
-  __Pyx_XDECREF((PyObject *)__pyx_v_grad_x);
-  __Pyx_XDECREF((PyObject *)__pyx_v_grad_y);
+  __Pyx_XDECREF((PyObject *)__pyx_v_diff_x);
+  __Pyx_XDECREF((PyObject *)__pyx_v_diff_y);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":549
+/* "imwip/cpp_backend/wrappers.pyx":545
  * 
  * # python version of affineWarp3D, this function accepts numpy arrays
  * def affine_warp_3D(             # <<<<<<<<<<<<<<
@@ -9746,7 +9746,7 @@ static PyObject *__pyx_pw_8libimwip_35affine_warp_3D(PyObject *__pyx_self, PyObj
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_A,&__pyx_n_s_b,&__pyx_n_s_f_warped,&__pyx_n_s_degree,&__pyx_n_s_indexing,0};
     PyObject* values[6] = {0,0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":553
+    /* "imwip/cpp_backend/wrappers.pyx":549
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  *         np.ndarray[ndim=1, dtype=float, mode="c"] b,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f_warped=None,             # <<<<<<<<<<<<<<
@@ -9783,13 +9783,13 @@ static PyObject *__pyx_pw_8libimwip_35affine_warp_3D(PyObject *__pyx_self, PyObj
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_A)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("affine_warp_3D", 0, 3, 6, 1); __PYX_ERR(0, 549, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("affine_warp_3D", 0, 3, 6, 1); __PYX_ERR(0, 545, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("affine_warp_3D", 0, 3, 6, 2); __PYX_ERR(0, 549, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("affine_warp_3D", 0, 3, 6, 2); __PYX_ERR(0, 545, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -9811,7 +9811,7 @@ static PyObject *__pyx_pw_8libimwip_35affine_warp_3D(PyObject *__pyx_self, PyObj
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "affine_warp_3D") < 0)) __PYX_ERR(0, 549, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "affine_warp_3D") < 0)) __PYX_ERR(0, 545, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -9833,7 +9833,7 @@ static PyObject *__pyx_pw_8libimwip_35affine_warp_3D(PyObject *__pyx_self, PyObj
     __pyx_v_b = ((PyArrayObject *)values[2]);
     __pyx_v_f_warped = ((PyArrayObject *)values[3]);
     if (values[4]) {
-      __pyx_v_degree = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 554, __pyx_L3_error)
+      __pyx_v_degree = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 550, __pyx_L3_error)
     } else {
       __pyx_v_degree = ((int)3);
     }
@@ -9841,20 +9841,20 @@ static PyObject *__pyx_pw_8libimwip_35affine_warp_3D(PyObject *__pyx_self, PyObj
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("affine_warp_3D", 0, 3, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 549, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("affine_warp_3D", 0, 3, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 545, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("libimwip.affine_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 550, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_A), __pyx_ptype_5numpy_ndarray, 1, "A", 0))) __PYX_ERR(0, 551, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_5numpy_ndarray, 1, "b", 0))) __PYX_ERR(0, 552, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 553, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_indexing), (&PyString_Type), 1, "indexing", 1))) __PYX_ERR(0, 555, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 546, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_A), __pyx_ptype_5numpy_ndarray, 1, "A", 0))) __PYX_ERR(0, 547, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_5numpy_ndarray, 1, "b", 0))) __PYX_ERR(0, 548, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 549, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_indexing), (&PyString_Type), 1, "indexing", 1))) __PYX_ERR(0, 551, __pyx_L1_error)
   __pyx_r = __pyx_pf_8libimwip_34affine_warp_3D(__pyx_self, __pyx_v_f, __pyx_v_A, __pyx_v_b, __pyx_v_f_warped, __pyx_v_degree, __pyx_v_indexing);
 
-  /* "imwip/cpp_backend/wrappers.pyx":549
+  /* "imwip/cpp_backend/wrappers.pyx":545
  * 
  * # python version of affineWarp3D, this function accepts numpy arrays
  * def affine_warp_3D(             # <<<<<<<<<<<<<<
@@ -9931,26 +9931,26 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
   __pyx_pybuffernd_f_warped.rcbuffer = &__pyx_pybuffer_f_warped;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 549, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 545, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f.diminfo[2].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f.diminfo[2].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_A.rcbuffer->pybuffer, (PyObject*)__pyx_v_A, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 549, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_A.rcbuffer->pybuffer, (PyObject*)__pyx_v_A, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 545, __pyx_L1_error)
   }
   __pyx_pybuffernd_A.diminfo[0].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_A.diminfo[0].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_A.diminfo[1].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_A.diminfo[1].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_b.rcbuffer->pybuffer, (PyObject*)__pyx_v_b, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 549, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_b.rcbuffer->pybuffer, (PyObject*)__pyx_v_b, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 545, __pyx_L1_error)
   }
   __pyx_pybuffernd_b.diminfo[0].strides = __pyx_pybuffernd_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_b.diminfo[0].shape = __pyx_pybuffernd_b.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 549, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 545, __pyx_L1_error)
   }
   __pyx_pybuffernd_f_warped.diminfo[0].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f_warped.diminfo[0].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f_warped.diminfo[1].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f_warped.diminfo[1].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f_warped.diminfo[2].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f_warped.diminfo[2].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[2];
 
-  /* "imwip/cpp_backend/wrappers.pyx":557
+  /* "imwip/cpp_backend/wrappers.pyx":553
  *         str indexing="ij"
  *     ):
  *     if f_warped is None:             # <<<<<<<<<<<<<<
@@ -9961,25 +9961,25 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":558
+    /* "imwip/cpp_backend/wrappers.pyx":554
  *     ):
  *     if f_warped is None:
  *         f_warped = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
  * 
  *     if indexing == "xy":
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 558, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 558, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 558, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 558, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 558, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 558, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_3);
@@ -9990,23 +9990,23 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
     __pyx_t_3 = 0;
     __pyx_t_5 = 0;
     __pyx_t_6 = 0;
-    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 558, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_7);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7);
     __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 558, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 558, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 558, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 558, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 558, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 554, __pyx_L1_error)
     __pyx_t_8 = ((PyArrayObject *)__pyx_t_5);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -10023,13 +10023,13 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
         __pyx_t_10 = __pyx_t_11 = __pyx_t_12 = 0;
       }
       __pyx_pybuffernd_f_warped.diminfo[0].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f_warped.diminfo[0].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f_warped.diminfo[1].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f_warped.diminfo[1].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f_warped.diminfo[2].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f_warped.diminfo[2].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[2];
-      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 558, __pyx_L1_error)
+      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 554, __pyx_L1_error)
     }
     __pyx_t_8 = 0;
     __Pyx_DECREF_SET(__pyx_v_f_warped, ((PyArrayObject *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":557
+    /* "imwip/cpp_backend/wrappers.pyx":553
  *         str indexing="ij"
  *     ):
  *     if f_warped is None:             # <<<<<<<<<<<<<<
@@ -10038,32 +10038,32 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":560
+  /* "imwip/cpp_backend/wrappers.pyx":556
  *         f_warped = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
  * 
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
  *         A = np.fliplr(np.flipud(A)).copy()
  *         b = np.flip(b).copy()
  */
-  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 560, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 556, __pyx_L1_error)
   __pyx_t_1 = (__pyx_t_2 != 0);
   if (__pyx_t_1) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":561
+    /* "imwip/cpp_backend/wrappers.pyx":557
  * 
  *     if indexing == "xy":
  *         A = np.fliplr(np.flipud(A)).copy()             # <<<<<<<<<<<<<<
  *         b = np.flip(b).copy()
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 561, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 557, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_fliplr); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 561, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_fliplr); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 557, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 561, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 557, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_flipud); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 561, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_flipud); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 557, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -10078,7 +10078,7 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
     }
     __pyx_t_6 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_13, __pyx_t_3, ((PyObject *)__pyx_v_A)) : __Pyx_PyObject_CallOneArg(__pyx_t_13, ((PyObject *)__pyx_v_A));
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 561, __pyx_L1_error)
+    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 557, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __pyx_t_13 = NULL;
@@ -10094,10 +10094,10 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
     __pyx_t_7 = (__pyx_t_13) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_13, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6);
     __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 561, __pyx_L1_error)
+    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 557, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_copy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 561, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_copy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 557, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_t_7 = NULL;
@@ -10112,10 +10112,10 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
     }
     __pyx_t_5 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 561, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 557, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 561, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 557, __pyx_L1_error)
     __pyx_t_14 = ((PyArrayObject *)__pyx_t_5);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -10132,22 +10132,22 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
         __pyx_t_12 = __pyx_t_11 = __pyx_t_10 = 0;
       }
       __pyx_pybuffernd_A.diminfo[0].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_A.diminfo[0].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_A.diminfo[1].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_A.diminfo[1].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[1];
-      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 561, __pyx_L1_error)
+      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 557, __pyx_L1_error)
     }
     __pyx_t_14 = 0;
     __Pyx_DECREF_SET(__pyx_v_A, ((PyArrayObject *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":562
+    /* "imwip/cpp_backend/wrappers.pyx":558
  *     if indexing == "xy":
  *         A = np.fliplr(np.flipud(A)).copy()
  *         b = np.flip(b).copy()             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 562, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 558, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_flip); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 562, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_flip); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 558, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_t_7 = NULL;
@@ -10162,10 +10162,10 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
     }
     __pyx_t_4 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_7, ((PyObject *)__pyx_v_b)) : __Pyx_PyObject_CallOneArg(__pyx_t_6, ((PyObject *)__pyx_v_b));
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 562, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 558, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_copy); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 562, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_copy); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 558, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -10180,10 +10180,10 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
     }
     __pyx_t_5 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 562, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 558, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 562, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 558, __pyx_L1_error)
     __pyx_t_15 = ((PyArrayObject *)__pyx_t_5);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -10200,13 +10200,13 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
         __pyx_t_10 = __pyx_t_11 = __pyx_t_12 = 0;
       }
       __pyx_pybuffernd_b.diminfo[0].strides = __pyx_pybuffernd_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_b.diminfo[0].shape = __pyx_pybuffernd_b.rcbuffer->pybuffer.shape[0];
-      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 562, __pyx_L1_error)
+      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 558, __pyx_L1_error)
     }
     __pyx_t_15 = 0;
     __Pyx_DECREF_SET(__pyx_v_b, ((PyArrayObject *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":560
+    /* "imwip/cpp_backend/wrappers.pyx":556
  *         f_warped = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
  * 
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
@@ -10215,7 +10215,7 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":567
+  /* "imwip/cpp_backend/wrappers.pyx":563
  *     # get the pointer to the first element and pass it to the C++ function
  *     affineWarp3D(
  *         &f[0,0,0],             # <<<<<<<<<<<<<<
@@ -10240,10 +10240,10 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
   } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_f.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 567, __pyx_L1_error)
+    __PYX_ERR(0, 563, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":568
+  /* "imwip/cpp_backend/wrappers.pyx":564
  *     affineWarp3D(
  *         &f[0,0,0],
  *         &A[0,0],             # <<<<<<<<<<<<<<
@@ -10263,10 +10263,10 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
   } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_A.diminfo[1].shape)) __pyx_t_9 = 1;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 568, __pyx_L1_error)
+    __PYX_ERR(0, 564, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":569
+  /* "imwip/cpp_backend/wrappers.pyx":565
  *         &f[0,0,0],
  *         &A[0,0],
  *         &b[0],             # <<<<<<<<<<<<<<
@@ -10281,10 +10281,10 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
   } else if (unlikely(__pyx_t_21 >= __pyx_pybuffernd_b.diminfo[0].shape)) __pyx_t_9 = 0;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 569, __pyx_L1_error)
+    __PYX_ERR(0, 565, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":570
+  /* "imwip/cpp_backend/wrappers.pyx":566
  *         &A[0,0],
  *         &b[0],
  *         &f_warped[0,0,0],             # <<<<<<<<<<<<<<
@@ -10309,10 +10309,10 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
   } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_f_warped.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 570, __pyx_L1_error)
+    __PYX_ERR(0, 566, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":566
+  /* "imwip/cpp_backend/wrappers.pyx":562
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
  *     affineWarp3D(             # <<<<<<<<<<<<<<
@@ -10321,7 +10321,7 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
  */
   affineWarp3D((&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_f.diminfo[1].strides, __pyx_t_18, __pyx_pybuffernd_f.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_A.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_A.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_A.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig1d(float *, __pyx_pybuffernd_b.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_b.diminfo[0].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_f_warped.diminfo[0].strides, __pyx_t_23, __pyx_pybuffernd_f_warped.diminfo[1].strides, __pyx_t_24, __pyx_pybuffernd_f_warped.diminfo[2].strides))), __pyx_v_degree, (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]), (__pyx_v_f->dimensions[2]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":577
+  /* "imwip/cpp_backend/wrappers.pyx":573
  *     )
  * 
  *     return f_warped             # <<<<<<<<<<<<<<
@@ -10333,7 +10333,7 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
   __pyx_r = ((PyObject *)__pyx_v_f_warped);
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":549
+  /* "imwip/cpp_backend/wrappers.pyx":545
  * 
  * # python version of affineWarp3D, this function accepts numpy arrays
  * def affine_warp_3D(             # <<<<<<<<<<<<<<
@@ -10375,7 +10375,7 @@ static PyObject *__pyx_pf_8libimwip_34affine_warp_3D(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":580
+/* "imwip/cpp_backend/wrappers.pyx":576
  * 
  * # python version of adjointAffineWarp3D, this function accepts numpy arrays
  * def adjoint_affine_warp_3D(             # <<<<<<<<<<<<<<
@@ -10403,7 +10403,7 @@ static PyObject *__pyx_pw_8libimwip_37adjoint_affine_warp_3D(PyObject *__pyx_sel
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f_warped,&__pyx_n_s_A,&__pyx_n_s_b,&__pyx_n_s_f,&__pyx_n_s_degree,&__pyx_n_s_indexing,0};
     PyObject* values[6] = {0,0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":584
+    /* "imwip/cpp_backend/wrappers.pyx":580
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  *         np.ndarray[ndim=1, dtype=float, mode="c"] b,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f=None,             # <<<<<<<<<<<<<<
@@ -10440,13 +10440,13 @@ static PyObject *__pyx_pw_8libimwip_37adjoint_affine_warp_3D(PyObject *__pyx_sel
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_A)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("adjoint_affine_warp_3D", 0, 3, 6, 1); __PYX_ERR(0, 580, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("adjoint_affine_warp_3D", 0, 3, 6, 1); __PYX_ERR(0, 576, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("adjoint_affine_warp_3D", 0, 3, 6, 2); __PYX_ERR(0, 580, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("adjoint_affine_warp_3D", 0, 3, 6, 2); __PYX_ERR(0, 576, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -10468,7 +10468,7 @@ static PyObject *__pyx_pw_8libimwip_37adjoint_affine_warp_3D(PyObject *__pyx_sel
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "adjoint_affine_warp_3D") < 0)) __PYX_ERR(0, 580, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "adjoint_affine_warp_3D") < 0)) __PYX_ERR(0, 576, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -10490,7 +10490,7 @@ static PyObject *__pyx_pw_8libimwip_37adjoint_affine_warp_3D(PyObject *__pyx_sel
     __pyx_v_b = ((PyArrayObject *)values[2]);
     __pyx_v_f = ((PyArrayObject *)values[3]);
     if (values[4]) {
-      __pyx_v_degree = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 585, __pyx_L3_error)
+      __pyx_v_degree = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_degree == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 581, __pyx_L3_error)
     } else {
       __pyx_v_degree = ((int)3);
     }
@@ -10498,20 +10498,20 @@ static PyObject *__pyx_pw_8libimwip_37adjoint_affine_warp_3D(PyObject *__pyx_sel
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("adjoint_affine_warp_3D", 0, 3, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 580, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("adjoint_affine_warp_3D", 0, 3, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 576, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("libimwip.adjoint_affine_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 581, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_A), __pyx_ptype_5numpy_ndarray, 1, "A", 0))) __PYX_ERR(0, 582, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_5numpy_ndarray, 1, "b", 0))) __PYX_ERR(0, 583, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 584, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_indexing), (&PyString_Type), 1, "indexing", 1))) __PYX_ERR(0, 586, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f_warped), __pyx_ptype_5numpy_ndarray, 1, "f_warped", 0))) __PYX_ERR(0, 577, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_A), __pyx_ptype_5numpy_ndarray, 1, "A", 0))) __PYX_ERR(0, 578, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_5numpy_ndarray, 1, "b", 0))) __PYX_ERR(0, 579, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 580, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_indexing), (&PyString_Type), 1, "indexing", 1))) __PYX_ERR(0, 582, __pyx_L1_error)
   __pyx_r = __pyx_pf_8libimwip_36adjoint_affine_warp_3D(__pyx_self, __pyx_v_f_warped, __pyx_v_A, __pyx_v_b, __pyx_v_f, __pyx_v_degree, __pyx_v_indexing);
 
-  /* "imwip/cpp_backend/wrappers.pyx":580
+  /* "imwip/cpp_backend/wrappers.pyx":576
  * 
  * # python version of adjointAffineWarp3D, this function accepts numpy arrays
  * def adjoint_affine_warp_3D(             # <<<<<<<<<<<<<<
@@ -10588,26 +10588,26 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
   __pyx_pybuffernd_f.rcbuffer = &__pyx_pybuffer_f;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 580, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f_warped.rcbuffer->pybuffer, (PyObject*)__pyx_v_f_warped, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 576, __pyx_L1_error)
   }
   __pyx_pybuffernd_f_warped.diminfo[0].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f_warped.diminfo[0].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f_warped.diminfo[1].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f_warped.diminfo[1].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f_warped.diminfo[2].strides = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f_warped.diminfo[2].shape = __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_A.rcbuffer->pybuffer, (PyObject*)__pyx_v_A, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 580, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_A.rcbuffer->pybuffer, (PyObject*)__pyx_v_A, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 576, __pyx_L1_error)
   }
   __pyx_pybuffernd_A.diminfo[0].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_A.diminfo[0].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_A.diminfo[1].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_A.diminfo[1].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_b.rcbuffer->pybuffer, (PyObject*)__pyx_v_b, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 580, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_b.rcbuffer->pybuffer, (PyObject*)__pyx_v_b, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 576, __pyx_L1_error)
   }
   __pyx_pybuffernd_b.diminfo[0].strides = __pyx_pybuffernd_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_b.diminfo[0].shape = __pyx_pybuffernd_b.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 580, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 576, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f.diminfo[2].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f.diminfo[2].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[2];
 
-  /* "imwip/cpp_backend/wrappers.pyx":588
+  /* "imwip/cpp_backend/wrappers.pyx":584
  *         str indexing="ij"
  *     ):
  *     if f is None:             # <<<<<<<<<<<<<<
@@ -10618,25 +10618,25 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":589
+    /* "imwip/cpp_backend/wrappers.pyx":585
  *     ):
  *     if f is None:
  *         f = np.zeros((f_warped.shape[0], f_warped.shape[1], f_warped.shape[2]), dtype=f_warped.dtype)             # <<<<<<<<<<<<<<
  * 
  *     if indexing == "xy":
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 589, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 589, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 589, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 589, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[2])); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 589, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f_warped->dimensions[2])); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 589, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_3);
@@ -10647,23 +10647,23 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
     __pyx_t_3 = 0;
     __pyx_t_5 = 0;
     __pyx_t_6 = 0;
-    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 589, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_7);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7);
     __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 589, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f_warped), __pyx_n_s_dtype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 589, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f_warped), __pyx_n_s_dtype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 589, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 589, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 589, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 585, __pyx_L1_error)
     __pyx_t_8 = ((PyArrayObject *)__pyx_t_5);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -10680,13 +10680,13 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
         __pyx_t_10 = __pyx_t_11 = __pyx_t_12 = 0;
       }
       __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f.diminfo[2].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f.diminfo[2].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[2];
-      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 589, __pyx_L1_error)
+      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 585, __pyx_L1_error)
     }
     __pyx_t_8 = 0;
     __Pyx_DECREF_SET(__pyx_v_f, ((PyArrayObject *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":588
+    /* "imwip/cpp_backend/wrappers.pyx":584
  *         str indexing="ij"
  *     ):
  *     if f is None:             # <<<<<<<<<<<<<<
@@ -10695,32 +10695,32 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":591
+  /* "imwip/cpp_backend/wrappers.pyx":587
  *         f = np.zeros((f_warped.shape[0], f_warped.shape[1], f_warped.shape[2]), dtype=f_warped.dtype)
  * 
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
  *         A = np.fliplr(np.flipud(A)).copy()
  *         b = np.flip(b).copy()
  */
-  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 591, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 587, __pyx_L1_error)
   __pyx_t_1 = (__pyx_t_2 != 0);
   if (__pyx_t_1) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":592
+    /* "imwip/cpp_backend/wrappers.pyx":588
  * 
  *     if indexing == "xy":
  *         A = np.fliplr(np.flipud(A)).copy()             # <<<<<<<<<<<<<<
  *         b = np.flip(b).copy()
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 592, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 588, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_fliplr); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 592, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_fliplr); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 588, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 592, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 588, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_flipud); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 592, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_flipud); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 588, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -10735,7 +10735,7 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
     }
     __pyx_t_6 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_13, __pyx_t_3, ((PyObject *)__pyx_v_A)) : __Pyx_PyObject_CallOneArg(__pyx_t_13, ((PyObject *)__pyx_v_A));
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 592, __pyx_L1_error)
+    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 588, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __pyx_t_13 = NULL;
@@ -10751,10 +10751,10 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
     __pyx_t_7 = (__pyx_t_13) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_13, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6);
     __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 592, __pyx_L1_error)
+    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 588, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_copy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 592, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_copy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 588, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_t_7 = NULL;
@@ -10769,10 +10769,10 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
     }
     __pyx_t_5 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 592, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 588, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 592, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 588, __pyx_L1_error)
     __pyx_t_14 = ((PyArrayObject *)__pyx_t_5);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -10789,22 +10789,22 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
         __pyx_t_12 = __pyx_t_11 = __pyx_t_10 = 0;
       }
       __pyx_pybuffernd_A.diminfo[0].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_A.diminfo[0].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_A.diminfo[1].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_A.diminfo[1].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[1];
-      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 592, __pyx_L1_error)
+      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 588, __pyx_L1_error)
     }
     __pyx_t_14 = 0;
     __Pyx_DECREF_SET(__pyx_v_A, ((PyArrayObject *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":593
+    /* "imwip/cpp_backend/wrappers.pyx":589
  *     if indexing == "xy":
  *         A = np.fliplr(np.flipud(A)).copy()
  *         b = np.flip(b).copy()             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 593, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 589, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_flip); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 593, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_flip); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 589, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_t_7 = NULL;
@@ -10819,10 +10819,10 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
     }
     __pyx_t_4 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_7, ((PyObject *)__pyx_v_b)) : __Pyx_PyObject_CallOneArg(__pyx_t_6, ((PyObject *)__pyx_v_b));
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 593, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 589, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_copy); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 593, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_copy); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 589, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -10837,10 +10837,10 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
     }
     __pyx_t_5 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 593, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 589, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 593, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 589, __pyx_L1_error)
     __pyx_t_15 = ((PyArrayObject *)__pyx_t_5);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -10857,13 +10857,13 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
         __pyx_t_10 = __pyx_t_11 = __pyx_t_12 = 0;
       }
       __pyx_pybuffernd_b.diminfo[0].strides = __pyx_pybuffernd_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_b.diminfo[0].shape = __pyx_pybuffernd_b.rcbuffer->pybuffer.shape[0];
-      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 593, __pyx_L1_error)
+      if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 589, __pyx_L1_error)
     }
     __pyx_t_15 = 0;
     __Pyx_DECREF_SET(__pyx_v_b, ((PyArrayObject *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":591
+    /* "imwip/cpp_backend/wrappers.pyx":587
  *         f = np.zeros((f_warped.shape[0], f_warped.shape[1], f_warped.shape[2]), dtype=f_warped.dtype)
  * 
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
@@ -10872,7 +10872,7 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":598
+  /* "imwip/cpp_backend/wrappers.pyx":594
  *     # get the pointer to the first element and pass it to the C++ function
  *     adjointAffineWarp3D(
  *         &f_warped[0,0,0],             # <<<<<<<<<<<<<<
@@ -10897,10 +10897,10 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_f_warped.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 598, __pyx_L1_error)
+    __PYX_ERR(0, 594, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":599
+  /* "imwip/cpp_backend/wrappers.pyx":595
  *     adjointAffineWarp3D(
  *         &f_warped[0,0,0],
  *         &A[0,0],             # <<<<<<<<<<<<<<
@@ -10920,10 +10920,10 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_A.diminfo[1].shape)) __pyx_t_9 = 1;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 599, __pyx_L1_error)
+    __PYX_ERR(0, 595, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":600
+  /* "imwip/cpp_backend/wrappers.pyx":596
  *         &f_warped[0,0,0],
  *         &A[0,0],
  *         &b[0],             # <<<<<<<<<<<<<<
@@ -10938,10 +10938,10 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_21 >= __pyx_pybuffernd_b.diminfo[0].shape)) __pyx_t_9 = 0;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 600, __pyx_L1_error)
+    __PYX_ERR(0, 596, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":601
+  /* "imwip/cpp_backend/wrappers.pyx":597
  *         &A[0,0],
  *         &b[0],
  *         &f[0,0,0],             # <<<<<<<<<<<<<<
@@ -10966,10 +10966,10 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_f.diminfo[2].shape)) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 601, __pyx_L1_error)
+    __PYX_ERR(0, 597, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":597
+  /* "imwip/cpp_backend/wrappers.pyx":593
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
  *     adjointAffineWarp3D(             # <<<<<<<<<<<<<<
@@ -10978,19 +10978,19 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
  */
   adjointAffineWarp3D((&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f_warped.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_f_warped.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_f_warped.diminfo[1].strides, __pyx_t_18, __pyx_pybuffernd_f_warped.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_A.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_A.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_A.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig1d(float *, __pyx_pybuffernd_b.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_b.diminfo[0].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_23, __pyx_pybuffernd_f.diminfo[1].strides, __pyx_t_24, __pyx_pybuffernd_f.diminfo[2].strides))), __pyx_v_degree, (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]), (__pyx_v_f->dimensions[2]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":608
+  /* "imwip/cpp_backend/wrappers.pyx":604
  *     )
  * 
  *     return f             # <<<<<<<<<<<<<<
  * 
- * def grad_affine_warp_3D(
+ * def diff_affine_warp_3D(
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(((PyObject *)__pyx_v_f));
   __pyx_r = ((PyObject *)__pyx_v_f);
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":580
+  /* "imwip/cpp_backend/wrappers.pyx":576
  * 
  * # python version of adjointAffineWarp3D, this function accepts numpy arrays
  * def adjoint_affine_warp_3D(             # <<<<<<<<<<<<<<
@@ -11032,57 +11032,57 @@ static PyObject *__pyx_pf_8libimwip_36adjoint_affine_warp_3D(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "imwip/cpp_backend/wrappers.pyx":610
+/* "imwip/cpp_backend/wrappers.pyx":606
  *     return f
  * 
- * def grad_affine_warp_3D(             # <<<<<<<<<<<<<<
+ * def diff_affine_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_8libimwip_39grad_affine_warp_3D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_8libimwip_39grad_affine_warp_3D = {"grad_affine_warp_3D", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8libimwip_39grad_affine_warp_3D, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_8libimwip_39grad_affine_warp_3D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8libimwip_39diff_affine_warp_3D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8libimwip_39diff_affine_warp_3D = {"diff_affine_warp_3D", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8libimwip_39diff_affine_warp_3D, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8libimwip_39diff_affine_warp_3D(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_f = 0;
   PyArrayObject *__pyx_v_A = 0;
   PyArrayObject *__pyx_v_b = 0;
-  PyArrayObject *__pyx_v_grad_x = 0;
-  PyArrayObject *__pyx_v_grad_y = 0;
-  PyArrayObject *__pyx_v_grad_z = 0;
+  PyArrayObject *__pyx_v_diff_x = 0;
+  PyArrayObject *__pyx_v_diff_y = 0;
+  PyArrayObject *__pyx_v_diff_z = 0;
   PyObject *__pyx_v_indexing = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("grad_affine_warp_3D (wrapper)", 0);
+  __Pyx_RefNannySetupContext("diff_affine_warp_3D (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_A,&__pyx_n_s_b,&__pyx_n_s_grad_x,&__pyx_n_s_grad_y,&__pyx_n_s_grad_z,&__pyx_n_s_indexing,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_A,&__pyx_n_s_b,&__pyx_n_s_diff_x,&__pyx_n_s_diff_y,&__pyx_n_s_diff_z,&__pyx_n_s_indexing,0};
     PyObject* values[7] = {0,0,0,0,0,0,0};
 
-    /* "imwip/cpp_backend/wrappers.pyx":614
+    /* "imwip/cpp_backend/wrappers.pyx":610
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  *         np.ndarray[ndim=1, dtype=float, mode="c"] b,
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_x=None,             # <<<<<<<<<<<<<<
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_y=None,
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_z=None,
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_x=None,             # <<<<<<<<<<<<<<
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_y=None,
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_z=None,
  */
     values[3] = (PyObject *)((PyArrayObject *)Py_None);
 
-    /* "imwip/cpp_backend/wrappers.pyx":615
+    /* "imwip/cpp_backend/wrappers.pyx":611
  *         np.ndarray[ndim=1, dtype=float, mode="c"] b,
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_x=None,
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_y=None,             # <<<<<<<<<<<<<<
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_z=None,
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_x=None,
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_y=None,             # <<<<<<<<<<<<<<
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_z=None,
  *         str indexing="ij"
  */
     values[4] = (PyObject *)((PyArrayObject *)Py_None);
 
-    /* "imwip/cpp_backend/wrappers.pyx":616
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_x=None,
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_y=None,
- *         np.ndarray[ndim=3, dtype=float, mode="c"] grad_z=None,             # <<<<<<<<<<<<<<
+    /* "imwip/cpp_backend/wrappers.pyx":612
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_x=None,
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_y=None,
+ *         np.ndarray[ndim=3, dtype=float, mode="c"] diff_z=None,             # <<<<<<<<<<<<<<
  *         str indexing="ij"
  *     ):
  */
@@ -11118,30 +11118,30 @@ static PyObject *__pyx_pw_8libimwip_39grad_affine_warp_3D(PyObject *__pyx_self, 
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_A)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("grad_affine_warp_3D", 0, 3, 7, 1); __PYX_ERR(0, 610, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("diff_affine_warp_3D", 0, 3, 7, 1); __PYX_ERR(0, 606, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("grad_affine_warp_3D", 0, 3, 7, 2); __PYX_ERR(0, 610, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("diff_affine_warp_3D", 0, 3, 7, 2); __PYX_ERR(0, 606, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (kw_args > 0) {
-          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_grad_x);
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_diff_x);
           if (value) { values[3] = value; kw_args--; }
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (kw_args > 0) {
-          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_grad_y);
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_diff_y);
           if (value) { values[4] = value; kw_args--; }
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (kw_args > 0) {
-          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_grad_z);
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_diff_z);
           if (value) { values[5] = value; kw_args--; }
         }
         CYTHON_FALLTHROUGH;
@@ -11152,7 +11152,7 @@ static PyObject *__pyx_pw_8libimwip_39grad_affine_warp_3D(PyObject *__pyx_self, 
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "grad_affine_warp_3D") < 0)) __PYX_ERR(0, 610, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "diff_affine_warp_3D") < 0)) __PYX_ERR(0, 606, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -11174,32 +11174,32 @@ static PyObject *__pyx_pw_8libimwip_39grad_affine_warp_3D(PyObject *__pyx_self, 
     __pyx_v_f = ((PyArrayObject *)values[0]);
     __pyx_v_A = ((PyArrayObject *)values[1]);
     __pyx_v_b = ((PyArrayObject *)values[2]);
-    __pyx_v_grad_x = ((PyArrayObject *)values[3]);
-    __pyx_v_grad_y = ((PyArrayObject *)values[4]);
-    __pyx_v_grad_z = ((PyArrayObject *)values[5]);
+    __pyx_v_diff_x = ((PyArrayObject *)values[3]);
+    __pyx_v_diff_y = ((PyArrayObject *)values[4]);
+    __pyx_v_diff_z = ((PyArrayObject *)values[5]);
     __pyx_v_indexing = ((PyObject*)values[6]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("grad_affine_warp_3D", 0, 3, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 610, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("diff_affine_warp_3D", 0, 3, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 606, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libimwip.grad_affine_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("libimwip.diff_affine_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 611, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_A), __pyx_ptype_5numpy_ndarray, 1, "A", 0))) __PYX_ERR(0, 612, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_5numpy_ndarray, 1, "b", 0))) __PYX_ERR(0, 613, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_grad_x), __pyx_ptype_5numpy_ndarray, 1, "grad_x", 0))) __PYX_ERR(0, 614, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_grad_y), __pyx_ptype_5numpy_ndarray, 1, "grad_y", 0))) __PYX_ERR(0, 615, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_grad_z), __pyx_ptype_5numpy_ndarray, 1, "grad_z", 0))) __PYX_ERR(0, 616, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_indexing), (&PyString_Type), 1, "indexing", 1))) __PYX_ERR(0, 617, __pyx_L1_error)
-  __pyx_r = __pyx_pf_8libimwip_38grad_affine_warp_3D(__pyx_self, __pyx_v_f, __pyx_v_A, __pyx_v_b, __pyx_v_grad_x, __pyx_v_grad_y, __pyx_v_grad_z, __pyx_v_indexing);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_f), __pyx_ptype_5numpy_ndarray, 1, "f", 0))) __PYX_ERR(0, 607, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_A), __pyx_ptype_5numpy_ndarray, 1, "A", 0))) __PYX_ERR(0, 608, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_5numpy_ndarray, 1, "b", 0))) __PYX_ERR(0, 609, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_diff_x), __pyx_ptype_5numpy_ndarray, 1, "diff_x", 0))) __PYX_ERR(0, 610, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_diff_y), __pyx_ptype_5numpy_ndarray, 1, "diff_y", 0))) __PYX_ERR(0, 611, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_diff_z), __pyx_ptype_5numpy_ndarray, 1, "diff_z", 0))) __PYX_ERR(0, 612, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_indexing), (&PyString_Type), 1, "indexing", 1))) __PYX_ERR(0, 613, __pyx_L1_error)
+  __pyx_r = __pyx_pf_8libimwip_38diff_affine_warp_3D(__pyx_self, __pyx_v_f, __pyx_v_A, __pyx_v_b, __pyx_v_diff_x, __pyx_v_diff_y, __pyx_v_diff_z, __pyx_v_indexing);
 
-  /* "imwip/cpp_backend/wrappers.pyx":610
+  /* "imwip/cpp_backend/wrappers.pyx":606
  *     return f
  * 
- * def grad_affine_warp_3D(             # <<<<<<<<<<<<<<
+ * def diff_affine_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
@@ -11213,19 +11213,19 @@ static PyObject *__pyx_pw_8libimwip_39grad_affine_warp_3D(PyObject *__pyx_self, 
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_A, PyArrayObject *__pyx_v_b, PyArrayObject *__pyx_v_grad_x, PyArrayObject *__pyx_v_grad_y, PyArrayObject *__pyx_v_grad_z, PyObject *__pyx_v_indexing) {
+static PyObject *__pyx_pf_8libimwip_38diff_affine_warp_3D(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_f, PyArrayObject *__pyx_v_A, PyArrayObject *__pyx_v_b, PyArrayObject *__pyx_v_diff_x, PyArrayObject *__pyx_v_diff_y, PyArrayObject *__pyx_v_diff_z, PyObject *__pyx_v_indexing) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_A;
   __Pyx_Buffer __pyx_pybuffer_A;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_b;
   __Pyx_Buffer __pyx_pybuffer_b;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_diff_x;
+  __Pyx_Buffer __pyx_pybuffer_diff_x;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_diff_y;
+  __Pyx_Buffer __pyx_pybuffer_diff_y;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_diff_z;
+  __Pyx_Buffer __pyx_pybuffer_diff_z;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_f;
   __Pyx_Buffer __pyx_pybuffer_f;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_grad_x;
-  __Pyx_Buffer __pyx_pybuffer_grad_x;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_grad_y;
-  __Pyx_Buffer __pyx_pybuffer_grad_y;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_grad_z;
-  __Pyx_Buffer __pyx_pybuffer_grad_z;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -11263,12 +11263,12 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("grad_affine_warp_3D", 0);
+  __Pyx_RefNannySetupContext("diff_affine_warp_3D", 0);
   __Pyx_INCREF((PyObject *)__pyx_v_A);
   __Pyx_INCREF((PyObject *)__pyx_v_b);
-  __Pyx_INCREF((PyObject *)__pyx_v_grad_x);
-  __Pyx_INCREF((PyObject *)__pyx_v_grad_y);
-  __Pyx_INCREF((PyObject *)__pyx_v_grad_z);
+  __Pyx_INCREF((PyObject *)__pyx_v_diff_x);
+  __Pyx_INCREF((PyObject *)__pyx_v_diff_y);
+  __Pyx_INCREF((PyObject *)__pyx_v_diff_z);
   __pyx_pybuffer_f.pybuffer.buf = NULL;
   __pyx_pybuffer_f.refcount = 0;
   __pyx_pybuffernd_f.data = NULL;
@@ -11281,68 +11281,68 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
   __pyx_pybuffer_b.refcount = 0;
   __pyx_pybuffernd_b.data = NULL;
   __pyx_pybuffernd_b.rcbuffer = &__pyx_pybuffer_b;
-  __pyx_pybuffer_grad_x.pybuffer.buf = NULL;
-  __pyx_pybuffer_grad_x.refcount = 0;
-  __pyx_pybuffernd_grad_x.data = NULL;
-  __pyx_pybuffernd_grad_x.rcbuffer = &__pyx_pybuffer_grad_x;
-  __pyx_pybuffer_grad_y.pybuffer.buf = NULL;
-  __pyx_pybuffer_grad_y.refcount = 0;
-  __pyx_pybuffernd_grad_y.data = NULL;
-  __pyx_pybuffernd_grad_y.rcbuffer = &__pyx_pybuffer_grad_y;
-  __pyx_pybuffer_grad_z.pybuffer.buf = NULL;
-  __pyx_pybuffer_grad_z.refcount = 0;
-  __pyx_pybuffernd_grad_z.data = NULL;
-  __pyx_pybuffernd_grad_z.rcbuffer = &__pyx_pybuffer_grad_z;
+  __pyx_pybuffer_diff_x.pybuffer.buf = NULL;
+  __pyx_pybuffer_diff_x.refcount = 0;
+  __pyx_pybuffernd_diff_x.data = NULL;
+  __pyx_pybuffernd_diff_x.rcbuffer = &__pyx_pybuffer_diff_x;
+  __pyx_pybuffer_diff_y.pybuffer.buf = NULL;
+  __pyx_pybuffer_diff_y.refcount = 0;
+  __pyx_pybuffernd_diff_y.data = NULL;
+  __pyx_pybuffernd_diff_y.rcbuffer = &__pyx_pybuffer_diff_y;
+  __pyx_pybuffer_diff_z.pybuffer.buf = NULL;
+  __pyx_pybuffer_diff_z.refcount = 0;
+  __pyx_pybuffernd_diff_z.data = NULL;
+  __pyx_pybuffernd_diff_z.rcbuffer = &__pyx_pybuffer_diff_z;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 610, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_f.rcbuffer->pybuffer, (PyObject*)__pyx_v_f, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 606, __pyx_L1_error)
   }
   __pyx_pybuffernd_f.diminfo[0].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_f.diminfo[0].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_f.diminfo[1].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_f.diminfo[1].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_f.diminfo[2].strides = __pyx_pybuffernd_f.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_f.diminfo[2].shape = __pyx_pybuffernd_f.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_A.rcbuffer->pybuffer, (PyObject*)__pyx_v_A, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 610, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_A.rcbuffer->pybuffer, (PyObject*)__pyx_v_A, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 606, __pyx_L1_error)
   }
   __pyx_pybuffernd_A.diminfo[0].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_A.diminfo[0].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_A.diminfo[1].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_A.diminfo[1].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_b.rcbuffer->pybuffer, (PyObject*)__pyx_v_b, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 610, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_b.rcbuffer->pybuffer, (PyObject*)__pyx_v_b, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 606, __pyx_L1_error)
   }
   __pyx_pybuffernd_b.diminfo[0].strides = __pyx_pybuffernd_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_b.diminfo[0].shape = __pyx_pybuffernd_b.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 610, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 606, __pyx_L1_error)
   }
-  __pyx_pybuffernd_grad_x.diminfo[0].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_x.diminfo[0].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_x.diminfo[1].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_x.diminfo[1].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad_x.diminfo[2].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad_x.diminfo[2].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[2];
+  __pyx_pybuffernd_diff_x.diminfo[0].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_x.diminfo[0].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_x.diminfo[1].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_x.diminfo[1].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff_x.diminfo[2].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff_x.diminfo[2].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 610, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 606, __pyx_L1_error)
   }
-  __pyx_pybuffernd_grad_y.diminfo[0].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_y.diminfo[0].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_y.diminfo[1].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_y.diminfo[1].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad_y.diminfo[2].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad_y.diminfo[2].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[2];
+  __pyx_pybuffernd_diff_y.diminfo[0].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_y.diminfo[0].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_y.diminfo[1].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_y.diminfo[1].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff_y.diminfo[2].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff_y.diminfo[2].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_z.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_z, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 610, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_z.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_z, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 606, __pyx_L1_error)
   }
-  __pyx_pybuffernd_grad_z.diminfo[0].strides = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_z.diminfo[0].shape = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_z.diminfo[1].strides = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_z.diminfo[1].shape = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad_z.diminfo[2].strides = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad_z.diminfo[2].shape = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.shape[2];
+  __pyx_pybuffernd_diff_z.diminfo[0].strides = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_z.diminfo[0].shape = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_z.diminfo[1].strides = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_z.diminfo[1].shape = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff_z.diminfo[2].strides = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff_z.diminfo[2].shape = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.shape[2];
 
-  /* "imwip/cpp_backend/wrappers.pyx":620
+  /* "imwip/cpp_backend/wrappers.pyx":616
  *     ):
  * 
- *     grad_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
- *     grad_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
- *     grad_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
+ *     diff_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 620, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 616, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 620, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 616, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 620, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 616, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 620, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 616, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 620, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 616, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 620, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 616, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1);
@@ -11353,31 +11353,31 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 620, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 616, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 620, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 616, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 620, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 616, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 620, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 616, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 620, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 616, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 620, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 616, __pyx_L1_error)
   __pyx_t_6 = ((PyArrayObject *)__pyx_t_3);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_8, &__pyx_t_9, &__pyx_t_10);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_x, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -11385,32 +11385,32 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
       }
       __pyx_t_8 = __pyx_t_9 = __pyx_t_10 = 0;
     }
-    __pyx_pybuffernd_grad_x.diminfo[0].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_x.diminfo[0].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_x.diminfo[1].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_x.diminfo[1].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad_x.diminfo[2].strides = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad_x.diminfo[2].shape = __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.shape[2];
-    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 620, __pyx_L1_error)
+    __pyx_pybuffernd_diff_x.diminfo[0].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_x.diminfo[0].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_x.diminfo[1].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_x.diminfo[1].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff_x.diminfo[2].strides = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff_x.diminfo[2].shape = __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.shape[2];
+    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 616, __pyx_L1_error)
   }
   __pyx_t_6 = 0;
-  __Pyx_DECREF_SET(__pyx_v_grad_x, ((PyArrayObject *)__pyx_t_3));
+  __Pyx_DECREF_SET(__pyx_v_diff_x, ((PyArrayObject *)__pyx_t_3));
   __pyx_t_3 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":621
+  /* "imwip/cpp_backend/wrappers.pyx":617
  * 
- *     grad_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
- *     grad_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
- *     grad_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
+ *     diff_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 621, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 621, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 621, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 621, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 621, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 621, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_3);
@@ -11421,31 +11421,31 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
   __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 621, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 621, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 621, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 621, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 621, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 621, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 617, __pyx_L1_error)
   __pyx_t_11 = ((PyArrayObject *)__pyx_t_4);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer, (PyObject*)__pyx_t_11, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer, (PyObject*)__pyx_t_11, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_10, &__pyx_t_9, &__pyx_t_8);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_y, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_8);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -11453,32 +11453,32 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
       }
       __pyx_t_10 = __pyx_t_9 = __pyx_t_8 = 0;
     }
-    __pyx_pybuffernd_grad_y.diminfo[0].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_y.diminfo[0].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_y.diminfo[1].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_y.diminfo[1].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad_y.diminfo[2].strides = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad_y.diminfo[2].shape = __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.shape[2];
-    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 621, __pyx_L1_error)
+    __pyx_pybuffernd_diff_y.diminfo[0].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_y.diminfo[0].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_y.diminfo[1].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_y.diminfo[1].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff_y.diminfo[2].strides = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff_y.diminfo[2].shape = __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.shape[2];
+    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 617, __pyx_L1_error)
   }
   __pyx_t_11 = 0;
-  __Pyx_DECREF_SET(__pyx_v_grad_y, ((PyArrayObject *)__pyx_t_4));
+  __Pyx_DECREF_SET(__pyx_v_diff_y, ((PyArrayObject *)__pyx_t_4));
   __pyx_t_4 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":622
- *     grad_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
- *     grad_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
- *     grad_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
+  /* "imwip/cpp_backend/wrappers.pyx":618
+ *     diff_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+ *     diff_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)             # <<<<<<<<<<<<<<
  * 
  *     if indexing == "xy":
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 622, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 618, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 622, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 618, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 622, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[0])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 618, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 622, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[1])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 618, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 622, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_Py_intptr_t((__pyx_v_f->dimensions[2])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 618, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 622, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 618, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
@@ -11489,31 +11489,31 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
   __pyx_t_4 = 0;
   __pyx_t_2 = 0;
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 622, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 618, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 622, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 618, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 622, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_f), __pyx_n_s_dtype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 618, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 622, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 618, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 622, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 618, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 622, __pyx_L1_error)
+  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 618, __pyx_L1_error)
   __pyx_t_12 = ((PyArrayObject *)__pyx_t_2);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_z.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_z.rcbuffer->pybuffer, (PyObject*)__pyx_t_12, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_z.rcbuffer->pybuffer);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_z.rcbuffer->pybuffer, (PyObject*)__pyx_t_12, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_8, &__pyx_t_9, &__pyx_t_10);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grad_z.rcbuffer->pybuffer, (PyObject*)__pyx_v_grad_z, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_diff_z.rcbuffer->pybuffer, (PyObject*)__pyx_v_diff_z, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -11521,39 +11521,39 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
       }
       __pyx_t_8 = __pyx_t_9 = __pyx_t_10 = 0;
     }
-    __pyx_pybuffernd_grad_z.diminfo[0].strides = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grad_z.diminfo[0].shape = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_grad_z.diminfo[1].strides = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_grad_z.diminfo[1].shape = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_grad_z.diminfo[2].strides = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_grad_z.diminfo[2].shape = __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.shape[2];
-    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 622, __pyx_L1_error)
+    __pyx_pybuffernd_diff_z.diminfo[0].strides = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_diff_z.diminfo[0].shape = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_diff_z.diminfo[1].strides = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_diff_z.diminfo[1].shape = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_diff_z.diminfo[2].strides = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_diff_z.diminfo[2].shape = __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.shape[2];
+    if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 618, __pyx_L1_error)
   }
   __pyx_t_12 = 0;
-  __Pyx_DECREF_SET(__pyx_v_grad_z, ((PyArrayObject *)__pyx_t_2));
+  __Pyx_DECREF_SET(__pyx_v_diff_z, ((PyArrayObject *)__pyx_t_2));
   __pyx_t_2 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":624
- *     grad_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+  /* "imwip/cpp_backend/wrappers.pyx":620
+ *     diff_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
  * 
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
  *         A = np.fliplr(np.flipud(A)).copy()
  *         b = np.flip(b).copy()
  */
-  __pyx_t_13 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_13 < 0)) __PYX_ERR(0, 624, __pyx_L1_error)
+  __pyx_t_13 = (__Pyx_PyString_Equals(__pyx_v_indexing, __pyx_n_s_xy, Py_EQ)); if (unlikely(__pyx_t_13 < 0)) __PYX_ERR(0, 620, __pyx_L1_error)
   __pyx_t_14 = (__pyx_t_13 != 0);
   if (__pyx_t_14) {
 
-    /* "imwip/cpp_backend/wrappers.pyx":625
+    /* "imwip/cpp_backend/wrappers.pyx":621
  * 
  *     if indexing == "xy":
  *         A = np.fliplr(np.flipud(A)).copy()             # <<<<<<<<<<<<<<
  *         b = np.flip(b).copy()
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 625, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 621, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fliplr); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 625, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fliplr); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 621, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 625, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 621, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_flipud); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 625, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_flipud); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 621, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -11568,7 +11568,7 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
     }
     __pyx_t_5 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_15, __pyx_t_4, ((PyObject *)__pyx_v_A)) : __Pyx_PyObject_CallOneArg(__pyx_t_15, ((PyObject *)__pyx_v_A));
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 625, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 621, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     __pyx_t_15 = NULL;
@@ -11584,10 +11584,10 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
     __pyx_t_3 = (__pyx_t_15) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_15, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_5);
     __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 625, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 621, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_copy); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 625, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_copy); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 621, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -11602,10 +11602,10 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
     }
     __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 625, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 621, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 625, __pyx_L1_error)
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 621, __pyx_L1_error)
     __pyx_t_16 = ((PyArrayObject *)__pyx_t_2);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -11622,22 +11622,22 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
         __pyx_t_10 = __pyx_t_9 = __pyx_t_8 = 0;
       }
       __pyx_pybuffernd_A.diminfo[0].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_A.diminfo[0].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_A.diminfo[1].strides = __pyx_pybuffernd_A.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_A.diminfo[1].shape = __pyx_pybuffernd_A.rcbuffer->pybuffer.shape[1];
-      if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 625, __pyx_L1_error)
+      if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 621, __pyx_L1_error)
     }
     __pyx_t_16 = 0;
     __Pyx_DECREF_SET(__pyx_v_A, ((PyArrayObject *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":626
+    /* "imwip/cpp_backend/wrappers.pyx":622
  *     if indexing == "xy":
  *         A = np.fliplr(np.flipud(A)).copy()
  *         b = np.flip(b).copy()             # <<<<<<<<<<<<<<
  * 
  *     # the C++ version accepts pointers, so for each numpy array we
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 626, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 622, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_flip); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 626, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_flip); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 622, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -11652,10 +11652,10 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
     }
     __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_b)) : __Pyx_PyObject_CallOneArg(__pyx_t_5, ((PyObject *)__pyx_v_b));
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 626, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 622, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_copy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 626, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_copy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 622, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -11670,10 +11670,10 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
     }
     __pyx_t_2 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 626, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 622, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 626, __pyx_L1_error)
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 622, __pyx_L1_error)
     __pyx_t_17 = ((PyArrayObject *)__pyx_t_2);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -11690,14 +11690,14 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
         __pyx_t_8 = __pyx_t_9 = __pyx_t_10 = 0;
       }
       __pyx_pybuffernd_b.diminfo[0].strides = __pyx_pybuffernd_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_b.diminfo[0].shape = __pyx_pybuffernd_b.rcbuffer->pybuffer.shape[0];
-      if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 626, __pyx_L1_error)
+      if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 622, __pyx_L1_error)
     }
     __pyx_t_17 = 0;
     __Pyx_DECREF_SET(__pyx_v_b, ((PyArrayObject *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "imwip/cpp_backend/wrappers.pyx":624
- *     grad_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
+    /* "imwip/cpp_backend/wrappers.pyx":620
+ *     diff_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
  * 
  *     if indexing == "xy":             # <<<<<<<<<<<<<<
  *         A = np.fliplr(np.flipud(A)).copy()
@@ -11705,9 +11705,9 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
  */
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":631
+  /* "imwip/cpp_backend/wrappers.pyx":627
  *     # get the pointer to the first element and pass it to the C++ function
- *     gradAffineWarp3D(
+ *     diffAffineWarp3D(
  *         &f[0,0,0],             # <<<<<<<<<<<<<<
  *         &A[0,0],
  *         &b[0],
@@ -11730,15 +11730,15 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
   } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_f.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 631, __pyx_L1_error)
+    __PYX_ERR(0, 627, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":632
- *     gradAffineWarp3D(
+  /* "imwip/cpp_backend/wrappers.pyx":628
+ *     diffAffineWarp3D(
  *         &f[0,0,0],
  *         &A[0,0],             # <<<<<<<<<<<<<<
  *         &b[0],
- *         &grad_x[0,0,0],
+ *         &diff_x[0,0,0],
  */
   __pyx_t_21 = 0;
   __pyx_t_22 = 0;
@@ -11753,15 +11753,15 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
   } else if (unlikely(__pyx_t_22 >= __pyx_pybuffernd_A.diminfo[1].shape)) __pyx_t_7 = 1;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 632, __pyx_L1_error)
+    __PYX_ERR(0, 628, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":633
+  /* "imwip/cpp_backend/wrappers.pyx":629
  *         &f[0,0,0],
  *         &A[0,0],
  *         &b[0],             # <<<<<<<<<<<<<<
- *         &grad_x[0,0,0],
- *         &grad_y[0,0,0],
+ *         &diff_x[0,0,0],
+ *         &diff_y[0,0,0],
  */
   __pyx_t_23 = 0;
   __pyx_t_7 = -1;
@@ -11771,42 +11771,42 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
   } else if (unlikely(__pyx_t_23 >= __pyx_pybuffernd_b.diminfo[0].shape)) __pyx_t_7 = 0;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 633, __pyx_L1_error)
+    __PYX_ERR(0, 629, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":634
+  /* "imwip/cpp_backend/wrappers.pyx":630
  *         &A[0,0],
  *         &b[0],
- *         &grad_x[0,0,0],             # <<<<<<<<<<<<<<
- *         &grad_y[0,0,0],
- *         &grad_z[0,0,0],
+ *         &diff_x[0,0,0],             # <<<<<<<<<<<<<<
+ *         &diff_y[0,0,0],
+ *         &diff_z[0,0,0],
  */
   __pyx_t_24 = 0;
   __pyx_t_25 = 0;
   __pyx_t_26 = 0;
   __pyx_t_7 = -1;
   if (__pyx_t_24 < 0) {
-    __pyx_t_24 += __pyx_pybuffernd_grad_x.diminfo[0].shape;
+    __pyx_t_24 += __pyx_pybuffernd_diff_x.diminfo[0].shape;
     if (unlikely(__pyx_t_24 < 0)) __pyx_t_7 = 0;
-  } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_grad_x.diminfo[0].shape)) __pyx_t_7 = 0;
+  } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_diff_x.diminfo[0].shape)) __pyx_t_7 = 0;
   if (__pyx_t_25 < 0) {
-    __pyx_t_25 += __pyx_pybuffernd_grad_x.diminfo[1].shape;
+    __pyx_t_25 += __pyx_pybuffernd_diff_x.diminfo[1].shape;
     if (unlikely(__pyx_t_25 < 0)) __pyx_t_7 = 1;
-  } else if (unlikely(__pyx_t_25 >= __pyx_pybuffernd_grad_x.diminfo[1].shape)) __pyx_t_7 = 1;
+  } else if (unlikely(__pyx_t_25 >= __pyx_pybuffernd_diff_x.diminfo[1].shape)) __pyx_t_7 = 1;
   if (__pyx_t_26 < 0) {
-    __pyx_t_26 += __pyx_pybuffernd_grad_x.diminfo[2].shape;
+    __pyx_t_26 += __pyx_pybuffernd_diff_x.diminfo[2].shape;
     if (unlikely(__pyx_t_26 < 0)) __pyx_t_7 = 2;
-  } else if (unlikely(__pyx_t_26 >= __pyx_pybuffernd_grad_x.diminfo[2].shape)) __pyx_t_7 = 2;
+  } else if (unlikely(__pyx_t_26 >= __pyx_pybuffernd_diff_x.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 634, __pyx_L1_error)
+    __PYX_ERR(0, 630, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":635
+  /* "imwip/cpp_backend/wrappers.pyx":631
  *         &b[0],
- *         &grad_x[0,0,0],
- *         &grad_y[0,0,0],             # <<<<<<<<<<<<<<
- *         &grad_z[0,0,0],
+ *         &diff_x[0,0,0],
+ *         &diff_y[0,0,0],             # <<<<<<<<<<<<<<
+ *         &diff_z[0,0,0],
  *         f.shape[0],
  */
   __pyx_t_27 = 0;
@@ -11814,26 +11814,26 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
   __pyx_t_29 = 0;
   __pyx_t_7 = -1;
   if (__pyx_t_27 < 0) {
-    __pyx_t_27 += __pyx_pybuffernd_grad_y.diminfo[0].shape;
+    __pyx_t_27 += __pyx_pybuffernd_diff_y.diminfo[0].shape;
     if (unlikely(__pyx_t_27 < 0)) __pyx_t_7 = 0;
-  } else if (unlikely(__pyx_t_27 >= __pyx_pybuffernd_grad_y.diminfo[0].shape)) __pyx_t_7 = 0;
+  } else if (unlikely(__pyx_t_27 >= __pyx_pybuffernd_diff_y.diminfo[0].shape)) __pyx_t_7 = 0;
   if (__pyx_t_28 < 0) {
-    __pyx_t_28 += __pyx_pybuffernd_grad_y.diminfo[1].shape;
+    __pyx_t_28 += __pyx_pybuffernd_diff_y.diminfo[1].shape;
     if (unlikely(__pyx_t_28 < 0)) __pyx_t_7 = 1;
-  } else if (unlikely(__pyx_t_28 >= __pyx_pybuffernd_grad_y.diminfo[1].shape)) __pyx_t_7 = 1;
+  } else if (unlikely(__pyx_t_28 >= __pyx_pybuffernd_diff_y.diminfo[1].shape)) __pyx_t_7 = 1;
   if (__pyx_t_29 < 0) {
-    __pyx_t_29 += __pyx_pybuffernd_grad_y.diminfo[2].shape;
+    __pyx_t_29 += __pyx_pybuffernd_diff_y.diminfo[2].shape;
     if (unlikely(__pyx_t_29 < 0)) __pyx_t_7 = 2;
-  } else if (unlikely(__pyx_t_29 >= __pyx_pybuffernd_grad_y.diminfo[2].shape)) __pyx_t_7 = 2;
+  } else if (unlikely(__pyx_t_29 >= __pyx_pybuffernd_diff_y.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 635, __pyx_L1_error)
+    __PYX_ERR(0, 631, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":636
- *         &grad_x[0,0,0],
- *         &grad_y[0,0,0],
- *         &grad_z[0,0,0],             # <<<<<<<<<<<<<<
+  /* "imwip/cpp_backend/wrappers.pyx":632
+ *         &diff_x[0,0,0],
+ *         &diff_y[0,0,0],
+ *         &diff_z[0,0,0],             # <<<<<<<<<<<<<<
  *         f.shape[0],
  *         f.shape[1],
  */
@@ -11842,56 +11842,56 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
   __pyx_t_32 = 0;
   __pyx_t_7 = -1;
   if (__pyx_t_30 < 0) {
-    __pyx_t_30 += __pyx_pybuffernd_grad_z.diminfo[0].shape;
+    __pyx_t_30 += __pyx_pybuffernd_diff_z.diminfo[0].shape;
     if (unlikely(__pyx_t_30 < 0)) __pyx_t_7 = 0;
-  } else if (unlikely(__pyx_t_30 >= __pyx_pybuffernd_grad_z.diminfo[0].shape)) __pyx_t_7 = 0;
+  } else if (unlikely(__pyx_t_30 >= __pyx_pybuffernd_diff_z.diminfo[0].shape)) __pyx_t_7 = 0;
   if (__pyx_t_31 < 0) {
-    __pyx_t_31 += __pyx_pybuffernd_grad_z.diminfo[1].shape;
+    __pyx_t_31 += __pyx_pybuffernd_diff_z.diminfo[1].shape;
     if (unlikely(__pyx_t_31 < 0)) __pyx_t_7 = 1;
-  } else if (unlikely(__pyx_t_31 >= __pyx_pybuffernd_grad_z.diminfo[1].shape)) __pyx_t_7 = 1;
+  } else if (unlikely(__pyx_t_31 >= __pyx_pybuffernd_diff_z.diminfo[1].shape)) __pyx_t_7 = 1;
   if (__pyx_t_32 < 0) {
-    __pyx_t_32 += __pyx_pybuffernd_grad_z.diminfo[2].shape;
+    __pyx_t_32 += __pyx_pybuffernd_diff_z.diminfo[2].shape;
     if (unlikely(__pyx_t_32 < 0)) __pyx_t_7 = 2;
-  } else if (unlikely(__pyx_t_32 >= __pyx_pybuffernd_grad_z.diminfo[2].shape)) __pyx_t_7 = 2;
+  } else if (unlikely(__pyx_t_32 >= __pyx_pybuffernd_diff_z.diminfo[2].shape)) __pyx_t_7 = 2;
   if (unlikely(__pyx_t_7 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 636, __pyx_L1_error)
+    __PYX_ERR(0, 632, __pyx_L1_error)
   }
 
-  /* "imwip/cpp_backend/wrappers.pyx":630
+  /* "imwip/cpp_backend/wrappers.pyx":626
  *     # the C++ version accepts pointers, so for each numpy array we
  *     # get the pointer to the first element and pass it to the C++ function
- *     gradAffineWarp3D(             # <<<<<<<<<<<<<<
+ *     diffAffineWarp3D(             # <<<<<<<<<<<<<<
  *         &f[0,0,0],
  *         &A[0,0],
  */
-  gradAffineWarp3D((&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_f.diminfo[1].strides, __pyx_t_20, __pyx_pybuffernd_f.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_A.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_A.diminfo[0].strides, __pyx_t_22, __pyx_pybuffernd_A.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig1d(float *, __pyx_pybuffernd_b.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_b.diminfo[0].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_grad_x.rcbuffer->pybuffer.buf, __pyx_t_24, __pyx_pybuffernd_grad_x.diminfo[0].strides, __pyx_t_25, __pyx_pybuffernd_grad_x.diminfo[1].strides, __pyx_t_26, __pyx_pybuffernd_grad_x.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_grad_y.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_grad_y.diminfo[0].strides, __pyx_t_28, __pyx_pybuffernd_grad_y.diminfo[1].strides, __pyx_t_29, __pyx_pybuffernd_grad_y.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_grad_z.rcbuffer->pybuffer.buf, __pyx_t_30, __pyx_pybuffernd_grad_z.diminfo[0].strides, __pyx_t_31, __pyx_pybuffernd_grad_z.diminfo[1].strides, __pyx_t_32, __pyx_pybuffernd_grad_z.diminfo[2].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]), (__pyx_v_f->dimensions[2]));
+  diffAffineWarp3D((&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_f.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_f.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_f.diminfo[1].strides, __pyx_t_20, __pyx_pybuffernd_f.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig2d(float *, __pyx_pybuffernd_A.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_A.diminfo[0].strides, __pyx_t_22, __pyx_pybuffernd_A.diminfo[1].strides))), (&(*__Pyx_BufPtrCContig1d(float *, __pyx_pybuffernd_b.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_b.diminfo[0].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_diff_x.rcbuffer->pybuffer.buf, __pyx_t_24, __pyx_pybuffernd_diff_x.diminfo[0].strides, __pyx_t_25, __pyx_pybuffernd_diff_x.diminfo[1].strides, __pyx_t_26, __pyx_pybuffernd_diff_x.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_diff_y.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_diff_y.diminfo[0].strides, __pyx_t_28, __pyx_pybuffernd_diff_y.diminfo[1].strides, __pyx_t_29, __pyx_pybuffernd_diff_y.diminfo[2].strides))), (&(*__Pyx_BufPtrCContig3d(float *, __pyx_pybuffernd_diff_z.rcbuffer->pybuffer.buf, __pyx_t_30, __pyx_pybuffernd_diff_z.diminfo[0].strides, __pyx_t_31, __pyx_pybuffernd_diff_z.diminfo[1].strides, __pyx_t_32, __pyx_pybuffernd_diff_z.diminfo[2].strides))), (__pyx_v_f->dimensions[0]), (__pyx_v_f->dimensions[1]), (__pyx_v_f->dimensions[2]));
 
-  /* "imwip/cpp_backend/wrappers.pyx":642
+  /* "imwip/cpp_backend/wrappers.pyx":638
  *     )
  * 
- *     return grad_x, grad_y, grad_z             # <<<<<<<<<<<<<<
+ *     return diff_x, diff_y, diff_z             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 642, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 638, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_INCREF(((PyObject *)__pyx_v_grad_x));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_grad_x));
-  PyTuple_SET_ITEM(__pyx_t_2, 0, ((PyObject *)__pyx_v_grad_x));
-  __Pyx_INCREF(((PyObject *)__pyx_v_grad_y));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_grad_y));
-  PyTuple_SET_ITEM(__pyx_t_2, 1, ((PyObject *)__pyx_v_grad_y));
-  __Pyx_INCREF(((PyObject *)__pyx_v_grad_z));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_grad_z));
-  PyTuple_SET_ITEM(__pyx_t_2, 2, ((PyObject *)__pyx_v_grad_z));
+  __Pyx_INCREF(((PyObject *)__pyx_v_diff_x));
+  __Pyx_GIVEREF(((PyObject *)__pyx_v_diff_x));
+  PyTuple_SET_ITEM(__pyx_t_2, 0, ((PyObject *)__pyx_v_diff_x));
+  __Pyx_INCREF(((PyObject *)__pyx_v_diff_y));
+  __Pyx_GIVEREF(((PyObject *)__pyx_v_diff_y));
+  PyTuple_SET_ITEM(__pyx_t_2, 1, ((PyObject *)__pyx_v_diff_y));
+  __Pyx_INCREF(((PyObject *)__pyx_v_diff_z));
+  __Pyx_GIVEREF(((PyObject *)__pyx_v_diff_z));
+  PyTuple_SET_ITEM(__pyx_t_2, 2, ((PyObject *)__pyx_v_diff_z));
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":610
+  /* "imwip/cpp_backend/wrappers.pyx":606
  *     return f
  * 
- * def grad_affine_warp_3D(             # <<<<<<<<<<<<<<
+ * def diff_affine_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
@@ -11910,27 +11910,27 @@ static PyObject *__pyx_pf_8libimwip_38grad_affine_warp_3D(CYTHON_UNUSED PyObject
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_A.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_b.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_z.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_f.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_z.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("libimwip.grad_affine_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("libimwip.diff_affine_warp_3D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_A.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_b.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_x.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_y.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_diff_z.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_f.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_x.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_y.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grad_z.rcbuffer->pybuffer);
   __pyx_L2:;
   __Pyx_XDECREF((PyObject *)__pyx_v_A);
   __Pyx_XDECREF((PyObject *)__pyx_v_b);
-  __Pyx_XDECREF((PyObject *)__pyx_v_grad_x);
-  __Pyx_XDECREF((PyObject *)__pyx_v_grad_y);
-  __Pyx_XDECREF((PyObject *)__pyx_v_grad_z);
+  __Pyx_XDECREF((PyObject *)__pyx_v_diff_x);
+  __Pyx_XDECREF((PyObject *)__pyx_v_diff_y);
+  __Pyx_XDECREF((PyObject *)__pyx_v_diff_z);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
@@ -13261,6 +13261,14 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_copy, __pyx_k_copy, sizeof(__pyx_k_copy), 0, 0, 1, 1},
   {&__pyx_n_s_degree, __pyx_k_degree, sizeof(__pyx_k_degree), 0, 0, 1, 1},
   {&__pyx_n_s_device, __pyx_k_device, sizeof(__pyx_k_device), 0, 0, 1, 1},
+  {&__pyx_n_s_diff, __pyx_k_diff, sizeof(__pyx_k_diff), 0, 0, 1, 1},
+  {&__pyx_n_s_diff_affine_warp_2D, __pyx_k_diff_affine_warp_2D, sizeof(__pyx_k_diff_affine_warp_2D), 0, 0, 1, 1},
+  {&__pyx_n_s_diff_affine_warp_3D, __pyx_k_diff_affine_warp_3D, sizeof(__pyx_k_diff_affine_warp_3D), 0, 0, 1, 1},
+  {&__pyx_n_s_diff_warp_2D, __pyx_k_diff_warp_2D, sizeof(__pyx_k_diff_warp_2D), 0, 0, 1, 1},
+  {&__pyx_n_s_diff_warp_3D, __pyx_k_diff_warp_3D, sizeof(__pyx_k_diff_warp_3D), 0, 0, 1, 1},
+  {&__pyx_n_s_diff_x, __pyx_k_diff_x, sizeof(__pyx_k_diff_x), 0, 0, 1, 1},
+  {&__pyx_n_s_diff_y, __pyx_k_diff_y, sizeof(__pyx_k_diff_y), 0, 0, 1, 1},
+  {&__pyx_n_s_diff_z, __pyx_k_diff_z, sizeof(__pyx_k_diff_z), 0, 0, 1, 1},
   {&__pyx_n_s_dtype, __pyx_k_dtype, sizeof(__pyx_k_dtype), 0, 0, 1, 1},
   {&__pyx_n_s_f, __pyx_k_f, sizeof(__pyx_k_f), 0, 0, 1, 1},
   {&__pyx_n_s_f_warped, __pyx_k_f_warped, sizeof(__pyx_k_f_warped), 0, 0, 1, 1},
@@ -13270,14 +13278,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_get_device, __pyx_k_get_device, sizeof(__pyx_k_get_device), 0, 0, 1, 1},
   {&__pyx_n_s_get_device_count, __pyx_k_get_device_count, sizeof(__pyx_k_get_device_count), 0, 0, 1, 1},
   {&__pyx_n_s_get_device_name, __pyx_k_get_device_name, sizeof(__pyx_k_get_device_name), 0, 0, 1, 1},
-  {&__pyx_n_s_grad, __pyx_k_grad, sizeof(__pyx_k_grad), 0, 0, 1, 1},
-  {&__pyx_n_s_grad_affine_warp_2D, __pyx_k_grad_affine_warp_2D, sizeof(__pyx_k_grad_affine_warp_2D), 0, 0, 1, 1},
-  {&__pyx_n_s_grad_affine_warp_3D, __pyx_k_grad_affine_warp_3D, sizeof(__pyx_k_grad_affine_warp_3D), 0, 0, 1, 1},
-  {&__pyx_n_s_grad_warp_2D, __pyx_k_grad_warp_2D, sizeof(__pyx_k_grad_warp_2D), 0, 0, 1, 1},
-  {&__pyx_n_s_grad_warp_3D, __pyx_k_grad_warp_3D, sizeof(__pyx_k_grad_warp_3D), 0, 0, 1, 1},
-  {&__pyx_n_s_grad_x, __pyx_k_grad_x, sizeof(__pyx_k_grad_x), 0, 0, 1, 1},
-  {&__pyx_n_s_grad_y, __pyx_k_grad_y, sizeof(__pyx_k_grad_y), 0, 0, 1, 1},
-  {&__pyx_n_s_grad_z, __pyx_k_grad_z, sizeof(__pyx_k_grad_z), 0, 0, 1, 1},
   {&__pyx_n_s_ij, __pyx_k_ij, sizeof(__pyx_k_ij), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_k_imwip_cpp_backend_wrappers_pyx, sizeof(__pyx_k_imwip_cpp_backend_wrappers_pyx), 0, 0, 1, 0},
@@ -13293,7 +13293,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_numpy, __pyx_k_numpy, sizeof(__pyx_k_numpy), 0, 0, 1, 1},
   {&__pyx_kp_s_numpy_core_multiarray_failed_to, __pyx_k_numpy_core_multiarray_failed_to, sizeof(__pyx_k_numpy_core_multiarray_failed_to), 0, 0, 1, 0},
   {&__pyx_kp_s_numpy_core_umath_failed_to_impor, __pyx_k_numpy_core_umath_failed_to_impor, sizeof(__pyx_k_numpy_core_umath_failed_to_impor), 0, 0, 1, 0},
-  {&__pyx_n_s_partial_grad_warp_3D, __pyx_k_partial_grad_warp_3D, sizeof(__pyx_k_partial_grad_warp_3D), 0, 0, 1, 1},
+  {&__pyx_n_s_partial_diff_warp_3D, __pyx_k_partial_diff_warp_3D, sizeof(__pyx_k_partial_diff_warp_3D), 0, 0, 1, 1},
   {&__pyx_n_s_set_device, __pyx_k_set_device, sizeof(__pyx_k_set_device), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_n_s_to, __pyx_k_to, sizeof(__pyx_k_to), 0, 0, 1, 1},
@@ -13341,239 +13341,239 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "imwip/cpp_backend/wrappers.pyx":21
+  /* "imwip/cpp_backend/wrappers.pyx":17
  *     string getDeviceName(int device)
  * 
  * def get_device():             # <<<<<<<<<<<<<<
  *     return getDevice()
  * 
  */
-  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_get_device, 21, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_get_device, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 17, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":24
+  /* "imwip/cpp_backend/wrappers.pyx":20
  *     return getDevice()
  * 
  * def set_device(int device):             # <<<<<<<<<<<<<<
  *     setDevice(device)
  * 
  */
-  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_n_s_device, __pyx_n_s_device); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_n_s_device, __pyx_n_s_device); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_set_device, 24, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_set_device, 20, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 20, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":27
+  /* "imwip/cpp_backend/wrappers.pyx":23
  *     setDevice(device)
  * 
  * def get_device_count():             # <<<<<<<<<<<<<<
  *     return getDeviceCount()
  * 
  */
-  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_get_device_count, 27, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_get_device_count, 23, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 23, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":30
+  /* "imwip/cpp_backend/wrappers.pyx":26
  *     return getDeviceCount()
  * 
  * def get_device_name(int device):             # <<<<<<<<<<<<<<
  *     cdef string name = getDeviceName(device)
  *     return name.decode('UTF-8')
  */
-  __pyx_tuple__7 = PyTuple_Pack(3, __pyx_n_s_device, __pyx_n_s_device, __pyx_n_s_name_2); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 30, __pyx_L1_error)
+  __pyx_tuple__7 = PyTuple_Pack(3, __pyx_n_s_device, __pyx_n_s_device, __pyx_n_s_name_2); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
-  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_get_device_name, 30, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 30, __pyx_L1_error)
+  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_get_device_name, 26, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 26, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":152
+  /* "imwip/cpp_backend/wrappers.pyx":148
  * 
  * # python version of warp2D, this function accepts numpy arrays
  * def warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  */
-  __pyx_tuple__9 = PyTuple_Pack(5, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_f_warped, __pyx_n_s_degree); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 152, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(5, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_f_warped, __pyx_n_s_degree); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
-  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_warp_2D, 152, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 152, __pyx_L1_error)
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_warp_2D, 148, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 148, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":170
+  /* "imwip/cpp_backend/wrappers.pyx":166
  * 
  * # python version of adjointWarp2D, this function accepts numpy arrays
  * def adjoint_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f_warped,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  */
-  __pyx_tuple__11 = PyTuple_Pack(5, __pyx_n_s_f_warped, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_f, __pyx_n_s_degree); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 170, __pyx_L1_error)
+  __pyx_tuple__11 = PyTuple_Pack(5, __pyx_n_s_f_warped, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_f, __pyx_n_s_degree); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 166, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
-  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_adjoint_warp_2D, 170, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 170, __pyx_L1_error)
+  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_adjoint_warp_2D, 166, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 166, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":195
+  /* "imwip/cpp_backend/wrappers.pyx":191
  * 
  * 
- * def grad_warp_2D(             # <<<<<<<<<<<<<<
+ * def diff_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  */
-  __pyx_tuple__13 = PyTuple_Pack(5, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_grad_x, __pyx_n_s_grad_y); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 195, __pyx_L1_error)
+  __pyx_tuple__13 = PyTuple_Pack(5, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_diff_x, __pyx_n_s_diff_y); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
-  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_grad_warp_2D, 195, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 195, __pyx_L1_error)
+  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_diff_warp_2D, 191, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 191, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":213
+  /* "imwip/cpp_backend/wrappers.pyx":209
  * 
  * # python version of jvpWarp2D, this function accepts numpy arrays
  * def jvp_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  */
-  __pyx_tuple__15 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_vec_in, __pyx_n_s_vec_out, __pyx_n_s_degree); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 213, __pyx_L1_error)
+  __pyx_tuple__15 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_vec_in, __pyx_n_s_vec_out, __pyx_n_s_degree); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
-  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_jvp_warp_2D, 213, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 213, __pyx_L1_error)
+  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_jvp_warp_2D, 209, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 209, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":232
+  /* "imwip/cpp_backend/wrappers.pyx":228
  * 
  * # python version of warp3D, this function accepts numpy arrays
  * def warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
-  __pyx_tuple__17 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_f_warped, __pyx_n_s_degree); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 232, __pyx_L1_error)
+  __pyx_tuple__17 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_f_warped, __pyx_n_s_degree); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
-  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_warp_3D, 232, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 232, __pyx_L1_error)
+  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_warp_3D, 228, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 228, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":261
+  /* "imwip/cpp_backend/wrappers.pyx":257
  * 
  * # python version of adjointBackwardWarp3D, this function accepts numpy arrays
  * def adjoint_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f_warped,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
-  __pyx_tuple__19 = PyTuple_Pack(6, __pyx_n_s_f_warped, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_f, __pyx_n_s_degree); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 261, __pyx_L1_error)
+  __pyx_tuple__19 = PyTuple_Pack(6, __pyx_n_s_f_warped, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_f, __pyx_n_s_degree); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 257, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_adjoint_warp_3D, 261, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 261, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_adjoint_warp_3D, 257, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 257, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":289
+  /* "imwip/cpp_backend/wrappers.pyx":285
  * 
  * 
- * def grad_warp_3D(             # <<<<<<<<<<<<<<
+ * def diff_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
-  __pyx_tuple__21 = PyTuple_Pack(7, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_grad_x, __pyx_n_s_grad_y, __pyx_n_s_grad_z); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_tuple__21 = PyTuple_Pack(7, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_diff_x, __pyx_n_s_diff_y, __pyx_n_s_diff_z); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
-  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(7, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_grad_warp_3D, 289, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(7, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_diff_warp_3D, 285, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 285, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":320
+  /* "imwip/cpp_backend/wrappers.pyx":316
  * 
  * 
- * def partial_grad_warp_3D(             # <<<<<<<<<<<<<<
+ * def partial_diff_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
-  __pyx_tuple__23 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_to, __pyx_n_s_grad); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __pyx_tuple__23 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_to, __pyx_n_s_diff); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 316, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
-  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_partial_grad_warp_3D, 320, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_partial_diff_warp_3D, 316, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 316, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":348
+  /* "imwip/cpp_backend/wrappers.pyx":344
  * 
  * # python version of jvpWarp3D, this function accepts numpy arrays
  * def jvp_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
-  __pyx_tuple__25 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_vec_in, __pyx_n_s_vec_out); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_tuple__25 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_vec_in, __pyx_n_s_vec_out); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 344, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
-  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_jvp_warp_3D, 348, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_jvp_warp_3D, 344, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 344, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":376
+  /* "imwip/cpp_backend/wrappers.pyx":372
  * 
- * # python version of gradWarp3DY, this function accepts numpy arrays
+ * # python version of diffWarp3DY, this function accepts numpy arrays
  * def jvp_warp_3DY(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
-  __pyx_tuple__27 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_vec_in, __pyx_n_s_vec_out); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 376, __pyx_L1_error)
+  __pyx_tuple__27 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_u, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_vec_in, __pyx_n_s_vec_out); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 372, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_jvp_warp_3DY, 376, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 376, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_jvp_warp_3DY, 372, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 372, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":472
+  /* "imwip/cpp_backend/wrappers.pyx":468
  * 
  * # python version of affineWarp2D, this function accepts numpy arrays
  * def affine_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
-  __pyx_tuple__29 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_A, __pyx_n_s_b, __pyx_n_s_f_warped, __pyx_n_s_degree, __pyx_n_s_indexing); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 472, __pyx_L1_error)
+  __pyx_tuple__29 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_A, __pyx_n_s_b, __pyx_n_s_f_warped, __pyx_n_s_degree, __pyx_n_s_indexing); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 468, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_affine_warp_2D, 472, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 472, __pyx_L1_error)
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_affine_warp_2D, 468, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 468, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":495
+  /* "imwip/cpp_backend/wrappers.pyx":491
  * 
  * # python version of adjointAffineWarp2D, this function accepts numpy arrays
  * def adjoint_affine_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f_warped,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
-  __pyx_tuple__31 = PyTuple_Pack(6, __pyx_n_s_f_warped, __pyx_n_s_A, __pyx_n_s_b, __pyx_n_s_f, __pyx_n_s_degree, __pyx_n_s_indexing); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __pyx_tuple__31 = PyTuple_Pack(6, __pyx_n_s_f_warped, __pyx_n_s_A, __pyx_n_s_b, __pyx_n_s_f, __pyx_n_s_degree, __pyx_n_s_indexing); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__31);
   __Pyx_GIVEREF(__pyx_tuple__31);
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_adjoint_affine_warp_2D, 495, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_adjoint_affine_warp_2D, 491, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 491, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":524
+  /* "imwip/cpp_backend/wrappers.pyx":520
  *     return f
  * 
- * def grad_affine_warp_2D(             # <<<<<<<<<<<<<<
+ * def diff_affine_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
-  __pyx_tuple__33 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_A, __pyx_n_s_b, __pyx_n_s_grad_x, __pyx_n_s_grad_y, __pyx_n_s_indexing); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 524, __pyx_L1_error)
+  __pyx_tuple__33 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_A, __pyx_n_s_b, __pyx_n_s_diff_x, __pyx_n_s_diff_y, __pyx_n_s_indexing); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 520, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__33);
   __Pyx_GIVEREF(__pyx_tuple__33);
-  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_grad_affine_warp_2D, 524, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 524, __pyx_L1_error)
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_diff_affine_warp_2D, 520, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 520, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":549
+  /* "imwip/cpp_backend/wrappers.pyx":545
  * 
  * # python version of affineWarp3D, this function accepts numpy arrays
  * def affine_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
-  __pyx_tuple__35 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_A, __pyx_n_s_b, __pyx_n_s_f_warped, __pyx_n_s_degree, __pyx_n_s_indexing); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 549, __pyx_L1_error)
+  __pyx_tuple__35 = PyTuple_Pack(6, __pyx_n_s_f, __pyx_n_s_A, __pyx_n_s_b, __pyx_n_s_f_warped, __pyx_n_s_degree, __pyx_n_s_indexing); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__35);
   __Pyx_GIVEREF(__pyx_tuple__35);
-  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_affine_warp_3D, 549, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 549, __pyx_L1_error)
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_affine_warp_3D, 545, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 545, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":580
+  /* "imwip/cpp_backend/wrappers.pyx":576
  * 
  * # python version of adjointAffineWarp3D, this function accepts numpy arrays
  * def adjoint_affine_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f_warped,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
-  __pyx_tuple__37 = PyTuple_Pack(6, __pyx_n_s_f_warped, __pyx_n_s_A, __pyx_n_s_b, __pyx_n_s_f, __pyx_n_s_degree, __pyx_n_s_indexing); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 580, __pyx_L1_error)
+  __pyx_tuple__37 = PyTuple_Pack(6, __pyx_n_s_f_warped, __pyx_n_s_A, __pyx_n_s_b, __pyx_n_s_f, __pyx_n_s_degree, __pyx_n_s_indexing); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 576, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__37);
   __Pyx_GIVEREF(__pyx_tuple__37);
-  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_adjoint_affine_warp_3D, 580, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 580, __pyx_L1_error)
+  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_adjoint_affine_warp_3D, 576, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 576, __pyx_L1_error)
 
-  /* "imwip/cpp_backend/wrappers.pyx":610
+  /* "imwip/cpp_backend/wrappers.pyx":606
  *     return f
  * 
- * def grad_affine_warp_3D(             # <<<<<<<<<<<<<<
+ * def diff_affine_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
-  __pyx_tuple__39 = PyTuple_Pack(7, __pyx_n_s_f, __pyx_n_s_A, __pyx_n_s_b, __pyx_n_s_grad_x, __pyx_n_s_grad_y, __pyx_n_s_grad_z, __pyx_n_s_indexing); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 610, __pyx_L1_error)
+  __pyx_tuple__39 = PyTuple_Pack(7, __pyx_n_s_f, __pyx_n_s_A, __pyx_n_s_b, __pyx_n_s_diff_x, __pyx_n_s_diff_y, __pyx_n_s_diff_z, __pyx_n_s_indexing); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 606, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__39);
   __Pyx_GIVEREF(__pyx_tuple__39);
-  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(7, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_grad_affine_warp_3D, 610, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 610, __pyx_L1_error)
+  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(7, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_imwip_cpp_backend_wrappers_pyx, __pyx_n_s_diff_affine_warp_3D, 606, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 606, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -13904,256 +13904,256 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "imwip/cpp_backend/wrappers.pyx":11
+  /* "imwip/cpp_backend/wrappers.pyx":7
  * """
  * 
  * import numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np
  * from libcpp.string cimport string
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":21
+  /* "imwip/cpp_backend/wrappers.pyx":17
  *     string getDeviceName(int device)
  * 
  * def get_device():             # <<<<<<<<<<<<<<
  *     return getDevice()
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_1get_device, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_1get_device, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_device, __pyx_t_1) < 0) __PYX_ERR(0, 21, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_device, __pyx_t_1) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":24
+  /* "imwip/cpp_backend/wrappers.pyx":20
  *     return getDevice()
  * 
  * def set_device(int device):             # <<<<<<<<<<<<<<
  *     setDevice(device)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_3set_device, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_3set_device, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_device, __pyx_t_1) < 0) __PYX_ERR(0, 24, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_set_device, __pyx_t_1) < 0) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":27
+  /* "imwip/cpp_backend/wrappers.pyx":23
  *     setDevice(device)
  * 
  * def get_device_count():             # <<<<<<<<<<<<<<
  *     return getDeviceCount()
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_5get_device_count, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_5get_device_count, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_device_count, __pyx_t_1) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_device_count, __pyx_t_1) < 0) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":30
+  /* "imwip/cpp_backend/wrappers.pyx":26
  *     return getDeviceCount()
  * 
  * def get_device_name(int device):             # <<<<<<<<<<<<<<
  *     cdef string name = getDeviceName(device)
  *     return name.decode('UTF-8')
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_7get_device_name, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 30, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_7get_device_name, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_device_name, __pyx_t_1) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_device_name, __pyx_t_1) < 0) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":152
+  /* "imwip/cpp_backend/wrappers.pyx":148
  * 
  * # python version of warp2D, this function accepts numpy arrays
  * def warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_9warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 152, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_9warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 152, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":170
+  /* "imwip/cpp_backend/wrappers.pyx":166
  * 
  * # python version of adjointWarp2D, this function accepts numpy arrays
  * def adjoint_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f_warped,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_11adjoint_warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_11adjoint_warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_adjoint_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 170, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_adjoint_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 166, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":195
+  /* "imwip/cpp_backend/wrappers.pyx":191
  * 
  * 
- * def grad_warp_2D(             # <<<<<<<<<<<<<<
+ * def diff_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_13grad_warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 195, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_13diff_warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_grad_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 195, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_diff_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":213
+  /* "imwip/cpp_backend/wrappers.pyx":209
  * 
  * # python version of jvpWarp2D, this function accepts numpy arrays
  * def jvp_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] u,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_15jvp_warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_15jvp_warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_jvp_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_jvp_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":232
+  /* "imwip/cpp_backend/wrappers.pyx":228
  * 
  * # python version of warp3D, this function accepts numpy arrays
  * def warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_17warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_17warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 232, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":261
+  /* "imwip/cpp_backend/wrappers.pyx":257
  * 
  * # python version of adjointBackwardWarp3D, this function accepts numpy arrays
  * def adjoint_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f_warped,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_19adjoint_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_19adjoint_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 257, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_adjoint_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 261, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_adjoint_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 257, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":289
+  /* "imwip/cpp_backend/wrappers.pyx":285
  * 
  * 
- * def grad_warp_3D(             # <<<<<<<<<<<<<<
+ * def diff_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_21grad_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_21diff_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_grad_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 289, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_diff_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":320
+  /* "imwip/cpp_backend/wrappers.pyx":316
  * 
  * 
- * def partial_grad_warp_3D(             # <<<<<<<<<<<<<<
+ * def partial_diff_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_23partial_grad_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_23partial_diff_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 316, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_partial_grad_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 320, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_partial_diff_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 316, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":348
+  /* "imwip/cpp_backend/wrappers.pyx":344
  * 
  * # python version of jvpWarp3D, this function accepts numpy arrays
  * def jvp_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_25jvp_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_25jvp_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 344, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_jvp_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 348, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_jvp_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 344, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":376
+  /* "imwip/cpp_backend/wrappers.pyx":372
  * 
- * # python version of gradWarp3DY, this function accepts numpy arrays
+ * # python version of diffWarp3DY, this function accepts numpy arrays
  * def jvp_warp_3DY(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=3, dtype=float, mode="c"] u,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_27jvp_warp_3DY, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 376, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_27jvp_warp_3DY, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 372, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_jvp_warp_3DY, __pyx_t_1) < 0) __PYX_ERR(0, 376, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_jvp_warp_3DY, __pyx_t_1) < 0) __PYX_ERR(0, 372, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":472
+  /* "imwip/cpp_backend/wrappers.pyx":468
  * 
  * # python version of affineWarp2D, this function accepts numpy arrays
  * def affine_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_29affine_warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 472, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_29affine_warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 468, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_affine_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 472, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_affine_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 468, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":495
+  /* "imwip/cpp_backend/wrappers.pyx":491
  * 
  * # python version of adjointAffineWarp2D, this function accepts numpy arrays
  * def adjoint_affine_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f_warped,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_31adjoint_affine_warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_31adjoint_affine_warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_adjoint_affine_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 495, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_adjoint_affine_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":524
+  /* "imwip/cpp_backend/wrappers.pyx":520
  *     return f
  * 
- * def grad_affine_warp_2D(             # <<<<<<<<<<<<<<
+ * def diff_affine_warp_2D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=2, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_33grad_affine_warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 524, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_33diff_affine_warp_2D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 520, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_grad_affine_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 524, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_diff_affine_warp_2D, __pyx_t_1) < 0) __PYX_ERR(0, 520, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":549
+  /* "imwip/cpp_backend/wrappers.pyx":545
  * 
  * # python version of affineWarp3D, this function accepts numpy arrays
  * def affine_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_35affine_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 549, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_35affine_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_affine_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 549, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_affine_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":580
+  /* "imwip/cpp_backend/wrappers.pyx":576
  * 
  * # python version of adjointAffineWarp3D, this function accepts numpy arrays
  * def adjoint_affine_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f_warped,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_37adjoint_affine_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 580, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_37adjoint_affine_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 576, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_adjoint_affine_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 580, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_adjoint_affine_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 576, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "imwip/cpp_backend/wrappers.pyx":610
+  /* "imwip/cpp_backend/wrappers.pyx":606
  *     return f
  * 
- * def grad_affine_warp_3D(             # <<<<<<<<<<<<<<
+ * def diff_affine_warp_3D(             # <<<<<<<<<<<<<<
  *         np.ndarray[ndim=3, dtype=float, mode="c"] f,
  *         np.ndarray[ndim=2, dtype=float, mode="c"] A,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_39grad_affine_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 610, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8libimwip_39diff_affine_warp_3D, NULL, __pyx_n_s_libimwip); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 606, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_grad_affine_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 610, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_diff_affine_warp_3D, __pyx_t_1) < 0) __PYX_ERR(0, 606, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "imwip/cpp_backend/wrappers.pyx":1
