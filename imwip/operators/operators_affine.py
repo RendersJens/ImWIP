@@ -16,8 +16,8 @@ class AffineWarpingOperator2D(LinearOperator):
     A 2D warping operator represented as a scipy LinearOperator.
     It is defined by an affine transformation :math:`Ax + b` or other
     affine or rigid parameters such as scaling, rotations and translations.
-    .
 
+    :param im_shape: shape of the images to be warped
     :param A: 2x2 matrix A of the affine transformation Ax + b.
     :param b: Vector b of the affine transformation Ax + b. It should have length 2.
     :param scale: Scaling parameters of the transformation. If a float, scaling will be
@@ -35,6 +35,7 @@ class AffineWarpingOperator2D(LinearOperator):
     :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
         if available, else ``numba``
 
+    :type im_shape: tuple of ints
     :type A: :class:`numpy.ndarray`, optional
     :type b: :class:`numpy.ndarray`, optional
     :type scale: float or sequence of floats, optional
@@ -49,7 +50,8 @@ class AffineWarpingOperator2D(LinearOperator):
     """
 
     def __init__(
-            self, im_shape,
+            self,
+            im_shape,
             A=None,
             b=None,
             scale=None,
@@ -248,8 +250,8 @@ class AffineWarpingOperator3D(LinearOperator):
     A 3D warping operator represented as a scipy LinearOperator.
     It is defined by an affine transformation :math:`Ax + b` or other
     affine or rigid parameters such as scaling, rotations and translations.
-    .
-
+    
+    :param im_shape: shape of the images to be warped
     :param A: 3x3 matrix A of the affine transformation Ax + b.
     :param b: Vector b of the affine transformation Ax + b. It should have length 3.
     :param scale: Scaling parameters of the transformation. If a float, scaling will be
@@ -273,6 +275,7 @@ class AffineWarpingOperator3D(LinearOperator):
     :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
         if available, else ``numba``
 
+    :type im_shape: tuple of ints
     :type A: :class:`numpy.ndarray`, optional
     :type b: :class:`numpy.ndarray`, optional
     :type scale: float or sequence of floats, optional
@@ -289,7 +292,8 @@ class AffineWarpingOperator3D(LinearOperator):
     """
 
     def __init__(
-            self, im_shape,
+            self,
+            im_shape,
             A=None, 
             b=None,
             scale=None,
