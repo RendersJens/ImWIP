@@ -15,8 +15,8 @@ matmul (matrix multiplication) operator. The adjoint warp is given by :code:`M.T
 .. note::
     :py:mod:`imwip.operators` provides Scipy LinearOperators which are equivalent
     to the matrix representation, but avoid the memory use of explicly storing the matrix.
-    It replaces the matrix-vecor multiplication with the efficient GPU implementations of
-    warps and adjoint warps. If you only need matrix-vector multiplicatoins, this will be
+    It replaces the matrix-vector multiplication with the efficient GPU implementations of
+    warps and adjoint warps. If you only need matrix-vector multiplications, this will be
     more efficient. Only use the matrices if you need explicit access to its coefficients.
 
 imwip.matrices.matrices\_dvf
