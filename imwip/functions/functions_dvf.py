@@ -20,7 +20,6 @@ def warp(
         w=None,
         out=None,
         degree=3,
-        indexing="ij",
         backend=None
     ):
     """
@@ -38,9 +37,6 @@ def warp(
     :param out: Array to write the output image in.
         If None, an output array will be allocated.
     :param degree: Degree of the splines used for interpolation
-    :param indexing: ``ij`` uses standard numpy array indexing. "xy" reversed the order of
-        the indexes, making the vertical axis the first index. This can be more intuitive
-        for 2D arrays. Defaults to ``ij``.
     :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
         if available, else ``numba``
 
@@ -50,7 +46,6 @@ def warp(
     :type w: :class:`numpy.ndarray`, optional
     :type out: :class:`numpy.ndarray`, optional
     :type degree: 1 or 3, optional
-    :type indexing: ``ij`` or ``xy``, optional
     :type backend: ``cpp`` or ``numba``, optional
     
     :return: The warped image
@@ -80,8 +75,7 @@ def warp(
                 u,
                 v,
                 out,
-                degree,
-                indexing
+                degree
             )
     else:
         return warp_function(
@@ -90,8 +84,7 @@ def warp(
                 v,
                 w,
                 out,
-                degree,
-                indexing
+                degree
             )
 
 def adjoint_warp(
@@ -101,7 +94,6 @@ def adjoint_warp(
         w=None,
         out=None,
         degree=3,
-        indexing="ij",
         backend=None
     ):
     """
@@ -134,8 +126,7 @@ def adjoint_warp(
                 u,
                 v,
                 out,
-                degree,
-                indexing
+                degree
             )
     else:
         return warp_function(
@@ -144,8 +135,7 @@ def adjoint_warp(
                 v,
                 w,
                 out,
-                degree,
-                indexing
+                degree
             )
 
 
@@ -157,7 +147,6 @@ def diff_warp(
         diff_x=None,
         diff_y=None,
         diff_z=None,
-        indexing="ij",
         backend=None
     ):
     """
@@ -175,11 +164,9 @@ def diff_warp(
         If None, an output array will be allocated.
     :param diff_z: Array to write the derivative to the first component in.
         If None, an output array will be allocated.
-    :param indexing: ``ij`` uses standard numpy array indexing. "xy" reversed the order of
-        the indexes, making the vertical axis the first index. This can be more intuitive
-        for 2D arrays. Defaults to ``ij``.
     :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
         if available, else ``numba``
+
     :type image: :class:`numpy.ndarray`
     :type u: :class:`numpy.ndarray`
     :type v: :class:`numpy.ndarray`
@@ -187,7 +174,6 @@ def diff_warp(
     :type diff_x: :class:`numpy.ndarray`, optional
     :type diff_y: :class:`numpy.ndarray`, optional
     :type diff_z: :class:`numpy.ndarray`, optional
-    :type indexing: ``ij`` or ``xy``, optional
     :type backend: ``cpp`` or ``numba``, optional
     :return: diff_x, diff_y, diff_z
     :rtype: :class:`numpy.ndarray`, :class:`numpy.ndarray`, :class:`numpy.ndarray`, 
@@ -219,7 +205,6 @@ def diff_warp(
                 v,
                 diff_x,
                 diff_y,
-                indexing
             )
     else:
         return warp_function(
@@ -230,5 +215,4 @@ def diff_warp(
                 diff_x,
                 diff_y,
                 diff_z,
-                indexing
             )
