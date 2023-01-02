@@ -304,7 +304,8 @@ class AffineWarpingOperator3D(LinearOperator):
             center=None,
             degree=3,
             adjoint_type="exact",
-            indexing="ij"
+            indexing="ij",
+            backend=None
         ):
         self.im_shape = im_shape
         self.im_size = im_shape[0]*im_shape[1]*im_shape[2]
