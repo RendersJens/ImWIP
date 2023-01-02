@@ -14,10 +14,10 @@ except ImportError:
 
 
 def affine_warp(
-        f,
+        image,
         A,
         b,
-        f_warped=None,
+        out=None,
         degree=3,
         indexing="ij",
         backend=None
@@ -73,20 +73,20 @@ def affine_warp(
         raise ValueError("backend should be \"cpp\" or \"numba\"")
 
     return warp_function(
-            f,
+            image,
             A,
             b,
-            f_warped,
+            out,
             degree,
             indexing
         )
 
 
 def adjoint_affine_warp(
-        f_warped,
+        image,
         A,
         b,
-        f=None,
+        out=None,
         degree=3,
         indexing="ij",
         backend=None
@@ -118,17 +118,17 @@ def adjoint_affine_warp(
         raise ValueError("backend should be \"cpp\" or \"numba\"")
 
     return warp_function(
-            f_warped,
+            image,
             A,
             b,
-            f,
+            out,
             degree,
             indexing
         )
 
 
 def diff_affine_warp(
-        f_warped,
+        image,
         A,
         b,
         diff_x=None,
@@ -190,7 +190,7 @@ def diff_affine_warp(
 
     if dim == 2:
         return warp_function(
-                f,
+                image,
                 A,
                 b,
                 diff_x,
@@ -199,7 +199,7 @@ def diff_affine_warp(
             )
     else:
         return warp_function(
-                f,
+                image,
                 A,
                 b,
                 diff_x,

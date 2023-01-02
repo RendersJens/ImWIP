@@ -76,20 +76,20 @@ def warp(
 
     if dim == 2:
         return warp_function(
-                f,
+                image,
                 u,
                 v,
-                f_warped,
+                out,
                 degree,
                 indexing
             )
     else:
         return warp_function(
-                f,
+                image,
                 u,
                 v,
                 w,
-                f_warped,
+                out,
                 degree,
                 indexing
             )
@@ -130,27 +130,27 @@ def adjoint_warp(
 
     if dim == 2:
         return warp_function(
-                f_warped,
+                image,
                 u,
                 v,
-                f,
+                out,
                 degree,
                 indexing
             )
     else:
         return warp_function(
-                f_warped,
+                image,
                 u,
                 v,
                 w,
-                f,
+                out,
                 degree,
                 indexing
             )
 
 
 def diff_warp(
-        f_warped,
+        image,
         u,
         v,
         w=None,
@@ -214,7 +214,7 @@ def diff_warp(
 
     if dim == 2:
         return warp_function(
-                f,
+                image,
                 u,
                 v,
                 diff_x,
@@ -223,7 +223,7 @@ def diff_warp(
             )
     else:
         return warp_function(
-                f,
+                image,
                 u,
                 v,
                 w,
