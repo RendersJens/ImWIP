@@ -185,6 +185,22 @@ class AffineWarpingOperator2D(LinearOperator):
         return np.vstack([diff_x.ravel(), diff_y.ravel()]).T
 
     def derivative(self, x, to=["b"]):
+        """
+        Computes the derivative of ``M @ x`` where ``M`` is this operator and ``x``
+        is a raveled image. You can differentiate towards any of the available parameters
+        for defining the operator, independend of which ones you used to define it. For
+        example, you can define the operator using A en b and then
+        differentiate it towards the rotation parameter.
+
+        :param x: A raveled image x on which this operator acts.
+        :param to: The parameters to differentiate towards.
+
+        :type x: :class:`numpy.ndarray`
+        :type to: sequence of strings
+
+        :return: The derivative as a dense matrix
+        :rtype: :class:`numpy.ndarray`
+        """
 
         # we expect the input as flattened array, so we reshape it
         x = x.reshape(self.im_shape)
@@ -559,6 +575,22 @@ class AffineWarpingOperator3D(LinearOperator):
         return np.vstack([diff_x.ravel(), diff_y.ravel(), diff_z.ravel()]).T
 
     def derivative(self, x, to=["b"]):
+        """
+        Computes the derivative of ``M @ x`` where ``M`` is this operator and ``x``
+        is a raveled image. You can differentiate towards any of the available parameters
+        for defining the operator, independend of which ones you used to define it. For
+        example, you can define the operator using the rotation parameters and then
+        differentiate it towards the caylay parameters.
+
+        :param x: A raveled image x on which this operator acts.
+        :param to: The parameters to differentiate towards.
+
+        :type x: :class:`numpy.ndarray`
+        :type to: sequence of strings
+
+        :return: The derivative as a dense matrix
+        :rtype: :class:`numpy.ndarray`
+        """
 
         # we expect the input as flattened array, so we reshape it
         x = x.reshape(self.im_shape)
