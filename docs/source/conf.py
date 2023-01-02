@@ -12,6 +12,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 project = 'ImWIP'
 copyright = '2022, Jens Renders'
 author = 'Jens Renders'
+version = "1.1"
 release = '1.1.0'
 
 # -- General configuration ---------------------------------------------------
