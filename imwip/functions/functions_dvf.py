@@ -42,7 +42,7 @@ def warp(
         the indexes, making the vertical axis the first index. This can be more intuitive
         for 2D arrays. Defaults to ``ij``.
     :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
-        if available, else "numba"
+        if available, else ``numba``
     :type image: :class:`numpy.ndarray`
     :type u: :class:`numpy.ndarray`
     :type v: :class:`numpy.ndarray`
@@ -177,7 +177,7 @@ def diff_warp(
         the indexes, making the vertical axis the first index. This can be more intuitive
         for 2D arrays. Defaults to ``ij``.
     :param backend: Whether to use the cpp or numba backend. If None, ``cpp`` will be used
-        if available, else "numba"
+        if available, else ``numba``
     :type image: :class:`numpy.ndarray`
     :type u: :class:`numpy.ndarray`
     :type v: :class:`numpy.ndarray`
