@@ -23,7 +23,7 @@ extensions = [
    'sphinx.ext.autodoc',
    'sphinx.ext.autosummary',
 ]
-install_requires=["numpy"]
+
 templates_path = ['_templates']
 exclude_patterns = []
 autodoc_member_order = 'bysource'
