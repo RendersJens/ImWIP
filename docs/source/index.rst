@@ -5,19 +5,18 @@ ImWIP: Image warping for Inverse Problems
 
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :hidden:
+   :caption: Introduction:
 
    why
    installation
    getting_started
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Reference Documentation:
+
    api/api
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

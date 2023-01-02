@@ -1,5 +1,9 @@
 imwip.functions
 ===============
+.. automodule:: imwip.functions
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 imwip.functions.functions\_dvf
 ------------------------------
