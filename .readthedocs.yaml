@@ -14,6 +14,6 @@ conda:
   environment: docs/environment.yml
 
 formats:
-  - html
+  - htmlzip
   - pdf
   - epub
