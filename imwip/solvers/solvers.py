@@ -103,6 +103,9 @@ def barzilai_borwein(grad_f,
     :type max_iter: int, optional
     :type verbose: bool, optional
     :type callback: callable, optional
+
+    :return: the minimum x, same size as x0
+    :rtype: :class:`numpy.ndarray`
     """
     x = x0
 
@@ -205,6 +208,9 @@ def split_barzilai_borwein(
     :type max_iter: int, optional
     :type verbose: bool, optional
     :type callback: callable, optional
+
+    :return: the minimum x
+    :rtype: list of :class:`numpy.ndarray`
     """
     x = [np.array(var) for var in x0]
 

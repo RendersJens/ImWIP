@@ -232,6 +232,9 @@ def diff_warping_operator_2D(image, u, v, approx=False, backend=None):
     :type v: :class:`numpy.ndarray`
     :type approx: bool, optional
     :type backend: ``cpp`` or ``numba``, optional
+
+    :return: derivative of warped image, towards the DVF
+    :rtype: :class:`~scipy.sparse.linalg.LinearOperator`
     """
     if approx:
         warped = imwip.warp(image, u, v, backend=backend)
@@ -265,6 +268,9 @@ def diff_warping_operator_3D(image, u, v, w, approx=False, backend=None):
     :type w: :class:`numpy.ndarray`
     :type approx: bool, optional
     :type backend: ``cpp`` or ``numba``, optional
+
+    :return: derivative of warped image, towards the DVF
+    :rtype: :class:`~scipy.sparse.linalg.LinearOperator`
     """
     if approx:
         warped = imwip.warp(image, u, v, w, backend=backend)
@@ -300,6 +306,9 @@ def partial_diff_warping_operator_3D(image, u, v, w, to, approx=False, backend=N
     :type to: 0, 1 or 2
     :type approx: bool, optional
     :type backend: ``cpp`` or ``numba``, optional
+
+    :return: partial derivative of warped image, towards one compoment of the DVF
+    :rtype: :class:`~scipy.sparse.linalg.LinearOperator`
     """
     if approx:
         warped = imwip.warp(image, u, v, w, backend=backend)
