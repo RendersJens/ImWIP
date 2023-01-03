@@ -6,7 +6,6 @@ ImWIP: Image warping for Inverse Problems
 
 .. toctree::
    :maxdepth: 1
-   :hidden:
    :caption: Introduction:
 
    why
@@ -15,7 +14,6 @@ ImWIP: Image warping for Inverse Problems
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
    :caption: Reference Documentation:
 
    api/api
