@@ -11,7 +11,8 @@ from tqdm import tqdm
 
 def invert_dvf_2D(u, v, max_iter=15, verbose=False, backend=None):
     """
-    Approximately inverts a 2D DVF using a fixed point inversion technique.
+    Approximately inverts a 2D DVF using the fixed point inversion technique
+    of :cite:t:`chen2008simple`
 
     .. note::
         A DVF can usually not be inverted exactly, since the vectors are only defined
@@ -50,7 +51,8 @@ def invert_dvf_2D(u, v, max_iter=15, verbose=False, backend=None):
 
 def invert_dvf_3D(u, v, w, max_iter=15, verbose=False, backend=None):
     """
-    Approximately inverts a 3D DVF using a fixed point inversion technique.
+    Approximately inverts a 3D DVF using the fixed point inversion technique
+    of :cite:t:`chen2008simple`
 
     .. note::
         A DVF can usually not be inverted exactly, since the vectors are only defined

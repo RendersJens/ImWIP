@@ -94,7 +94,8 @@ def adjoint_affine_warp(
     """
     The function :meth:`affine_warp` is a linear function of the input image (even if degree 3
     is used for the splines). Therefore it has an adjoint function which is computed
-    by this function. See :meth:`affine_warp` for the description of parameters and return value.
+    by this function, as described by :cite:t:`renders2021adjoint`.
+    See :meth:`affine_warp` for the description of parameters and return value.
 
     """
 

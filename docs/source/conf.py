@@ -14,6 +14,7 @@ extensions = [
    'sphinx.ext.autodoc',
    'sphinx.ext.autosummary',
    'sphinx.ext.intersphinx',
+   'sphinxcontrib.bibtex'
 ]
 
 intersphinx_mapping = {
@@ -22,6 +23,8 @@ intersphinx_mapping = {
     "skimage": ("https://scikit-image.org/docs/stable/", None),
     "pylops": ("https://pylops.readthedocs.io/en/stable/", None),
 }
+
+bibtex_bibfiles = ['refs.bib']
 
 templates_path = ['_templates']
 exclude_patterns = []

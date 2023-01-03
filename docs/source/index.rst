@@ -18,3 +18,6 @@ ImWIP: Image warping for Inverse Problems
 
    api/api
 
+Bibliography:
+-------------
+.. bibliography::

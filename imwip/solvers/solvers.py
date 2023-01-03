@@ -70,10 +70,11 @@ def barzilai_borwein(grad_f,
                      verbose=True,
                      callback=None):
     """
-    Minimizes a function f using projected gradient descent with BB step size
-    and bounds. The BB stepsize is only defined from the second iteration on. Therefore,
-    the initial step size has to be computed by some other method. By default it will be
-    1, but it can be specified or it can be searched with a line search.
+    Minimizes a function f using projected gradient descent with the step size of
+    :cite:t:`barzilai1988two` and bounds. The BB stepsize is only defined from the second
+    iteration on. Therefore, the initial step size has to be computed by some other method.
+    By default it will be 1, but it can be specified or it can be searched with a line
+    search.
 
     .. note::
         the function f itself is not a required arguement for this optimizer. It is
