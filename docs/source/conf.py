@@ -27,3 +27,17 @@ exclude_patterns = []
 autodoc_member_order = 'bysource'
 
 html_theme = 'sphinx_rtd_theme'
+html_context = {
+    "menu_links_name": "Repository",
+    "menu_links": [
+        (
+            '<i class="fa fa-github fa-fw"></i> Source Code',
+            "https://github.com/RendersJens/ImWIP",
+        ),
+    ],
+    "display_github": True, # Integrate GitHub
+    "github_user": "RendersJens", # Username
+    "github_repo": "ImWIP", # Repo name
+    "github_version": "main", # Version
+    "conf_py_path": "/source/", # Path in the checkout to the docs root
+}
