@@ -10,11 +10,22 @@ import numpy as np
 import pylops
 
 def diff(A, x, to=None):
-    """ 
-    Given an imwip operator :math:`A = A(p)` (:math:`p` represents all the parameters of
-    :math:`A`),
-    or a pylops blockmatrix built of those, this function gives the derivative
+    """
+    Given an imwip operator :math:`A = A(p)` (where :math:`p` represents all the parameters of
+    :math:`A`), or a pylops blockmatrix built of those, this function gives the derivative
     of :math:`A(p)x` towards :math:`p`.
+
+    :param A: An ImWIP image warping operator or a Pylops block operator containing
+        ImWIP image warping operators.
+    :param x: A raveled image on which A acts
+    :param to: a parameter or list of parameters to which to differentiate.
+
+    :type A: :class:`LinearOperator`
+    :type x: :class:`numpy.ndarray`
+    :type to: string or sequence of strings, optional
+
+    :return: The derivative or list of derivatives towards the parameters specified in `to`
+    :rtype: :class:`LinearOperator` or list of :class:`LinearOperator`
     """
 
     if hasattr(A, "derivative"):

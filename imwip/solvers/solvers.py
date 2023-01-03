@@ -69,7 +69,40 @@ def barzilai_borwein(grad_f,
                      max_iter=100,
                      verbose=True,
                      callback=None):
-    """ projected gradient descent with BB step size and bounds
+    """
+    Minimizes a function f using projected gradient descent with BB step size
+    and bounds. The BB stepsize is only defined from the second iteration on. Therefore,
+    the initial step size has to be computed by some other method. By default it will be
+    1, but it can be specified or it can be searched with a line search.
+
+    .. note::
+        the function f itself is not a required arguement for this optimizer. It is
+        only needed if you want to use a line search for the intial step size.
+
+    :param grad_f: gradient of the function to be minimized. It should return a 1D
+        :class:`numpy.ndarray` of the same size as its input (which is the same size as x0).
+    :param x0: initial guess for the minimum
+    :param f: function to be minimized, used for the line search for the initial step size.
+        Not used if line_search_iter is None. It should return a float
+    :param line_search_iter: How many iterations to perform in the line search for the
+        initial stepsize. Leave empty for no line search.
+    :param init_step: user specified initial stepsize. Leave empty to use line search.
+    :param bounds: minimum and maximum constraints on the variables. Leave empty for no
+        bounds, and use ``numpy.inf`` or ``-numpy.inf`` to bound only from one side.
+    :param max_iter: maximum number of iterations to perform
+    :param verbose: whether to show a progress bar, defaults to False.
+    :param callback: If given, this function will be called each iteration. The current estimate of
+        the minimum will be passed as arguement.
+
+    :type grad_f: callable
+    :type x0: :class:`numpy.ndarray`
+    :type f: callable, optional
+    :type line_search_iter: int, optional
+    :type init_step: float, optional
+    :type bounds: tuple of floats or tuple of sequences of floats, optional
+    :type max_iter: int, optional
+    :type verbose: bool, optional
+    :type callback: callable, optional
     """
     x = x0
 
@@ -142,8 +175,36 @@ def split_barzilai_borwein(
         verbose=True,
         callback=None
     ):
-    """ A split version of projected gradient descent with BB step size and bounds
-        we use different stepsizes for different types of variables
+    """
+    A split version of :py:func:`barzilai_borwein`. Instead of using a single stepsize
+    for all variables, this function allows to group the variables and use a separate
+    stepsize for each group.
+
+    :param grad_f: gradient of the function to be minimized. It should return a list of 1D
+        :class:`numpy.ndarray` (one for each group of variables) of the same size as its
+        input (which is the same size as x0).
+    :param x0: initial guess for the minimum, one array per group of variables.
+    :param f: function to be minimized, used for the line search for the initial step size.
+        Not used if line_search_iter is None. It should return a float
+    :param line_search_iter: How many iterations to perform in the line search for the
+        initial stepsize. Leave empty for no line search.
+    :param init_step: user specified initial stepsize. Leave empty to use line search.
+    :param bounds: minimum and maximum constraints on the variables. Leave empty for no
+        bounds, and use ``numpy.inf`` or ``-numpy.inf`` to bound only from one side.
+    :param max_iter: maximum number of iterations to perform
+    :param verbose: whether to show a progress bar, defaults to False.
+    :param callback: If given, this function will be called each iteration. The current estimate of
+        the minimum will be passed as arguement.
+
+    :type grad_f: callable
+    :type x0: list of :class:`numpy.ndarray`
+    :type f: callable, optional
+    :type line_search_iter: int, optional
+    :type init_step: float, optional
+    :type bounds: list of bounds as specified in :py:func:`barzilai_borwein`
+    :type max_iter: int, optional
+    :type verbose: bool, optional
+    :type callback: callable, optional
     """
     x = [np.array(var) for var in x0]
 
