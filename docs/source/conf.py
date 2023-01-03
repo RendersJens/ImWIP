@@ -19,6 +19,7 @@ extensions = [
 intersphinx_mapping = {
     "numpy": ("https://docs.scipy.org/doc/numpy/", None),
     "scipy": ("https://docs.scipy.org/doc/scipy/reference", None),
+    "skimage": ("https://scikit-image.org/docs/stable/", None),
     "pylops": ("https://pylops.readthedocs.io/en/stable/", None),
 }
 
@@ -28,13 +29,6 @@ autodoc_member_order = 'bysource'
 
 html_theme = 'sphinx_rtd_theme'
 html_context = {
-    "menu_links_name": "Repository",
-    "menu_links": [
-        (
-            '<i class="fa fa-github fa-fw"></i> Source Code',
-            "https://github.com/RendersJens/ImWIP",
-        ),
-    ],
     "display_github": True, # Integrate GitHub
     "github_user": "RendersJens", # Username
     "github_repo": "ImWIP", # Repo name
