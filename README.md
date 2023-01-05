@@ -2,57 +2,43 @@
 [![DOI](https://zenodo.org/badge/452688446.svg)](https://zenodo.org/badge/latestdoi/452688446)
 
 
-**ImWIP**: CUDA/C implementations of various warping and adjoint warping and differentiated warping algorithms, with python wrappers.
+**ImWIP**: Image Warping for Inverse Problems
 
-Features
-------------
+ImWIP provides efficient, matrix-free and GPU accelerated implementations of image warping operators, in Python and C++. The goal of this package is to enable the use of image warping in inverse problems. This requires two extra operations on top of regular image warping: adjoint image warping (to solve for images) and differentiated image warping (to solve for the deformation field).
 
-* Linear and cubic image warping of 2D and 3D images
-  * Using a Deformation Vector Field (DVF)
-  * Using an affine transformation
-* The adjoint action of the above warp functions. Each of these image warps can be seen as a linear operator <img src="svgs/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode" align=middle width=12.32879834999999pt height=22.465723500000017pt/> acting on a vector <img src="svgs/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode" align=middle width=9.39498779999999pt height=14.15524440000002pt/> that represents the image. The implementation of the adjoint operators <img src="svgs/99f7812af37ee7004df7177a1e821ec5.svg?invert_in_darkmode" align=middle width=21.86251649999999pt height=27.6567522pt/> or <img src="svgs/6b76fc0b9cd7cb371b27ad5803620550.svg?invert_in_darkmode" align=middle width=19.063992749999993pt height=22.63846199999998pt/> is usefull to solve linear systems involving <img src="svgs/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode" align=middle width=12.32879834999999pt height=22.465723500000017pt/> and to compute analytic derivatives to <img src="svgs/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode" align=middle width=9.39498779999999pt height=14.15524440000002pt/> of functionals involving <img src="svgs/bbb2565155df2f2e483c15107e8505b1.svg?invert_in_darkmode" align=middle width=21.723786149999988pt height=22.465723500000017pt/>.
-* Analytic derivatives of <img src="svgs/5f1ace7f43d147d16685246df2a801c6.svg?invert_in_darkmode" align=middle width=31.05032864999999pt height=24.65753399999998pt/> to <img src="svgs/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode" align=middle width=5.936097749999991pt height=20.221802699999984pt/>, where <img src="svgs/5f1ace7f43d147d16685246df2a801c6.svg?invert_in_darkmode" align=middle width=31.05032864999999pt height=24.65753399999998pt/> is a warping operator along rigid or affine motion determined by the vector <img src="svgs/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode" align=middle width=5.936097749999991pt height=20.221802699999984pt/> of rigid or affine motion parameters. This is a basic tool in the development of algorithms that solve for the motion parameters.
-
-As an example, imagine that we want to solve the following system for <img src="svgs/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode" align=middle width=5.936097749999991pt height=20.221802699999984pt/> and <img src="svgs/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode" align=middle width=9.39498779999999pt height=14.15524440000002pt/>:
-<p align="center"><img src="svgs/87a280c0a9ff0b90c7f09a08993028e8.svg?invert_in_darkmode" align=middle width=82.71114885pt height=16.438356pt/></p>
-
-or similarly, we want to minimize
-<p align="center"><img src="svgs/9116c69b4bf34c5010af96ea5559072e.svg?invert_in_darkmode" align=middle width=183.19751835pt height=32.990165999999995pt/></p>
-
-Here <img src="svgs/4bdc8d9bcfb35e1c9bfb51fc69687dfc.svg?invert_in_darkmode" align=middle width=7.054796099999991pt height=22.831056599999986pt/> can represent data that is the result of moving an unknown image <img src="svgs/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode" align=middle width=9.39498779999999pt height=14.15524440000002pt/> with unknown affine motion and then applying a known linear transformation <img src="svgs/61e84f854bc6258d4108d08d4c4a0852.svg?invert_in_darkmode" align=middle width=13.29340979999999pt height=22.465723500000017pt/>. To solve this problem, we need the gradient of <img src="svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode" align=middle width=9.81741584999999pt height=22.831056599999986pt/> with respect to <img src="svgs/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode" align=middle width=9.39498779999999pt height=14.15524440000002pt/> and <img src="svgs/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode" align=middle width=5.936097749999991pt height=20.221802699999984pt/>:
-<p align="center"><img src="svgs/1f80b08b5cd75529f481e70861365fbb.svg?invert_in_darkmode" align=middle width=286.5218862pt height=45.90338775pt/></p>
-
-This requires the operators <img src="svgs/3ade4d0824e4bcb71339a0fd819ece89.svg?invert_in_darkmode" align=middle width=79.76213519999999pt height=27.6567522pt/> and <img src="svgs/51f1bcfdd671038e2035d5c0bf517dbc.svg?invert_in_darkmode" align=middle width=35.662204049999986pt height=24.7161288pt/>, which are all provided by this package.
 
 Requirements
 ------------
-* gcc and g++
-* nvcc
-* Python 3.7+
-    * numpy
-    * scipy
-    * numba
-    * pylops (currently requires scipy < 1.8)
+
+ImWIP heavily relies on CUDA kernels for efficient parallelization. Therfore a CUDA enabeled GPU is required. Furthermore, the following python dependencies are needed, which can be easily installed using conda, and get the package working using the numba/CUDA backend.
+
+- python >= 3.8
+- numpy
+- scipy
+- numba
+- pylops
+- tqdm
+
+There is also a C++/CUDA backend, which is a bit faster then the numba backend, and it can
+be accessed from any language that supports a C interface functions. It will automatically
+compile if the following dependencies are met:
+
+- linux
+- cython
+- nvcc
 
 Installation
 ------------
-**Install with pip:**
+
+If git is installed, simply run
 
 `$ pip install git+https://github.com/RendersJens/ImWIP.git`
 
 
-Or clone/download the repository and run pip in the root folder of the project:
+Otherwise, download the repository from https://github.com/RendersJens/ImWIP and run pip in the root folder of the project:
 
 `$ pip install .`
 
-**Install without pip:**
-
-clone/download the repository and run
-
-`$ python setup.py install`
-
-in the root folder of the project.
-
-Basic usage
------------
-Take a look at `/examples` for basic usage.
+Getting started and reference documentation
+-------------------------------------------
+Full documentation is available on https://imwip.readthedocs.io/
