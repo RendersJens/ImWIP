@@ -475,7 +475,12 @@ class AffineWarpingOperator3D(LinearOperator):
             co_y,
             co_z
         ):
-        rotation = self.rotation
+        rotation = [
+            np.arctan2(-self.A[2,1], self.A[2,2]),
+            np.arctan2(-self.A[2,0], np.hypot(self.A[2,1], self.A[2,2])),
+            np.arctan2(-self.A[1,0], self.A[0,0])
+        ]
+        print(rotation)
         rot_i = np.array([[1,                    0,                   0],
                           [0,  np.cos(rotation[0]), np.sin(rotation[0])],
                           [0, -np.sin(rotation[0]), np.cos(rotation[0])]])
