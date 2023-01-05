@@ -15,7 +15,7 @@ v = 8*np.repeat(np.cos(np.linspace(0,4*np.pi, im_size, dtype=np.float32)), im_si
 w = 2*np.repeat(np.cos(np.linspace(0,4*np.pi, im_size, dtype=np.float32)), im_size**2).reshape((im_size,)*3)
 
 # linear backward warp
-linear_warped_shepp = imwip.warp(shepp, u, v, w)
+linear_warped_shepp = imwip.warp(shepp, u, v, w, degree=1)
 
 # cubic backward warp
 cubic_warped_shepp = imwip.warp(shepp, u, v, w, degree=3)

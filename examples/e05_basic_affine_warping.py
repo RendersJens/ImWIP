@@ -22,7 +22,7 @@ print(b)
 linear_warped_shepp = imwip.affine_warp(shepp, A, b, degree=1)
 
 # cubic backward warp
-cubic_warped_shepp = imwip.affine_warp(shepp, A, b)
+cubic_warped_shepp = imwip.affine_warp(shepp, A, b, degree=3)
 
 # a cubic warp can produce values outside of the original range
 np.clip(cubic_warped_shepp, 0, 255, out=cubic_warped_shepp)

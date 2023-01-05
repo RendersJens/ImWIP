@@ -21,7 +21,7 @@ linear_warped_shepp = imwip.affine_warp(shepp, A, b, degree=1)
 
 # cubic backward warp
 t0 = time()
-cubic_warped_shepp = imwip.affine_warp(shepp, A, b)
+cubic_warped_shepp = imwip.affine_warp(shepp, A, b, degree=3)
 print(time()-t0)
 
 # plots
