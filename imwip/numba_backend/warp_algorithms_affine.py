@@ -132,10 +132,14 @@ def diff_affine_warp_2D(
         f,
         A,
         b,
+        diff_x=None,
+        diff_y=None,
         indexing="ij"
     ):
-    diff_x = np.zeros(f.shape, dtype=f.dtype)
-    diff_y = np.zeros(f.shape, dtype=f.dtype)
+    if diff_x is None:
+        diff_x = np.zeros(f.shape, dtype=f.dtype)
+    if diff_y is None:
+        diff_y = np.zeros(f.shape, dtype=f.dtype)
 
     if indexing == "xy":
         A = np.fliplr(np.flipud(A)).copy()
@@ -251,11 +255,17 @@ def diff_affine_warp_3D(
         f,
         A,
         b,
+        diff_x=None,
+        diff_y=None,
+        diff_z=None,
         indexing="ij"
     ):
-    diff_x = np.zeros(f.shape, dtype=f.dtype)
-    diff_y = np.zeros(f.shape, dtype=f.dtype)
-    diff_z = np.zeros(f.shape, dtype=f.dtype)
+    if diff_x is None:
+        diff_x = np.zeros(f.shape, dtype=f.dtype)
+    if diff_y is None:
+        diff_y = np.zeros(f.shape, dtype=f.dtype)
+    if diif_z is None:
+        diff_z = np.zeros(f.shape, dtype=f.dtype)
 
     if indexing == "xy":
         A = np.fliplr(np.flipud(A)).copy()
