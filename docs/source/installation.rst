@@ -1,11 +1,8 @@
 Installation
 ============
 
-Dependencies
+Requirements
 ------------
-
-Required
-********
 
 ImWIP heavily relies on CUDA kernels for efficient parallelization. Therfore a CUDA enabeled GPU is required. Furthermore, the following python dependencies are needed, which can be easily installed using conda, and get the package working using the numba/CUDA backend.
 
@@ -16,10 +13,7 @@ ImWIP heavily relies on CUDA kernels for efficient parallelization. Therfore a C
 - pylops
 - tqdm
 
-
-For best performance
-********************
-If these are available, the C++/CUDA backend will automatically compile, which is a bit faster then the numba backend.
+There is also a C++/CUDA backend, which is a bit faster then the numba backend, and it can be accessed from any language that supports a C interface functions. It will automatically compile if the following dependencies are met:
 
 - linux
 - cython
