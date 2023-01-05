@@ -35,7 +35,7 @@ If git is installed, simply run
 `$ pip install git+https://github.com/RendersJens/ImWIP.git`
 
 
-Otherwise, download the repository from https://github.com/RendersJens/ImWIP and run pip in the root folder of the project:
+Otherwise, download this repository and run pip in the root folder of the project:
 
 `$ pip install .`
 
