@@ -264,7 +264,7 @@ def diff_affine_warp_3D(
         diff_x = np.zeros(f.shape, dtype=f.dtype)
     if diff_y is None:
         diff_y = np.zeros(f.shape, dtype=f.dtype)
-    if diif_z is None:
+    if diff_z is None:
         diff_z = np.zeros(f.shape, dtype=f.dtype)
 
     if indexing == "xy":
