@@ -18,10 +18,12 @@
 # the GNU General Public License along with ImWIP. If not, see <https://www.gnu.org/licenses/>.
 
 import numpy as np
-from .warp_kernels_affine import (affine_linear_warp_2D_kernel,
-                                  affine_cubic_warp_2D_kernel,
-                                  affine_linear_warp_3D_kernel,
-                                  affine_cubic_warp_3D_kernel)
+from .warp_kernels_affine import (
+    affine_linear_warp_2D_kernel,
+    affine_cubic_warp_2D_kernel,
+    affine_linear_warp_3D_kernel,
+    affine_cubic_warp_3D_kernel
+)
 import os
 
 path = os.path.dirname(__file__)
@@ -38,10 +40,10 @@ cubic_3D_coefficients_dz = np.loadtxt(path+"/../cpp_backend/cubic_3D_coefficient
 __all__ = [
     'affine_warp_2D',
     'adjoint_affine_warp_2D',
-    'grad_affine_warp_2D',
+    'diff_affine_warp_2D',
     'affine_warp_3D',
     'adjoint_affine_warp_3D',
-    'grad_affine_warp_3D'
+    'diff_affine_warp_3D'
 ]
 
 
@@ -126,14 +128,14 @@ def adjoint_affine_warp_2D(
     return f
 
 
-def grad_affine_warp_2D(
+def diff_affine_warp_2D(
         f,
         A,
         b,
         indexing="ij"
     ):
-    grad_x = np.zeros(f.shape, dtype=f.dtype)
-    grad_y = np.zeros(f.shape, dtype=f.dtype)
+    diff_x = np.zeros(f.shape, dtype=f.dtype)
+    diff_y = np.zeros(f.shape, dtype=f.dtype)
 
     if indexing == "xy":
         A = np.fliplr(np.flipud(A)).copy()
@@ -147,7 +149,7 @@ def grad_affine_warp_2D(
         f,
         A,
         b,
-        grad_x,
+        diff_x,
         coeffs_dx,
         False
     )
@@ -155,11 +157,11 @@ def grad_affine_warp_2D(
         f,
         A,
         b,
-        grad_y,
+        diff_y,
         coeffs_dy,
         False
     )
-    return grad_x, grad_y
+    return diff_x, diff_y
 
 
 def affine_warp_3D(
@@ -245,15 +247,15 @@ def adjoint_affine_warp_3D(
     return f
 
 
-def grad_affine_warp_3D(
+def diff_affine_warp_3D(
         f,
         A,
         b,
         indexing="ij"
     ):
-    grad_x = np.zeros(f.shape, dtype=f.dtype)
-    grad_y = np.zeros(f.shape, dtype=f.dtype)
-    grad_z = np.zeros(f.shape, dtype=f.dtype)
+    diff_x = np.zeros(f.shape, dtype=f.dtype)
+    diff_y = np.zeros(f.shape, dtype=f.dtype)
+    diff_z = np.zeros(f.shape, dtype=f.dtype)
 
     if indexing == "xy":
         A = np.fliplr(np.flipud(A)).copy()
@@ -268,7 +270,7 @@ def grad_affine_warp_3D(
         f,
         A,
         b,
-        grad_x,
+        diff_x,
         coeffs_dx,
         False
     )
@@ -276,7 +278,7 @@ def grad_affine_warp_3D(
         f,
         A,
         b,
-        grad_y,
+        diff_y,
         coeffs_dy,
         False
     )
@@ -284,8 +286,8 @@ def grad_affine_warp_3D(
         f,
         A,
         b,
-        grad_z,
+        diff_z,
         coeffs_dz,
         False
     )
-    return grad_x, grad_y, grad_z
+    return diff_x, diff_y, diff_z
