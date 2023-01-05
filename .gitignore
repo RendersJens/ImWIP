@@ -2,8 +2,9 @@
 samples/experiments/
 *.so
 *.o
-imwip/cuda/wrappers.cpp
+imwip/cpp_backend/wrappers.cpp
 *.pyc
 .DS_Store
 imwip.egg-info/
 build/
+.ipynb_checkpoints/
