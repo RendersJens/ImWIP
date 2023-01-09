@@ -13,7 +13,7 @@ ImWIP heavily relies on CUDA kernels for efficient parallelization. Therfore a C
 - pylops
 - tqdm
 
-There is also a C++/CUDA backend, which is a bit faster then the numba backend, and it can be accessed from any language that supports a C interface functions. It will automatically compile if the following dependencies are met:
+There is also a C++/CUDA backend, which is a bit faster than the numba backend, and it can be accessed from any language that supports a C interface functions. It will automatically compile if the following dependencies are met:
 
 - linux
 - cython
