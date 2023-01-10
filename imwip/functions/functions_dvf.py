@@ -196,9 +196,7 @@ def diff_warp(
     if backend is None:
         backend = "cpp" if libimwip_available else "numba"
 
-    dim = b.size
-    if dim not in [2, 3]:
-        raise ValueError("b should be of length 2 or 3")
+    dim = 2 if w is None else 3
     if backend == "cpp":
         if dim == 2:
             warp_function = libimwip.diff_warp_2D

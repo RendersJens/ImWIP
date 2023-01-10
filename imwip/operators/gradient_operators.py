@@ -18,7 +18,7 @@
 # the GNU General Public License along with ImWIP. If not, see <https://www.gnu.org/licenses/>.
 
 import numpy as np
-# from math import prod
+from math import prod
 from functools import reduce
 from scipy.sparse.linalg import LinearOperator
 
@@ -69,7 +69,7 @@ class SquareGradientOperator(LinearOperator):
 class GradientOperator3DX(LinearOperator):
     def __init__(self, im_shape, dtype=None):
         self.im_shape = im_shape
-        self.shape = ((im_shape[0]-1)*im_shape[1]*im_shape[2], prod(*im_shape))
+        self.shape = ((im_shape[0]-1)*im_shape[1]*im_shape[2], prod(im_shape))
         if dtype is None:
             self.dtype = np.float32
         else:
@@ -90,7 +90,7 @@ class GradientOperator3DX(LinearOperator):
 class GradientOperator3DY(LinearOperator):
     def __init__(self, im_shape, dtype=None):
         self.im_shape = im_shape
-        self.shape = (im_shape[0]*(im_shape[1]-1)*im_shape[2], prod(*im_shape))
+        self.shape = (im_shape[0]*(im_shape[1]-1)*im_shape[2], prod(im_shape))
         if dtype is None:
             self.dtype = np.float32
         else:
@@ -111,7 +111,7 @@ class GradientOperator3DY(LinearOperator):
 class GradientOperator3DZ(LinearOperator):
     def __init__(self, im_shape, dtype=None):
         self.im_shape = im_shape
-        self.shape = (im_shape[0]*im_shape[1]*(im_shape[2]-1), prod(*im_shape))
+        self.shape = (im_shape[0]*im_shape[1]*(im_shape[2]-1), prod(im_shape))
         if dtype is None:
             self.dtype = np.float32
         else:

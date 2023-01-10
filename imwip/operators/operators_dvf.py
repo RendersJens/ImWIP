@@ -255,7 +255,7 @@ def diff_warping_operator_2D(image, u, v, approx=False, backend=None):
         gradx, grady = imwip.diff_warp(image, u, v, backend=backend)
     diffx = pylops.Diagonal(gradx.ravel(), dtype=np.float32)
     diffy = pylops.Diagonal(grady.ravel(), dtype=np.float32)
-    return pylops.VStack([diffx, diffy], dtype=np.float32)
+    return pylops.HStack([diffx, diffy], dtype=np.float32)
 
 
 def diff_warping_operator_3D(image, u, v, w, approx=False, backend=None):
@@ -292,7 +292,7 @@ def diff_warping_operator_3D(image, u, v, w, approx=False, backend=None):
     diffx = pylops.Diagonal(gradx.ravel(), dtype=np.float32)
     diffy = pylops.Diagonal(grady.ravel(), dtype=np.float32)
     diffz = pylops.Diagonal(gradz.ravel(), dtype=np.float32)
-    return pylops.VStack([diffx, diffy, diffz], dtype=np.float32)
+    return pylops.HStack([diffx, diffy, diffz], dtype=np.float32)
 
 
 def partial_diff_warping_operator_3D(image, u, v, w, to, approx=False, backend=None):
