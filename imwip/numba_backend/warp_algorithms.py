@@ -121,10 +121,14 @@ def adjoint_warp_2D(
 def diff_warp_2D(
         f,
         u,
-        v
+        v,
+        diff_x=None,
+        diff_y=None
     ):
-    diff_x = np.zeros(f.shape, dtype=f.dtype)
-    diff_y = np.zeros(f.shape, dtype=f.dtype)
+    if diff_x is None:
+        diff_x = np.zeros(f.shape, dtype=f.dtype)
+    if diff_y is None:
+        diff_y = np.zeros(f.shape, dtype=f.dtype)
 
     coeffs_dx = cubic_2D_coefficients_dx
     coeffs_dy = cubic_2D_coefficients_dy
@@ -232,11 +236,20 @@ def diff_warp_3D(
         f,
         u,
         v,
-        w
+        w,
+        diff_x,
+        diff_y,
+        diff_z
     ):
-    diff_x = np.zeros(f.shape, dtype=f.dtype)
-    diff_y = np.zeros(f.shape, dtype=f.dtype)
-    diff_z = np.zeros(f.shape, dtype=f.dtype)
+
+    if diff_x is None:
+        diff_x = np.zeros(f.shape, dtype=f.dtype)
+
+    if diff_y is None:
+        diff_y = np.zeros(f.shape, dtype=f.dtype)
+
+    if diff_z is None:
+        diff_z = np.zeros(f.shape, dtype=f.dtype)
 
     coeffs_dx = cubic_3D_coefficients_dx
     coeffs_dy = cubic_3D_coefficients_dy
