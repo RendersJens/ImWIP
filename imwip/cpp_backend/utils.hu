@@ -28,5 +28,3 @@ int getDevice();
 void setDevice(int device);
 
 int getDeviceCount();
-
-std::string getDeviceName(int device);

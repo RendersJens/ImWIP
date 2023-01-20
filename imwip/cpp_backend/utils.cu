@@ -51,9 +51,9 @@ int getDeviceCount(){
     return *count;
 }
 
-std::string getDeviceName(int device){
-    cudaDeviceProp* prop;
-    gpuErrchk(cudaGetDeviceProperties(prop, device));
-    std::string name(prop->name);
-    return name;
-}
+// std::string getDeviceName(int device){
+//     cudaDeviceProp* prop;
+//     gpuErrchk(cudaGetDeviceProperties(prop, device));
+//     std::string name(prop->name);
+//     return name;
+// }

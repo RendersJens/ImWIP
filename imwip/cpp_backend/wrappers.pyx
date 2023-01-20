@@ -36,9 +36,9 @@ def set_device(int device):
 def get_device_count():
     return getDeviceCount()
 
-def get_device_name(int device):
-    cdef string name = getDeviceName(device)
-    return name.decode('UTF-8')
+# def get_device_name(int device):
+#     cdef string name = getDeviceName(device)
+#     return name.decode('UTF-8')
 
 
 # import the C++ versions of the warping functions
