@@ -11,6 +11,7 @@ ImWIP: Image warping for Inverse Problems
    why
    installation
    getting_started
+   notebooks/Performance_benchmarks.ipynb
 
 .. toctree::
    :maxdepth: 2
