@@ -20,8 +20,9 @@
 
 import numpy as np
 import pylops
+import scipy.sparse as sps
 
-def diff(A, x, to=None):
+def diff(A, x, to=None, matrix=False):
     """
     Given an imwip operator :math:`A = A(p)` (where :math:`p` represents all the parameters of
     :math:`A`), or a :py:mod:`pylops` block operator built of those, this function gives the derivative
@@ -31,15 +32,22 @@ def diff(A, x, to=None):
         ImWIP image warping operators.
     :param x: A raveled image on which A acts
     :param to: a parameter or list of parameters to which to differentiate.
+    :param matrix: if True, the derviative is returned as a :class:`scipy.sparse.coo_matrix`.
+        Otherwise it will be returned as :class:`~scipy.sparse.linalg.LinearOperator`. Defaults to false
 
     :type A: :class:`~scipy.sparse.linalg.LinearOperator`
     :type x: :class:`numpy.ndarray`
     :type to: string or sequence of strings, optional
+    :type matrix: bool, optional
 
     :return: The derivative or list of derivatives towards the parameters specified in `to`
-    :rtype: :class:`~scipy.sparse.linalg.LinearOperator` or list of
-        :class:`~scipy.sparse.linalg.LinearOperator`
+    :rtype: :class:`~scipy.sparse.linalg.LinearOperator` or :class:`scipy.sparse.coo_matrix` or list of
+        the same type.
     """
+    if matrix:
+        block_diag = sps.block_diag
+    else:
+        block_diag = pylops.BlockDiag
 
     if hasattr(A, "derivative"):
         if isinstance(to, str):
@@ -50,19 +58,19 @@ def diff(A, x, to=None):
         return [np.zeros((x.size, 0)) for var in to]
     elif isinstance(A, pylops.VStack):
         if to is None:
-            return pylops.BlockDiag([diff(Ai, x) for Ai in A.ops])
+            return block_diag([diff(Ai, x) for Ai in A.ops])
         elif isinstance(to, str):
             derivatives = []
             for Ai in A.ops:
                 derivatives.append(diff(Ai, x, to=[to])[0])
-            return pylops.BlockDiag(derivatives)
+            return block_diag(derivatives)
         else:
             diff_dict = {var: [] for var in to}
             for Ai in A.ops:
                 derivatives = diff(Ai, x, to=to)
                 for var, derivative in zip(to, derivatives):
                     diff_dict[var].append(derivative)
-            return [pylops.BlockDiag(diff_dict[var]) for var in to]
+            return [block_diag(diff_dict[var]) for var in to]
     elif isinstance(A, pylops.BlockDiag):
         if to is None:
             raise NotImplementedError()
@@ -72,7 +80,7 @@ def diff(A, x, to=None):
             for Ai in A.ops:
                 derivatives.append(diff(Ai, x[index:index + Ai.shape[1]], to=[to])[0])
                 index += Ai.shape[1]
-            return pylops.BlockDiag(derivatives)
+            return block_diag(derivatives)
         else:
             diff_dict = {var: [] for var in to}
             index = 0
@@ -81,4 +89,4 @@ def diff(A, x, to=None):
                 index += Ai.shape[1]
                 for var, derivative in zip(to, derivatives):
                     diff_dict[var].append(derivative)
-            return [pylops.BlockDiag(diff_dict[var]) for var in to]
+            return [block_diag(diff_dict[var]) for var in to]
