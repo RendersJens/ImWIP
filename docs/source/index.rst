@@ -10,7 +10,7 @@ ImWIP: Image warping for Inverse Problems
 
    why
    installation
-   getting_started
+   examples
    notebooks/Performance_benchmarks.ipynb
 
 .. toctree::
