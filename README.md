@@ -42,3 +42,22 @@ Otherwise, download this repository and run pip in the root folder of the projec
 Getting started and reference documentation
 -------------------------------------------
 Full documentation is available on https://imwip.readthedocs.io/
+
+Citing ImWIP
+------------
+
+If you use ImWIP in your research, please cite
+
+J. Renders, J. De Beenhouwer, J. Sijbers, ImWIP: Image Warping for Inverse Problems, https://doi.org/10.5281/zenodo.5910755 (Feb. 2023).
+
+BibTex:
+
+```
+@manual{renders2023imwip,
+  author={Renders, Jens and De Beenhouwer, Jan and Sijbers, Jan},
+  title={{ImWIP: Image Warping for Inverse Problems}},
+  note={{\tt https://doi.org/10.5281/zenodo.5910755}},
+  Year={2023},
+  Month=feb
+}
+```
