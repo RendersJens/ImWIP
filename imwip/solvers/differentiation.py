@@ -49,13 +49,13 @@ def diff(A, x, to=None, matrix=False):
     else:
         block_diag = pylops.BlockDiag
 
-    if hasattr(A, "derivative"):
+    if isinstance(A, pylops.Identity) or (hasattr(A, "constant") and A.constant):
+        return [np.zeros((x.size, 0)) for var in to]
+    elif hasattr(A, "derivative"):
         if isinstance(to, str):
             return A.derivative(x, to=[to])[0]
         else:
             return A.derivative(x, to=to)
-    elif isinstance(A, pylops.Identity):
-        return [np.zeros((x.size, 0)) for var in to]
     elif isinstance(A, pylops.VStack):
         if to is None:
             return block_diag([diff(Ai, x) for Ai in A.ops])
