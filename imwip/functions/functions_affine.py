@@ -19,6 +19,7 @@
 
 import numpy as np
 import imwip.numba_backend
+import imwip.numba_cpu_backend
 try:
     import libimwip
     libimwip_available = True
@@ -82,6 +83,11 @@ def affine_warp(
             warp_function = imwip.numba_backend.affine_warp_2D
         else:
             warp_function = imwip.numba_backend.affine_warp_3D
+    elif backend == "numba_cpu":
+        if dim == 2:
+            warp_function = imwip.numba_cpu_backend.affine_warp_2D
+        else:
+            warp_function = imwip.numba_cpu_backend.affine_warp_3D
     else:
         raise ValueError("backend should be \"cpp\" or \"numba\"")
 
