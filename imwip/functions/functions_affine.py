@@ -89,7 +89,7 @@ def affine_warp(
         else:
             warp_function = imwip.numba_cpu_backend.affine_warp_3D
     else:
-        raise ValueError("backend should be \"cpp\" or \"numba\"")
+        raise ValueError("backend should be \"cpp\" or \"numba\" or \"numba_cpu\"")
 
     return warp_function(
             image,
@@ -140,7 +140,7 @@ def adjoint_affine_warp(
         else:
             warp_function = imwip.numba_cpu_backend.adjoint_affine_warp_3D
     else:
-        raise ValueError("backend should be \"cpp\" or \"numba\"")
+        raise ValueError("backend should be \"cpp\" or \"numba\" or \"numba_cpu\"")
 
     return warp_function(
             image,
@@ -216,7 +216,7 @@ def diff_affine_warp(
         else:
             warp_function = imwip.numba_cpu_backend.diff_affine_warp_3D
     else:
-        raise ValueError("backend should be \"cpp\" or \"numba\"")
+        raise ValueError("backend should be \"cpp\" or \"numba\" or \"numba_cpu\"")
 
     if dim == 2:
         return warp_function(
