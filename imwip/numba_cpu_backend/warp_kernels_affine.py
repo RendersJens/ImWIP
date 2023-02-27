@@ -23,7 +23,7 @@ from numba.types import int32, float32
 import math
 
 
-@njit
+@njit(fastmath=True)
 def affine_cubic_warp_3D_kernel(f, A, b, f_warped, coeffs, adjoint):
     for i in range(f.shape[0]):
         for j in range(f.shape[1]):

@@ -23,7 +23,7 @@ from numba.types import int32, float32
 import math
 
 
-@njit
+@njit(fastmath=True)
 def cubic_downsampling_3D_kernel(f, f_lr, coeffs, adjoint):
     for i in range(f_lr.shape[0]):
         for j in range(f_lr.shape[1]):
