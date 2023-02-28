@@ -19,7 +19,8 @@
 
 import numpy as np
 from .downsample_kernels import (
-    cubic_downsampling_3D_kernel
+    cubic_downsampling_3D_kernel,
+    adjoint_cubic_downsampling_3D_kernel
 )
 import os
 
@@ -47,8 +48,7 @@ def downsample_3D(
     cubic_downsampling_3D_kernel(
         f,
         f_lr,
-        coeffs,
-        False
+        coeffs
     )
     return f_lr
 
@@ -58,10 +58,9 @@ def adjoint_downsample_3D(
         f_lr,
     ):
     coeffs = cubic_3D_coefficients
-    cubic_downsampling_3D_kernel(
+    adjoint_cubic_downsampling_3D_kernel(
         f,
         f_lr,
-        coeffs,
-        True
+        coeffs
     )
     return f

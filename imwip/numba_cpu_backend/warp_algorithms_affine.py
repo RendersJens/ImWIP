@@ -19,7 +19,8 @@
 
 import numpy as np
 from .warp_kernels_affine import (
-    affine_cubic_warp_3D_kernel
+    affine_cubic_warp_3D_kernel,
+    adjoint_affine_cubic_warp_3D_kernel
 )
 import os
 
@@ -62,8 +63,7 @@ def affine_warp_3D(
             f,
             A,
             b,
-            f_warped,
-            False
+            f_warped
         )
     elif degree == 3:
         affine_cubic_warp_3D_kernel(
@@ -71,8 +71,7 @@ def affine_warp_3D(
             A,
             b,
             f_warped,
-            coeffs,
-            False
+            coeffs
         )
     else:
         raise NotImplementedError("Only degree 1 and 3 are implemented.")
@@ -97,21 +96,19 @@ def adjoint_affine_warp_3D(
 
     coeffs = cubic_3D_coefficients
     if degree == 1:
-        affine_linear_warp_3D_kernel(
+        adjoint_affine_linear_warp_3D_kernel(
             f_warped,
             A,
             b,
-            f,
-            True
+            f
         )
     elif degree == 3:
-        affine_cubic_warp_3D_kernel(
+        adjoint_affine_cubic_warp_3D_kernel(
             f_warped,
             A,
             b,
             f,
-            coeffs,
-            True
+            coeffs
         )
     else:
         raise NotImplementedError("Only degree 1 and 3 are implemented.")
@@ -148,23 +145,20 @@ def diff_affine_warp_3D(
         A,
         b,
         diff_x,
-        coeffs_dx,
-        False
+        coeffs_dx
     )
     affine_cubic_warp_3D_kernel(
         f,
         A,
         b,
         diff_y,
-        coeffs_dy,
-        False
+        coeffs_dy
     )
     affine_cubic_warp_3D_kernel(
         f,
         A,
         b,
         diff_z,
-        coeffs_dz,
-        False
+        coeffs_dz
     )
     return diff_x, diff_y, diff_z
