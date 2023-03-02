@@ -411,20 +411,33 @@ class AffineWarpingOperator3D(LinearOperator):
         return x_warped.ravel()
 
     def _rmatvec(self, x_warped):
-        
+
         # we expect the input as flattened array, so we reshape it
         x_warped = x_warped.reshape(self.im_shape)
 
         # perform the adjoint warp
-        x = imwip.adjoint_affine_warp(
-            x_warped,
-            self.A,
-            self.b,
-            degree=self.degree,
-            indexing=self.indexing,
-            backend=self.backend
-        )
-        
+        if self.adjoint_type == "exact":
+            x = imwip.adjoint_affine_warp(
+                x_warped,
+                self.A,
+                self.b,
+                degree=self.degree,
+                indexing=self.indexing,
+                backend=self.backend
+            )
+        elif self.adjoint_type == "inverse":
+            Ai = np.linalg.inv(self.A)
+            x = imwip.affine_warp(
+                x_warped,
+                Ai,
+                -Ai @ self.b,
+                degree=self.degree,
+                indexing=self.indexing,
+                backend=self.backend
+            )
+        else:
+            raise NotImplementedError("adjoint type should be 'exact' or 'inverse'")
+
         # return as flattened array
         return x.ravel()
 
