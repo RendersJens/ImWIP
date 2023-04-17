@@ -71,6 +71,7 @@ class AffineWarpingOperator2D(LinearOperator):
             rotation=None,
             translation=None,
             centered=True,
+            center=None,
             degree=3,
             adjoint_type="exact",
             derivative_type="exact",
@@ -106,8 +107,13 @@ class AffineWarpingOperator2D(LinearOperator):
             self.b += np.array(translation)
 
         self.centered = centered
+        if center is None:
+            self.center = np.array(im_shape, dtype=np.float32)/2
+        else:
+            self.center = center
+
         if self.centered:
-            center = np.array(im_shape, dtype=np.float32)/2
+            center = self.center
             if indexing == "xy":
                 center = np.flip(center)
             self.b = center - self.A @ center + self.b
@@ -174,8 +180,8 @@ class AffineWarpingOperator2D(LinearOperator):
         dxds = co_x.astype(np.float32)
         dyds = co_y.astype(np.float32)
         if self.centered:
-            dxds -= self.im_shape[0]/2
-            dyds -= self.im_shape[1]/2
+            dxds -= self.center[0]
+            dyds -= self.center[1]
         
         diff_sx = diff_x * dxds
         diff_sy = diff_y * dyds
@@ -190,8 +196,8 @@ class AffineWarpingOperator2D(LinearOperator):
         dxdr = -co_x*np.sin(self.rotation) + co_y*np.cos(self.rotation)
         dydr = -co_x*np.cos(self.rotation) - co_y*np.sin(self.rotation)
         if self.centered:
-            dxdr += self.im_shape[0]/2*np.sin(self.rotation) - self.im_shape[1]/2*np.cos(self.rotation)
-            dydr += self.im_shape[0]/2*np.cos(self.rotation) + self.im_shape[1]/2*np.sin(self.rotation)
+            dxdr += self.center[0]*np.sin(self.rotation) - self.center[1]*np.cos(self.rotation)
+            dydr += self.center[0]*np.cos(self.rotation) + self.center[1]*np.sin(self.rotation)
 
         diff_rotation = diff_x*dxdr + diff_y*dydr
         return diff_rotation.reshape((-1, 1))
