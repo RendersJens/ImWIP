@@ -417,10 +417,10 @@ class AffineWarpingOperator3D(LinearOperator):
         return x_warped.ravel()
 
     def _rmatvec(self, x_warped):
-
+    
         # we expect the input as flattened array, so we reshape it
         x_warped = x_warped.reshape(self.im_shape)
-
+    
         # perform the adjoint warp
         if self.adjoint_type == "exact":
             x = imwip.adjoint_affine_warp(
@@ -443,7 +443,7 @@ class AffineWarpingOperator3D(LinearOperator):
             )
         else:
             raise NotImplementedError("adjoint type should be 'exact' or 'inverse'")
-
+    
         # return as flattened array
         return x.ravel()
 
@@ -535,13 +535,14 @@ class AffineWarpingOperator3D(LinearOperator):
             drj -= rot_k @ (d_rot_j @ (rot_i @ center))
             drk -= d_rot_k @ (rot_j @ (rot_i @ center))
         
-        diff_x = diff_x.ravel()
-        diff_y = diff_y.ravel()
-        diff_z = diff_z.ravel()
+        diff_x = np.squeeze(diff_x.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T)
+        diff_y = np.squeeze(diff_y.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T)
+        diff_z = np.squeeze(diff_z.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T)
         diff_ri = diff_x*dri[0] + diff_y*dri[1] + diff_z*dri[2]
         diff_rj = diff_x*drj[0] + diff_y*drj[1] + diff_z*drj[2]
         diff_rk = diff_x*drk[0] + diff_y*drk[1] + diff_z*drk[2]
-        return np.vstack([diff_ri, diff_rj, diff_rk]).T
+        diff_out = np.stack([diff_ri, diff_rj, diff_rk])
+        return diff_out
 
     def _derivative_cayley(
             self,
@@ -613,7 +614,12 @@ class AffineWarpingOperator3D(LinearOperator):
         return np.vstack([diff_u, diff_v, diff_w]).T
 
     def _derivative_translation(self, x, diff_x, diff_y, diff_z):
-        return np.vstack([diff_x.ravel(), diff_y.ravel(), diff_z.ravel()]).T
+        diff_x = np.squeeze(diff_x.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T)
+        diff_y = np.squeeze(diff_y.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T)
+        diff_z = np.squeeze(diff_z.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T)
+        diff_out = np.stack([diff_x, diff_y, diff_z])
+
+        return diff_out
 
     def derivative(self, x, to=["b"]):
         """
@@ -634,7 +640,10 @@ class AffineWarpingOperator3D(LinearOperator):
         """
 
         # we expect the input as flattened array, so we reshape it
-        x = x.reshape(self.im_shape)
+        
+        self.jacobian_mult_col_number = int(x.size/np.prod(self.im_shape))
+        x = x.reshape((*self.im_shape,self.jacobian_mult_col_number))
+
         diff_x, diff_y, diff_z = imwip.diff_affine_warp(
             x,
             self.A,

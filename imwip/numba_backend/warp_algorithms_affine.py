@@ -22,7 +22,8 @@ from .warp_kernels_affine import (
     affine_linear_warp_2D_kernel,
     affine_cubic_warp_2D_kernel,
     affine_linear_warp_3D_kernel,
-    affine_cubic_warp_3D_kernel
+    affine_cubic_warp_3D_kernel,
+    affine_cubic_warp_3D_kernel_mul
 )
 import os
 
@@ -276,7 +277,15 @@ def diff_affine_warp_3D(
     coeffs_dz = cubic_3D_coefficients_dz
     threads_per_block = (8, 8, 8)
     num_blocks = ((f.shape[0] + 7)//8, (f.shape[1] + 7)//8, (f.shape[2] + 7)//8)
-    affine_cubic_warp_3D_kernel[num_blocks, threads_per_block](
+    
+    if len(f.shape)==4:
+        affine_kernel = affine_cubic_warp_3D_kernel_mul
+    elif len(f.shape)==3:
+        affine_kernel = affine_cubic_warp_3D_kernel
+    else:
+        raise ValueError("number of f dimensions not supported")
+    
+    affine_kernel[num_blocks, threads_per_block](
         f,
         A,
         b,
@@ -284,7 +293,7 @@ def diff_affine_warp_3D(
         coeffs_dx,
         False
     )
-    affine_cubic_warp_3D_kernel[num_blocks, threads_per_block](
+    affine_kernel[num_blocks, threads_per_block](
         f,
         A,
         b,
@@ -292,7 +301,7 @@ def diff_affine_warp_3D(
         coeffs_dy,
         False
     )
-    affine_cubic_warp_3D_kernel[num_blocks, threads_per_block](
+    affine_kernel[num_blocks, threads_per_block](
         f,
         A,
         b,

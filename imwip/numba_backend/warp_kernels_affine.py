@@ -201,3 +201,52 @@ def affine_cubic_warp_3D_kernel(f, A, b, f_warped, coeffs, adjoint):
                         else:
                             f_warped[i, j, k] += coefficient * f[Q0, Q1, Q2]
                     m += 1
+                    
+@cuda.jit
+def affine_cubic_warp_3D_kernel_mul(f, A, b, f_warped, coeffs, adjoint):
+    i, j, k = cuda.grid(3)
+
+    if i < f.shape[0] and j < f.shape[1] and k < f.shape[2]:
+
+        f_i = float32(i)
+        f_j = float32(j)
+        f_k = float32(k)
+
+        # position at which to iterpolate
+        x = A[0, 0]*f_i + A[0, 1]*f_j + A[0, 2]*f_k + b[0]
+        y = A[1, 0]*f_i + A[1, 1]*f_j + A[1, 2]*f_k + b[1]
+        z = A[2, 0]*f_i + A[2, 1]*f_j + A[2, 2]*f_k + b[2]
+
+        # points from which to interpolate
+        x1 = int32(math.floor(x))
+        y1 = int32(math.floor(y))
+        z1 = int32(math.floor(z))
+        # xi = x1 - 1 + i
+
+        # interpolation coefficients
+        xmx1 = x - float32(x1)
+        ymy1 = y - float32(y1)
+        zmz1 = z - float32(z1)
+        x_powers = (float32(1), xmx1, xmx1**2, xmx1**3)
+        y_powers = (float32(1), ymy1, ymy1**2, ymy1**3)
+        z_powers = (float32(1), zmz1, zmz1**2, zmz1**3)
+        monomials = cuda.local.array(64, float32)
+        for pz in range(4):
+            for py in range(4):
+                for px in range(4):
+                    monomials[pz*16 + py*4 + px] = x_powers[px] * y_powers[py] * z_powers[pz]
+
+        m = 0
+        for ii in range(4):
+            for jj in range(4):
+                for kk in range(4):
+                    Q0 = x1 + ii - 1
+                    Q1 = y1 + jj - 1
+                    Q2 = z1 + kk - 1
+                    if 0 <= Q0 < f.shape[0] and 0 <= Q1 < f.shape[1] and 0 <= Q2 < f.shape[2]:
+                        coefficient = float32(0)
+                        for n in range(64):
+                            coefficient += coeffs[m*64 + n] * monomials[n]
+                            for l in range(f.shape[3]):
+                                f_warped[i, j, k, l] += coefficient * f[Q0, Q1, Q2, l]
+                    m += 1

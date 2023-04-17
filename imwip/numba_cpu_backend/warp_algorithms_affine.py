@@ -20,6 +20,7 @@
 import numpy as np
 from .warp_kernels_affine import (
     affine_cubic_warp_3D_kernel,
+    affine_cubic_warp_3D_kernel_mul,
     adjoint_affine_cubic_warp_3D_kernel
 )
 import os
@@ -139,22 +140,29 @@ def diff_affine_warp_3D(
     coeffs_dx = cubic_3D_coefficients_dx
     coeffs_dy = cubic_3D_coefficients_dy
     coeffs_dz = cubic_3D_coefficients_dz
+    
+    if len(f.shape)==4:
+        affine_kernel = affine_cubic_warp_3D_kernel_mul
+    elif len(f.shape)==3:
+        affine_kernel = affine_cubic_warp_3D_kernel
+    else:
+        raise ValueError("number of f dimensions not supported")
 
-    affine_cubic_warp_3D_kernel(
+    affine_kernel(
         f,
         A,
         b,
         diff_x,
         coeffs_dx
     )
-    affine_cubic_warp_3D_kernel(
+    affine_kernel(
         f,
         A,
         b,
         diff_y,
         coeffs_dy
     )
-    affine_cubic_warp_3D_kernel(
+    affine_kernel(
         f,
         A,
         b,

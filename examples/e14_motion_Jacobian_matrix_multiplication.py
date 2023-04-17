@@ -1,79 +1,36 @@
 import numpy as np
-import astra
-import tomopy
-import pylops
-from matplotlib import pyplot as plt
 import imwip
-from scipy.ndimage import center_of_mass
+from time import time
 
-im_size = 256
-true_trans = [25, -10, 15]
-true_rot = [0.3, 0.2, 0.1]
-A = imwip.AffineWarpingOperator3D(
-    im_shape=(im_size, im_size, im_size),
-    rotation=true_rot,
-    translation=true_trans,
-    centered=True
-).A
-shepp = tomopy.shepp3d(im_size).astype(np.float32)
+# settings
+hr_dim = np.array([216,256,76]).astype(int) #use [32, 32, 32] for testing
+backend ='numba' #or numba_cpu
+stdmotion = 1.5
+ra = np.random.normal(0,stdmotion,3).astype(np.float32)
+tr = np.random.normal(0,stdmotion,3).astype(np.float32)
+center = hr_dim.astype(np.float32) / 2 - 0.5
+M = imwip.AffineWarpingOperator3D(hr_dim, translation=tr, rotation=ra, center=center, backend=backend)
+n_cols = 15
 
-# motion operator for simulation
-M = imwip.AffineWarpingOperator3D(
-    im_shape=(im_size, im_size, im_size),
-    rotation=true_rot,
-    translation=true_trans,
-    centered=True
-)
+# benchmark
+rr0 = np.ones(M.shape[1]).astype(np.float32)
+t0 = time()
+for i in np.arange(n_cols):
+    Jr0r, Jr0t = M.derivative(rr0,['rot','trans'])
+dt0 = time() - t0
+print(dt0)
 
-# simulate
-b = M @ shepp.ravel()
+rr1 = np.ones((M.shape[1],1)).astype(np.float32)
+t1 = time()
+for i in np.arange(n_cols):
+    Jr1r, Jr1t = M.derivative(rr1,['rot','trans'])
+dt1 = time() - t1
+print(dt1)
 
-# solve
-# ---------------------
+rr2 = np.ones([M.shape[1], n_cols]).astype(np.float32)
+t2 = time()
+Jr2r, Jr2t = M.derivative(rr2,['rot','trans'])
+dt2 = time() - t2
+print(dt2)
 
-com = np.array(center_of_mass(b.reshape(shepp.shape)), dtype=np.float32)
-trans = np.array(center_of_mass(shepp)) - com
-T = imwip.AffineWarpingOperator3D(
-    im_shape=(im_size, im_size, im_size),
-    translation=trans,
-    centered=True
-)
-x = T @ shepp.ravel()
-
-R = lambda rot: imwip.AffineWarpingOperator3D(
-    im_shape=(im_size, im_size, im_size),
-    rotation=rot,
-    center=com,
-    centered=True
-)
-
-# objective function
-def f(rot):
-    res = R(rot) @ x - b
-    return 1/2 * np.dot(res, res)
-
-# gradient of objective function
-def grad_f(rot):
-    res = R(rot) @ x - b
-    print(np.linalg.norm(res))
-    dMx_rot = imwip.diff(R(rot), x, to="rot")
-    grad_rot = dMx_rot.T @ res
-    return grad_rot
-
-# calback function: print motion parameters each iteration
-callback = lambda rot: print(rot, R(rot).A @ trans)
-
-# initial guess: zero
-rot0 = [0.0, 0.0, 0.0]
-
-# solve
-rot = imwip.barzilai_borwein(
-    grad_f,
-    x0=rot0,
-    max_iter=20,
-    verbose=True,
-    callback=callback
-)
-
-print(rot)
-print(true_rot)
+print('Time gain',np.round((dt0-dt2)/dt0*100,2),'%') #12%
