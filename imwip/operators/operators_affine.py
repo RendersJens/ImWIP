@@ -535,13 +535,14 @@ class AffineWarpingOperator3D(LinearOperator):
             drj -= rot_k @ (d_rot_j @ (rot_i @ center))
             drk -= d_rot_k @ (rot_j @ (rot_i @ center))
         
-        diff_x = np.squeeze(diff_x.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T)
-        diff_y = np.squeeze(diff_y.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T)
-        diff_z = np.squeeze(diff_z.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T)
-        diff_ri = diff_x*dri[0] + diff_y*dri[1] + diff_z*dri[2]
+        diff_x = diff_x.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T #diff_x (2, 4202496)
+        diff_y = diff_y.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T #dri (3, 4202496)
+        diff_z = diff_z.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T
+        diff_ri = diff_x*dri[0] + diff_y*dri[1] + diff_z*dri[2] #diff_ri (2, 4202496)
         diff_rj = diff_x*drj[0] + diff_y*drj[1] + diff_z*drj[2]
         diff_rk = diff_x*drk[0] + diff_y*drk[1] + diff_z*drk[2]
-        diff_out = np.stack([diff_ri, diff_rj, diff_rk])
+        diff_out = np.squeeze(np.transpose(np.stack([diff_ri, diff_rj, diff_rk]),(1,2,0)))
+            
         return diff_out
 
     def _derivative_cayley(
@@ -614,11 +615,12 @@ class AffineWarpingOperator3D(LinearOperator):
         return np.vstack([diff_u, diff_v, diff_w]).T
 
     def _derivative_translation(self, x, diff_x, diff_y, diff_z):
-        diff_x = np.squeeze(diff_x.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T)
-        diff_y = np.squeeze(diff_y.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T)
-        diff_z = np.squeeze(diff_z.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T)
-        diff_out = np.stack([diff_x, diff_y, diff_z])
 
+        diff_x = diff_x.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T
+        diff_y = diff_y.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T
+        diff_z = diff_z.reshape((np.prod(self.im_shape),self.jacobian_mult_col_number)).T
+        diff_out = np.squeeze(np.transpose(np.stack([diff_x, diff_y, diff_z]),(1,2,0)))
+        
         return diff_out
 
     def derivative(self, x, to=["b"]):

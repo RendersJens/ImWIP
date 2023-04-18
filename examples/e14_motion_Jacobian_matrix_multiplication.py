@@ -3,7 +3,7 @@ import imwip
 from time import time
 
 # settings
-hr_dim = np.array([216,256,76]).astype(int) #use [32, 32, 32] for testing
+hr_dim = np.array([64,64,64]).astype(int)
 backend ='numba' #or numba_cpu
 stdmotion = 1.5
 ra = np.random.normal(0,stdmotion,3).astype(np.float32)
