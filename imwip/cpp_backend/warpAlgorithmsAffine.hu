@@ -82,3 +82,16 @@ void diffAffineWarp3D(
     int shape1,
     int shape2
 );
+
+void diffAffineWarp3DMul(
+    const float* f,
+    const float* A,
+    const float* b,
+    float* diffx,
+    float* diffy,
+    float* diffz,
+    int shape0,
+    int shape1,
+    int shape2,
+    int shape3
+);

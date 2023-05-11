@@ -465,6 +465,19 @@ cdef extern from "warpAlgorithmsAffine.hu":
         int shape2
     )
 
+    void diffAffineWarp3DMul(
+        const float* f,
+        const float* A,
+        const float* b,
+        float* diffx,
+        float* diffy,
+        float* diffz,
+        int shape0,
+        int shape1,
+        int shape2,
+        int shape3
+    )
+
     void adjointAffineWarp3D(
         const float* fWarped,
         const float* A,
@@ -625,7 +638,7 @@ def diff_affine_warp_3D(
         np.ndarray[ndim=3, dtype=float, mode="c"] diff_z=None,
         str indexing="ij"
     ):
-    
+
     diff_x = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
     diff_y = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
     diff_z = np.zeros((f.shape[0], f.shape[1], f.shape[2]), dtype=f.dtype)
@@ -646,6 +659,41 @@ def diff_affine_warp_3D(
         f.shape[0],
         f.shape[1],
         f.shape[2]
+    )
+
+    return diff_x, diff_y, diff_z
+
+def diff_affine_warp_3D_mul(
+        np.ndarray[ndim=4, dtype=float, mode="c"] f,
+        np.ndarray[ndim=2, dtype=float, mode="c"] A,
+        np.ndarray[ndim=1, dtype=float, mode="c"] b,
+        np.ndarray[ndim=4, dtype=float, mode="c"] diff_x=None,
+        np.ndarray[ndim=4, dtype=float, mode="c"] diff_y=None,
+        np.ndarray[ndim=4, dtype=float, mode="c"] diff_z=None,
+        str indexing="ij"
+    ):
+
+    diff_x = np.zeros((f.shape[0], f.shape[1], f.shape[2], f.shape[3]), dtype=f.dtype)
+    diff_y = np.zeros((f.shape[0], f.shape[1], f.shape[2], f.shape[3]), dtype=f.dtype)
+    diff_z = np.zeros((f.shape[0], f.shape[1], f.shape[2], f.shape[3]), dtype=f.dtype)
+
+    if indexing == "xy":
+        A = np.fliplr(np.flipud(A)).copy()
+        b = np.flip(b).copy()
+
+    # the C++ version accepts pointers, so for each numpy array we
+    # get the pointer to the first element and pass it to the C++ function
+    diffAffineWarp3DMul(
+        &f[0,0,0,0],
+        &A[0,0],
+        &b[0],
+        &diff_x[0,0,0,0],
+        &diff_y[0,0,0,0],
+        &diff_z[0,0,0,0],
+        f.shape[0],
+        f.shape[1],
+        f.shape[2],
+        f.shape[3]
     )
 
     return diff_x, diff_y, diff_z

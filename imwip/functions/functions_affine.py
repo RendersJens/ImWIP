@@ -191,7 +191,7 @@ def diff_affine_warp(
     :type indexing: ``ij`` or ``xy``, optional
     :type backend: ``cpp`` or ``numba``, optional
     :return: diff_x, diff_y, diff_z
-    :rtype: :class:`numpy.ndarray`, :class:`numpy.ndarray`, :class:`numpy.ndarray`, 
+    :rtype: :class:`numpy.ndarray`, :class:`numpy.ndarray`, :class:`numpy.ndarray`,
     """
 
     if backend is None:
@@ -204,7 +204,10 @@ def diff_affine_warp(
         if dim == 2:
             warp_function = libimwip.diff_affine_warp_2D
         else:
-            warp_function = libimwip.diff_affine_warp_3D
+            if image.ndim == 4:
+                warp_function = libimwip.diff_affine_warp_3D_mul
+            else:
+                warp_function = libimwip.diff_affine_warp_3D
     elif backend == "numba":
         if dim == 2:
             warp_function = imwip.numba_backend.diff_affine_warp_2D

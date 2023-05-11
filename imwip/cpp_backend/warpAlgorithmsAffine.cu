@@ -533,3 +533,115 @@ void diffAffineWarp3D(
     cudaFree(d_diffy);
     cudaFree(d_diffz);
 }
+
+
+void diffAffineWarp3DMul(
+        const float* f,
+        const float* A,
+        const float* b,
+        float* diffx,
+        float* diffy,
+        float* diffz,
+        int shape0,
+        int shape1,
+        int shape2,
+        int shape3
+    ){
+
+    size_t size = shape0 * shape1 * shape2 * shape3 * sizeof(float);
+
+    // allocate vectors in device memory
+    float *d_f, *d_A, *d_b, *d_diffx, *d_diffy, *d_diffz;
+    gpuErrchk(cudaMalloc(&d_f, size));
+    gpuErrchk(cudaMalloc(&d_A, 9 * sizeof(float)));
+    gpuErrchk(cudaMalloc(&d_b, 3 * sizeof(float)));
+    gpuErrchk(cudaMalloc(&d_diffx, size));
+    gpuErrchk(cudaMalloc(&d_diffy, size));
+    gpuErrchk(cudaMalloc(&d_diffz, size));
+
+    // copy vectors from host memory to device memory
+    gpuErrchk(cudaMemcpy(d_f, f, size, cudaMemcpyHostToDevice));
+    gpuErrchk(cudaMemcpy(d_A, A, 9 * sizeof(float), cudaMemcpyHostToDevice));
+    gpuErrchk(cudaMemcpy(d_b, b, 3 * sizeof(float), cudaMemcpyHostToDevice));
+    gpuErrchk(cudaMemcpy(d_diffx, diffx, size, cudaMemcpyHostToDevice));
+    gpuErrchk(cudaMemcpy(d_diffy, diffy, size, cudaMemcpyHostToDevice));
+    gpuErrchk(cudaMemcpy(d_diffz, diffz, size, cudaMemcpyHostToDevice));
+
+    // kernel invocation with 16*16 threads per block, and enough blocks
+    // to cover the entire length of the vectors
+    dim3 threadsPerBlock(8,8,8);
+    dim3 numBlocks((shape2 + 7)/8, (shape1 + 7)/8, (shape0 + 7)/8); //faster order
+    float coeffsx[] = {
+        #include "cubic_3D_coefficients_dx.inc"
+    };
+    float coeffsy[] = {
+        #include "cubic_3D_coefficients_dy.inc"
+    };
+    float coeffsz[] = {
+        #include "cubic_3D_coefficients_dz.inc"
+    };
+    float *d_coeffsx;
+    float *d_coeffsy;
+    float *d_coeffsz;
+    gpuErrchk(cudaMalloc(&d_coeffsx, 64*64*sizeof(float)));
+    gpuErrchk(cudaMalloc(&d_coeffsy, 64*64*sizeof(float)));
+    gpuErrchk(cudaMalloc(&d_coeffsz, 64*64*sizeof(float)));
+    gpuErrchk(cudaMemcpy(d_coeffsx, coeffsx, 64*64*sizeof(float), cudaMemcpyHostToDevice));
+    gpuErrchk(cudaMemcpy(d_coeffsy, coeffsy, 64*64*sizeof(float), cudaMemcpyHostToDevice));
+    gpuErrchk(cudaMemcpy(d_coeffsz, coeffsz, 64*64*sizeof(float), cudaMemcpyHostToDevice));
+    affineCubicWarp3DKernelMul<<<numBlocks, threadsPerBlock>>>(
+        d_f,
+        d_A,
+        d_b,
+        d_diffx,
+        shape0,
+        shape1,
+        shape2,
+        shape3,
+        d_coeffsx
+    );
+    gpuErrchk(cudaPeekAtLastError());
+    gpuErrchk(cudaDeviceSynchronize());
+    affineCubicWarp3DKernelMul<<<numBlocks, threadsPerBlock>>>(
+        d_f,
+        d_A,
+        d_b,
+        d_diffy,
+        shape0,
+        shape1,
+        shape2,
+        shape3,
+        d_coeffsy
+    );
+    gpuErrchk(cudaPeekAtLastError());
+    gpuErrchk(cudaDeviceSynchronize());
+    affineCubicWarp3DKernelMul<<<numBlocks, threadsPerBlock>>>(
+        d_f,
+        d_A,
+        d_b,
+        d_diffz,
+        shape0,
+        shape1,
+        shape2,
+        shape3,
+        d_coeffsz
+    );
+    gpuErrchk(cudaPeekAtLastError());
+    gpuErrchk(cudaDeviceSynchronize());
+    cudaFree(d_coeffsx);
+    cudaFree(d_coeffsy);
+    cudaFree(d_coeffsz);
+
+    // copy the result back to the host
+    gpuErrchk(cudaMemcpy(diffx, d_diffx, size, cudaMemcpyDeviceToHost));
+    gpuErrchk(cudaMemcpy(diffy, d_diffy, size, cudaMemcpyDeviceToHost));
+    gpuErrchk(cudaMemcpy(diffz, d_diffz, size, cudaMemcpyDeviceToHost));
+
+    // release the device memory
+    cudaFree(d_f);
+    cudaFree(d_A);
+    cudaFree(d_b);
+    cudaFree(d_diffx);
+    cudaFree(d_diffy);
+    cudaFree(d_diffz);
+}
