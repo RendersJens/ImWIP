@@ -644,7 +644,11 @@ class AffineWarpingOperator3D(LinearOperator):
         # we expect the input as flattened array, so we reshape it
         
         self.jacobian_mult_col_number = int(x.size/np.prod(self.im_shape))
-        x = x.reshape((*self.im_shape,self.jacobian_mult_col_number))
+        
+        if self.jacobian_mult_col_number != 1:
+            x = x.reshape((*self.im_shape,self.jacobian_mult_col_number))
+        else:
+            x = x.reshape(self.im_shape)
 
         diff_x, diff_y, diff_z = imwip.diff_affine_warp(
             x,

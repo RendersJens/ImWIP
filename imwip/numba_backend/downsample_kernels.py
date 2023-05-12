@@ -31,9 +31,12 @@ def cubic_downsampling_2D_kernel(f, f_lr, coeffs, adjoint):
         f_i = float32(i)
         f_j = float32(j)
 
+        F_i = float32(f.shape[0]/f_lr.shape[0])
+        F_j = float32(f.shape[1]/f_lr.shape[1])
+
         # position at which to iterpolate
-        x = f_i * float32(f.shape[0]/f_lr.shape[0])
-        y = f_j * float32(f.shape[1]/f_lr.shape[1])
+        x = f_i * F_i + (F_i - float32(1))/float32(2)
+        y = f_j * F_j + (F_j - float32(1))/float32(2)
 
         # points from which to interpolate
         x1 = int32(math.floor(x))
@@ -75,10 +78,14 @@ def cubic_downsampling_3D_kernel(f, f_lr, coeffs, adjoint):
         f_j = float32(j)
         f_k = float32(k)
 
+        F_i = float32(f.shape[0]/f_lr.shape[0])
+        F_j = float32(f.shape[1]/f_lr.shape[1])
+        F_k = float32(f.shape[2]/f_lr.shape[2])
+
         # position at which to iterpolate
-        x = f_i * float32(f.shape[0]/f_lr.shape[0])
-        y = f_j * float32(f.shape[1]/f_lr.shape[1])
-        z = f_k * float32(f.shape[2]/f_lr.shape[2])
+        x = f_i * F_i + (F_i - float32(1))/float32(2)
+        y = f_j * F_j + (F_j - float32(1))/float32(2)
+        z = f_k * F_k + (F_k - float32(1))/float32(2)
 
         # points from which to interpolate
         x1 = int32(math.floor(x))
