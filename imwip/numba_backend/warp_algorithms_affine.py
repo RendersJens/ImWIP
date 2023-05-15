@@ -275,8 +275,8 @@ def diff_affine_warp_3D(
     coeffs_dx = cubic_3D_coefficients_dx
     coeffs_dy = cubic_3D_coefficients_dy
     coeffs_dz = cubic_3D_coefficients_dz
-    threads_per_block = (8, 8, 8)
-    num_blocks = ((f.shape[0] + 7)//8, (f.shape[1] + 7)//8, (f.shape[2] + 7)//8)
+    threads_per_block = (4, 4, 4)
+    num_blocks = ((f.shape[0] + 3)//4, (f.shape[1] + 3)//4, (f.shape[2] + 3)//4)
     
     if len(f.shape)==4:
         affine_kernel = affine_cubic_warp_3D_kernel_mul

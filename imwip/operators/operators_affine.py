@@ -22,7 +22,7 @@ import numpy as np
 import imwip
 from scipy.sparse.linalg import LinearOperator
 from collections.abc import Iterable
-
+from time import time
 
 class AffineWarpingOperator2D(LinearOperator):
     """
@@ -328,6 +328,7 @@ class AffineWarpingOperator3D(LinearOperator):
         ):
         self.im_shape = im_shape
         self.im_size = im_shape[0]*im_shape[1]*im_shape[2]
+        self.derivative_time = []
 
         # accumulate the given transformations one by one
         self.dtype = np.dtype('float32')
@@ -649,7 +650,8 @@ class AffineWarpingOperator3D(LinearOperator):
             x = x.reshape((*self.im_shape,self.jacobian_mult_col_number))
         else:
             x = x.reshape(self.im_shape)
-
+        
+        t1=time()
         diff_x, diff_y, diff_z = imwip.diff_affine_warp(
             x,
             self.A,
@@ -657,6 +659,7 @@ class AffineWarpingOperator3D(LinearOperator):
             indexing=self.indexing,
             backend=self.backend
         )
+        self.derivative_time.append(time()-t1)
 
         if "cayley" in to or "rotation" in to or "rot" in to or "scale" in to or "zoom" in to:
             co_x, co_y, co_z = np.meshgrid(

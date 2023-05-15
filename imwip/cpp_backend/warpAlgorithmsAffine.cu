@@ -569,8 +569,8 @@ void diffAffineWarp3DMul(
 
     // kernel invocation with 16*16 threads per block, and enough blocks
     // to cover the entire length of the vectors
-    dim3 threadsPerBlock(8,8,8);
-    dim3 numBlocks((shape2 + 7)/8, (shape1 + 7)/8, (shape0 + 7)/8); //faster order
+    dim3 threadsPerBlock(4,4,4);
+    dim3 numBlocks((shape2 + 3)/4, (shape1 + 3)/4, (shape0 + 3)/4); //faster order
     float coeffsx[] = {
         #include "cubic_3D_coefficients_dx.inc"
     };
