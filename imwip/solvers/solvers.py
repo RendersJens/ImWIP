@@ -163,7 +163,7 @@ def barzilai_borwein(grad_f,
         grad = grad_f(x)
 
         if callback is not None:
-            callback(x)
+            callback(x,i)
 
         # BB step size
         grad_diff = grad - gradp
@@ -273,7 +273,7 @@ def split_barzilai_borwein(
         grad = grad_f(*x)
 
         if callback is not None:
-            callback(*x)
+            callback(*x,i)
 
         # independent BB step sizes
         for i in range(len(x)):
