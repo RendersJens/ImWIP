@@ -247,6 +247,6 @@ def affine_cubic_warp_3D_kernel_mul(f, A, b, f_warped, coeffs, adjoint):
                         coefficient = float32(0)
                         for n in range(64):
                             coefficient += coeffs[m*64 + n] * monomials[n]
-                            for l in range(f.shape[3]):
-                                f_warped[i, j, k, l] += coefficient * f[Q0, Q1, Q2, l]
+                        for l in range(f.shape[3]):
+                            f_warped[i, j, k, l] += coefficient * f[Q0, Q1, Q2, l]
                     m += 1

@@ -9,7 +9,7 @@ stdmotion = 1.5
 np.random.seed(0)
 ra = np.random.normal(0,stdmotion,3).astype(np.float32)
 tr = np.random.normal(0,stdmotion,3).astype(np.float32)
-center = hr_dim.astype(np.float32) / 2 - 0.5
+center = hr_dim.astype(np.float32) / 2.0 - 0.5
 M = imwip.AffineWarpingOperator3D(hr_dim, translation=tr, rotation=ra, center=center, backend=backend)
 n_cols = 2
 
