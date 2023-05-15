@@ -624,6 +624,9 @@ class AffineWarpingOperator3D(LinearOperator):
         
         return diff_out
 
+    def reset_timer(self):
+        self.derivative_time = []
+
     def derivative(self, x, to=["b"]):
         """
         Computes the derivative of ``M @ x`` where ``M`` is this operator and ``x``
