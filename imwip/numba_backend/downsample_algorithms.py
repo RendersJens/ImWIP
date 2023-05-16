@@ -47,7 +47,7 @@ def downsample_2D(
     ):
     coeffs = cubic_2D_coefficients
     threads_per_block = (16, 16)
-    num_blocks = ((f.shape[0] + 15)//16, (f.shape[1] + 15)//16)
+    num_blocks = ((f_lr.shape[0] + 15)//16, (f_lr.shape[1] + 15)//16)
     cubic_downsampling_2D_kernel[num_blocks, threads_per_block](
         f,
         f_lr,
@@ -63,7 +63,7 @@ def adjoint_downsample_2D(
     ):
     coeffs = cubic_2D_coefficients
     threads_per_block = (16, 16)
-    num_blocks = ((f.shape[0] + 15)//16, (f.shape[1] + 15)//16)
+    num_blocks = ((f_lr.shape[0] + 15)//16, (f_lr.shape[1] + 15)//16)
     cubic_downsampling_2D_kernel[num_blocks, threads_per_block](
         f,
         f_lr,
@@ -78,7 +78,7 @@ def downsample_3D(
     ):
     coeffs = cubic_3D_coefficients
     threads_per_block = (8, 8, 8)
-    num_blocks = ((f.shape[0] + 7)//8, (f.shape[1] + 7)//8, (f.shape[2] + 7)//8)
+    num_blocks = ((f_lr.shape[0] + 7)//8, (f_lr.shape[1] + 7)//8, (f_lr.shape[2] + 7)//8)
     cubic_downsampling_3D_kernel[num_blocks, threads_per_block](
         f,
         f_lr,
@@ -94,7 +94,7 @@ def adjoint_downsample_3D(
     ):
     coeffs = cubic_3D_coefficients
     threads_per_block = (8, 8, 8)
-    num_blocks = ((f.shape[0] + 7)//8, (f.shape[1] + 7)//8, (f.shape[2] + 7)//8)
+    num_blocks = ((f_lr.shape[0] + 7)//8, (f_lr.shape[1] + 7)//8, (f_lr.shape[2] + 7)//8)
     cubic_downsampling_3D_kernel[num_blocks, threads_per_block](
         f,
         f_lr,
