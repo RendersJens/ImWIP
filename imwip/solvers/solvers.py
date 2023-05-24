@@ -169,8 +169,14 @@ def barzilai_borwein(grad_f,
             callback(x)
 
         # BB step size
-        grad_diff = grad - gradp
-        a = abs(np.dot(x-xp, grad_diff))/np.dot(grad_diff, grad_diff)
+        y = grad - gradp
+        norm_y_squared = np.dot(y, y)
+        if norm_y_squared > 0:
+            s = x-xp
+            a = abs(np.dot(s, y))/norm_y_squared
+        else:
+            print("exited barzilai_borwein early")
+            break
 
         # new solution: gradient descent step
         xp = x
@@ -287,8 +293,16 @@ def split_barzilai_borwein(
 
         # independent BB step sizes
         for i in range(len(x)):
-            grad_diff = grad[i] - gradp[i]
-            a[i] = abs(np.dot(x[i]-xp[i], grad_diff))/np.dot(grad_diff, grad_diff)
+            y = grad[i] - gradp[i]
+            norm_y_squared = np.dot(y, y)
+            if norm_y_squared > 0:
+                s = x[i]-xp[i]
+                a[i] = abs(np.dot(s, y))/norm_y_squared
+            else:
+                a[i] = 0
+        if all(s == 0 for s in a):
+            print("exited split_barzilai_borwein early")
+            break
 
         # new solution: gradient descent step
         xp = x[:]
