@@ -78,6 +78,7 @@ def barzilai_borwein(grad_f,
                      line_search_iter=None,
                      init_step=None,
                      bounds=None,
+                     projector=None,
                      max_iter=100,
                      verbose=True,
                      callback=None):
@@ -102,6 +103,7 @@ def barzilai_borwein(grad_f,
     :param init_step: user specified initial stepsize. Leave empty to use line search.
     :param bounds: minimum and maximum constraints on the variables. Leave empty for no
         bounds, and use ``numpy.inf`` or ``-numpy.inf`` to bound only from one side.
+    :param projector: a custom function that projects the variable on a constraint set.
     :param max_iter: maximum number of iterations to perform
     :param verbose: whether to show a progress bar, defaults to False.
     :param callback: If given, this function will be called each iteration. The current estimate of
@@ -113,6 +115,7 @@ def barzilai_borwein(grad_f,
     :type line_search_iter: int, optional
     :type init_step: float, optional
     :type bounds: tuple of floats or tuple of sequences of floats, optional
+    :type projector: callable, optional
     :type max_iter: int, optional
     :type verbose: bool, optional
     :type callback: callable, optional
@@ -177,6 +180,10 @@ def barzilai_borwein(grad_f,
         if bounds is not None:
             x = np.clip(x, *bounds)
 
+        # apply the projector
+        if not projector is None:
+            x = projector(x)
+
     return x
 
 
@@ -187,6 +194,7 @@ def split_barzilai_borwein(
         line_search_iter=None,
         init_step=None,
         bounds=None,
+        projector=None,
         max_iter=100,
         verbose=True,
         callback=None
@@ -207,6 +215,7 @@ def split_barzilai_borwein(
     :param init_step: user specified initial stepsize. Leave empty to use line search.
     :param bounds: minimum and maximum constraints on the variables. Leave empty for no
         bounds, and use ``numpy.inf`` or ``-numpy.inf`` to bound only from one side.
+    :param projector: a custom function that projects the variable on a constraint set.
     :param max_iter: maximum number of iterations to perform
     :param verbose: whether to show a progress bar, defaults to False.
     :param callback: If given, this function will be called each iteration. The current estimate of
@@ -218,6 +227,7 @@ def split_barzilai_borwein(
     :type line_search_iter: int, optional
     :type init_step: float, optional
     :type bounds: list of bounds as specified in :py:func:`barzilai_borwein`
+    :type projector: callable, optional
     :type max_iter: int, optional
     :type verbose: bool, optional
     :type callback: callable, optional
@@ -290,5 +300,9 @@ def split_barzilai_borwein(
             for i in range(len(x)):
                 if bounds[i] is not None:
                     x[i] = np.clip(x[i], *bounds[i])
+
+        # apply the projector
+        if not projector is None:
+            x = projector(x)
 
     return x
