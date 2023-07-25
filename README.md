@@ -23,6 +23,7 @@ ImWIP heavily relies on CUDA kernels for efficient parallelization. Therfore a C
 For conda users, these dependencies can be automatically installed from the `environment.yml` file in the root of this project. For example by running
 
 `$ conda env create`
+
 `$ conda activate imwip`
 
 
