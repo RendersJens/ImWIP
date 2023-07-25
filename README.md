@@ -18,14 +18,18 @@ ImWIP heavily relies on CUDA kernels for efficient parallelization. Therfore a C
 - numba
 - pylops
 - tqdm
+- cython
+
+For conda users, these dependencies can be automatically installed from the `environment.yml` file in the root of this project. For example by running
+
+`$ conda env create`
+`$ conda activate imwip`
+
 
 There is also a C++/CUDA backend, which is a bit faster than the numba backend, and it can
 be accessed from any language that supports a C interface functions. It will automatically
-compile if the following dependencies are met:
+compile on linux systems where the nvcc compiler is available.
 
-- linux
-- cython
-- nvcc
 
 Installation
 ------------
