@@ -22,10 +22,10 @@ ImWIP heavily relies on CUDA kernels for efficient parallelization. Therfore a C
 
 For conda users, these dependencies can be automatically installed from the `environment.yml` file in the root of this project. For example by running
 
-`$ conda env create`
-
-`$ conda activate imwip`
-
+```bash
+conda env create
+conda activate imwip
+```
 
 There is also a C++/CUDA backend, which is a bit faster than the numba backend, and it can
 be accessed from any language that supports a C interface functions. It will automatically
@@ -37,12 +37,15 @@ Installation
 
 If git is installed, simply run
 
-`$ pip install git+https://github.com/RendersJens/ImWIP.git`
-
+```bash
+pip install git+https://github.com/RendersJens/ImWIP.git
+```
 
 Otherwise, download this repository and run pip in the root folder of the project:
 
-`$ pip install .`
+```bash
+pip install .
+```
 
 Getting started and reference documentation
 -------------------------------------------
