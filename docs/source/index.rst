@@ -12,6 +12,7 @@ ImWIP: Image warping for Inverse Problems
    installation
    examples
    notebooks/Performance_benchmarks.ipynb
+   notebooks/Asymptotics.ipynb
 
 .. toctree::
    :maxdepth: 2
