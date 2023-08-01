@@ -20,6 +20,7 @@
 
 import numpy as np
 from tqdm import tqdm
+import imwip
 
 
 def invert_dvf_2D(u, v, max_iter=15, verbose=False, backend=None):
