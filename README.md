@@ -56,16 +56,24 @@ Citing ImWIP
 
 If you use ImWIP in your research, please cite
 
-J. Renders, J. De Beenhouwer, J. Sijbers, ImWIP: Image Warping for Inverse Problems, https://doi.org/10.5281/zenodo.5910755 (Feb. 2023).
+Jens Renders, Ben Jeurissen, Anh-Tuan Nguyen, Jan De Beenhouwer, Jan Sijbers,
+ImWIP: Open-source image warping toolbox with adjoints and derivatives,
+SoftwareX,
+Volume 24,
+2023,
+101524
 
 BibTex:
 
 ```
-@manual{renders2023imwip,
-  author={Renders, Jens and De Beenhouwer, Jan and Sijbers, Jan},
-  title={{ImWIP: Image Warping for Inverse Problems}},
-  note={{\tt https://doi.org/10.5281/zenodo.5910755}},
-  Year={2023},
-  Month=feb
+@article{RENDERS2023101524,
+  title = {ImWIP: Open-source image warping toolbox with adjoints and derivatives},
+  author = {Jens Renders and Ben Jeurissen and Anh-Tuan Nguyen and Jan {De Beenhouwer} and Jan Sijbers},
+  journal = {SoftwareX},
+  volume = {24},
+  pages = {101524},
+  year = {2023},
+  issn = {2352-7110},
+  doi = {https://doi.org/10.1016/j.softx.2023.101524},
 }
 ```
