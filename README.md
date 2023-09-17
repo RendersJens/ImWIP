@@ -66,7 +66,7 @@ Volume 24,
 BibTex:
 
 ```
-@article{RENDERS2023101524,
+@article{renders2023,
   title = {ImWIP: Open-source image warping toolbox with adjoints and derivatives},
   author = {Jens Renders and Ben Jeurissen and Anh-Tuan Nguyen and Jan {De Beenhouwer} and Jan Sijbers},
   journal = {SoftwareX},
