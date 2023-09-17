@@ -12,6 +12,7 @@ ImWIP: Image warping for Inverse Problems
    installation
    examples
    benchmarks
+   citing
 
 .. toctree::
    :maxdepth: 2
