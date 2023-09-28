@@ -21,7 +21,8 @@ import numpy as np
 from .warp_kernels_affine import (
     affine_cubic_warp_3D_kernel,
     affine_cubic_warp_3D_kernel_mul,
-    adjoint_affine_cubic_warp_3D_kernel
+    adjoint_affine_cubic_warp_3D_kernel,
+    affine_cubic_warp_2D_kernel
 )
 import os
 
@@ -42,6 +43,77 @@ __all__ = [
     'diff_affine_warp_3D'
 ]
 
+
+def affine_warp_2D(
+        f,
+        A,
+        b,
+        f_warped=None,
+        degree=3,
+        indexing="ij"
+    ):
+    if f_warped is None:
+        f_warped = np.zeros(f.shape, dtype=f.dtype)
+
+    if indexing == "xy":
+        A = np.fliplr(np.flipud(A)).copy()
+        b = np.flip(b).copy()
+
+    coeffs = cubic_2D_coefficients
+    if degree == 1:
+        affine_linear_warp_2D_kernel(
+            f,
+            A,
+            b,
+            f_warped
+        )
+    elif degree == 3:
+        affine_cubic_warp_2D_kernel(
+            f,
+            A,
+            b,
+            f_warped,
+            coeffs
+        )
+    else:
+        raise NotImplementedError("Only degree 1 and 3 are implemented.")
+
+    return f_warped
+
+def adjoint_affine_warp_2D(
+        f_warped,
+        A,
+        b,
+        f=None,
+        degree=3,
+        indexing="ij"
+    ):
+    if f is None:
+        f = np.zeros(f_warped.shape, dtype=f_warped.dtype)
+
+    if indexing == "xy":
+        A = np.fliplr(np.flipud(A)).copy()
+        b = np.flip(b).copy()
+
+    coeffs = cubic_2D_coefficients
+    if degree == 1:
+        affine_linear_warp_2D_kernel(
+            f_warped,
+            A,
+            b,
+            f
+        )
+    elif degree == 3:
+        affine_cubic_warp_2D_kernel(
+            f_warped,
+            A,
+            b,
+            f,
+            coeffs
+        )
+    else:
+        raise NotImplementedError("Only degree 1 and 3 are implemented.")
+    return f
 
 def affine_warp_3D(
         f,

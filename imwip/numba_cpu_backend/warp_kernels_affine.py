@@ -70,6 +70,46 @@ def affine_cubic_warp_3D_kernel(f, A, b, f_warped, coeffs):
                                 f_warped[i, j, k] += coefficient * f[Q0, Q1, Q2]
                             m += 1
 
+
+@njit(parallel=True, fastmath=True)
+def affine_cubic_warp_2D_kernel(f, A, b, f_warped, coeffs):
+    for i in prange(f.shape[0]):
+        for j in prange(f.shape[1]):
+            for k in prange(f.shape[2]):
+                f_i = float32(i)
+                f_j = float32(j)
+
+                # position at which to iterpolate
+                x = A[0, 0]*f_i + A[0, 1]*f_j + + b[0]
+                y = A[1, 0]*f_i + A[1, 1]*f_j + + b[1]
+
+                # points from which to interpolate
+                x1 = int32(math.floor(x))
+                y1 = int32(math.floor(y))
+                # xi = x1 - 1 + i
+
+                # interpolation coefficients
+                xmx1 = x - float32(x1)
+                ymy1 = y - float32(y1)
+                x_powers = (float32(1), xmx1, xmx1**2, xmx1**3)
+                y_powers = (float32(1), ymy1, ymy1**2, ymy1**3)
+                monomials = np.zeros(16, dtype=np.float32)
+                for py in range(4):
+                    for px in range(4):
+                            monomials[py*4 + px] = x_powers[px] * y_powers[py]
+
+                m = 0
+                for ii in range(4):
+                    for jj in range(4):
+                            Q0 = x1 + ii - 1
+                            Q1 = y1 + jj - 1
+                            if 0 <= Q0 < f.shape[0] and 0 <= Q1 < f.shape[1]:
+                                coefficient = float32(0)
+                                for n in range(16):
+                                    coefficient += coeffs[m*16 + n] * monomials[n]
+                                f_warped[i, j] += coefficient * f[Q0, Q1]
+                            m += 1
+
 @njit(parallel=True, fastmath=True)
 def affine_cubic_warp_3D_kernel_mul(f, A, b, f_warped, coeffs):
     for i in prange(f.shape[0]):
