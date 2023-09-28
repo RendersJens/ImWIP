@@ -38,6 +38,8 @@ cubic_3D_coefficients_dz = np.loadtxt(path+"/../cpp_backend/cubic_3D_coefficient
 
 
 __all__ = [
+    'affine_warp_2D',
+    'adjoint_affine_warp_2D',
     'affine_warp_3D',
     'adjoint_affine_warp_3D',
     'diff_affine_warp_3D'
