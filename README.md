@@ -18,26 +18,34 @@ ImWIP heavily relies on CUDA kernels for efficient parallelization. Therfore a C
 - numba
 - pylops
 - tqdm
+- cython
+
+For conda users, these dependencies can be automatically installed from the `environment.yml` file in the root of this project. For example by running
+
+```bash
+conda env create
+conda activate imwip
+```
 
 There is also a C++/CUDA backend, which is a bit faster than the numba backend, and it can
 be accessed from any language that supports a C interface functions. It will automatically
-compile if the following dependencies are met:
+compile on linux systems where the nvcc compiler is available.
 
-- linux
-- cython
-- nvcc
 
 Installation
 ------------
 
 If git is installed, simply run
 
-`$ pip install git+https://github.com/RendersJens/ImWIP.git`
-
+```bash
+pip install git+https://github.com/RendersJens/ImWIP.git
+```
 
 Otherwise, download this repository and run pip in the root folder of the project:
 
-`$ pip install .`
+```bash
+pip install .
+```
 
 Getting started and reference documentation
 -------------------------------------------
@@ -48,16 +56,24 @@ Citing ImWIP
 
 If you use ImWIP in your research, please cite
 
-J. Renders, J. De Beenhouwer, J. Sijbers, ImWIP: Image Warping for Inverse Problems, https://doi.org/10.5281/zenodo.5910755 (Feb. 2023).
+Jens Renders, Ben Jeurissen, Anh-Tuan Nguyen, Jan De Beenhouwer, Jan Sijbers,
+ImWIP: Open-source image warping toolbox with adjoints and derivatives,
+SoftwareX,
+Volume 24,
+2023,
+101524
 
 BibTex:
 
 ```
-@manual{renders2023imwip,
-  author={Renders, Jens and De Beenhouwer, Jan and Sijbers, Jan},
-  title={{ImWIP: Image Warping for Inverse Problems}},
-  note={{\tt https://doi.org/10.5281/zenodo.5910755}},
-  Year={2023},
-  Month=feb
+@article{renders2023,
+  title = {ImWIP: Open-source image warping toolbox with adjoints and derivatives},
+  author = {Jens Renders and Ben Jeurissen and Anh-Tuan Nguyen and Jan {De Beenhouwer} and Jan Sijbers},
+  journal = {SoftwareX},
+  volume = {24},
+  pages = {101524},
+  year = {2023},
+  issn = {2352-7110},
+  doi = {https://doi.org/10.1016/j.softx.2023.101524},
 }
 ```

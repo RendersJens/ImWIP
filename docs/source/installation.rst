@@ -12,12 +12,19 @@ ImWIP heavily relies on CUDA kernels for efficient parallelization. Therfore a C
 - numba
 - pylops
 - tqdm
-
-There is also a C++/CUDA backend, which is a bit faster than the numba backend, and it can be accessed from any language that supports a C interface functions. It will automatically compile if the following dependencies are met:
-
-- linux
 - cython
-- nvcc
+
+For conda users, these dependencies can be automatically installed from the `environment.yml` file in the root of this project. For example by running
+
+.. code-block:: console
+
+   conda env create
+   conda activate imwip
+
+
+There is also a C++/CUDA backend, which is a bit faster than the numba backend, and it can
+be accessed from any language that supports a C interface functions. It will automatically
+compile on linux systems where the nvcc compiler is available.
 
 
 Installing ImWIP
@@ -27,10 +34,10 @@ If git is installed, simply run
 
 .. code-block:: console
 
-   $ pip install git+https://github.com/RendersJens/ImWIP.git
+   pip install git+https://github.com/RendersJens/ImWIP.git
 
 Otherwise, download the repository from https://github.com/RendersJens/ImWIP and run pip in the root folder of the project:
 
 .. code-block:: console
 
-    $ pip install .
+    pip install .
