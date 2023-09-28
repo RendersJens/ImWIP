@@ -22,7 +22,8 @@ from .warp_kernels_affine import (
     affine_cubic_warp_3D_kernel,
     affine_cubic_warp_3D_kernel_mul,
     adjoint_affine_cubic_warp_3D_kernel,
-    affine_cubic_warp_2D_kernel
+    affine_cubic_warp_2D_kernel,
+    adjoint_affine_cubic_warp_2D_kernel
 )
 import os
 
@@ -106,7 +107,7 @@ def adjoint_affine_warp_2D(
             f
         )
     elif degree == 3:
-        affine_cubic_warp_2D_kernel(
+        adjoint_affine_cubic_warp_2D_kernel(
             f_warped,
             A,
             b,
