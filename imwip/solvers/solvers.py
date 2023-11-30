@@ -20,7 +20,8 @@
 
 import numpy as np
 from tqdm import tqdm
-
+import pickle
+import glob
 
 def _line_search(f, fx, grad, x, d, t=0.5, c=1e-4, a=1.0, max_iter=20, verbose=False):
     m = np.dot(grad, d/np.linalg.norm(d))
@@ -68,6 +69,7 @@ def _get_split_stepsize(x, grad, f=None, init_step=None, line_search_iter=None, 
                         max_iter=line_search_iter,
                         verbose=verbose
                         )
+    
     return a
 
 
@@ -159,18 +161,27 @@ def barzilai_borwein(grad_f,
         loop = tqdm(range(max_iter))
     else:
         loop = range(max_iter)
-    for i in loop:
+    for ii in loop:
 
         # gradient at previous solution
         gradp = grad
         grad = grad_f(x)
 
         if callback is not None:
-            callback(x,i)
+            callback(x,ii)
 
         # BB step size
-        grad_diff = grad - gradp
-        a = abs(np.dot(x-xp, grad_diff))/np.dot(grad_diff, grad_diff)
+        #grad_diff = grad - gradp
+        #a = abs(np.dot(x-xp, grad_diff))/np.dot(grad_diff, grad_diff)
+
+        y = grad - gradp
+        norm_y_squared = np.dot(y, y)
+        if norm_y_squared > 0:
+            s = x-xp
+            a = abs(np.dot(s, y))/norm_y_squared
+        else:
+            print("exited barzilai_borwein early at",ii,"-th iteration")
+            break
 
         # new solution: gradient descent step
         xp = x
@@ -197,7 +208,12 @@ def split_barzilai_borwein(
         projector=None,
         max_iter=100,
         verbose=True,
-        callback=None
+        minStepSize=0,
+        callback=None,
+        continuation=0,
+        index=None,
+        saveTempFile=0,
+        tempfilePath=None
     ):
     """
     A split version of :py:func:`barzilai_borwein`. Instead of using a single stepsize
@@ -235,65 +251,146 @@ def split_barzilai_borwein(
     :return: the minimum x
     :rtype: list of :class:`numpy.ndarray`
     """
-    x = [np.array(var) for var in x0]
+    
+    if continuation == 0:
 
-    # gradient at begin position
-    grad = grad_f(*x)
+        x = [np.array(var) for var in x0]
+    
+        # gradient at begin position
+        grad = grad_f(*x)
+    
+        # initial stepsize
+        a = _get_split_stepsize(
+            x,
+            grad,
+            f=f,
+            init_step=init_step,
+            line_search_iter=line_search_iter,
+            verbose=verbose
+        )
+    
+        # gradient descent step
+        xp = x[:]
+        for i in range(len(x)):
+            x[i] = x[i] - a[i]*grad[i]
+    
+        # another gradient descent step
+        gradp = grad
+        grad = grad_f(*x)
+        a = _get_split_stepsize(
+            x,
+            grad,
+            f=f,
+            init_step=init_step,
+            line_search_iter=line_search_iter,
+            verbose=verbose
+        )
+        xp = x[:]
+        
+        for i in range(len(x)):
+            x[i] = x[i] - a[i]*grad[i]
+    
+            if verbose:
+                loop = tqdm(range(max_iter))
+            else:
+                loop = range(max_iter)
+    
+        cc = 0
+        # now that we have our previous value xp
+        # we can start iterating
+        step = None
+        criterion = None
 
-    # initial stepsize
-    a = _get_split_stepsize(
-        x,
-        grad,
-        f=f,
-        init_step=init_step,
-        line_search_iter=line_search_iter,
-        verbose=verbose
-    )
-
-    # gradient descent step
-    xp = x[:]
-    for i in range(len(x)):
-        x[i] = x[i] - a[i]*grad[i]
-
-    # another gradient descent step
-    gradp = grad
-    grad = grad_f(*x)
-    a = _get_split_stepsize(
-        x,
-        grad,
-        f=f,
-        init_step=init_step,
-        line_search_iter=line_search_iter,
-        verbose=verbose
-    )
-    xp = x[:]
-    for i in range(len(x)):
-        x[i] = x[i] - a[i]*grad[i]
-
-    # now that we have our previous value xp
-    # we can start iterating
-    if verbose:
-        loop = tqdm(range(max_iter))
-    else:
-        loop = range(max_iter)
-    for i in loop:
-
+    elif continuation == 1:
+        # Specify the path to the pickle file
+        pickle_all_temp_files = tempfilePath + '/tempFile_exp' + str(index) + '_it*.pkl'
+        matching_files = glob.glob(pickle_all_temp_files)
+        ii_values = np.array([int(file.split('_it')[1].split('.pkl')[0]) for file in matching_files])
+        ii_values_thr = ii_values[ii_values < max_iter]
+        max_ii = max(ii_values_thr)
+        pickle_most_recent_temp_file = tempfilePath + '/tempFile_exp' + str(index) + '_it' + str(max_ii) + '.pkl'
+        print('starting the optimization from temp file', pickle_most_recent_temp_file)
+        # Load the variables from the pickle file
+        with open(pickle_most_recent_temp_file, "rb") as pickle_file:
+            loaded_variables = pickle.load(pickle_file)
+            
+        grad = loaded_variables['grad']
+        x = loaded_variables['x']
+        ii = loaded_variables['ii']
+        cc = loaded_variables['cc']
+        xp = loaded_variables['xp']
+        step = loaded_variables['step']
+        a = loaded_variables['a']
+        criterion = np.linalg.norm(step[1])
+        
+        if len(step) != 2:
+            newstep = []
+            newstep.append(step[:x[0].size])
+            newstep.append(step[x[0].size:])
+            step = newstep
+            
+        if verbose:
+            loop = tqdm(range(ii + 1, max_iter))
+        else:
+            loop = range(ii + 1, max_iter)
+    
+    for ii in loop:
+        
+        if saveTempFile == 1 and np.mod(ii + 1, 1e5) == 0:
+            savePath = tempfilePath + '/tempFile_exp' + str(index) + '_it' + str(ii) + '.pkl'
+            save_temp_file(grad, x, ii, cc, xp, step, a, savePath)
+        
+        if ii > 0:
+            #print('PD step', np.linalg.norm(step[0]))
+            #print('T2 step', np.linalg.norm(step[1]))
+            #print('concat step', np.linalg.norm(np.concatenate(step)))
+            criterion = np.linalg.norm(step[1])
+            
+            if cc>= 5 and criterion < minStepSize:
+                if saveTempFile == 1:
+                    savePath = tempfilePath + '/tempFile_exp' + str(index) + '_it' + str(ii) + '.pkl'
+                    save_temp_file(grad, x, ii, cc, xp, step, a, savePath)
+                print("minStepSize reached:", criterion, "Exited split_barzilai_borwein early at", ii ,"-th iteration")
+                break
+            
+            if criterion < minStepSize:
+                cc = cc + 1
+            else:
+                cc = 0 #reset counter
+            
         # gradient at previous solution
         gradp = grad
         grad = grad_f(*x)
 
         if callback is not None:
-            callback(*x,i)
+            callback(*x,ii)
 
         # independent BB step sizes
         for i in range(len(x)):
-            grad_diff = grad[i] - gradp[i]
-            a[i] = abs(np.dot(x[i]-xp[i], grad_diff))/np.dot(grad_diff, grad_diff)
-
+            #grad_diff = grad[i] - gradp[i]
+            #a[i] = abs(np.dot(x[i]-xp[i], grad_diff))/np.dot(grad_diff, grad_diff)
+            y = grad[i] - gradp[i]
+            norm_y_squared = np.dot(y, y)
+            if norm_y_squared > 0:
+                s = x[i]-xp[i]
+                a[i] = abs(np.dot(s, y))/norm_y_squared
+            else:
+                a[i] = 0
+                
+        if all(s == 0 for s in a):
+            if saveTempFile == 1:
+                savePath = tempfilePath + '/tempFile_exp' + str(index) + '_it' + str(ii) + '.pkl'
+                save_temp_file(grad, x, ii, cc, xp, step, a, savePath)
+            print("Max estimation precision reached. StepSize reached:", criterion, ". Exited split_barzilai_borwein early at", ii ,"-th iteration")
+            break
+        
         # new solution: gradient descent step
         xp = x[:]
+        step = []
         for i in range(len(x)):
-            x[i] = x[i] - a[i]*grad[i]
+            step_i = a[i]*grad[i]
+            x[i] = x[i] - step_i
+            step.append(step_i)
 
         # apply the bounds
         if bounds is not None:
@@ -304,5 +401,29 @@ def split_barzilai_borwein(
         # apply the projector
         if not projector is None:
             x = projector(x)
+    
+    if saveTempFile == 1:
+        savePath = tempfilePath + '/tempFile_exp' + str(index) + '_it' + str(ii) + '.pkl'
+        save_temp_file(grad, x, ii, cc, xp, step, a, savePath)
+    
+    if ii == max_iter-1:
+        print("Max number of iterations reached. StepSize reached:", criterion, ". Exited split_barzilai_borwein at", ii ,"-th iteration")
+        
+    return x, step
 
-    return x
+
+def save_temp_file(grad, x, ii, cc, xp, step, a, savePath):
+# Create a dictionary to store the variables
+    
+    variables = {'grad': grad,
+        'x' : x,
+        'ii': ii,
+        'cc': cc,
+        'xp': xp,
+        'step': step,
+        'a': a}
+    
+    with open(savePath, 'wb') as fp:
+        pickle.dump(variables, fp)
+        
+    return None
